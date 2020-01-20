@@ -6,7 +6,7 @@
 \contentsline {chapter}{Introducción}{1}{chapter*.4}%
 \contentsline {chapter}{Objetivos del proyecto}{3}{chapter*.5}%
 \contentsline {chapter}{Conceptos teóricos}{5}{chapter*.6}%
-\contentsline {section}{\numberline {3.1}Realidad aumentada}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Realidad aumentada y virtual}{5}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Herramientas AR}{5}{section.3.2}%
 \contentsline {subsection}{CoSpaces}{5}{section*.7}%
 \contentsline {subsection}{Metaverse}{6}{section*.8}%
@@ -15,22 +15,22 @@
 \contentsline {subsection}{Vuforia}{7}{section*.11}%
 \contentsline {subsection}{Wikitude}{7}{section*.12}%
 \contentsline {subsection}{ArUco}{7}{section*.13}%
-\contentsline {subsection}{OpenCV}{7}{section*.14}%
+\contentsline {subsection}{OpenCV}{8}{section*.14}%
 \contentsline {subsection}{ArCore}{8}{section*.15}%
 \contentsline {subsection}{ArKit}{8}{section*.16}%
 \contentsline {subsection}{8thWall}{8}{section*.17}%
 \contentsline {section}{\numberline {3.3}Tecnicas AR}{8}{section.3.3}%
 \contentsline {subsection}{Detección de marcadores}{8}{section*.18}%
-\contentsline {subsubsection}{Mergecube}{8}{section*.19}%
-\contentsline {subsection}{Detección del entorno}{8}{section*.20}%
-\contentsline {subsubsection}{SLAM}{8}{section*.21}%
-\contentsline {section}{\numberline {3.4}Secciones}{8}{section.3.4}%
-\contentsline {subsection}{Subsecciones}{8}{section*.22}%
-\contentsline {subsubsection}{Subsubsecciones}{8}{section*.23}%
-\contentsline {section}{\numberline {3.5}Referencias}{8}{section.3.5}%
+\contentsline {subsubsection}{Mergecube}{9}{section*.19}%
+\contentsline {subsection}{Detección del entorno}{9}{section*.20}%
+\contentsline {subsubsection}{SLAM}{9}{section*.21}%
+\contentsline {section}{\numberline {3.4}Secciones}{9}{section.3.4}%
+\contentsline {subsection}{Subsecciones}{9}{section*.22}%
+\contentsline {subsubsection}{Subsubsecciones}{9}{section*.23}%
+\contentsline {section}{\numberline {3.5}Referencias}{9}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Imágenes}{9}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Listas de items}{9}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Tablas}{10}{section.3.8}%
+\contentsline {section}{\numberline {3.7}Listas de items}{10}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Tablas}{11}{section.3.8}%
 \contentsline {chapter}{Técnicas y herramientas}{13}{chapter*.24}%
 \contentsline {section}{\numberline {4.1}Técnicas de desarrollo}{13}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Herramientas de documentación}{13}{section.4.2}%

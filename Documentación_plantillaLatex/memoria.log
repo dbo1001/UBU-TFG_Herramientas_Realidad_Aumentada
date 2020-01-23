@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.23)  20 JAN 2020 19:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.23)  23 JAN 2020 01:54
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1073,13 +1073,13 @@ l.1 \capitulo{3}{Conceptos teóricos}
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 17.
+(Font)              <10> on input line 19.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 17.
+(Font)              <7> on input line 19.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 17.
+(Font)              <5> on input line 19.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-7.
+9.
 
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1092,55 +1092,54 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.22 
+l.20 
       [5]
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 
+l.35 
       [6]
-Underfull \vbox (badness 1490) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 61.
-LaTeX Info: Redefining \% on input line 61.
+LaTeX Info: Redefining \. on input line 59.
+LaTeX Info: Redefining \% on input line 59.
  [7]
-LaTeX Info: Redefining \. on input line 82.
-LaTeX Info: Redefining \% on input line 82.
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
 
 [8]
 File: ./img/escudoInfor.pdf Graphic file (type pdf)
 <use ./img/escudoInfor.pdf>
 Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 110.
 (pdftex.def)             Requested size: 344.69766pt x 411.04959pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 LaTeX Info: Redefining \. on input line 110.
 LaTeX Info: Redefining \% on input line 110.
-[9]
-LaTeX Info: Redefining \. on input line 126.
-LaTeX Info: Redefining \% on input line 126.
+ [9]
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
  [10])
 LaTeX Info: Redefining \. on input line 467.
 LaTeX Info: Redefining \% on input line 467.
  [11]
+LaTeX Info: Redefining \. on input line 467.
+LaTeX Info: Redefining \% on input line 467.
+ [12]
 \openout2 = `./tex/4_Tecnicas_y_herramientas.aux'.
 
- (tex/4_Tecnicas_y_herramientas.tex [12
-
-
-
-]
+ (tex/4_Tecnicas_y_herramientas.tex
 Overfull \hbox (7.81235pt too wide) in paragraph at lines 13--14
 []\T1/lmr/m/n/12 (-20) Link del re-po-si-to-rio: [][]$\T1/lmtt/m/n/12 https : /
  / github . com / smi0010 / TFG _ Herramientas _
  []
 
-) [13]
+) [13
+
+
+
+]
 \openout2 = `./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux'.
 
  (tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.tex [14
@@ -1200,9 +1199,15 @@ LaTeX Info: Redefining \% on input line 26.
 (tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 477.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 477.
-Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 4C28399AF8AFFFA0A7DC0F93F70CA8C0;1464.
 
+
+Package rerunfilecheck Warning: File `memoria.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `memoria.out':
+(rerunfilecheck)             Before: 4C28399AF8AFFFA0A7DC0F93F70CA8C0;1464
+(rerunfilecheck)             After:  9AB90FCB59B80E2AEDDCF68EFDF13A6E;1467.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1210,12 +1215,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 477.
  ) 
 Here is how much of TeX's memory you used:
  13150 strings out of 492484
- 201381 string characters out of 3120694
- 374992 words of memory out of 3000000
+ 201385 string characters out of 3120694
+ 375992 words of memory out of 3000000
  17031 multiletter control sequences out of 15000+200000
  96898 words of font info for 108 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,42p,681b,681s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,12n,42p,806b,681s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
 enc}<C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
 mbx10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
@@ -1233,7 +1238,7 @@ o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/User
 s/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C
 :/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.
 pfb>
-Output written on memoria.pdf (33 pages, 745058 bytes).
+Output written on memoria.pdf (33 pages, 746283 bytes).
 PDF statistics:
  742 PDF objects out of 1000 (max. 8388607)
  83 named destinations out of 1000 (max. 500000)

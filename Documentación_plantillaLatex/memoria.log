@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.23)  27 JAN 2020 20:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.23)  29 JAN 2020 02:39
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1088,7 +1088,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<./img/cospaces2.png, id=569, 1450.6697pt x 727.96968pt>
+<./img/cospaces2.png, id=575, 1450.6697pt x 727.96968pt>
 File: ./img/cospaces2.png Graphic file (type png)
 <use ./img/cospaces2.png>
 Package pdftex.def Info: ./img/cospaces2.png  used on input line 20.
@@ -1097,7 +1097,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 ...}{Plataforma de de desarrollo de CoSpaces}
+l.20 ...es2}{Plataforma de desarrollo de CoSpaces}
                                                    [5]
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
@@ -1110,113 +1110,126 @@ l.30
 LaTeX Info: Redefining \. on input line 44.
 LaTeX Info: Redefining \% on input line 44.
  [7]
-<./img/ejemploMarcadorCasa.jpg, id=601, 1027.84pt x 684.5575pt>
+<./img/vuforia01.png, id=609, 385.44pt x 155.07938pt>
+File: ./img/vuforia01.png Graphic file (type png)
+<use ./img/vuforia01.png>
+Package pdftex.def Info: ./img/vuforia01.png  used on input line 50.
+(pdftex.def)             Requested size: 344.69766pt x 138.68512pt.
+LaTeX Info: Redefining \. on input line 69.
+LaTeX Info: Redefining \% on input line 69.
+ [8 <./img/vuforia01.png>]
+<./img/ejemploMarcadorCasa.jpg, id=618, 1027.84pt x 684.5575pt>
 File: ./img/ejemploMarcadorCasa.jpg Graphic file (type jpg)
 <use ./img/ejemploMarcadorCasa.jpg>
-Package pdftex.def Info: ./img/ejemploMarcadorCasa.jpg  used on input line 71.
+Package pdftex.def Info: ./img/ejemploMarcadorCasa.jpg  used on input line 81.
 (pdftex.def)             Requested size: 344.69766pt x 229.57103pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
-[8]
-<./img/ejemploMarcadorTigre.jpg, id=612, 1027.84pt x 587.19376pt>
-File: ./img/ejemploMarcadorTigre.jpg Graphic file (type jpg)
-<use ./img/ejemploMarcadorTigre.jpg>
-Package pdftex.def Info: ./img/ejemploMarcadorTigre.jpg  used on input line 74.
-
-(pdftex.def)             Requested size: 344.69766pt x 196.91943pt.
-LaTeX Info: Redefining \. on input line 77.
-LaTeX Info: Redefining \% on input line 77.
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[9 <./img/ejemploMarcadorCasa.jpg> <./img/ejemploMarcadorTigre.jpg>]
-<./img/mergecube.jpg, id=619, 1752.5475pt x 1168.365pt>
+[9]
+<./img/ejemploMarcadorTigre.jpg, id=628, 1027.84pt x 587.19376pt>
+File: ./img/ejemploMarcadorTigre.jpg Graphic file (type jpg)
+<use ./img/ejemploMarcadorTigre.jpg>
+Package pdftex.def Info: ./img/ejemploMarcadorTigre.jpg  used on input line 84.
+
+(pdftex.def)             Requested size: 344.69766pt x 196.91943pt.
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+ [10 <./img/ejemploMarcadorCasa.jpg> <./img/ejemploMarcadorTigre.jpg>]
+<./img/mergecube.jpg, id=635, 1752.5475pt x 1168.365pt>
 File: ./img/mergecube.jpg Graphic file (type jpg)
 <use ./img/mergecube.jpg>
-Package pdftex.def Info: ./img/mergecube.jpg  used on input line 80.
+Package pdftex.def Info: ./img/mergecube.jpg  used on input line 90.
 (pdftex.def)             Requested size: 344.69766pt x 229.7824pt.
-LaTeX Info: Redefining \. on input line 84.
-LaTeX Info: Redefining \% on input line 84.
- [10 <./img/mergecube.jpg>]
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[11 <./img/mergecube.jpg>]
 File: ./img/escudoInfor.pdf Graphic file (type pdf)
 <use ./img/escudoInfor.pdf>
-Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 111.
+Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 121.
 (pdftex.def)             Requested size: 344.69766pt x 411.04959pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 111.
-LaTeX Info: Redefining \% on input line 111.
-[11]
-LaTeX Info: Redefining \. on input line 127.
-LaTeX Info: Redefining \% on input line 127.
- [12])
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+[12]
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
+ [13])
 LaTeX Info: Redefining \. on input line 467.
 LaTeX Info: Redefining \% on input line 467.
- [13]
+ [14]
 \openout2 = `./tex/4_Tecnicas_y_herramientas.aux'.
 
- (tex/4_Tecnicas_y_herramientas.tex [14
-
-
-
-]
+ (tex/4_Tecnicas_y_herramientas.tex
 Overfull \hbox (7.81235pt too wide) in paragraph at lines 13--14
 []\T1/lmr/m/n/12 (-20) Link del re-po-si-to-rio: [][]$\T1/lmtt/m/n/12 https : /
  / github . com / smi0010 / TFG _ Herramientas _
  []
 
-[15]
-<./img/Unity01.png, id=665, 484.05844pt x 358.33875pt>
-File: ./img/Unity01.png Graphic file (type png)
-<use ./img/Unity01.png>
-Package pdftex.def Info: ./img/Unity01.png  used on input line 27.
-(pdftex.def)             Requested size: 193.61993pt x 143.33296pt.
-<./img/unity02.png, id=666, 481.19775pt x 360.1455pt>
-File: ./img/unity02.png Graphic file (type png)
-<use ./img/unity02.png>
-Package pdftex.def Info: ./img/unity02.png  used on input line 28.
-(pdftex.def)             Requested size: 192.4757pt x 144.05563pt.
-
-Overfull \hbox (23.33151pt too wide) in paragraph at lines 27--29
-[][] [] 
- []
-
-)
-LaTeX Info: Redefining \. on input line 468.
-LaTeX Info: Redefining \% on input line 468.
- [16 <./img/Unity01.png> <./img/unity02.png>]
-\openout2 = `./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux'.
-
-
-(tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.tex) [17
+[15
 
 
 
 ]
-\openout2 = `./tex/6_Trabajos_relacionados.aux'.
+<./img/unity01.png, id=677, 484.05844pt x 358.33875pt>
+File: ./img/unity01.png Graphic file (type png)
+<use ./img/unity01.png>
+Package pdftex.def Info: ./img/unity01.png  used on input line 29.
+(pdftex.def)             Requested size: 344.69766pt x 255.18231pt.
+<./img/unity02.png, id=678, 481.19775pt x 360.1455pt>
+File: ./img/unity02.png Graphic file (type png)
+<use ./img/unity02.png>
+Package pdftex.def Info: ./img/unity02.png  used on input line 30.
+(pdftex.def)             Requested size: 344.69766pt x 257.98566pt.
 
 
-(tex/6_Trabajos_relacionados.tex [18
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+[16 <./img/unity01.png>])
+LaTeX Info: Redefining \. on input line 468.
+LaTeX Info: Redefining \% on input line 468.
+ [17 <./img/unity02.png>]
+\openout2 = `./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux'.
+
+
+(tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.tex [18
 
 
 
 ]) [19]
+\openout2 = `./tex/6_Trabajos_relacionados.aux'.
+
+
+(tex/6_Trabajos_relacionados.tex [20
+
+
+
+]) [21]
 \openout2 = `./tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux'.
 
 
-(tex/7_Conclusiones_Lineas_de_trabajo_futuras.tex [20
+(tex/7_Conclusiones_Lineas_de_trabajo_futuras.tex [22
 
 
 
-]) [21] (memoria.bbl
-[22
+]) [23] (memoria.bbl
+[24
 
 
 ]
@@ -1228,7 +1241,7 @@ Class memoir Warning: The material used in the headers is too large
 either increase the head height or redesign the header
 (in both cases you will find help in the memoir manual). on input line 477.
 
-[23]
+[25]
 \tf@toc=\write5
 \openout5 = `memoria.toc'.
 
@@ -1253,7 +1266,7 @@ LaTeX Info: Redefining \% on input line 26.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 477.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 477.
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 9AB90FCB59B80E2AEDDCF68EFDF13A6E;1467.
+(rerunfilecheck)             Checksum: A02A7D32F2670308E86D0C86BAC04A5F;1467.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1261,11 +1274,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 477.
  ) 
 Here is how much of TeX's memory you used:
- 13220 strings out of 492484
- 203279 string characters out of 3120694
- 375369 words of memory out of 3000000
- 17088 multiletter control sequences out of 15000+200000
- 100068 words of font info for 111 fonts, out of 3000000 for 9000
+ 13237 strings out of 492484
+ 203553 string characters out of 3120694
+ 375682 words of memory out of 3000000
+ 17101 multiletter control sequences out of 15000+200000
+ 99977 words of font info for 110 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,42p,806b,681s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
@@ -1286,9 +1299,9 @@ uario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/
 Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pf
 b><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmt
 t12.pfb>
-Output written on memoria.pdf (35 pages, 1945507 bytes).
+Output written on memoria.pdf (37 pages, 1965088 bytes).
 PDF statistics:
- 775 PDF objects out of 1000 (max. 8388607)
- 89 named destinations out of 1000 (max. 500000)
- 29409 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 798 PDF objects out of 1000 (max. 8388607)
+ 95 named destinations out of 1000 (max. 500000)
+ 29414 words of extra memory for PDF output out of 29859 (max. 10000000)
 

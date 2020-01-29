@@ -17,7 +17,7 @@ nuevas online, poder la web..
 \subsection{ArCore}
 \subsection{ArKit}
 \subsection{CoSpaces} CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo educativo. Se puede acceder a ella tanto por web como desde la aplicación de móvil. Permite a los profesores crear salas para sus alumnos donde tendrían acceso a los diferentes ejemplos a usar para sus clases. También cuenta con una galería donde los usuarios pueden compartir sus ejemplos.
-\imagen{cospaces2}{Plataforma de de desarrollo de CoSpaces}
+\imagen{cospaces2}{Plataforma de desarrollo de CoSpaces}
 Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scrips, aun que hay que destacar, que la programación por scrips y algunas opciones de la programación de bloques unicamente están disponibles con una licencia premium. Para añadir un modelo3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly(biblioteca publica de google de modelos3D).
 CoSpace también cuenta con la opción de diseñar proyectos para el mergecube, aunque este plugin se encuentra disponible para la versión premium.
 
@@ -42,8 +42,18 @@ Usa la tecnología SLAM (Simultaneous Localization and Mapping) para el reconoci
 Tiene disponible SDK para desarrollar, en iOS, Android, y Unity.
 
 \subsection{Vuforia}
-Es un SDK para realizar aplicaciones de realidad aumentada. Se puede emplear Java, C++ y desarrollar con Unity.
-Cuenta con una licencia gratuita por defecto con limitaciones,un máximo de 100 vumarks y 1000 cloud targets.
+Vuforia\footnote{https://developer.vuforia.com/} es un kit de desarrollo(SDK) para aplicaciones de AR, para las plataformas de Android, iOS, Windows y HoloLens. Fue creado por Qualcomm Connected Experience en 2010, y en 2015 PTC inc lo compro.\cite{simonetti2013vuforia}
+
+Vuforia proporciona una API en C++, Java, Objective-C++ y los lenguajes de .NET mediante de Unity.
+
+Vuforia soporta diferentes tipos marcadores, estos pueden ser 2D o 3D, también soporta múltiples marcadores simultáneamente , y reconocimiento del terreno sin marcadores.
+\imagen{vuforia01}{Posibles marcadores de Vuforia}
+
+Los marcadores se pueden crear desde la pagina web de developer vuforia, para ello deben escoger que tipo de marcador quieren crear y adjuntarle las imágenes que formaran dicho marcador. La pagina dará una calificación de 5 estrellas según la calidad de la imagen para ser un marcador. Una vez completado, da la opción de descargarlos el un archivo configurable de Unity que incluirá los marcadores en nuestro proyecto.
+
+
+
+Cuenta con una licencia gratuita por defecto, con la limitación de poder tener un máximo de 100 vumarks y 1000 cloud targets.
 Es posible ampliar a 3 tipos de tarifas, básica `por 42 mes, básica +cloud por 92, y la pro en la deben ponerse en contacto con ellos para su registro y uso.
 
 
@@ -76,7 +86,7 @@ Entorno de desarrollo, que se caracteriza por que da la posibilidad de ejecutar 
 	\colorbox{red}{MEJORAR y Completar si es posible}
 	
 	\subsubsection{Mergecube}
-	El mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por ......, el cual tiene grabado unos dibujos por sus 6 caras, los dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
+	El mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por Merge , el cual tiene grabado unos dibujos por sus 6 caras, los dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
 	\imagen{mergecube}{Mergecube} 
 	\subsection{Detección del entorno}
 	La detección del entorno trata de poder reconocer el entorno que la cámara capta y ser capaz de sin la ayuda de un marcador, poder ubicar los modelos en el escenario.

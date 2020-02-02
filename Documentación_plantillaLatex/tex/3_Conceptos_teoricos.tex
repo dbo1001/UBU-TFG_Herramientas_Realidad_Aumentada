@@ -15,6 +15,7 @@ Se han comparado diferentes herramientas de desarrollo para realidad aumentada. 
 nuevas online, poder la web.. 
 
 \subsection{ArCore}
+
 \subsection{ArKit}
 \subsection{CoSpaces} CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo educativo. Se puede acceder a ella tanto por web como desde la aplicación de móvil. Permite a los profesores crear salas para sus alumnos donde tendrían acceso a los diferentes ejemplos a usar para sus clases. También cuenta con una galería donde los usuarios pueden compartir sus ejemplos.
 \imagen{cospaces2}{Plataforma de desarrollo de CoSpaces}
@@ -56,6 +57,26 @@ Los marcadores se pueden crear desde la pagina web de developer vuforia, para el
 Cuenta con una licencia gratuita por defecto, con la limitación de poder tener un máximo de 100 vumarks y 1000 cloud targets.
 Es posible ampliar a 3 tipos de tarifas, básica `por 42 mes, básica +cloud por 92, y la pro en la deben ponerse en contacto con ellos para su registro y uso.
 
+Actualmente Vuforia esta disponible para las versiones:
+\begin{table}[]
+	\begin{tabular}{|l|l|l|l|l|l|}
+		\hline
+		\multicolumn{2}{|l|}{Device OS}                       & \multicolumn{2}{l|}{Herramientas de Desarrollo}                                             & \multicolumn{2}{l|}{Fusion Provider}                \\ \hline
+		&                          & NDK                                            & r20+                                       &                                &                    \\ \cline{3-4}
+		&                          & \cellcolor[HTML]{EFEFEF}Gradle                 & \cellcolor[HTML]{EFEFEF}5.1.1+             &                                &                    \\ \cline{3-4}
+		&                          & Android SDK Build Tools                        & 28.0.3                                     &                                &                    \\ \cline{3-4}
+		&                          & \cellcolor[HTML]{EFEFEF}Android Studio         & \cellcolor[HTML]{EFEFEF}3.4.x              &                                &                    \\ \cline{3-4}
+		\multirow{-5}{*}{Android}  & \multirow{-5}{*}{5.1.1+} & Unity Editor                                   & 2019.2.0+                                  & \multirow{-5}{*}{ArCore 1.10+} & \multirow{-5}{*}{} \\ \hline
+		&                          & \cellcolor[HTML]{EFEFEF}XCode                  & \cellcolor[HTML]{EFEFEF}10.1+              & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
+		\multirow{-2}{*}{iOS}      & \multirow{-2}{*}{11+}    & Unity Editor                                   & 2019.2+                                    & \multicolumn{2}{l|}{\multirow{-2}{*}{ArKit}}        \\ \hline
+		&                          & \cellcolor[HTML]{EFEFEF}Visual Studio          & \cellcolor[HTML]{EFEFEF}2017 versión 15.9+ & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
+		&                          & Unity Editor                                   & 2019.2.0+                                  & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
+		\multirow{-3}{*}{Windows}  & \multirow{-3}{*}{10}     & \cellcolor[HTML]{EFEFEF}Unity Editor(Hololens) & \cellcolor[HTML]{EFEFEF}2018.4.11          & \multicolumn{2}{l|}{\multirow{-3}{*}{}}             \\ \hline
+		&                          & Lumin SDK                                      & 0.22.0                                     & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
+		\multirow{-2}{*}{Lumin Os} & \multirow{-2}{*}{10}     & \cellcolor[HTML]{EFEFEF}Lumin OS               & \cellcolor[HTML]{EFEFEF}0.97+              & \multicolumn{2}{l|}{\multirow{-2}{*}{}}             \\ \hline
+	\end{tabular}
+\end{table}
+\cite{vuforia_supported_versions}
 
 \subsection{Wikitude}
 
@@ -78,16 +99,16 @@ Entorno de desarrollo, que se caracteriza por que da la posibilidad de ejecutar 
 \section{Técnicas AR}
 	\subsection{Detección de marcadores}
 	La detección de marcadores, se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial para situar elemento que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras.
-	\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo}
+	\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo  \cite{AR_company}}
 	Con la mejora de las cámaras, también es posible utilizar como marcadores imágenes mas complejas, como por ejemplo un folleto publicitario o la foto de un planeta.
 	También es posible que el marcador se trate de un objeto físico, como por ejemplo una lampara, o un coche.
-	\imagen{ejemploMarcadorTigre}{Ejemplo donde una carta de un tigre es un marcador}
+	\imagen{ejemploMarcadorTigre}{Ejemplo donde una carta de un tigre es un marcador \cite{AR_company}}
 	Aunque gracias al avance de la calidad de las cámaras y el los software de reconocimiento, es posible utilizar marcadores mas complejos,esto también implicarán que será mas probable que falle, y por consecuencia se desencuandren las imágenes insertadas por AR, que los tiempos de detección sean mas largos.
 	\colorbox{red}{MEJORAR y Completar si es posible}
 	
 	\subsubsection{Mergecube}
 	El mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por Merge , el cual tiene grabado unos dibujos por sus 6 caras, los dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
-	\imagen{mergecube}{Mergecube} 
+	\imagen{mergecube}{Mergecube  \cite{barker_2019}} 
 	\subsection{Detección del entorno}
 	La detección del entorno trata de poder reconocer el entorno que la cámara capta y ser capaz de sin la ayuda de un marcador, poder ubicar los modelos en el escenario.
 	Para esto hay diferentes técnicas, en resumen estas técnicas lo que hacen es detectar los cambios de profundidad de la imagen, y con esos datos evaluar que objetos están mas o menos cerca, cuales son planos, si se trata de un objeto que no tiene profundidad(una pared)...

@@ -15,6 +15,21 @@ Se han comparado diferentes herramientas de desarrollo para realidad aumentada. 
 nuevas online, poder la web.. 
 
 \subsection{ArCore}
+ArCore \footnote{\url{https://developers.google.com/ar/discover}} es la plataforma de Google de desarrollo de realidad aumentada. Con el uso de diferentes API permite que los dispositivos detecten su entorno, lo comprendan e interactúen con la información.
+
+Para conseguir integrar el contenido virtual en mundo real, ArCore utiliza 3 técnicas fundamentales.
+\begin{itemize}
+	\item Motion Tracking, seguimiento del movimiento en español, permite establecer la posición del móvil en relación con el mundo.
+	\item La compresión ambiental, esta permite detectar la posición y tamaño de las superficies del entorno.
+	\item Estimación de la luz, que permite "estimar" las condiciones de luz del ambiente.
+\end{itemize}
+
+Su funcionamiento se puede resumir en dos pasos principalmente, rastrear la posición del dispositivo a medida que se mueve y construir su propia comprensión del mundo real.
+
+ArCore utiliza el motion Tracking para identificar los puntos clave, y rastrea cómo esos puntos se mueven. Combinado el movimiento de dichos puntos con  las lecturas de los sensores de inercia del dispositivo, ArCore calcula la posición y orientación del dispositivo mientras se mueve.
+\cite{google}
+
+Lamentablemente no es compatible con cualquier dispositivo, en el siguiente enlace se encuentra la lista de los dispositivos compatibles actualmente \url{https://developers.google.com/ar/discover/supported-devices}.
 
 \subsection{ArKit}
 \subsection{CoSpaces} CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo educativo. Se puede acceder a ella tanto por web como desde la aplicación de móvil. Permite a los profesores crear salas para sus alumnos donde tendrían acceso a los diferentes ejemplos a usar para sus clases. También cuenta con una galería donde los usuarios pueden compartir sus ejemplos.

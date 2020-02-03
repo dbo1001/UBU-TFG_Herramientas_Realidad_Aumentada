@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.23)  3 FEB 2020 21:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.23)  4 FEB 2020 00:00
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1104,7 +1104,7 @@ been already used, duplicate ignored
 l.42 	\item S
              esiones colaborativas: Tiene la capacidad de crear un mapa mund...
 [6]
-<./img/cospaces2.png, id=602, 1450.6697pt x 727.96968pt>
+<./img/cospaces2.png, id=598, 1450.6697pt x 727.96968pt>
 File: ./img/cospaces2.png Graphic file (type png)
 <use ./img/cospaces2.png>
 Package pdftex.def Info: ./img/cospaces2.png  used on input line 51.
@@ -1115,7 +1115,7 @@ LaTeX Info: Redefining \% on input line 54.
 LaTeX Info: Redefining \. on input line 70.
 LaTeX Info: Redefining \% on input line 70.
  [8]
-<./img/vuforia01.png, id=632, 385.44pt x 155.07938pt>
+<./img/vuforia01.png, id=628, 385.44pt x 155.07938pt>
 File: ./img/vuforia01.png Graphic file (type png)
 <use ./img/vuforia01.png>
 Package pdftex.def Info: ./img/vuforia01.png  used on input line 81.
@@ -1138,7 +1138,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 119.
 LaTeX Info: Redefining \% on input line 119.
  [10 <./img/vuforia01.png>]
-<./img/ejemploMarcadorCasa.jpg, id=649, 1027.84pt x 684.5575pt>
+<./img/ejemploMarcadorCasa.jpg, id=645, 1027.84pt x 684.5575pt>
 File: ./img/ejemploMarcadorCasa.jpg Graphic file (type jpg)
 <use ./img/ejemploMarcadorCasa.jpg>
 Package pdftex.def Info: ./img/ejemploMarcadorCasa.jpg  used on input line 131.
@@ -1151,7 +1151,7 @@ Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
 [11]
-<./img/ejemploMarcadorTigre.jpg, id=661, 1027.84pt x 587.19376pt>
+<./img/ejemploMarcadorTigre.jpg, id=657, 1027.84pt x 587.19376pt>
 File: ./img/ejemploMarcadorTigre.jpg Graphic file (type jpg)
 <use ./img/ejemploMarcadorTigre.jpg>
 Package pdftex.def Info: ./img/ejemploMarcadorTigre.jpg  used on input line 134
@@ -1160,7 +1160,7 @@ Package pdftex.def Info: ./img/ejemploMarcadorTigre.jpg  used on input line 134
 LaTeX Info: Redefining \. on input line 134.
 LaTeX Info: Redefining \% on input line 134.
  [12 <./img/ejemploMarcadorCasa.jpg> <./img/ejemploMarcadorTigre.jpg>]
-<./img/mergecube.jpg, id=670, 1752.5475pt x 1168.365pt>
+<./img/mergecube.jpg, id=666, 1752.5475pt x 1168.365pt>
 File: ./img/mergecube.jpg Graphic file (type jpg)
 <use ./img/mergecube.jpg>
 Package pdftex.def Info: ./img/mergecube.jpg  used on input line 140.
@@ -1204,48 +1204,34 @@ Overfull \hbox (7.81235pt too wide) in paragraph at lines 13--14
  / github . com / smi0010 / TFG _ Herramientas _
  []
 
-[19]
-<./img/unity01.png, id=722, 484.05844pt x 358.33875pt>
-File: ./img/unity01.png Graphic file (type png)
-<use ./img/unity01.png>
-Package pdftex.def Info: ./img/unity01.png  used on input line 29.
-(pdftex.def)             Requested size: 344.69766pt x 255.18231pt.
-<./img/unity02.png, id=723, 481.19775pt x 360.1455pt>
-File: ./img/unity02.png Graphic file (type png)
-<use ./img/unity02.png>
-Package pdftex.def Info: ./img/unity02.png  used on input line 30.
-(pdftex.def)             Requested size: 344.69766pt x 257.98566pt.
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
- [20 <./img/unity01.png>])
+) [19]
 LaTeX Info: Redefining \. on input line 468.
 LaTeX Info: Redefining \% on input line 468.
- [21 <./img/unity02.png>]
+ [20]
 \openout2 = `./tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.aux'.
 
+ (tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.tex)
+[21
 
-(tex/5_Aspectos_relevantes_del_desarrollo_del_proyecto.tex [22
+
+
+]
+\openout2 = `./tex/6_Trabajos_relacionados.aux'.
+
+ (tex/6_Trabajos_relacionados.tex [22
 
 
 
 ]) [23]
-\openout2 = `./tex/6_Trabajos_relacionados.aux'.
-
-
-(tex/6_Trabajos_relacionados.tex [24
-
-
-
-]) [25]
 \openout2 = `./tex/7_Conclusiones_Lineas_de_trabajo_futuras.aux'.
 
 
-(tex/7_Conclusiones_Lineas_de_trabajo_futuras.tex [26
+(tex/7_Conclusiones_Lineas_de_trabajo_futuras.tex [24
 
 
 
-]) [27] (memoria.bbl
-[28
+]) [25] (memoria.bbl
+[26
 
 
 ]
@@ -1257,7 +1243,7 @@ Class memoir Warning: The material used in the headers is too large
 either increase the head height or redesign the header
 (in both cases you will find help in the memoir manual). on input line 477.
 
-[29]
+[27]
 \tf@toc=\write5
 \openout5 = `memoria.toc'.
 
@@ -1290,11 +1276,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 477.
  ) 
 Here is how much of TeX's memory you used:
- 13263 strings out of 492484
- 203876 string characters out of 3120694
- 376940 words of memory out of 3000000
- 17107 multiletter control sequences out of 15000+200000
- 100341 words of font info for 114 fonts, out of 3000000 for 9000
+ 13235 strings out of 492484
+ 203470 string characters out of 3120694
+ 376764 words of memory out of 3000000
+ 17083 multiletter control sequences out of 15000+200000
+ 97353 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,42p,868b,681s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
@@ -1306,18 +1292,17 @@ type1/public/lm/lmcsc10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/lm/lmr10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/Usuario/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/Usuario/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/Usuario/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/Usuario/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/Usuario/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/Usuario/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/Us
-uario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/
-Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pf
-b><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmt
-t12.pfb>
-Output written on memoria.pdf (41 pages, 1978989 bytes).
+rams/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/Usuario/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/Usuario/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/Usuario/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/Usuari
+o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/User
+s/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C
+:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.
+pfb>
+Output written on memoria.pdf (39 pages, 1894439 bytes).
 PDF statistics:
- 844 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
- 29414 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 825 PDF objects out of 1000 (max. 8388607)
+ 104 named destinations out of 1000 (max. 500000)
+ 28892 words of extra memory for PDF output out of 29859 (max. 10000000)
 

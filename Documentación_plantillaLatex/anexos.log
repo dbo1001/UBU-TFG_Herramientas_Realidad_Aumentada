@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.23)  23 DEC 2019 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.23)  3 FEB 2020 23:44
 entering extended mode
 **./anexos.tex
 (anexos.tex
@@ -1067,15 +1067,67 @@ l.1 \apendice{Especificación de Requisitos}
 
 
 
-]) [7]
+]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+1.
+
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+<./img/unity01.png, id=576, 484.05844pt x 358.33875pt>
+File: ./img/unity01.png Graphic file (type png)
+<use ./img/unity01.png>
+Package pdftex.def Info: ./img/unity01.png  used on input line 15.
+(pdftex.def)             Requested size: 344.69766pt x 255.18231pt.
+
+[7]
+<./img/unity02.png, id=587, 481.19775pt x 360.1455pt>
+File: ./img/unity02.png Graphic file (type png)
+<use ./img/unity02.png>
+Package pdftex.def Info: ./img/unity02.png  used on input line 16.
+(pdftex.def)             Requested size: 344.69766pt x 257.98566pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 16.
+LaTeX Info: Redefining \% on input line 16.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph
+4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.16 \imagen{unity02}{Paso 2: Seleccionar}
+                                           <./img/unity01.png>])
+LaTeX Info: Redefining \. on input line 395.
+LaTeX Info: Redefining \% on input line 395.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
+
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph
+4.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.395 \include{./tex/D_Manual_programador}
+                                           <./img/unity02.png>]
 \openout2 = `./tex/E_Manual_usuario.aux'.
 
- (tex/E_Manual_usuario.tex
-[8
+
+(tex/E_Manual_usuario.tex [10
 
 
 
-]) [9] (anexos.bbl [10
+]) [11] (anexos.bbl [12
 
 
 ]
@@ -1090,7 +1142,7 @@ Class memoir Warning: The material used in the headers is too large
 either increase the head height or redesign the header
 (in both cases you will find help in the memoir manual). on input line 402.
 
-[11]
+[13]
 \tf@toc=\write5
 \openout5 = `anexos.toc'.
 
@@ -1112,7 +1164,7 @@ LaTeX Info: Redefining \% on input line 26.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 402.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 402.
 Package rerunfilecheck Info: File `anexos.out' has not changed.
-(rerunfilecheck)             Checksum: 462AE30DEE203C2BDB6A0EE204EFC6B6;2134.
+(rerunfilecheck)             Checksum: 4CF391E89F5CDD46FCB004134377532A;2134.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1120,13 +1172,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 402.
  ) 
 Here is how much of TeX's memory you used:
- 12962 strings out of 492484
- 196980 string characters out of 3120694
- 369200 words of memory out of 3000000
- 16984 multiletter control sequences out of 15000+200000
- 68289 words of font info for 54 fonts, out of 3000000 for 9000
+ 13059 strings out of 492484
+ 199117 string characters out of 3120694
+ 369388 words of memory out of 3000000
+ 17057 multiletter control sequences out of 15000+200000
+ 72141 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,12n,43p,255b,706s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,12n,43p,618b,706s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
 enc}<C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
 mbx12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
@@ -1134,13 +1186,15 @@ c/lm/lmbx8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/lm/lmcsc10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/lm/lmr12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/lm/lmr17.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/Usuario/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/Usuario/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Usuario/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso17.pfb>
-Output written on anexos.pdf (17 pages, 574276 bytes).
+ 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/Usuario/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/Usuario/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/Usuario/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Usuario/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso17.pfb><C:/Users/Usuari
+o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on anexos.pdf (19 pages, 687222 bytes).
 PDF statistics:
- 635 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 18163 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 665 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 19197 words of extra memory for PDF output out of 20736 (max. 10000000)
 

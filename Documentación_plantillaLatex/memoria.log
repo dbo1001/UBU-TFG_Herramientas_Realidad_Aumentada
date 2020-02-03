@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.23)  2 FEB 2020 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.23)  3 FEB 2020 20:59
 entering extended mode
 **./memoria.tex
 (memoria.tex
@@ -1095,101 +1095,104 @@ been already used, duplicate ignored
 l.23 	\item L
              a compresión ambiental, esta permite detectar la posición y t...
 [5]
-<./img/cospaces2.png, id=591, 1450.6697pt x 727.96968pt>
-File: ./img/cospaces2.png Graphic file (type png)
-<use ./img/cospaces2.png>
-Package pdftex.def Info: ./img/cospaces2.png  used on input line 36.
-(pdftex.def)             Requested size: 344.69766pt x 172.97235pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 36.
-LaTeX Info: Redefining \% on input line 36.
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.36 ...es2}{Plataforma de desarrollo de CoSpaces}
-                                                   [6]
-LaTeX Info: Redefining \. on input line 46.
-LaTeX Info: Redefining \% on input line 46.
+l.43 	\item S
+             esiones colaborativas: Tiene la capacidad de crear un mapa mund...
+[6]
+<./img/cospaces2.png, id=602, 1450.6697pt x 727.96968pt>
+File: ./img/cospaces2.png Graphic file (type png)
+<use ./img/cospaces2.png>
+Package pdftex.def Info: ./img/cospaces2.png  used on input line 52.
+(pdftex.def)             Requested size: 344.69766pt x 172.97235pt.
+LaTeX Info: Redefining \. on input line 55.
+LaTeX Info: Redefining \% on input line 55.
  [7 <./img/cospaces2.png>]
-LaTeX Info: Redefining \. on input line 62.
-LaTeX Info: Redefining \% on input line 62.
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
  [8]
-<./img/vuforia01.png, id=625, 385.44pt x 155.07938pt>
+<./img/vuforia01.png, id=628, 385.44pt x 155.07938pt>
 File: ./img/vuforia01.png Graphic file (type png)
 <use ./img/vuforia01.png>
-Package pdftex.def Info: ./img/vuforia01.png  used on input line 66.
+Package pdftex.def Info: ./img/vuforia01.png  used on input line 82.
 (pdftex.def)             Requested size: 344.69766pt x 138.68512pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 76.
-
-
-Overfull \hbox (78.9129pt too wide) in paragraph at lines 77--93
-[][] 
- []
-
-LaTeX Info: Redefining \. on input line 105.
-LaTeX Info: Redefining \% on input line 105.
-[9 <./img/vuforia01.png>]
-<./img/ejemploMarcadorCasa.jpg, id=636, 1027.84pt x 684.5575pt>
-File: ./img/ejemploMarcadorCasa.jpg Graphic file (type jpg)
-<use ./img/ejemploMarcadorCasa.jpg>
-Package pdftex.def Info: ./img/ejemploMarcadorCasa.jpg  used on input line 117.
-
-(pdftex.def)             Requested size: 344.69766pt x 229.57103pt.
-LaTeX Info: Redefining \. on input line 117.
-LaTeX Info: Redefining \% on input line 117.
- [10]
-<./img/ejemploMarcadorTigre.jpg, id=648, 1027.84pt x 587.19376pt>
-File: ./img/ejemploMarcadorTigre.jpg Graphic file (type jpg)
-<use ./img/ejemploMarcadorTigre.jpg>
-Package pdftex.def Info: ./img/ejemploMarcadorTigre.jpg  used on input line 120
-.
-(pdftex.def)             Requested size: 344.69766pt x 196.91943pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 120.
-LaTeX Info: Redefining \% on input line 120.
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
+[9]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 92.
+
+
+Overfull \hbox (78.9129pt too wide) in paragraph at lines 93--109
+[][] 
+ []
+
+
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+ [10 <./img/vuforia01.png>]
+<./img/ejemploMarcadorCasa.jpg, id=645, 1027.84pt x 684.5575pt>
+File: ./img/ejemploMarcadorCasa.jpg Graphic file (type jpg)
+<use ./img/ejemploMarcadorCasa.jpg>
+Package pdftex.def Info: ./img/ejemploMarcadorCasa.jpg  used on input line 133.
+
+(pdftex.def)             Requested size: 344.69766pt x 229.57103pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 133.
+LaTeX Info: Redefining \% on input line 133.
 
 Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-[11 <./img/ejemploMarcadorCasa.jpg>]
-<./img/mergecube.jpg, id=657, 1752.5475pt x 1168.365pt>
+[11]
+<./img/ejemploMarcadorTigre.jpg, id=657, 1027.84pt x 587.19376pt>
+File: ./img/ejemploMarcadorTigre.jpg Graphic file (type jpg)
+<use ./img/ejemploMarcadorTigre.jpg>
+Package pdftex.def Info: ./img/ejemploMarcadorTigre.jpg  used on input line 136
+.
+(pdftex.def)             Requested size: 344.69766pt x 196.91943pt.
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
+ [12 <./img/ejemploMarcadorCasa.jpg> <./img/ejemploMarcadorTigre.jpg>]
+<./img/mergecube.jpg, id=666, 1752.5475pt x 1168.365pt>
 File: ./img/mergecube.jpg Graphic file (type jpg)
 <use ./img/mergecube.jpg>
-Package pdftex.def Info: ./img/mergecube.jpg  used on input line 126.
+Package pdftex.def Info: ./img/mergecube.jpg  used on input line 142.
 (pdftex.def)             Requested size: 344.69766pt x 229.7824pt.
+LaTeX Info: Redefining \. on input line 146.
+LaTeX Info: Redefining \% on input line 146.
+
+Overfull \vbox (0.85403pt too high) has occurred while \output is active []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 126.
-LaTeX Info: Redefining \% on input line 126.
-[12 <./img/ejemploMarcadorTigre.jpg>]
-LaTeX Info: Redefining \. on input line 148.
-LaTeX Info: Redefining \% on input line 148.
- [13 <./img/mergecube.jpg>]
+[13 <./img/mergecube.jpg>]
 File: ./img/escudoInfor.pdf Graphic file (type pdf)
 <use ./img/escudoInfor.pdf>
-Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 157.
+Package pdftex.def Info: ./img/escudoInfor.pdf  used on input line 173.
 (pdftex.def)             Requested size: 344.69766pt x 411.04959pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 157.
-LaTeX Info: Redefining \% on input line 157.
-[14]
 LaTeX Info: Redefining \. on input line 173.
 LaTeX Info: Redefining \% on input line 173.
+[14]
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
  [15])
 LaTeX Info: Redefining \. on input line 467.
 LaTeX Info: Redefining \% on input line 467.
@@ -1207,12 +1210,12 @@ Overfull \hbox (7.81235pt too wide) in paragraph at lines 13--14
 
 
 ]
-<./img/unity01.png, id=704, 484.05844pt x 358.33875pt>
+<./img/unity01.png, id=709, 484.05844pt x 358.33875pt>
 File: ./img/unity01.png Graphic file (type png)
 <use ./img/unity01.png>
 Package pdftex.def Info: ./img/unity01.png  used on input line 29.
 (pdftex.def)             Requested size: 344.69766pt x 255.18231pt.
-<./img/unity02.png, id=705, 481.19775pt x 360.1455pt>
+<./img/unity02.png, id=710, 481.19775pt x 360.1455pt>
 File: ./img/unity02.png Graphic file (type png)
 <use ./img/unity02.png>
 Package pdftex.def Info: ./img/unity02.png  used on input line 30.
@@ -1296,11 +1299,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 477.
  ) 
 Here is how much of TeX's memory you used:
- 13251 strings out of 492484
- 203747 string characters out of 3120694
- 375910 words of memory out of 3000000
- 17106 multiletter control sequences out of 15000+200000
- 100068 words of font info for 111 fonts, out of 3000000 for 9000
+ 13256 strings out of 492484
+ 203805 string characters out of 3120694
+ 375942 words of memory out of 3000000
+ 17107 multiletter control sequences out of 15000+200000
+ 100159 words of font info for 112 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,42p,806b,681s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
@@ -1321,9 +1324,9 @@ uario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/
 Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pf
 b><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmt
 t12.pfb>
-Output written on memoria.pdf (39 pages, 1973237 bytes).
+Output written on memoria.pdf (39 pages, 1976758 bytes).
 PDF statistics:
- 826 PDF objects out of 1000 (max. 8388607)
- 102 named destinations out of 1000 (max. 500000)
+ 832 PDF objects out of 1000 (max. 8388607)
+ 104 named destinations out of 1000 (max. 500000)
  29414 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -32,6 +32,22 @@ ArCore utiliza el motion Tracking para identificar los puntos clave, y rastrea c
 Lamentablemente no es compatible con cualquier dispositivo, en el siguiente enlace se encuentra la lista de los dispositivos compatibles actualmente \url{https://developers.google.com/ar/discover/supported-devices}.
 
 \subsection{ArKit}
+ARKit \footnote{\url{https://developer.apple.com/augmented-reality/}} es la herramienta de realidad aumentada de Apple para sistemas iOS. ARKit consigue mostrar contenido virtual de forma natural en el mudo real, incluso pudiendo situarlo detrás o delante del usuario con People Occlusion, pudiendo reconocer hasta 3 rostros al mismo tiempo.\cite{apple_inc}
+
+Funciones destacadas que posee Arkit actualmente.
+\begin{itemize}
+	\item Oclusión de personas: es capaz de diferenciar a una persona del fondo del escenario, consiguiendo que el contenido virtual  pueda pasar por delante o por detrás de la persona.
+	\item Captura de movimiento: Tiene la capacidad de capturar los movimientos de una persona. Distinguiendo diferentes posiciones y movimientos al instante, de forma que es capaz de usarlo como referencias para experiencias de AR.
+	\item Cámara frontal y trasera simultánea: Tiene la capacidad de usar ambas cámaras al mismo tiempo, pudiendo así por ejemplo interactuar con el entorno capturado por la cámara trasera, usando unicamente el rostro.
+	\item Seguimiento de rostros múltiples: Es capaz de reconocer hasta 3 rostros al mismo tiempo usando la cámara TrueDepth.
+	\item Sesiones colaborativas: Tiene la capacidad de crear un mapa mundial, entre múltiples usuarios conectados. Siendo así capaz de crear experiencias de realidad aumentada mas rápido, que pueden servir por ejemplo para juegos multijugador.
+\end{itemize}
+
+
+
+Solo esta disponible para sistemas iOS 11.0 o superior.
+
+
 \subsection{CoSpaces} CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo educativo. Se puede acceder a ella tanto por web como desde la aplicación de móvil. Permite a los profesores crear salas para sus alumnos donde tendrían acceso a los diferentes ejemplos a usar para sus clases. También cuenta con una galería donde los usuarios pueden compartir sus ejemplos.
 \imagen{cospaces2}{Plataforma de desarrollo de CoSpaces}
 Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scrips, aun que hay que destacar, que la programación por scrips y algunas opciones de la programación de bloques unicamente están disponibles con una licencia premium. Para añadir un modelo3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly(biblioteca publica de google de modelos3D).

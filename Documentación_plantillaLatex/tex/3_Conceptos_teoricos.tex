@@ -133,8 +133,24 @@ Entorno de desarrollo, que se caracteriza porque da la posibilidad de ejecutar e
 	También es posible que el marcador se trate de un objeto físico, como por ejemplo una lampara, o un coche.
 	\imagen{ejemploMarcadorTigre}{Ejemplo donde una carta de un tigre es un marcador \cite{AR_company}.}
 	Aunque gracias al avance de la calidad de las cámaras y del software de reconocimiento, es posible utilizar marcadores mas complejos, esto también implicarán que será mas probable que falle, y por consecuencia se desencuandren las imágenes insertadas por AR, que los tiempos de detección sean mas largos.
-	\colorbox{red}{MEJORAR y Completar si es posible}
 	
+	Se pueden clasificar los marcadores en \cite{linowes_babilinski_2017}:
+	\begin{itemize}
+		\item \subsubsection{Marcadores}El marcador mas básico es uno con un borde ancho. Su ventaja es que minimizan los costes de procesamiento y las posibilidades de error al reconocerlo.
+		\imagenPeque{market}{\cite{linowes_babilinski_2017}}
+		\item \subsubsection{Marcadores Codificados}Se trata de marcadores que poseen códigos de barra 2D, dentro del área de bordes patrones. 
+		\imagen{market2}{\cite{linowes_babilinski_2017}}
+		\item \subsubsection{Imágenes}El poder usar imágenes evita tener que crear marcadores personalizados. El reconocimiento de imágenes entra en la categoría de seguimiento de características naturales. Su calidad como marcador, dependerá de si tiene un borde que defina claramente esa imagen, del contrate de sus colores o la complejidad de su composición.
+		\item \subsubsection{Multiples Marcadores}
+		Es el caso de usar mas de un marcador al mismo tiempo por la misma cámara. Permitiendo así tener distintos objetos en la misma escena simultáneamente. También es posible crearlos formado objetos geométricos, un ejemplo sería el Mergecube.
+		\item \subsubsection{Reconocimiento de texto}
+		Algunos SDK de realidad aumentada cuentan con la capacidad de distinguir textos. La precisión estará influenciada dependiendo del tipo de fuente de las letra. 
+		\item \subsubsection{Formas Simples}
+		Algunas aplicaciones tienen la capacidad de distinguir diferentes formas simples, como son cubos, cilindros.También pueden distinguir las medidas de las formas, pudiendo así diferenciar si un cubo es mas grande que otro.
+		\item \subsubsection{Reconocimiento de objetos}
+		Se trata del siguiente nivel, la capacidad de distinguir objetos. No solo reconocerá e identifica la forma y tamaño del objeto, también detalles característicos que le puedan diferenciar de otro. Vuforia por ejemplo cuenta con una funcionalidad llamada Vuforia Object Scanner, que permite escanear un objeto para una copia digital, que se podría usar como marcador.
+		\imagen{vuforia_recoObjeto}{Vuforia Object Scanner\cite{vuforia_scanner}.}		
+	\end{itemize}
 	\subsubsection{Mergecube}
 	El Mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por Merge , el cual tiene grabado unos dibujos por sus 6 caras, los dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
 	\imagen{mergecube}{Mergecube  \cite{barker_2019}.} 

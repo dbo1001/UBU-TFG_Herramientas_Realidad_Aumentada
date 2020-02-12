@@ -69,13 +69,15 @@ Otros en los que reconoce la cara (facetracking) y es capaz de poner objetos en 
 Posee Word tracking, que en resumen es la capacidad de reconocer el entorno para poder colocar objetos de una manera mas realista sobre el terreno, por ejemplo, que de la sensación de que realmente esta sobre la mesa aunque vayamos moviendo el ángulo de la cámara.
 
 \subsection{Kudan} Kudan\footnote{\href{https://www.xlsoft.com/en/products/kudan/index.html}{kudan}} 
-se trata de un SDK, con la capacidad de soportar AR con marcadores y sin la necesidad de marcadores. 
-Posee soporte para APIs nativas, como ObjetiveC para iOS, Java para Android y Unity.
+se trata de un SDK, con la capacidad de soportar AR con marcadores y sin la necesidad de marcadores. En principio Kudan no tiene un limite de marcadores que pueda detectar al mismo tiempo, pero se puede incluir un limite para que la aplicación tenga un rendimiento adecuado. 
+Posee soporte para APIs nativas, como ObjetiveC para iOS, Java para Android y Unity \cite{kudan_developer_hub}.
 
 El motor de Kudan está escrito en C++ y optimizado con programación en ensamblador, dando un mayor rendimiento y más estable, con el menor impacto de memoria.
 Usa la tecnología SLAM (Simultaneous Localization and Mapping) para el reconocimiento del escenario.
 
-\imagen{marta_2}{Imagen perteneciente a la aplicacion M.A.R.T.A, que funciona con Kudan}
+\imagen{marta_2}{Imagen perteneciente a la aplicación M.A.R.T.A, que funciona con Kudan}
+
+Kudan soporta los siguientes formatos 3D: FBX, OBJ y COLLADA.
 
 \subsection{Vuforia}
 Vuforia\footnote{\url{https://developer.vuforia.com/}} es un kit de desarrollo( SDK) para aplicaciones de AR, para las plataformas de Android, iOS, Windows y HoloLens. Fue creado por Qualcomm Connected Experience en 2010, y en 2015 PTC inc lo compro \cite{simonetti2013vuforia}.
@@ -125,10 +127,20 @@ Es una librería de visión por computación y machine learning, de código abie
 
 
 \subsection{8thWall}
-Entorno de desarrollo, que se caracteriza porque da la posibilidad de ejecutar el proyecto desde el navegador web dándole permiso para usar la cámara del dispositivo, de forma que no haría falta instalarse ninguna aplicación.
+8ThWall\footnote{\url{https://www.8thwall.com/}}
+Entorno de desarrollo de realidad aumentada, que se caracteriza principalmente por el WebAR, que da la posibilidad de ejecutar las imágenes AR a través del propio navegador web del dispositivo, sin tener que instalarse ninguna aplicación extra en el dispositivo. 
+
+Posee las siguientes características:
+\begin{itemize}
+	\item World Tracking: (COMPLETAR)
+	\item Image Targets: 8thWall Web puede detectar y rastrear imágenes y usarlas como marcadores. Cada aplicación puede tener un máximo de 1000 marcadores.
+	\item Modular framework: (COMPLETAR)
+\end{itemize}
 
 
+Tiene soporte con los frameworks 3D A-Frame, three.js, babylon.js, Amazon Sumerian y PlayCanvas.
 
+Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegadores soportados son; Chrome, Chromium,Firefox, Android WebViews.
 
 \section{Técnicas AR}
 	\subsection{Detección de marcadores}

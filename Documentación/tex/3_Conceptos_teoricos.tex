@@ -175,8 +175,10 @@ Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegad
 	La detección del entorno trata de poder reconocer el entorno que la cámara capta y ser capaz de, sin la ayuda de un marcador, poder ubicar los modelos en el escenario.
 	Para esto hay diferentes técnicas, en resumen estas técnicas lo que hacen es detectar los cambios de profundidad de la imagen, y con esos datos evaluar qué objetos están mas o menos cerca, cuáles son planos, si se trata de un objeto que no tiene profundidad(una pared)...
 	\subsubsection{SLAM}
-	Simultaneous Localization and Mapping, se trata de una técnica de reconocimiento del entorno que la cámara visualiza, puede reconocer dónde hay una superficie plana, dónde un pared.
+	Simultaneous Localization and Mapping, se trata de una técnica para estimar los movimientos de los sensores y reconstruir la estructura en un entorno desconocido. Cuando esta técnica se aplica en cámaras, se denomina visual SLAM(vSLAM), ya que se basara en la información visual recibida.
+	La mayoría de herramientas de realidad aumentada, que tienen la capacidad de detectar el entorno sin necesidad de marcadores, se basan en esta técnica.
 	
+	Los algoritmos de vSLAM, no solo son usados unicamente para la AR, también pueden ser aplicados para robótica, o los coches autónomos no tripulados.
 	
 	
 \section{Secciones}

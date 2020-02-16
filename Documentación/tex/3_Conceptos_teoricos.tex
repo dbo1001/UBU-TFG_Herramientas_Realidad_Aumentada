@@ -2,8 +2,8 @@
 
 
 \section{Realidad aumentada y virtual}
-El concepto de realidad aumentada (AR Augmented Reality) se aplica a las tecnologías que permiten añadir información gráfica sobrepuesta al mundo real en pantalla.
-La realidad virtual(RV) se diferencia de la anterior, en que esta crea un entorno virtual completo en el que el usuario se sumerge.
+El concepto de realidad aumentada (AR--Augmented Reality) se aplica a las tecnologías que permiten añadir información gráfica sobrepuesta al mundo real en dispositivos visuales: pantallas, gafas, etc.
+La realidad virtual(RV--Virtuality Reality) se diferencia de la anterior, en que esta crea un entorno virtual completo en el que el usuario se sumerge.
  
 origenes y evolucion...
 
@@ -11,7 +11,7 @@ origenes y evolucion...
 
 
 \section{Herramientas AR}
-Se han comparado diferentes herramientas de desarrollo para realidad aumentada. Algunas de ellas se tratan de herramientas ya desarrolladas y usadas con fines educativos o comerciales. Otras de las herramientas que se ven son los frameworks/api que muchas de las herramientas anteriores usan.
+Se han comparado diferentes herramientas de desarrollo para realidad aumentada. Algunas de ellas se tratan de herramientas ya desarrolladas y usadas con fines educativos o comerciales. Otras de las herramientas que se explican son los frameworks/API que muchas de las herramientas anteriores usan.
 nuevas online, poder la web.. 
 
 \subsection{ArCore}
@@ -24,16 +24,16 @@ Para conseguir integrar el contenido virtual en el mundo real, ArCore utiliza tr
 	\item Estimación de la luz: que permite estimar las condiciones de luz del ambiente.
 \end{itemize}
 
-Su funcionamiento se puede resumir en dos pasos principalmente, rastrear la posición del dispositivo a medida que se mueve y construir su propia comprensión del mundo real.
+Su funcionamiento se puede resumir en dos pasos principalmente: rastrear la posición del dispositivo a medida que se mueve y construir su propia comprensión del mundo real.
 
-ArCore utiliza el motion Tracking para identificar los puntos clave, y rastrea cómo esos puntos se mueven. Combinado el movimiento de dichos puntos con  las lecturas de los sensores de inercia del dispositivo, ArCore calcula la posición y orientación del dispositivo mientras se mueve \cite{google}.
+ArCore utiliza el Motion Tracking para identificar los puntos clave, y rastrea cómo esos puntos se mueven. Combinado el movimiento de dichos puntos con  las lecturas de los sensores de inercia del dispositivo, ArCore calcula la posición y orientación del dispositivo mientras se mueve \cite{google}.
 
 Lamentablemente no es compatible con cualquier dispositivo. En el siguiente enlace se encuentra la lista de los dispositivos compatibles actualmente \url{https://developers.google.com/ar/discover/supported-devices}.
 
 \subsection{ArKit}
 ARKit \footnote{\url{https://developer.apple.com/augmented-reality/}} es la herramienta de realidad aumentada de Apple para sistemas iOS. ARKit consigue mostrar contenido virtual de forma natural en el mudo real, incluso pudiendo situarlo detrás o delante del usuario con People Occlusion, pudiendo reconocer hasta 3 rostros al mismo tiempo \cite{apple_inc}.
 
-Funciones destacadas que posee Arkit actualmente.
+Funciones destacadas que posee ArKit actualmente.
 \begin{itemize}
 	\item Oclusión de personas: es capaz de diferenciar a una persona del fondo del escenario, consiguiendo que el contenido virtual  pueda pasar por delante o por detrás de la persona.
 	\item Captura de movimiento: Tiene la capacidad de capturar los movimientos de una persona. Distinguiendo diferentes posiciones y movimientos al instante, de forma que es capaz de usarlo como referencias para experiencias de AR.
@@ -44,12 +44,12 @@ Funciones destacadas que posee Arkit actualmente.
 
 
 
-Solo esta disponible para sistemas iOS 11.0 o superior.
+Una limitación es que unicamente esta disponible para sistemas iOS 11.0 o superior.
 
 
 \subsection{CoSpaces} CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo educativo. Se puede acceder a ella tanto por web, como desde la aplicación de móvil. Permite a los profesores crear salas para sus alumnos donde tendrían acceso a los diferentes ejemplos a usar para sus clases. También cuenta con una galería donde los usuarios pueden compartir sus ejemplos.
-\imagen{cospaces2}{Plataforma de desarrollo de CoSpaces.}
-Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scripts, aunque hay que destacar, que la programación por scripts y algunas opciones de la programación de bloques únicamente están disponibles con una licencia premium. Para añadir un modelo 3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly(biblioteca publica de google de modelos 3D\footnote{\url{https://poly.google.com/}}).
+\imagen{cospaces2}{Imagen de mi plataforma de desarrollo de CoSpaces.}
+Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D, donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scripts, aunque hay que destacar, que la programación por scripts y algunas opciones de la programación de bloques únicamente están disponibles con una licencia premium. Para añadir un modelo 3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly (biblioteca pública de google de modelos 3D\footnote{\url{https://poly.google.com/}}).
 CoSpace también cuenta con la opción de diseñar proyectos para el Mergecube, aunque este plugin se encuentra disponible para la versión premium.
 
 ...
@@ -57,7 +57,7 @@ CoSpace también cuenta con la opción de diseñar proyectos para el Mergecube, 
 \subsection{Metaverse} Metaverse\footnote{\url{https://studio.gometa.io/discover/me}} es otra aplicación enfocada bastante al entorno educativo. En este caso el entorno de desarrollo de los ejemplos es más sencillo. En la propia web, tendremos una estructura similar un modelo de diagrama de flujo. En cada paso se puede añadir un objeto 3D o una imagen que es la que estará flotando cuando estemos usando la realidad aumentada, posteriormente se pueden añadir botones y menús, para que te lleven a otra pantalla que tenga otro objeto asignado. Así, por ejemplo, se pueden hacer programas en los que se creen pequeños juegos de preguntas y, dependiendo de las respuestas, te llevan a diferentes pantallas.
 También da la posibilidad de importar tus propios modelos e imágenes.
 También incluye la posibilidad de reconocer expresiones faciales para poder usarlo como disparadores.
-También puede usar el Arcore y Arkit para permitir que los objetos puedan asentarse en una posición y poder girar alrededor suyo.
+También puede usar el ArCore y ArKit para permitir que los objetos puedan asentarse en una posición y poder girar alrededor suyo.
 
 \subsection{Zapworks} ZapWorks\footnote{\url{https://zap.works/}}
 Esta aplicación se podría considerar que está más enfocada a lo comercial. Ofrece una prueba gratuita de 30 días, luego hay diferentes modelos de suscripción.
@@ -68,32 +68,32 @@ Algunos ejemplos que muestra son, por ejemplo, el reconocimiento de un folleto d
 Otros en los que reconoce la cara (facetracking) y es capaz de poner objetos en AR, por ejemplo, sombreros, gafas, cascos…
 Posee Word tracking, que en resumen es la capacidad de reconocer el entorno para poder colocar objetos de una manera mas realista sobre el terreno, por ejemplo, que de la sensación de que realmente esta sobre la mesa aunque vayamos moviendo el ángulo de la cámara.
 
-\subsection{Kudan} Kudan\footnote{\href{https://www.xlsoft.com/en/products/kudan/index.html}{kudan}} 
-se trata de un SDK, con la capacidad de soportar AR con marcadores y sin la necesidad de marcadores. En principio Kudan no tiene un limite de marcadores que pueda detectar al mismo tiempo, pero se puede incluir un limite para que la aplicación tenga un rendimiento adecuado. 
+\subsection{Kudan} Kudan\footnote{\url{https://www.xlsoft.com/en/products/kudan/index.html}} 
+se trata de un SDK, con la capacidad de soportar AR tanto con marcadores y como sin ellos. En principio Kudan no tiene un limite de marcadores que pueda detectar al mismo tiempo, pero se puede incluir un limite para que la aplicación tenga un rendimiento adecuado. 
 Posee soporte para APIs nativas, como ObjetiveC para iOS, Java para Android y Unity \cite{kudan_developer_hub}.
 
-El motor de Kudan está escrito en C++ y optimizado con programación en ensamblador, dando un mayor rendimiento y más estable, con el menor impacto de memoria.
+El motor de Kudan está escrito en C++ y optimizado con programación en ensamblador, dando un mayor rendimiento y estabilidad, con el menor impacto de memoria.
 Usa la tecnología SLAM (Simultaneous Localization and Mapping) para el reconocimiento del escenario.
 
-\imagen{marta_2}{Imagen perteneciente a la aplicación M.A.R.T.A, que funciona con Kudan}
+\imagenPeque{marta_2}{Imagen perteneciente a la aplicación M.A.R.T.A, que funciona con Kudan}
 
 Kudan soporta los siguientes formatos 3D: FBX, OBJ y COLLADA.
 
 \subsection{Vuforia}
-Vuforia\footnote{\url{https://developer.vuforia.com/}} es un kit de desarrollo( SDK) para aplicaciones de AR, para las plataformas de Android, iOS, Windows y HoloLens. Fue creado por Qualcomm Connected Experience en 2010, y en 2015 PTC inc lo compro \cite{simonetti2013vuforia}.
+Vuforia\footnote{\url{https://developer.vuforia.com/}} es un kit de desarrollo ( SDK) para aplicaciones de AR, para las plataformas de Android, iOS, Windows y HoloLens. Fue creado por Qualcomm Connected Experience en 2010, y en 2015 PTC inc lo compró \cite{simonetti2013vuforia}.
 
-Vuforia proporciona una API en C++, Java, Objective-C++ y los lenguajes de .NET mediante de Unity.
+Vuforia proporciona una API en C++, Java, Objective-C++ y los lenguajes de .NET mediante Unity.
 
 Vuforia soporta diferentes tipos marcadores, estos pueden ser 2D o 3D, también soporta múltiples marcadores simultáneamente, y reconocimiento del terreno sin marcadores.
 \imagen{vuforia01}{Posibles marcadores de Vuforia}
 
-Los marcadores se pueden crear desde la pagina web de developer vuforia, para ello deben escoger qué tipo de marcadores se quieren crear y adjuntarle las imágenes que formarán dicho marcador. La página dará una calificación de 5 estrellas según la calidad de la imagen para ser un marcador. Una vez completado, da la opción de descargarlos el un archivo configurable de Unity que incluirá los marcadores en nuestro proyecto.
+Los marcadores se pueden crear desde la página web de developer vuforia, para ello deben escoger qué tipo de marcadores se quieren crear y adjuntarle las imágenes que formarán dicho marcador. La página dará una calificación de 5 estrellas según la calidad de la imagen para ser un marcador. Una vez completado, da la opción de descargarlos el un archivo configurable de Unity que incluirá los marcadores en nuestro proyecto.
 
 
 
 Cuenta con una licencia gratuita por defecto, con la limitación de poder tener un máximo de 100 vumarks y 1000 cloud targets.
 
-Actualmente Vuforia esta disponible para las versiones~\cite{vuforia_supported_versions}.
+Actualmente Vuforia esta disponible para las versiones indicadas en la siguiente tabla~\cite{vuforia_supported_versions}.
 \begin{table}[]
 	\begin{tabular}{|l|l|l|l|l|l|}
 		\hline
@@ -127,8 +127,8 @@ Es una librería de visión por computación y machine learning, de código abie
 
 
 \subsection{8thWall}
-8ThWall\footnote{\url{https://www.8thwall.com/}}
-Entorno de desarrollo de realidad aumentada, que se caracteriza principalmente por el WebAR, que da la posibilidad de ejecutar las imágenes AR a través del propio navegador web del dispositivo, sin tener que instalarse ninguna aplicación extra en el dispositivo. 
+8thWall\footnote{\url{https://www.8thwall.com/}}
+es un entorno de desarrollo de realidad aumentada, que se caracteriza principalmente por el WebAR, que da la posibilidad de ejecutar las imágenes AR a través del propio navegador web del dispositivo, sin tener que instalarse ninguna aplicación extra en el dispositivo. 
 
 Posee las siguientes características:
 \begin{itemize}
@@ -144,32 +144,32 @@ Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegad
 
 \section{Técnicas AR}
 	\subsection{Detección de marcadores}
-	La detección de marcadores, se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial, para situar elemento que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras.
-	\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo  \cite{AR_company}}
+	La detección de marcadores se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial, para situar elemento que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras.
+	\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo  \cite{AR_company}.}
 	Con la mejora de las cámaras, también es posible utilizar como marcadores imágenes mas complejas, como por ejemplo un folleto publicitario o la foto de un planeta.
-	También es posible que el marcador se trate de un objeto físico, como por ejemplo una lampara, o un coche.
+	También es posible que el marcador se trate de un objeto físico, como por ejemplo una lámpara, o un coche.
 	\imagen{ejemploMarcadorTigre}{Ejemplo donde una carta de un tigre es un marcador \cite{AR_company}.}
-	Aunque gracias al avance de la calidad de las cámaras y del software de reconocimiento, es posible utilizar marcadores mas complejos, esto también implicarán que será mas probable que falle, y por consecuencia se desencuandren las imágenes insertadas por AR, que los tiempos de detección sean mas largos.
+	Aunque gracias al avance de la calidad de las cámaras y del software de reconocimiento, es posible utilizar marcadores mas complejos, esto también implicarán que será mas probable que falle, y por consecuencia se desencuandren las imágenes insertadas por AR, que los tiempos de detección sean mas largos etc.
 	
 	Se pueden clasificar los marcadores en \cite{linowes_babilinski_2017}:
 	\begin{itemize}
 		\item \subsubsection{Marcadores}El marcador mas básico es uno con un borde ancho. Su ventaja es que minimizan los costes de procesamiento y las posibilidades de error al reconocerlo.
-		\imagenPeque{market}{\cite{linowes_babilinski_2017}}
+		\imagenPeque{market}{Ejemplo de un marcador\cite{linowes_babilinski_2017}.}
 		\item \subsubsection{Marcadores Codificados}Se trata de marcadores que poseen códigos de barra 2D, dentro del área de bordes patrones. 
-		\imagen{market2}{\cite{linowes_babilinski_2017}}
-		\item \subsubsection{Imágenes}El poder usar imágenes evita tener que crear marcadores personalizados. El reconocimiento de imágenes entra en la categoría de seguimiento de características naturales. Su calidad como marcador, dependerá de si tiene un borde que defina claramente esa imagen, del contrate de sus colores o la complejidad de su composición.
+		\imagen{market2}{Ejemplo de marcadores codificados\cite{linowes_babilinski_2017}.}
+		\item \subsubsection{Imágenes}El poder usar imágenes evita tener que crear marcadores personalizados. El reconocimiento de imágenes entra en la categoría de seguimiento de características naturales. Su calidad como marcador, dependerá de si tiene un borde que defina claramente esa imagen, del contraste de sus colores o la complejidad de su composición.
 		\item \subsubsection{Multiples Marcadores}
 		Es el caso de usar mas de un marcador al mismo tiempo por la misma cámara. Permitiendo así tener distintos objetos en la misma escena simultáneamente. También es posible crearlos formado objetos geométricos, un ejemplo sería el Mergecube.
 		\item \subsubsection{Reconocimiento de texto}
 		Algunos SDK de realidad aumentada cuentan con la capacidad de distinguir textos. La precisión estará influenciada dependiendo del tipo de fuente de las letra. 
 		\item \subsubsection{Formas Simples}
-		Algunas aplicaciones tienen la capacidad de distinguir diferentes formas simples, como son cubos, cilindros.También pueden distinguir las medidas de las formas, pudiendo así diferenciar si un cubo es mas grande que otro.
+		Algunas aplicaciones tienen la capacidad de distinguir diferentes formas simples, como son cubos, cilindros. También pueden distinguir las medidas de las formas, pudiendo así diferenciar si un cubo es mas grande que otro.
 		\item \subsubsection{Reconocimiento de objetos}
 		Se trata del siguiente nivel, la capacidad de distinguir objetos. No solo reconocerá e identifica la forma y tamaño del objeto, también detalles característicos que le puedan diferenciar de otro. Vuforia por ejemplo cuenta con una funcionalidad llamada Vuforia Object Scanner, que permite escanear un objeto para una copia digital, que se podría usar como marcador.
-		\imagen{vuforia_recoObjeto}{Vuforia Object Scanner\cite{vuforia_scanner}.}		
+		\imagen{vuforia_recoObjeto}{Vuforia Object Scanner \cite{vuforia_scanner}.}		
 	\end{itemize}
 	\subsubsection{Mergecube}
-	El Mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por Merge , el cual tiene grabado unos dibujos por sus 6 caras, los dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
+	El Mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por Merge, el cual tiene grabado unos dibujos por sus 6 caras, los dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
 	\imagen{mergecube}{Mergecube  \cite{barker_2019}.} 
 	\subsection{Detección del entorno}
 	La detección del entorno trata de poder reconocer el entorno que la cámara capta y ser capaz de, sin la ayuda de un marcador, poder ubicar los modelos en el escenario.

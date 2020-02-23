@@ -3,19 +3,20 @@
 
 \section{Realidad aumentada y virtual}
 El concepto de realidad aumentada (AR--Augmented Reality) se aplica a las tecnologías que permiten añadir información gráfica sobrepuesta al mundo real en dispositivos visuales: pantallas, gafas, etc.
-La realidad virtual(RV--Virtuality Reality) se diferencia de la anterior, en que esta crea un entorno virtual completo en el que el usuario se sumerge.
+La realidad virtual (VR--Virtuality Reality) se diferencia de la anterior, en que esta crea un entorno virtual completo en el que el usuario se sumerge.
  
 origenes y evolucion...
-
+El termino de 
 
 
 
 \section{Herramientas AR}
-Se han comparado diferentes herramientas de desarrollo para realidad aumentada. Algunas de ellas se tratan de herramientas ya desarrolladas y usadas con fines educativos o comerciales. Otras de las herramientas que se explican son los frameworks/API que muchas de las herramientas anteriores usan.
+Se han comparado diferentes herramientas de desarrollo para realidad aumentada. 
+Algunas de ellas se tratan de herramientas ya desarrolladas y usadas con fines educativos o comerciales. Otras de las herramientas que se explican son los frameworks/API que muchas de las herramientas anteriores usan.
 nuevas online, poder la web.. 
 
 \subsection{ArCore}
-ArCore \footnote{\url{https://developers.google.com/ar/discover}} es la plataforma de Google de desarrollo de realidad aumentada. Con el uso de diferentes API permite que los dispositivos detecten su entorno, lo comprendan e interactúen con la información.
+ArCore \footnote{\url{https://developers.google.com/ar/discover}} es la plataforma de Google de desarrollo para realidad aumentada. Con el uso de diferentes API permite que los dispositivos detecten su entorno, lo comprendan e interactúen con la información.
 
 Para conseguir integrar el contenido virtual en el mundo real, ArCore utiliza tres técnicas fundamentales.
 \begin{itemize}
@@ -136,14 +137,14 @@ Los sistemas deberán cumplir los requisitos indicados en el siguiente enlace:\u
 
 
 \subsection{OpenCV}
-Es una librería de visión por computación y machine learning, de código abierto. Permite identificar objetos, caras, hacer tracking..
+OpenCV\footnote{\url{https://opencv.org/}} es una librería de visión artificial y machine learning, de código abierto. Tiene una licencia BSD por lo que facilita su uso y modificación para las empresas. Cuenta con más de 2500 algoritmos optimizados. Estos pueden emplearse para detectar y reconocer rostros, identificación de objetos, clasificar acciones humanas en vídeos, seguir los movimientos de la cámara, rastrear objetos en movimiento, extraer modelos 3D de objetos, producir nubes de puntos 3D de cámaras estéreo, seguir el movimiento de los ojos, reconocer paisajes y establecer marcadores para usarlos en realidad aumentada.
 
-....., pero he visto casos que únicamente utilizan OpenCv, pero también otros en que lo combinan con Arkit, ArUco u otros para mejorar los resultados.
+Esta disponible en interfaces para C++,Python, Java y MATLAB y es compatible con Windows, Linux, Android y Mac OS.
 
 
 \subsection{8thWall}
 8thWall\footnote{\url{https://www.8thwall.com/}}
-es un entorno de desarrollo de realidad aumentada, que se caracteriza principalmente por el WebAR, que da la posibilidad de ejecutar las imágenes AR a través del propio navegador web del dispositivo, sin tener que instalarse ninguna aplicación extra en el dispositivo\cite{8thwall_products}.
+es un entorno de desarrollo de realidad aumentada, que se caracteriza principalmente por el WebAR, que da la posibilidad de ejecutar las imágenes AR a través del propio navegador web del dispositivo, sin tener que instalarse ninguna aplicación extra en el mismo\cite{8thwall_products}.
 
 Posee las siguientes características:
 \begin{itemize}
@@ -159,7 +160,7 @@ Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegad
 
 \section{Técnicas AR}
 	\subsection{Detección de marcadores}
-	La detección de marcadores se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial, para situar elemento que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras.
+	La detección de marcadores se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial, para situar elementos que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras.
 	\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo  \cite{AR_company}.}
 	Con la mejora de las cámaras, también es posible utilizar como marcadores imágenes mas complejas, como por ejemplo un folleto publicitario o la foto de un planeta.
 	También es posible que el marcador se trate de un objeto físico, como por ejemplo una lámpara, o un coche.
@@ -174,7 +175,7 @@ Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegad
 		\imagen{market2}{Ejemplo de marcadores codificados\cite{linowes_babilinski_2017}.}
 		\item \subsubsection{Imágenes}El poder usar imágenes evita tener que crear marcadores personalizados. El reconocimiento de imágenes entra en la categoría de seguimiento de características naturales. Su calidad como marcador, dependerá de si tiene un borde que defina claramente esa imagen, del contraste de sus colores o la complejidad de su composición.
 		\item \subsubsection{Multiples Marcadores}
-		Es el caso de usar mas de un marcador al mismo tiempo por la misma cámara. Permitiendo así tener distintos objetos en la misma escena simultáneamente. También es posible crearlos formado objetos geométricos, un ejemplo sería el Mergecube.
+		Es el caso de usar mas de un marcador al mismo tiempo por la misma cámara. Permitiendo así tener distintos objetos en la misma escena simultáneamente. También es posible crearlos formado objetos geométricos, un ejemplo sería el Mergecube(Inluir referencia merge).
 		\item \subsubsection{Reconocimiento de texto}
 		Algunos SDK de realidad aumentada cuentan con la capacidad de distinguir textos. La precisión estará influenciada dependiendo del tipo de fuente de las letra. 
 		\item \subsubsection{Formas Simples}

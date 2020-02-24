@@ -60,14 +60,23 @@ También da la posibilidad de importar tus propios modelos e imágenes.
 También incluye la posibilidad de reconocer expresiones faciales para poder usarlo como disparadores.
 También puede usar el ArCore y ArKit para permitir que los objetos puedan asentarse en una posición y poder girar alrededor suyo.
 
-\subsection{Zapworks} ZapWorks\footnote{\url{https://zap.works/}}
-Esta aplicación se podría considerar que está más enfocada a lo comercial. Ofrece una prueba gratuita de 30 días, luego hay diferentes modelos de suscripción.
-Ofrece más posibilidades que las anteriores herramientas. Pero también es mas compleja ya que usa su propia aplicación para diseño y programación de ejemplos////REVISARR////.
-Para trabajar con los proyectos tiene su propia aplicación de escritorio, desde donde se pueden crear objetos, mecánicas que quieras incorporar, programar los scripts (javascript) a usar.
+\subsection{Zapworks} ZapWorks\footnote{\url{https://zap.works/}} se trata de una herramienta de desarrollo para AR. En general esta compuesto por dos herramientas de creación, ZapWorks Designer y ZapWorks Studio.
+\begin{itemize}
+	\item ZapWorks Studio: se trata de la aplicación de desarrollo para escritorio. La aplicación permite desarrollar los proyectos AR, con modelos 3D, animaciones, interacciones, etc. Soporta los formatos  GLTF, FBX, OBJ, POD de modelos 3D.
+	\imagen{zapworkStudio}{Imagen perteneciente a la aplicación de ZapWorks Studio\cite{ZapStudio}.}
+	\item ZapWorks Designer: Se trata de una aplicación web, desde la que se puede de una forma sencilla, asociar a un marcador, imágenes, textos, vídeos, links. Pero no es posible trabajar con modelos 3D.
+\end{itemize}	
+La herramienta posee los siguientes tipos de seguimiento de realidad aumentada.
+\begin{itemize}
+	\item Word Tracking: Capacidad de reconocer el entorno para poder colocar objetos de una manera mas realista sobre el terreno, sin la ayuda de marcadores.
+	\item Face Tracking: Capacidad de reconocer y seguir rostros, para por ejemplo colocar, en una cara el contenido AR y que aunque se muevan el contenido se mueva con la cara.
+	\item Image Tracking: Que una imagen pueda ser el marcador, y pueda seguirla en movimiento.
+	\item Zapbox Tracking: \colorbox{red}{COMPLETAR}
+	 
+\end{itemize}
+Para acceder al contenido AR almacenado en el servidor de ZapWorks, utiliza los zapcodes, se tratan una imagen codificada para que pueda descargar un proyecto AR. Una vez que la aplicación reconoce el zapcode, descarga el proyecto y este se ejecutará.
+\imagenPeque{zapcode}{Ejemplo de un zapcode \cite{ZapStudio}.}
 
-Algunos ejemplos que muestra son, por ejemplo, el reconocimiento de un folleto de publicidad que actúa de disparador y salta un modelo 3D del anuncio interactivo. Otro ejemplo es reconociendo una imagen del Sistema Solar consigue que se ejecute un modelo 3D del Sistema Solar. 
-Otros en los que reconoce la cara (facetracking) y es capaz de poner objetos en AR, por ejemplo, sombreros, gafas, cascos…
-Posee Word tracking, que en resumen es la capacidad de reconocer el entorno para poder colocar objetos de una manera mas realista sobre el terreno, por ejemplo, que de la sensación de que realmente esta sobre la mesa aunque vayamos moviendo el ángulo de la cámara.
 
 \subsection{Kudan} Kudan\footnote{\url{https://www.xlsoft.com/en/products/kudan/index.html}} 
 se trata de un SDK, con la capacidad de soportar AR tanto con marcadores y como sin ellos. En principio Kudan no tiene un limite de marcadores que pueda detectar al mismo tiempo, pero se puede incluir un limite para que la aplicación tenga un rendimiento adecuado. 

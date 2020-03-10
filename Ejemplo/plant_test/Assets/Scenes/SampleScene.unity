@@ -2012,6 +2012,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pSystem: {fileID: 1339314486667903815}
   textoAgua: {fileID: 1013521103}
+--- !u!114 &1339314486667903814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339314486667903812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4751d5993bccb14ba2878075361db32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particulas: {fileID: 1339314486667903815}
 --- !u!198 &1339314486667903815 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1339314486523995640, guid: b25bcba941006f347a9b9c538263e514,

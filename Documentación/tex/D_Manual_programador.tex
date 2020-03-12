@@ -1,6 +1,7 @@
 \apendice{Documentación técnica de programación}
 
 \section{Introducción}
+En este apartado se explicaran los pasos para la instalación y ejecución de las herramientas con las que se deberá trabajar.
 
 \section{Estructura de directorios}
 
@@ -17,6 +18,18 @@ En la pestaña de installs, pulsando el botón <<Add>>, saldrá una ventana dond
 
 Una vez terminada la instalación ya es posible comenzar a crear proyectos. 
 Para poder descargar y usar Assets desde la tienda de Unity es necesario tener una cuenta de usuario.
+
+Dado que en el ejemplo realizado en Unity se utiliza Vuforia como herramienta de realidad aumentada, es necesario añadir dicha herramienta al proyecto de Unity en el se trabajará. Para esto hay varios métodos posibles:
+\begin{itemize}
+\item Desde la pestaña de Edit-Project Settings, en el apartado Player-XR Settings, nos encontraremos con varias herramientas que se han instalado por defecto con Unity, marcamos el check de Vuforia y se incluirá automáticamente en nuestro proyecto.
+\imagenPeque{VuforiaPlayer01}{Instalación Vuforia en Unity paso 1.}
+
+\imagenPequeDos{VuforiaPlayer02}{Instalación Vuforia en Unity paso 2.}
+\item Otra opción posible es, desde la pestaña de la tienda de Assests de Unity, podemos buscar Vuforia Core Samples. Aquí la podremos encontrar de forma gratuita para descargar, y el único proceso que tendremos que seguir es presionar el botón de descargar y seguidamente el botón de importar, de esta manera Vuforia quedará importado en nuestro proyecto. Si seguimos estos pasos también se habrán incorporado al proyecto algunos ejemplos ya construidos de las distintas funcionalidades de la herramienta.
+
+\item Por ultimo, con el SDK de Vuforia para Unity, el cual le podemos descargar desde \href{https://developer.vuforia.com/downloads/sdk}{developer Vuforia} si tenemos una cuenta de usuario (Una cuenta gratuita es suficiente). Una vez que le hemos descargado, podemos importarlo en el proyecto ejecutándolo mientras tenemos el proyecto Unity abierto, o simplemente arrastrando el ejecutable dentro del proyecto abierto.	
+\end{itemize}
+
 
 \section{Compilación, instalación y ejecución del proyecto}
 

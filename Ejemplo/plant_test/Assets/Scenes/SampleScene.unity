@@ -1989,6 +1989,11 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.scalar
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 1339314486523995640, guid: b25bcba941006f347a9b9c538263e514,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1339314486332193579, guid: b25bcba941006f347a9b9c538263e514, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b25bcba941006f347a9b9c538263e514, type: 3}

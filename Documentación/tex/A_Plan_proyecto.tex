@@ -10,7 +10,7 @@ En un principio, se ha llevado a cabo una reunión a la semana para cada sprint,
 
 A continuación se explicarán un resumen de los sprints que se han ido desarrollando durante el proyecto.
 
-\subsection{Sprint 0 (-22/01/2020)}
+\subsection{Sprint 0 (15/01/2020-22/01/2020)}
 Durante la primera reunión, estuvimos hablando sobre el objetivo del proyecto, de que visión teníamos sobre él, y de hacia donde le podríamos dirigir.
 Las tareas que se hicieron fueron sobre la creación del repositorio y la instalación de \LaTeX{} para la documentación. También comencé a investigar sobre diferentes herramientas de realidad aumentada de forma general, para poder compararlas y ver las ventajas y desventajas que tienen.
 
@@ -36,17 +36,24 @@ Se estuvo hablando respecto al ejemplo, para empezar ya con el. Sobre la idea de
 Dado que aún la idea parecía algo incompleta y complicada de ajustar a las herramientas de realidad aumentada, vamos a intentar primero un ejemplo mas sencillo, este sería uno en la que poder ver las fases de crecimiento en una <<planta>>. 
 Durante el sprint probare a poder usar la cámara de forma que sea como una regadera, así cuando este encima del Mercube donde estaría la planta virtual, se simule en realidad aumentada, que cae agua desde la cámara del teléfono hacia la planta. Otra forma pensada mas simplificada, sería simplemente añadir en pantalla un botón, que al presionarle se simule que cae agua sobre la planta sin tener que mover el teléfono.
 
-\subsection{Sprint 6 (04/03/2020 -11/03/2020)}
+\subsection{Sprint 6 (04/03/2020 - 11/03/2020)}
 
 Durante la reunión de este sprint mostré los primeros pasos que había realizado del ejemplo a desarrollar en Unity para aplicar herramientas AR. También comenté mis ideas sobre como continuar y los puntos en que me quería centrar durante este sprint.
 
 Centrarme en poder detectar las partículas que simulan ser agua, cuando estas colisionan con un objeto determinado. Y que contando el número de contactos poder determinar la progresión para poder pasar a otra etapa o nivel. También hacer uso del sensor giroscopio del móvil, para determinar con la inclinación del dispositivo la cantidad de partículas que caen.
 
-Como la idea del ejemplo sería seguir el crecimiento de una planta en realidad aumentada desde un punto educativo, pensamos en que aparte de poder echarle agua, también se podría cambiar entre diferentes opciones, como abonos,sulfatos etc, también se podrían considerar establecer normas del tipo, escoger la temporada en la que se planta, si necesita que le quiten malas hiervas, etc. Por lo que habría que incluir una forma de cambiar entre esas diferentes opciones.
+Como la idea del ejemplo sería seguir el crecimiento de una planta en realidad aumentada desde un punto educativo, pensamos en que aparte de poder echarle agua, también se podría cambiar entre diferentes opciones, como abonos, sulfatos, etc. También se podrían considerar establecer normas del tipo, escoger la temporada en la que se planta, si necesita que le quiten malas hiervas, etc. Por lo que habría que incluir una forma de cambiar entre esas diferentes opciones.
 
 Otro de los aspectos que he estado mirando, es mejorar el posicionamiento virtual del objeto 3D en el marcador. Ya que con la primera configuración que he probado, cuando se mueve la cámara (el móvil) el objeto se mueve de su posición demasiado y no queda estable.
 
-\subsection{Sprint 7 (11/03/2020 -18/03/2020)}
+\subsection{Sprint 7 (11/03/2020 - 18/03/2020)}
+Durante la reunión de este sprint , mostré los avances que había realizado sobre el ejemplo de la aplicación. También les explique que estuve realizando varias pruebas añadiendo las funcionalidades del SDK de MergeCube en la aplicación. Consiguiendo mejorar los resultados con el uso conjunto de Vuforia + Mergecube, que anteriormente usando unicamente Vuforia.
+
+Otro de los aspectos tratados fue sobre la herramienta de CoSpace, la necesidad de explicar las ventajas de su uso, para explicar su viabilidad económica.
+
+Durante la semana realice algunos avances en la documentación, y estuve solucionando un bug en el uso del giroscopio. El bug en cuestión se traba de que el eje de gravedad de las partículas, no coincidía con el eje de gravedad normal. El problema resulto ser que, el parámetro <<Simulation Space>> debía de estar con la opción Word. Otro problema de este bug, era que el eje Z, no tenía la interpretación deseada para nuestro ejemplo. Para esto en el script del giroscopio, se modifico para invertir el eje Z.
+ 
+\subsection{Sprint 8 (18/03/2020 - 25/03/2020)}
 
 \section{Estudio de viabilidad}
 
@@ -55,14 +62,14 @@ Otro de los aspectos que he estado mirando, es mejorar el posicionamiento virtua
 En este apartado se evaluara la viabilidad económica de las herramientas que se han investigado.
 
 
-CoSpaces, ofrece varias tarifas aparte de la básica que es gratuita, la más barata de 69,99\euro  anuales y la mas cara es de 1349,99\euro  anuales.
+CoSpaces, ofrece varias tarifas aparte de la básica que es gratuita, la más barata de 69,99\euro{}  anuales y la mas cara es de 1349,99\euro{} anuales.
 
 La tarifa básica, ofrece la creación de una clase con capacidad para 30 personas (alumnos y profesores). En esta clase virtual, el profesor puede crear unicamente una tarea y asignarse al alumnado de forma individual o por grupos. El número máximo de profesores por clase en la tarifa básica es de uno.
 
 La tarifa básica, permite la creación de un máximo de dos espacios, es decir un máximo de dos proyectos. En la creación de ejemplos, estos se encuentran limitados a unos pocos modelos 3D de CoSpace, y a un limitado número de opciones de programación por CoBlocks. En la tarifa básica no es posible realizar proyectos para el MergeCube.
 
-Con la tarifa Pro de 69,99\euro, el número de personas máximas para una clase, aumenta en 5, permitiendo también que haya mas de un profesor en la clase. Permite crear mas de una clase. En el apartado de espacios, la tarifa Pro, permite crear mas de dos espacios, y en estos espacios da acceso a todos los modelos 3D de CoSpace, y permite utilizar en la programación todos los bloques de CoBlocks y scripts.
-Si se desea utilizar el Meregecube, la licencia asciende hasta los 79.99\euro. 
+Con la tarifa Pro de 69,99\euro{}, el número de personas máximas para una clase, aumenta en 5, permitiendo también que haya mas de un profesor en la clase. Permite crear mas de una clase. En el apartado de espacios, la tarifa Pro, permite crear mas de dos espacios, y en estos espacios da acceso a todos los modelos 3D de CoSpace, y permite utilizar en la programación todos los bloques de CoBlocks y scripts.
+Si se desea utilizar el Meregecube, la licencia asciende hasta los 79.99\euro{}. 
 
 El resto de tarifas que posee CoSpaces, su principal característica es el número de personas simultaneas para una clase que puede tener, subiendo en la ultima tarifa hasta 400 personas adicionales.
 

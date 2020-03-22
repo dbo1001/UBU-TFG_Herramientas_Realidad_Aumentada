@@ -36,5 +36,141 @@ En el siguiente apartado se especificarán los requisitos y objetivos del ejempl
 	\item \textbf{RNF 3:} Debe de ser responsiva, pudiéndose adaptar la interfaz, a la pantalla de cualquier dispositivo.
 \end{itemize}
 \section{Especificación de requisitos}
+\subsection{Descripción de los casos de uso}
+%\tablaCasosDeUso{Caso de Uso 1: Menu}{}{}{}
+\subsubsection{Caso de uso 1: Menú}
+\begin{itemize}
+	\item \textbf{Autor:} Saúl Martín Ibáñez
+	\item \textbf{Descripción:} Se crea un menú en el que poder seleccionar distintos modos de juego que pueda haber en la aplicación. Así como para poder configurar algunas de normas o preferencias del usuario.
+	\item \textbf{Precondiciones:} Compatibilidad del dispositivo con la aplicación.
+	\item \textbf{Requisitos:} RF-1.1, RF-1.2, RF-1.3
+	\item \textbf{Acciones:}
+	\begin{enumerate}
+		\item Abrir aplicación.
+		\item Seleccionar modo de juego.
+		\item Ajustar normas de juego a las preferencias que escoja el usuario o a las por defecto.
+	\end{enumerate}
+	\item \textbf{Post Condiciones:} Inicia el modo cámara ¿?
+	\item \textbf{Excepciones:} No hay
+	\item \textbf{Importancia:} media...
+\end{itemize}
+\subsubsection{Caso de uso 2: Botones Herramientas}
+\begin{itemize}
+	\item \textbf{Autor:} Saúl Martín Ibáñez
+	\item \textbf{Descripción:} Se trata de los botones para poder seleccionar las diferentes opciones del modo jugable de la aplicación.
+	\item \textbf{Precondiciones:}
+	\item \textbf{Requisitos:} RF-2
+	\item \textbf{Acciones:}
+	\begin{enumerate}
+		\item Seleccionar el botón de la acción deseada.
+		\item Habilitar la herramienta seleccionada y deshabilitar la anterior. 
+	\end{enumerate}
+	\item \textbf{Post Condiciones:}
+	\item \textbf{Excepciones:}
+	\item \textbf{Importancia:} Alta
+\end{itemize}
+\subsubsection{Caso de uso 3: Atrás}
+ \begin{itemize}
+ 	\item \textbf{Autor:} Saúl Martín Ibáñez
+ 	\item \textbf{Descripción:} Retroceder al menú, para poder volver a seleccionar otro modo.
+ 	\item \textbf{Precondiciones:} Estar en el segundo nivel del menú, o dentro del modo jugable.
+ 	\item \textbf{Requisitos:} RF-3
+ 	\item \textbf{Acciones:}
+ 	\begin{enumerate}
+ 		\item Pulsar el botón de Atrás.
+ 		\item Volver al menú principal.
+ 	\end{enumerate}
+ 	\item \textbf{Post Condiciones:} El usuario ha vuelto a la pantalla del menú.
+ 	\item \textbf{Excepciones:}	
+ 	\item \textbf{Importancia:} Media.
+ \end{itemize}
+\subsubsection{Caso de uso 4: Interfaz}
+\begin{itemize}
+	\item \textbf{Autor:} Saúl Martín Ibáñez
+	\item \textbf{Descripción:} En la interfaz del juego se mostrara el progreso de cada fase, de esta manera el usuario, sabrá cuanto le falta para finalizar la fase en la que se encuentra.
+	\item \textbf{Precondiciones:} Estar en la pantalla del modo jugable.
+	\item \textbf{Requisitos:} RF-4
+	\item \textbf{Acciones:}
+	\begin{enumerate}
+		\item Actualizar visualmente el progreso, cuando el usuario cumpla los requisitos.
+	\end{enumerate}
+	\item \textbf{Post Condiciones:} La interfaz se ha actualizado con éxito.
+	\item \textbf{Excepciones:} La información de la interfaz no se actualiza.
+	\item \textbf{Importancia:} media.
+\end{itemize}
+\subsubsection{Caso de uso 5: Giroscopio}
+\begin{itemize}
+	\item \textbf{Autor:} Saúl Martín Ibáñez
+	\item \textbf{Descripción:} la aplicación puede usar el sensor giroscópico del terminal, para actualizar los vectores de gravedad de objetos de la aplicación.
+	\item \textbf{Precondiciones:}-
+	\item \textbf{Requisitos:} RF-5
+	\item \textbf{Acciones:} No hay.
+	\item \textbf{Post Condiciones:} Se actualizan los vectores de gravedad, según la inclinación del dispositivo.
+	\item \textbf{Excepciones:} El dispositivo no posee del sensor o tiene inhabilitado los permisos.
+	\item \textbf{Importancia:} Media.
+\end{itemize}
+\subsubsection{Caso de uso 6: }
+ \begin{itemize}
+ 	\item \textbf{Autor:} Saúl Martín Ibáñez
+ 	\item \textbf{Descripción:} Al completar una fase ofrecerán datos educativos sobre esa fase. 
+ 	\item \textbf{Precondiciones:}...
+ 	\item \textbf{Requisitos:} RF-7
+ 	\item \textbf{Acciones:}
+ 	\item \textbf{Post Condiciones:} Se ha ofrecido información.
+ 	\item \textbf{Excepciones:} No se ha ofrecido ningún tipo de información de la fase.
+ 	\item \textbf{Importancia:} Media
+ \end{itemize}
+\subsubsection{Caso de uso 7: Ayuda}
+\begin{itemize}
+	\item \textbf{Autor:} Saúl Martín Ibáñez
+	\item \textbf{Descripción:} Ofrecer una guía para los usuarios nobeles o que tengan dudas en las normas y funcionamiento de la aplicación.
+	\item \textbf{Precondiciones:}
+	\item \textbf{Requisitos:} RF-8
+	\item \textbf{Acciones:}
+	\begin{enumerate}
+		\item Seleccionar botón de ayuda.
+		\item En caso de estar en mitad del juego, pausar el progreso y poder continuar después.
+		\item Desplegar una guía con las posibles dudas de utilización de la aplicación que puedan surgir.
+	\end{enumerate}
+	\item \textbf{Post Condiciones:}
+	\item \textbf{Excepciones:} Tener la ayuda ya desplegada.
+	\item \textbf{Importancia:} 
+\end{itemize}
+\subsubsection{Caso de uso 8: Cambiar Idioma}
+\begin{itemize}
+	\item \textbf{Autor:} Saúl Martín Ibáñez
+	\item \textbf{Descripción:} Poder cambiar el idioma de los menús, y demás información textual de la aplicación, entre los idiomas disponibles.
+	\item \textbf{Precondiciones:} No hay.
+	\item \textbf{Requisitos:} RF-9
+	\item \textbf{Acciones:}
+	\begin{enumerate}
+		\item Seleccionar botón de idioma.
+		\item Seleccionar idioma deseado.
+		\item Cambiar el idioma.
+	\end{enumerate}
+	\item \textbf{Post Condiciones:} El idioma de la aplicación ha cambiado satisfactoriamente.
+	\item \textbf{Excepciones:} Ya se encuentra en ese idioma.
+	\item \textbf{Importancia:} Baja.
+\end{itemize}
+\subsubsection{Caso de uso 9: Captura de Pantalla}
+\begin{itemize}
+	\item \textbf{Autor:} Saúl Martín Ibáñez
+	\item \textbf{Descripción:} Poder realizar una foto del instante del juego con realidad aumentada.
+	\item \textbf{Precondiciones:} Estar en el modo realidad aumentada.
+	\item \textbf{Requisitos:} RF-10
+	\item \textbf{Acciones:}
+	\begin{enumerate}
+		\item Presionar el botón de foto.
+		\item Guardar la foto en la galería.
+	\end{enumerate}
+	\item \textbf{Post Condiciones:} La foto se ha guardado con éxito.
+	\item \textbf{Excepciones:} La aplicación no tiene permisos para guardar un archivo.
+	\item \textbf{Importancia:} Baja.
+\end{itemize}
+
+\subsection{Actores}
+\begin{itemize}
+	\item \textbf{Usuario:} usuario que hará uso aplicación.
+\end{itemize}
 
 

@@ -191,7 +191,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2081588773}
+  - {fileID: 374962700}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -212,6 +212,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!21 &206170134
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'mergeP.Right_scaledMaterial
+
+    15542'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: -1, y: -1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!4 &262940348 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1339314486523995647, guid: b25bcba941006f347a9b9c538263e514,
@@ -224,6 +252,34 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1339314486667903811}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &374962700
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'mergeP.Bottom_scaledMaterial
+
+    15542'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: -1, y: -1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &444006945
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,16 +379,16 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!21 &546541731
+--- !u!21 &571447377
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'mergeP.Top_scaledMaterial
+  m_Name: 'mergeP.Back_scaledMaterial
 
-    15518'
+    15542'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -443,6 +499,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630859099}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &642708286
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'mergeP.Top_scaledMaterial
+
+    15542'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: -1, y: -1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +689,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1994656356}
+  - {fileID: 571447377}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -727,7 +811,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 847183460}
+  - {fileID: 1798165241}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -748,34 +832,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!21 &847183460
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'mergeP.Left_scaledMaterial
-
-    15518'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: -1, y: -1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &894317900
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +903,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 546541731}
+  - {fileID: 642708286}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1134,7 +1190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1512018423}
+  - {fileID: 206170134}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1239,6 +1295,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1001924574}
     m_Modifications:
+    - target: {fileID: 4454161756409938147, guid: 83159a856da2fe641bdbe4edf84b1761,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4454161756409938151, guid: 83159a856da2fe641bdbe4edf84b1761,
         type: 3}
       propertyPath: m_Name
@@ -1368,34 +1429,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.44299895, y: 0.44299906, z: 0.57875675}
   m_Center: {x: -0.00000023841858, y: 0, z: 0.28937837}
---- !u!21 &1512018423
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'mergeP.Right_scaledMaterial
-
-    15518'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: -1, y: -1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1614262930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,7 +1536,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1855085210}
+  - {fileID: 1971534692}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1546,6 +1579,110 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &1679647023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1828574492}
+    m_Modifications:
+    - target: {fileID: 8661153274012289892, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473810, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_Name
+      value: Planta1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce48e4a4c302efc4a980306a5565c57b, type: 3}
+--- !u!4 &1679647024 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8661153274116473811, guid: ce48e4a4c302efc4a980306a5565c57b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1679647023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1679647025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8661153274012289892, guid: ce48e4a4c302efc4a980306a5565c57b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1679647023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1679647026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8661153274925016944, guid: ce48e4a4c302efc4a980306a5565c57b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1679647023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1679647027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2515803872329466374, guid: ce48e4a4c302efc4a980306a5565c57b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1679647023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1679647028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9096665277151055689, guid: ce48e4a4c302efc4a980306a5565c57b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1679647023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1705259077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1749,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1798165241
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'mergeP.Left_scaledMaterial
+
+    15542'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: -1, y: -1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1820597999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,10 +1955,11 @@ Transform:
   m_Children:
   - {fileID: 1614262931}
   - {fileID: 1001924574}
+  - {fileID: 1679647024}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1855085210
+--- !u!21 &1971534692
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1802,63 +1968,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 'mergeP.Front_scaledMaterial
 
-    15518'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: -1, y: -1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
---- !u!21 &1994656356
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'mergeP.Back_scaledMaterial
-
-    15518'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: -1, y: -1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
---- !u!21 &2081588773
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'mergeP.Bottom_scaledMaterial
-
-    15518'
+    15542'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2017,6 +2127,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pSystem: {fileID: 1339314486667903815}
   textoAgua: {fileID: 1013521103}
+  fase1: {fileID: 1679647028}
+  fase2: {fileID: 1679647027}
+  fase3: {fileID: 1679647026}
+  fase4: {fileID: 1679647025}
+  regadera: {fileID: 1339314486667903816}
 --- !u!114 &1339314486667903814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2033,6 +2148,12 @@ MonoBehaviour:
 --- !u!198 &1339314486667903815 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1339314486523995640, guid: b25bcba941006f347a9b9c538263e514,
+    type: 3}
+  m_PrefabInstance: {fileID: 1339314486667903811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1339314486667903816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1339314486326864655, guid: b25bcba941006f347a9b9c538263e514,
     type: 3}
   m_PrefabInstance: {fileID: 1339314486667903811}
   m_PrefabAsset: {fileID: 0}

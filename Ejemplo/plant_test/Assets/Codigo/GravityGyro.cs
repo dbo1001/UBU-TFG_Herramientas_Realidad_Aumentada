@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class GravityGyro : MonoBehaviour
 {
+    
     public ParticleSystem particulas;
-    //public Text ejes;
+    public Text ejes;
     // Start is called before the first frame update
     /*public int x;
     public int y;
@@ -38,6 +39,7 @@ public class GravityGyro : MonoBehaviour
         if (Input.gyro.gravity.z < 0)
             pos.z = pos.z * (-1);
         Physics.gravity = pos;
+
         
     }
 }

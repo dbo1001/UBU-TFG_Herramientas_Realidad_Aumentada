@@ -22,7 +22,17 @@ public class ControladorAR : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    
+    public void ActivarDesactivarHerramienta(GameObject objeto)
+    {
+        if (objeto.active is true)
+        {
+            objeto.SetActive(false);
+        }
+        else
+        {
+            objeto.SetActive(true);
+        }
+    }
 
-    
+
 }

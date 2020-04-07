@@ -1862,6 +1862,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c7a44c8e3d1b440ba60a44aeb0afe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  regadera: {fileID: 1339314486667903816}
+  ventama: {fileID: 1796885458}
 --- !u!4 &1201102598
 Transform:
   m_ObjectHideFlags: 0
@@ -2503,6 +2505,11 @@ PrefabInstance:
     - target: {fileID: 2334048992064065574, guid: 95fc6354c02f1db4a82c7e2755b8cde7,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2334048992455054517, guid: 95fc6354c02f1db4a82c7e2755b8cde7,
+        type: 3}
+      propertyPath: m_Horizontal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2334048992869312318, guid: 95fc6354c02f1db4a82c7e2755b8cde7,
@@ -3790,7 +3797,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1735273548783399170}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1201102597}
+        m_MethodName: ActivarDesactivarHerramienta
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1339314486667903816}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1735273548783399175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3804,7 +3822,7 @@ GameObject:
   - component: {fileID: 1735273548783399170}
   - component: {fileID: 1735273548783399173}
   m_Layer: 5
-  m_Name: Button
+  m_Name: bRegadera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

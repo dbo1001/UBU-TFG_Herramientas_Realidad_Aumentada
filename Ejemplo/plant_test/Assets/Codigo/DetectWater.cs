@@ -21,6 +21,7 @@ public class DetectWater : MonoBehaviour
     public GameObject fase4;
     public GameObject regadera;
     bool flag = true;
+    bool fertilizanteUse = false;
 
     // Start is called before the first frame update
     void Start()
@@ -49,23 +50,26 @@ public class DetectWater : MonoBehaviour
         agua = agua + pSystem.GetCollisionEvents(other, collisionEvents);
         ActualizarHud();
     }
+
     void ActualizarHud()
     {
         //agua = agua + agua;
         textoAgua.text = "Agua: " + agua;
         
         ActualizarProgreso(agua);
-        if (agua >= 5000)
+        if (agua >= 5000 & fertilizanteUse == true)
         {
             agua = 0;
             if (flag == true)
             {
                 flag = false;
+                fertilizanteUse = false;
                 fase1.SetActive(true);
                 ActualizarProgreso(0);
             }
             else if (fase1.active)
             {
+                fertilizanteUse = false;
                 fase1.SetActive(false);
                 fase2.SetActive(true);
                 ActualizarProgreso(0);
@@ -73,6 +77,7 @@ public class DetectWater : MonoBehaviour
             }
             else if (fase2.active)
             {
+                fertilizanteUse = false;
                 fase2.SetActive(false);
                 fase3.SetActive(true);
                 ActualizarProgreso(0);
@@ -80,6 +85,7 @@ public class DetectWater : MonoBehaviour
             }
             else if (fase3.active)
             {
+                fertilizanteUse = false;
                 fase3.SetActive(false);
                 fase4.SetActive(true);
                 regadera.SetActive(false);
@@ -89,6 +95,12 @@ public class DetectWater : MonoBehaviour
             
         }
     }
+
+    public void FertilizanteUsado()
+    {
+         fertilizanteUse = true;
+    }
+
     public void ActualizarProgreso(float amount)
     {
         agua2 = ((amount * maxPro) / 5000);

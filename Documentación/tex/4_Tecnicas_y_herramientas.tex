@@ -24,6 +24,24 @@ La otra posibilidad para programar que ofrece CoSpaces, se trata de elaborar scr
 CoSpaces también da la posibilidad de crear espacios de trabajo para alumnos, en estos espacios se puede asignar tareas a los alumnos.
 \subsection{Ejemplo Unity}
 
+Para el desarrollo se ha encogido Unity como motor gráfico. Esto se debe a que es un motor gratuito y que goza de grandes características y utilidades. Dadas sus grandes características es uno de los mas utilizados, y la gran mayoría de herramientas de realidad aumentada tienen soporte para Unity.
+
+El proceso para crear un proyecto es, desde Unity HUb escoger que tipo de proyecto crear, uno 2D, 3D, etc. En nuestro caso nos interesa un proyecto en 3D. Escogemos la ruta en la que se desea guardar el proyecto y adelante.
+Una vez se ha generado el entorno deberemos hacer las configuraciones iniciales, que son cambiar el proyecto de un proyecto pensado para Windows, a Android que el entorno para el que crearemos la aplicación inicialmente. Para ello vamos a la pestaña File, Build Settings, desde aquí encontraremos la opción para que tipo de plataforma queremos que sea nuestro proyecto, en nuestro caso nos interesa Android.
+El segundo paso será añadir el paquete de Vuforia para usar sus extensiones, hay dos opciones: desde la propia Unity si la versión en la que se trabaja lo tiene incluido,desde la pestaña Edit, Project Settings, en Player dentro de la opciones al final se encuentra el apartado XR Settings y desde aquí se puede activar el check de Vuforia que procederá a instalarse, o bien la segunda opción sería importando el SDK de Vuforia que se puede conseguir en su pagina de developer\footnote{\url{https://developer.vuforia.com/downloads/sdk}}. En la versión de Unity 2019.2 contiene la versión  de Vuforia 8.5.
+Debido a que importe un ejemplo que ofrece la compañía, actualice la versión de Vuforia hasta la 8.6.10. Antes de intentar realizar una actualización de Vuforia, hay que tener en cuenta de que sea compatible con la versión de Unity, ya que puede darse el caso de que para actualizar Vuforia sea necesario también actualizar la versión de Unity, y esto si el proyecto ya está avanzado podría conllevar problemas de compatibilidad.
+En mi caso he decido seguir en la versión 2019.2... de Unity y 8.6.1 de Vuforia.
+
+El proceso para instalar el paquete de Vuforia y iniciar un proyecto no es muy complicado, por lo que prácticamente cualquier usuario siguiendo los pasos.
+
+El segundo paso en la aplicación sería empezar a construirla. Para empezar en el proyecto los dos elementos mas importantes serán incluir la cámara de realidad aumentada de Vuforia, y el multitarget que podamos diseñar para reconocer el MergeCube. El proyecto creado por Unity lleva por defecto una cámara normal, como para nuestra aplicación no la utilizaremos la podemos borrar.
+Para añadir la cámara hacemos click derecho, Vuforia Engine, y escogemos AR Camera.
+
+Un problema que tiene el realizar una aplicación para móviles, es que cada vez que se quiera hacer una prueba en el dispositivo es necesario compilar al apk .... Este proceso para hacer pruebas puntales no tiene un gran impacto en cuanto esfuerzo y tiempo invertido, pero si es necesario hacer muchas pruebas, por que por ejemplo hay un bug especifico que unicamente ocurre en el dispositivo móvil, el impacto en tiempo invertido en compilar será considerable.
+
+
+
+
 \section{Herramientas de documentación}
 \subsection{LaTex}
 Se trata de un sistema de composición de textos, con el objetivo de la creación de documentos de alta calidad tipográfica.

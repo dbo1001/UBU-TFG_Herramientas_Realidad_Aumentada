@@ -25,7 +25,7 @@ public class DeviceTrackable : MonoBehaviour
     Timer relocalizationStatusDelayTimer;
     Timer resetDeviceTrackerTimer;
     #endregion // PRIVATE_MEMBERS
-    
+    public UnityEngine.UI.Image fondoDeviceTracker;
 
     #region UNITY_MONOBEHAVIOUR_METHODS
 
@@ -168,6 +168,7 @@ public class DeviceTrackable : MonoBehaviour
                 {
                     if (this.positionalDeviceTracker.Start())
                     {
+                        fondoDeviceTracker.color = new Color32(0,205,40,255);
                         Debug.Log("Successfully started device tracker");
                     }
                     else
@@ -179,6 +180,7 @@ public class DeviceTrackable : MonoBehaviour
             else if (this.positionalDeviceTracker.IsActive)
             {
                 this.positionalDeviceTracker.Stop();
+                fondoDeviceTracker.color = new Color32(255, 255, 255, 255);
 
                 Debug.Log("Successfully stopped device tracker");
             }

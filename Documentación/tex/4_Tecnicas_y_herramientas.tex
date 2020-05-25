@@ -26,16 +26,38 @@ CoSpaces también da la posibilidad de crear espacios de trabajo para alumnos, e
 
 Para el desarrollo se ha encogido Unity como motor gráfico. Esto se debe a que es un motor gratuito y que goza de grandes características y utilidades. Dadas sus grandes características es uno de los mas utilizados, y la gran mayoría de herramientas de realidad aumentada tienen soporte para Unity.
 
-El proceso para crear un proyecto es, desde Unity HUb escoger que tipo de proyecto crear, uno 2D, 3D, etc. En nuestro caso nos interesa un proyecto en 3D. Escogemos la ruta en la que se desea guardar el proyecto y adelante.
-Una vez se ha generado el entorno deberemos hacer las configuraciones iniciales, que son cambiar el proyecto de un proyecto pensado para Windows, a Android que el entorno para el que crearemos la aplicación inicialmente. Para ello vamos a la pestaña File, Build Settings, desde aquí encontraremos la opción para que tipo de plataforma queremos que sea nuestro proyecto, en nuestro caso nos interesa Android.
+El proceso para crear un proyecto es, desde Unity HUb escoger que tipo de proyecto crear, uno 2D, 3D, etc. En nuestro caso nos interesa un proyecto en 3D. Escogemos la ruta en la que se desea guardar el proyecto y procedemos a crear el proyecto.
+
+Una vez se ha generado el entorno deberemos hacer las configuraciones iniciales, en primer lugar se deberá cambiar la plataforma para la que se compilara el proyecto de Windows a Android, este paso permitirá que al construir el ejecutable este sea para Android. Para ello vamos a la pestaña File, Build Settings, desde aquí encontraremos que se encuentra seleccionada Windows de forma predeterminada, cambiamos a Android.
+
 El segundo paso será añadir el paquete de Vuforia para usar sus extensiones, hay dos opciones: desde la propia Unity si la versión en la que se trabaja lo tiene incluido,desde la pestaña Edit, Project Settings, en Player dentro de la opciones al final se encuentra el apartado XR Settings y desde aquí se puede activar el check de Vuforia que procederá a instalarse, o bien la segunda opción sería importando el SDK de Vuforia que se puede conseguir en su pagina de developer\footnote{\url{https://developer.vuforia.com/downloads/sdk}}. En la versión de Unity 2019.2 contiene la versión  de Vuforia 8.5.
 Debido a que importe un ejemplo que ofrece la compañía, actualice la versión de Vuforia hasta la 8.6.10. Antes de intentar realizar una actualización de Vuforia, hay que tener en cuenta de que sea compatible con la versión de Unity, ya que puede darse el caso de que para actualizar Vuforia sea necesario también actualizar la versión de Unity, y esto si el proyecto ya está avanzado podría conllevar problemas de compatibilidad.
-En mi caso he decido seguir en la versión 2019.2... de Unity y 8.6.1 de Vuforia.
+En mi caso he decido seguir en la versión 2019.2.19f1 de Unity y 8.6.1 de Vuforia.
 
-El proceso para instalar el paquete de Vuforia y iniciar un proyecto no es muy complicado, por lo que prácticamente cualquier usuario siguiendo los pasos.
+El proceso para instalar el paquete de Vuforia y iniciar un proyecto no es muy complicado, por lo que prácticamente cualquier usuario siguiendo los pasos podrá completarlo sin problemas.
 
-El segundo paso en la aplicación sería empezar a construirla. Para empezar en el proyecto los dos elementos mas importantes serán incluir la cámara de realidad aumentada de Vuforia, y el multitarget que podamos diseñar para reconocer el MergeCube. El proyecto creado por Unity lleva por defecto una cámara normal, como para nuestra aplicación no la utilizaremos la podemos borrar.
-Para añadir la cámara hacemos click derecho, Vuforia Engine, y escogemos AR Camera.
+El segundo paso en la aplicación sería empezar a construirla. 
+Los primeros elementos ha incluir en el proyecto serán la ARcamera y el Multitarget.
+La ARcamera se trata de la cámara diseñada por Vuforia para el uso de realidad aumentada, y el Multitarget se trata del elemento en el se establecerá que targets se reconocerán y sobre donde se construiran los objetos de realidad aumentada.
+El proyecto creado por Unity lleva por defecto una cámara normal, como para nuestra aplicación no la utilizaremos la podemos borrar.
+Para añadir la ARcamara hacemos click derecho, Vuforia Engine, y escogemos AR Camera. Se deberá configurar la ARcamara añadiendo la license key que nos proporciona Vuforia.
+
+Para añadir el multiTarget hay que seguir un proceso similar. La diferencia esta en su configuración. En nuestro caso queremos que el multiTarget tenga como target el MergeCube, para ello en la pagina de developer de Vuforia\footnote{\url{https://developer.vuforia.com}} podremos crear el multiTarget (añadiendo las 6 imágenes del modelo que queremos que sea), descargarlo e importarlo a nuestro proyecto. 
+Click derecho, Vuforia Engine, y escogemos multiTarget, podremos apreciar que el cubo tiene las imágenes que habíamos configurado. Hay que asegurarse de que el cubo este en el campo visual de la cámara en la escena del proyecto, de lo contrario no se podrá reconocer al ejecutarse. Será en este elemento al que tendremos que asociar los modelos que queremos que se muestren en el Mergecube al enfocar nuestro dispositivo al MergeCube.
+
+Con estos dos elementos ya creados se pude proceder a construir la aplicación. El primer elemento que contruir será el un cubo que sera el esqueleto visual. Incluimos un un cubo 3D en la escena y se lo asignamos como elemento hijo al Multitarget. Hay que asegurarse de que estén situados la misma posición, de lo contrarío al ejecutar la aplicación y detectar el Mergecube, el cubo 3D creado no aparecerá en el propio Mergecube.
+
+Dado que queremos representar el crecimiento de un planta debo buscar algún modelo 3D de plantas para Unity, en este caso les buscaré la tienda de Assest de Unity, con el filtro de los assests gratuitos. Aunque no hay demasiados modelos gratuitos, si que he podido encontrar algunos que puedan servir para realizar el ejemplo de la aplicación. Una vez se seleccionado un modelo que nos interese, se importa en el proyecto desde las assets store, y cuando se añada en la escena se deberá incluir como hijo del cubo. El tema de incluir un elemento como hijo de otro es objetivo de mantener un orden y que si realizamos por ejemplo un cambio de posición o de escala en el padre, ese cambio también afectará al hijo, de lo contrarío al realizar uno de esos ajustes habría que repetirlo para el otro modelo o de lo contrario se desajustarían.
+
+Para representar el crecimiento se representara el movimiento de regar la planta echando agua sobre la planta. Para representar esto lo primero que he buscado es un modelo 3D para representar una regadera en la assest store. Una vez encontrado el modelo, le importamos en el proyecto, dado que la idea ha representar es que el movimiento del móvil sea el movimiento como mover la regadera, se debe poner el el modelo como hijo de la ARcamara, de esta manera al mover el teléfono la regadera seguirá el mismo movimiento. Al realizarlo de esta manera hay que prestar atención en que coordenada se coloca, es necesario colocarlo ha cierta distancia de la cámara para que se aprecie cierta distancia, esto se puede ir probando posiciones hasta dar con una que nos parezca correcta. Para añadir el efecto de agua, he usado efectos de partículas de Unity. En la configuración de las partículas de agua, hay que activar el modificador de gravedad dándole un valor de 10, y el tipo de espacio simulado en World, el número máximo de partículas también le he aumentado hasta 10000 y cambiar el color de la partícula por un azul. También es posible añadir un assest a las partículas para dar mayor efecto, pero de los que he encontrado de forma gratuita no me convencían por lo que de momento lo dejaré así. Ahora el problema está en que las partículas siempre caen en la misma inclinación sin importar la posición del dispositivo, para conseguir usar el giroscopio de dispositivo he creado un Script que detecta el giroscopio y ajusta el eje de gravedad según los movimientos del dispositivo. Este proceso fue algo tedioso debido al tener que estar compilando y pasando la aplicación al dispositivo para probar que funcionaba correctamente. Un detalle a tener en cuenta es que el eje Z del giroscopio hay que invertirlo (multiplicar por -1) para conseguir el efecto deseado.
+
+Para detectar y contar el número de partículas que colisionan con la planta, he creado otro scipt que suma cada colision y va actualizando una barra de progreso en la interfaz.
+
+
+Al crear la interfaz...
+uno de los problemas que mas habitualmente he tenido con la interfaz se trata que dependiendo de en que dispositivo o resolución se ejecute, hay elemento que se mueven y no están en su posición correcta. Esto se debe a la forma de centrar su punto de referencia de localización. Por defecto los elemento su punto de referencia es el centro respecto a su elemento padre, dependiendo de su localización habrá que cambiarlo al mas adecuado, para que se referencia a la esquina o a la distancia entre la parte superior e inferior.... etc.
+
+
 
 Un problema que tiene el realizar una aplicación para móviles, es que cada vez que se quiera hacer una prueba en el dispositivo es necesario compilar al apk .... Este proceso para hacer pruebas puntales no tiene un gran impacto en cuanto esfuerzo y tiempo invertido, pero si es necesario hacer muchas pruebas, por que por ejemplo hay un bug especifico que unicamente ocurre en el dispositivo móvil, el impacto en tiempo invertido en compilar será considerable.
 
@@ -46,10 +68,21 @@ Un problema que tiene el realizar una aplicación para móviles, es que cada vez
 
 -
 
-Para la implementación de las funcionalidades de Device Tracker y crear target personalizados, me basare en los que ofrece Vuforia en su ejemplo\footnote{\url{https://assetstore.unity.com/packages/templates/packs/vuforia-core-samples-99026}} utilizando de base sus mismos scripts, adaptando les a las necesidades del ejemplo desarrollado.
+Para la implementación de las funcionalidades de Device Tracker y crear target personalizados, me basare en el material que ofrece Vuforia en su ejemplo\footnote{\url{https://assetstore.unity.com/packages/templates/packs/vuforia-core-samples-99026}} utilizando de base sus mismos scripts, adaptando les a las necesidades del ejemplo desarrollado.
 
-Para la captura de un target personalizado, hay que crear en la interfaz una señal que indique que el objetivo que se desea transformar en un target tiene una calidad suficiente. Esto puede realizarse mediante una representación de tres colores, como un semáforo. Después hay que añadir en el proyecto un ImagenTarget y configurarlo en el Inspector y definirlo como tipo de User Defined. Es muy importante asegurase de que el ImagenTarget está situado en el campo de visión de la ARcamera, o de lo contrario será imposible reconocerle. Seguido hay que añadir CameraImageBuilder que es el encargado de construir el target temporal. Ahora el paso ha seguir es de asginar a los componentes creados sus respectivos scripts, durante este proceso en mi primer intento Unity tuvo algún fallo y corrompió el proyecto, haciendo imposible asociar ningún script y ademas los que estaban asociados anteriormente también fallaban. Para solucionar el bug probé dos posibles soluciones: borrar los metadatos y reimportar todo el proyecto, por desgracia ninguno funciono por lo que tuve que volver a una copia de seguridad.
-Para implementar el Device tracker hay que crear un botón para poder activarlo y desactivarlo, y añadir el correspondiente script de deviceTracker.
+Para la captura de un target personalizado, hay que crear en la interfaz una señal que indique la calidad del objetivo que se desea transformar en un target.
+Esto puede realizarse mediante una representación de tres colores, como un semáforo.
+Después hay que añadir en el proyecto un ImagenTarget de Vuforia() y configurarlo definiendo el tipo de imagen target que es como User Defined. El ImagenTarget será la referencia de Unity para colocar el modelo 3D por ello es muy importante asegurase de que el ImagenTarget está situado en el campo de visión de la ARcamera, o de lo contrario será imposible reconocerle. 
+Seguido hay que añadir CameraImageBuilder que es el encargado de construir el target temporal. 
+Ahora el paso ha seguir es de asignar a los componentes creados sus respectivos scripts que contralan las funciones. 
+
+Durante este proceso en mi primer intento Unity tuvo algún fallo y corrompió el proyecto. Haciendo imposible asociar ningún script y ademas los que estaban asociados anteriormente también fallaban impidiendo su uso. Para solucionar el bug probé dos posibles soluciones: borrar los metadatos y reimportar todo el proyecto, por desgracia ninguno funciono por lo que tuve que volver a una copia de seguridad.
+
+
+Para implementar el Device tracker hay que crear un botón para poder activarlo y desactivarlo, y añadir el correspondiente script de DeviceTracker.
+
+
+Para la mejorar la interfaz, estoy añadiendo efectos de movimiento en algunos de los menús, cambiando fonts y skins. Por ejemplo el menú que se despliega al mostrar las herramientas antes simplemente aparecía y desaparecía, ahora he añadido la animación para que se despliegue desde el marco derecho de la pantalla.
 
 
 

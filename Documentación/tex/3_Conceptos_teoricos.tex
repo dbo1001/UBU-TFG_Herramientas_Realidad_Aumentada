@@ -2,20 +2,40 @@
 
 
 \section{Realidad aumentada y virtual}
+
 El concepto de realidad aumentada (AR--Augmented Reality) se aplica a las tecnologías que permiten añadir información gráfica sobrepuesta al mundo real en dispositivos visuales: pantallas, gafas, etc.
 La realidad virtual (VR--Virtuality Reality) se diferencia de la anterior, en que esta crea un entorno virtual completo en el que el usuario se sumerge.
  
 origenes y evolucion...
-El termino de 
 
+El concepto de realidad aumentada fue utilizado por primera vez en 1901 por Frank L Baum en su novela The Master Key( ref), en ella presenta una historia que a un niño le otorgan un regalo, que son como unas gafas que da a entender un concepto de realidad aumentada.
 
+Décadas mas tarde Morton Helling conocido como el padre de la realidad virtual, invento el Sensorama en 1957 y lo patento en 1962
+, una maquina que intentaba una mayor inmersión con la combinación de una pantalla, ventiladores, olores, una silla que se movía y sonido estero. Morton también diseño TELESPHERE MASK, un aparato que recuerda mucho a las gafas de realidad virtual que conocemos hoy en día.
 
+\imagen{Sensorama}{ Sensorama \cite{ARhistory}}
+
+En 1968 el profesor Ivan Sutherland junto a su estudiante Bob Sproull, Quintin Foster and Danny Cohen desarrollaron el considerado el primer sistema de realidad aumentada. Se conectaba a un ordenador para generar los gráficos. En este enlace se puede ver una demostración: \url{https://www.youtube.com/watch?v=Xd1DgzPPH_Q}.
+
+\imagen{EspadaDeDamocles}{La espada de Damocles \cite{EspadaDamocles}}
+
+En 1975 Myron Krueger creo VideoPlace, un sistema con el que lograba que el usuario pudiera interaccionar con la pantalla y moviendo objetos en en tiempo real.\cite{ARevolution}
+
+En 1980 Stve Mann un investigador de fotografía computacional ofreció el concepto de wearable computing. 
+
+En 1981 Dan Reitan realiza por primera vez la complementación de símbolos meteorológicos para las retransmisiones meteorológicas.
+
+Ya en la década de los 90, Tom Caudell utiliza el termino realidad aumentada para referirse a los dispositivos que exponían un esquema de montaje sobre las piezas para facilitar el proceso de montaje. 
+
+continuar...
 \section{Herramientas AR}
+
 Se han comparado diferentes herramientas de desarrollo para realidad aumentada. 
 Algunas de ellas se tratan de herramientas ya desarrolladas y usadas con fines educativos o comerciales. Otras de las herramientas que se explican son los frameworks/API que muchas de las herramientas anteriores usan.
  
 
 \subsection{ArCore}
+
 ArCore \footnote{\url{https://developers.google.com/ar/discover}} es la plataforma de Google de desarrollo para realidad aumentada. Con el uso de diferentes API permite que los dispositivos detecten su entorno, lo comprendan e interactúen con la información.
 
 Para conseguir integrar el contenido virtual en el mundo real, ArCore utiliza tres técnicas fundamentales:
@@ -32,9 +52,11 @@ ArCore utiliza el Motion Tracking para identificar los puntos clave, y rastrea c
 Lamentablemente no es compatible con cualquier dispositivo. En el siguiente enlace se encuentra la lista de los dispositivos compatibles actualmente \url{https://developers.google.com/ar/discover/supported-devices}.
 
 \subsection{ArKit}
+
 ARKit \footnote{\url{https://developer.apple.com/augmented-reality/}} es la herramienta de realidad aumentada de Apple para sistemas iOS. ARKit consigue mostrar contenido virtual de forma natural en el mudo real, incluso pudiendo situarlo detrás o delante del usuario con People Occlusion, pudiendo reconocer hasta 3 rostros al mismo tiempo \cite{apple_inc}.
 
 Funciones destacadas que posee ArKit actualmente.
+
 \begin{itemize}
 	\item Oclusión de personas: es capaz de diferenciar a una persona del fondo del escenario, consiguiendo que el contenido virtual  pueda pasar por delante o por detrás de la persona.
 	\item Captura de movimiento: Tiene la capacidad de capturar los movimientos de una persona. Distinguiendo diferentes posiciones y movimientos al instante, de forma que es capaz de usarlo como referencias para experiencias de AR.
@@ -48,53 +70,69 @@ Funciones destacadas que posee ArKit actualmente.
 Una limitación es que únicamente esta disponible para sistemas iOS 11.0 o superior.
 
 
-\subsection{CoSpaces}\label{sub:Def_cospace} CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo educativo. Se puede acceder a ella tanto por web, como desde la aplicación de móvil. Permite a los profesores crear salas para sus alumnos donde tendrían acceso a los diferentes ejemplos a usar para sus clases. También cuenta con una galería donde los usuarios pueden compartir sus ejemplos.
+\subsection{CoSpaces}\label{sub:Def_cospace} 
+
+CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo educativo. Se puede acceder a ella tanto por web, como desde la aplicación de móvil. Permite a los profesores crear salas para sus alumnos donde tendrían acceso a los diferentes ejemplos a usar para sus clases. También cuenta con una galería donde los usuarios pueden compartir sus ejemplos.
+
 \imagen{cospaces2}{Imagen de mi plataforma de desarrollo de CoSpaces.}
+
 Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D, donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scripts, aunque hay que destacar, que la programación por scripts y algunas opciones de la programación de bloques únicamente están disponibles con una licencia premium. Para añadir un modelo 3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly (biblioteca pública de google de modelos 3D\footnote{\url{https://poly.google.com/}}).
 CoSpace también cuenta con la opción de diseñar proyectos para el Mergecube, aunque este plugin se encuentra disponible para la versión premium.
 
 ...
 
-\subsection{Metaverse} Metaverse\footnote{\url{https://studio.gometa.io/discover/me}} es otra aplicación enfocada bastante al entorno educativo. En este caso el entorno de desarrollo de los ejemplos es más sencillo. En la propia web, tendremos una estructura similar a un modelo de diagrama de flujo. En cada paso se puede añadir un objeto 3D o una imagen que es la que estará flotando cuando estemos usando la realidad aumentada, posteriormente se pueden añadir botones y menús, para que te lleven a otra pantalla que tenga otro objeto asignado. Así, por ejemplo, se pueden hacer programas en los que se creen pequeños juegos de preguntas y, dependiendo de las respuestas, te llevan a diferentes pantallas.
+\subsection{Metaverse} 
+
+Metaverse\footnote{\url{https://studio.gometa.io/discover/me}} es otra aplicación enfocada bastante al entorno educativo. En este caso el entorno de desarrollo de los ejemplos es más sencillo. En la propia web, tendremos una estructura similar a un modelo de diagrama de flujo. En cada paso se puede añadir un objeto 3D o una imagen que es la que estará flotando cuando estemos usando la realidad aumentada, posteriormente se pueden añadir botones y menús, para que te lleven a otra pantalla que tenga otro objeto asignado. Así, por ejemplo, se pueden hacer programas en los que se creen pequeños juegos de preguntas y, dependiendo de las respuestas, te llevan a diferentes pantallas.
 Además da la posibilidad de importar tus propios modelos e imágenes.
 También incluye la posibilidad de reconocer expresiones faciales para poder usarlo como disparadores.
 Otra característica es que puede usar el ArCore y ArKit para permitir que los objetos puedan asentarse en una posición y poder girar alrededor suyo.
 
 \subsection{Zapworks} ZapWorks\footnote{\url{https://zap.works/}} se trata de una herramienta de desarrollo para AR. En general esta compuesto por dos herramientas de creación, ZapWorks Designer y ZapWorks Studio.
+
 \begin{itemize}
 	\item ZapWorks Studio: se trata de la aplicación de desarrollo para escritorio. La aplicación permite desarrollar los proyectos AR, con modelos 3D, animaciones, interacciones, etc. Soporta los formatos  GLTF, FBX, OBJ, POD de modelos 3D.
 	\imagen{zapworkStudio}{Imagen perteneciente a la aplicación de ZapWorks Studio\cite{ZapStudio}.}
 	\item ZapWorks Designer: Se trata de una aplicación web, desde la que se puede de una forma sencilla, asociar a un marcador, imágenes, textos, vídeos, links. Pero no es posible trabajar con modelos 3D.
 \end{itemize}	
+
 La herramienta posee los siguientes tipos de seguimiento de realidad aumentada.
+
 \begin{itemize}
 	\item Word Tracking: Capacidad de reconocer el entorno para poder colocar objetos de una manera mas realista sobre el terreno, sin la ayuda de marcadores.
 	\item Face Tracking: Capacidad de reconocer y seguir rostros, para por ejemplo colocar, en una cara el contenido AR y que aunque se muevan el contenido se mueva con la cara.
 	\item Image Tracking: Que una imagen pueda ser el marcador, y pueda seguirla en movimiento.
-	\item Zapbox Tracking: \colorbox{red}{COMPLETAR}
-	 
+	\item Zapbox Tracking: \colorbox{red}{COMPLETAR}	 
 \end{itemize}
+
 Para acceder al contenido AR almacenado en el servidor de ZapWorks, utiliza los zapcodes, se tratan una imagen codificada para que pueda descargar un proyecto AR. Una vez que la aplicación reconoce el zapcode, descarga el proyecto y este se ejecutará.
+
 \imagenPeque{zapcode}{Ejemplo de un zapcode \cite{ZapStudio}.}
 
 
-\subsection{Kudan} Kudan\footnote{\url{https://www.xlsoft.com/en/products/kudan/index.html}} 
+\subsection{Kudan} 
+
+Kudan\footnote{\url{https://www.xlsoft.com/en/products/kudan/index.html}} 
 se trata de un SDK, con la capacidad de soportar AR tanto con marcadores y como sin ellos. En principio Kudan no tiene un limite de marcadores que pueda detectar al mismo tiempo, pero se puede incluir un limite para que la aplicación tenga un rendimiento adecuado. 
 Posee soporte para APIs nativas, como ObjetiveC para iOS, Java para Android y Unity.~\cite{kudan_developer_hub}.
 
 El motor de Kudan está escrito en C++ y optimizado con programación en ensamblador, dando un mayor rendimiento y estabilidad, con el menor impacto de memoria.
 Usa la tecnología SLAM (Simultaneous Localization and Mapping) para el reconocimiento del escenario.
 
-\imagenPeque{marta_2}{Imagen perteneciente a la aplicación M.A.R.T.A, que funciona con Kudan}\footnote{\url{https://play.google.com/store/apps/details?id=com.apophistechlabs.marta}}
+\imagenPeque{marta_2}{Imagen perteneciente a la aplicación M.A.R.T.A \cite{marta_app}.}
 
 Kudan soporta los siguientes formatos 3D: FBX, OBJ y COLLADA.
 
+En la imagen \ref{fig:marta_2} podemos ver un ejemplo de la aplicación M.A.R.T.A\footnote{\url{https://play.google.com/store/apps/details?id=com.apophistechlabs.marta}} que utiliza Kudan para detectar una superficie en la que colocar el modelo 3D.
+
 \subsection{Vuforia}\label{sub:Def_Vuforia}
+
 Vuforia\footnote{\url{https://developer.vuforia.com/}} es un kit de desarrollo ( SDK) para aplicaciones de AR, para las plataformas de Android, iOS, Windows, Unity y HoloLens. Fue creado por Qualcomm Connected Experience en 2010, y en 2015 PTC inc lo compró \cite{simonetti2013vuforia}.
 
 Vuforia proporciona una API en C++, Java, Objective-C++ y los lenguajes de .NET mediante Unity.
 
 Vuforia soporta diferentes tipos marcadores, estos pueden ser 2D o 3D, también soporta múltiples marcadores simultáneamente, y reconocimiento del terreno sin marcadores.
+
 \imagen{vuforia01}{Posibles marcadores de Vuforia}
 
 Los marcadores se pueden crear desde la página web de developer vuforia, para ello deben escoger qué tipo de marcadores se quieren crear y adjuntarle las imágenes que formarán dicho marcador. La página dará una calificación de 5 estrellas según la calidad de la imagen para ser un marcador. Una vez completado, da la opción de descargarlos el un archivo configurable de Unity que incluirá los marcadores en nuestro proyecto.
@@ -125,7 +163,9 @@ Actualmente Vuforia esta disponible para las versiones indicadas en la siguiente
 
 
 \subsection{Wikitude}
+
 Wikitude\footnote{\url{https://www.wikitude.com/}} se trata de un SDK de realidad aumentada, ofrece un amplio repertorio de características\cite{wikitude}: 
+
 \begin{itemize}
 	\item Reconocimiento de imágenes.
 	\item Reconocimiento de objetos.
@@ -136,6 +176,7 @@ Wikitude\footnote{\url{https://www.wikitude.com/}} se trata de un SDK de realida
 	
 	\item Geo AR: Permite agregar contenido de realidad aumentada basándose en la ubicación, valiéndose del GPS y demás sensores para determinar la ubicación.
 	\item Cloud Recognition: Ofrece la posibilidad de guardar en línea los datos de imágenes/marcadores para las aplicaciones.
+	
 \end{itemize}
 
 Wikitude esta disponible para Android, iOS, Windows y Smart Glasses.
@@ -146,16 +187,19 @@ Los sistemas deberán cumplir los requisitos indicados en el siguiente enlace: \
 
 
 \subsection{OpenCV}
+
 OpenCV\footnote{\url{https://opencv.org/}} es una librería de visión artificial y machine learning, de código abierto. Tiene una licencia BSD por lo que facilita su uso y modificación para las empresas. Cuenta con más de 2500 algoritmos optimizados. Estos pueden emplearse para detectar y reconocer rostros, identificación de objetos, clasificar acciones humanas en vídeos, seguir los movimientos de la cámara, rastrear objetos en movimiento, extraer modelos 3D de objetos, producir nubes de puntos 3D de cámaras estéreo, seguir el movimiento de los ojos, reconocer paisajes y establecer marcadores para usarlos en realidad aumentada.
 
 Esta disponible en interfaces para C++,Python, Java y MATLAB y es compatible con Windows, Linux, Android y Mac OS.
 
 
 \subsection{8thWall}
+
 8thWall\footnote{\url{https://www.8thwall.com/}}
 es un entorno de desarrollo de realidad aumentada, que se caracteriza principalmente por el WebAR, que da la posibilidad de ejecutar las imágenes AR a través del propio navegador web del dispositivo, sin tener que instalarse ninguna aplicación extra en el mismo\cite{8thwall_products}.
 
 Posee las siguientes características:
+
 \begin{itemize}
 	\item World Tracking: Con la tecnología SLAM, es capaz de reconocer superficies planas instantáneamente, ademas de estimaciones de iluminación.
 	\item Image Targets: 8thWall Web puede detectar y rastrear imágenes y usarlas como marcadores. Cada aplicación puede tener un máximo de 1000 marcadores.
@@ -168,38 +212,70 @@ Tiene soporte con los frameworks 3D A-Frame, three.js, babylon.js, Amazon Sumeri
 Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegadores soportados son; Chrome, Chromium,Firefox, Android WebViews.
 
 \section{Técnicas AR}
+
 	\subsection{Detección de marcadores}
+	
 	La detección de marcadores se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial, para situar elementos que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras.
+	
 	\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo  \cite{AR_company}.}
+	
 	Con la mejora de las cámaras, también es posible utilizar como marcadores imágenes mas complejas, como por ejemplo un folleto publicitario o la foto de un planeta.
 	También es posible que el marcador se trate de un objeto físico, como por ejemplo una lámpara, o un coche.
+	
 	\imagen{ejemploMarcadorTigre}{Ejemplo donde una carta de un tigre es un marcador \cite{AR_company}.}
+	
 	Aunque gracias al avance de la calidad de las cámaras y del software de reconocimiento, es posible utilizar marcadores mas complejos, esto también implicarán que será mas probable que falle, y por consecuencia se desencuandren las imágenes insertadas por AR, que los tiempos de detección sean mas largos etc.
 	
 	Se pueden clasificar los marcadores en \cite{linowes_babilinski_2017}:
+	
 	\begin{itemize}
-		\item \subsubsection{Marcadores}El marcador mas básico es uno con un borde ancho. Su ventaja es que minimizan los costes de procesamiento y las posibilidades de error al reconocerlo.
-		\imagenPeque{market}{Ejemplo de un marcador\cite{linowes_babilinski_2017}.}
-		\item \subsubsection{Marcadores Codificados}Se trata de marcadores que poseen códigos de barra 2D, dentro del área de bordes patrones. 
+		\item \subsubsection{Marcadores} El marcador mas básico es uno con un borde ancho. Su ventaja es que minimizan los costes de procesamiento y las posibilidades de error al reconocerlo.\\
+		
+		
+		\imagenPeque{market}{Ejemplo de un marcador\cite{linowes_babilinski_2017}.}	
+		
+		\item \subsubsection{Marcadores Codificados}
+		
+		Se trata de marcadores que poseen códigos de barra 2D, dentro del área de bordes patrones.
+		
 		\imagen{market2}{Ejemplo de marcadores codificados\cite{linowes_babilinski_2017}.}
-		\item \subsubsection{Imágenes}El poder usar imágenes evita tener que crear marcadores personalizados. El reconocimiento de imágenes entra en la categoría de seguimiento de características naturales. Su calidad como marcador, dependerá de si tiene un borde que defina claramente esa imagen, del contraste de sus colores o la complejidad de su composición.
+		
+		\item \subsubsection{Imágenes}
+		
+		El poder usar imágenes evita tener que crear marcadores personalizados. El reconocimiento de imágenes entra en la categoría de seguimiento de características naturales. Su calidad como marcador, dependerá de si tiene un borde que defina claramente esa imagen, del contraste de sus colores o la complejidad de su composición.
+		
 		\item \subsubsection{Multiples Marcadores}
+		
 		Es el caso de usar mas de un marcador al mismo tiempo por la misma cámara. Permitiendo así tener distintos objetos en la misma escena simultáneamente. También es posible crearlos formado objetos geométricos, un ejemplo sería el Mergecube(Inluir referencia merge).
+		
 		\item \subsubsection{Reconocimiento de texto}
+		
 		Algunos SDK de realidad aumentada cuentan con la capacidad de distinguir textos. La precisión estará influenciada dependiendo del tipo de fuente de las letra. 
+		
 		\item \subsubsection{Formas Simples}
+		
 		Algunas aplicaciones tienen la capacidad de distinguir diferentes formas simples, como son cubos, cilindros. También pueden distinguir las medidas de las formas, pudiendo así diferenciar si un cubo es mas grande que otro.
+		
 		\item \subsubsection{Reconocimiento de objetos}
+		
 		Se trata del siguiente nivel, la capacidad de distinguir objetos. No solo reconocerá e identifica la forma y tamaño del objeto, también detalles característicos que le puedan diferenciar de otro. Vuforia por ejemplo cuenta con una funcionalidad llamada Vuforia Object Scanner, que permite escanear un objeto para una copia digital, que se podría usar como marcador.
-		\imagen{vuforia_recoObjeto}{Vuforia Object Scanner \cite{vuforia_scanner}.}		
+		
+		\imagen{vuforia_recoObjeto}{Vuforia Object Scanner \cite{vuforia_scanner}.}	
+			
 	\end{itemize}
+
 	\subsubsection{Mergecube}
+	
 	El Mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por Merge, el cual tiene grabado unos dibujos por sus 6 caras, los dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
 	\imagen{mergecube}{Mergecube  \cite{barker_2019}.} 
+	
 	\subsection{Detección del entorno}
+	
 	La detección del entorno trata de poder reconocer el entorno que la cámara capta y ser capaz de, sin la ayuda de un marcador, poder ubicar los modelos en el escenario de forma realista.
 	Para esto hay diferentes técnicas, en resumen estas técnicas lo que hacen es detectar los cambios de profundidad de la imagen, y con esos datos evaluar qué objetos están mas o menos cerca, cuáles son una superficie plana, si se trata de un objeto que no tiene profundidad(una pared)...
+	
 	\subsubsection{SLAM}
+	
 	Simultaneous Localization and Mapping, se trata de una técnica para estimar los movimientos de los sensores y reconstruir la estructura en un entorno desconocido. Cuando esta técnica se aplica en cámaras, se denomina visual SLAM(vSLAM), ya que se basara en la información visual recibida.
 	La mayoría de herramientas de realidad aumentada, que tienen la capacidad de detectar el entorno sin necesidad de marcadores, se basan en esta técnica \cite{taketomi2017visual}.
 	

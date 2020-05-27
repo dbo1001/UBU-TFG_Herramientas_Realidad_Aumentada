@@ -18,6 +18,8 @@ public class Controlador : MonoBehaviour
     public GameObject multiTarget;
     public GameObject camaraAR;
 
+    static bool tipoAR;
+
 
 
     // Start is called before the first frame update

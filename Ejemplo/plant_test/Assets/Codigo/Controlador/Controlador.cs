@@ -37,9 +37,9 @@ public class Controlador : MonoBehaviour
     //Controla el botón Atras del menú.
     public void Atras()
     {
-        if (!menu1.active)
+        if (!menu1.active )
         {
-            if (!menu1_1.active)
+            if (!menu1_1.active )
             {
                 if (!menu1_1_1.active)
                 {
@@ -49,15 +49,25 @@ public class Controlador : MonoBehaviour
                 }
                 else
                 {
+                    //normal
                     menu1_1_1.SetActive(false);
                     menu1_1.SetActive(true);
+                    //ar
+                    menu2_1_1.SetActive(false);
+                    menu2_1.SetActive(true);
                 }
                 
             }
             else{
+                //normal
                 menu1_1.SetActive(false);
                 menu1.SetActive(true);
                 atras.SetActive(false);
+
+                //ar
+                menu2_1.SetActive(false);
+                menu2.SetActive(true);
+                atras2.SetActive(false);
             }
         }
     }
@@ -69,14 +79,23 @@ public class Controlador : MonoBehaviour
         {
             if (!menu2_1.active)
             {
+                //ar
                 menu2_1_1.SetActive(false);
                 menu2_1.SetActive(true);
+                //normal
+                menu1_1_1.SetActive(false);
+                menu1_1.SetActive(true);
             }
             else
             {
+                //ar
                 menu2_1.SetActive(false);
                 menu2.SetActive(true);
                 atras2.SetActive(false);
+                //normal
+                menu1_1.SetActive(false);
+                menu1.SetActive(true);
+                atras.SetActive(false);
             }
         }
     }

@@ -26,6 +26,9 @@ public class Controlador : MonoBehaviour
     static bool tipoARMerge=true;
     static bool tipoARCaptura=false;
 
+    static bool tomatoLive = false;
+    static bool calabazaLive = false;
+    static bool giraSolLive = false;
 
     // Start is called before the first frame update
 
@@ -124,6 +127,47 @@ public class Controlador : MonoBehaviour
     public  bool GetTipoARcapturar()
     {
         return tipoARCaptura;
+    }
+
+    public void ActivarTomate()
+    {
+        tomatoLive = true;
+        //desactivar el resto de plantas
+        calabazaLive = false;
+        giraSolLive = false;
+
+    }
+
+    public void ActivarCalabaza()
+    {
+        calabazaLive = true;
+        //desactivar el resto de plantas
+        tomatoLive = false;
+        giraSolLive = false;
+    }
+
+    public void ActivarGiraSol()
+    {
+        giraSolLive = true;
+        //desactivar el resto de plantas
+        calabazaLive = false;
+        tomatoLive = false;
+
+    }
+
+    public bool GetTomato()
+    {
+        return tomatoLive;
+    }
+
+    public bool GetCalabaza()
+    {
+        return calabazaLive;
+    }
+
+    public bool GetGirasol()
+    {
+        return giraSolLive;
     }
 
     public void Start()

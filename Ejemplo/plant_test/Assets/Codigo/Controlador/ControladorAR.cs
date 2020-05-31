@@ -16,9 +16,10 @@ public class ControladorAR : MonoBehaviour
     public GameObject captura2;
     public GameObject captura3;
 
-    public GameObject Planta_Tomate;
-    public GameObject Planta_Calabaza;
-    
+    public GameObject plantaTomate;
+    public GameObject plantaCalabaza;
+    public GameObject plantaGirasol;
+
     private Controlador controlador = new Controlador();
 
     public void Start()
@@ -26,6 +27,7 @@ public class ControladorAR : MonoBehaviour
         regadera.SetActive(false);
         ventama.SetActive(false);
         
+        //modo ar
         if (controlador.GetTipoARcapturar())
         {
             mergecube.SetActive(false);
@@ -40,6 +42,20 @@ public class ControladorAR : MonoBehaviour
             captura.SetActive(false);
             captura2.SetActive(false);
             captura3.SetActive(false);
+        }
+
+        //planta activada
+        if (controlador.GetTomato())
+        {
+            plantaTomate.SetActive(true);
+        }
+        if (controlador.GetCalabaza())
+        {
+            plantaCalabaza.SetActive(true);
+        }
+        if (controlador.GetGirasol())
+        {
+            plantaGirasol.SetActive(true);
         }
     }
 

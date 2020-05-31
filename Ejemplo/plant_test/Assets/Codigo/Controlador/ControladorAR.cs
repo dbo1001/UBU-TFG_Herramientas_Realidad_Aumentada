@@ -16,6 +16,9 @@ public class ControladorAR : MonoBehaviour
     public GameObject captura2;
     public GameObject captura3;
 
+    public GameObject Planta_Tomate;
+    public GameObject Planta_Calabaza;
+    
     private Controlador controlador = new Controlador();
 
     public void Start()

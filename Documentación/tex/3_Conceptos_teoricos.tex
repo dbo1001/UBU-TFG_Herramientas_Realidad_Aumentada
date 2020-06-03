@@ -6,28 +6,48 @@
 El concepto de realidad aumentada (AR--Augmented Reality) se aplica a las tecnologías que permiten añadir información gráfica sobrepuesta al mundo real en dispositivos visuales: pantallas, gafas, etc.
 La realidad virtual (VR--Virtuality Reality) se diferencia de la anterior, en que esta crea un entorno virtual completo en el que el usuario se sumerge.
  
-origenes y evolucion...
+
 
 El concepto de realidad aumentada fue utilizado por primera vez en 1901 por Frank L Baum en su novela The Master Key( ref), en ella presenta una historia que a un niño le otorgan un regalo, que son como unas gafas que da a entender un concepto de realidad aumentada.
 
 Décadas mas tarde Morton Helling conocido como el padre de la realidad virtual, invento el Sensorama en 1957 y lo patento en 1962
-, una maquina que intentaba una mayor inmersión con la combinación de una pantalla, ventiladores, olores, una silla que se movía y sonido estero. Morton también diseño TELESPHERE MASK, un aparato que recuerda mucho a las gafas de realidad virtual que conocemos hoy en día.
+, se trataba de una maquina que intentaba una mayor inmersión con la combinación de una pantalla, ventiladores, olores, una silla que se movía y sonido estero. Morton también diseño TELESPHERE MASK, un aparato que recuerda mucho a las gafas de realidad virtual que conocemos hoy en día.
 
 \imagen{Sensorama}{ Sensorama \cite{ARhistory}}
 
-En 1968 el profesor Ivan Sutherland junto a su estudiante Bob Sproull, Quintin Foster and Danny Cohen desarrollaron el considerado el primer sistema de realidad aumentada. Se conectaba a un ordenador para generar los gráficos. En este enlace se puede ver una demostración: \url{https://www.youtube.com/watch?v=Xd1DgzPPH_Q}.
+En 1968 el profesor Ivan Sutherland junto a su estudiante Bob Sproull, Quintin Foster and Danny Cohen desarrollaron el considerado el primer sistema de realidad aumentada. Se conectaba a un ordenador para generar los gráficos. En el vídeo del siguiente enlace se puede ver una demostración: \url{https://www.youtube.com/watch?v=Xd1DgzPPH_Q}.
 
 \imagen{EspadaDeDamocles}{La espada de Damocles \cite{EspadaDamocles}}
 
 En 1975 Myron Krueger creo VideoPlace, un sistema con el que lograba que el usuario pudiera interaccionar con la pantalla y moviendo objetos en en tiempo real.\cite{ARevolution}
 
-En 1980 Stve Mann un investigador de fotografía computacional ofreció el concepto de wearable computing. 
 
-En 1981 Dan Reitan realiza por primera vez la complementación de símbolos meteorológicos para las retransmisiones meteorológicas.
 
-Ya en la década de los 90, Tom Caudell utiliza el termino realidad aumentada para referirse a los dispositivos que exponían un esquema de montaje sobre las piezas para facilitar el proceso de montaje. 
+En 1981 Dan Reitan utiliza por primera para las retransmisiones meteorológicas, símbolos meteorológicos para complementar los informativos.
 
-continuar...
+Ya en la década de los 90, Tom Caudell por primera vez utiliza el termino realidad aumentada , para referirse a los dispositivos que exponían un esquema de montaje sobre las piezas para facilitar el proceso de montaje. 
+Dos años mas tarde , Louis Rosenberg construiría el primer sistema inmersivo de realidad aumentada.  Se trataba de Virtual Fixtures, que proyectaba la imagen de unos brazos roboticos.
+
+En 1994 se crea KARMA ( Knowledge based Augmented Reality for Maintenance Assistance), creado por  Steven Feiner, Blair MacIntyre y Doree Seligmann. Se trata de un sistema de pruebas para el diseño de entornos de realidad aumentada, para usarse en tareas de mantenimiento y reparación.
+
+Ronald T. Azuma  en 1997 escribió <<A survey of Augmented Reality>>, donde explora los diferentes usos que podría tener la realidad aumentada en medicina, producción, investigación, mecánica y entretenimiento.
+
+En 1999 la NASA emplea la realidad aumentada para mejorar la navegación en sus vuelos de prueba. Ese mismo año, Hirokazu Kato desarrolla ARToolKit, un software para el desarrollo de aplicaciones de realidad aumentada.
+
+(investigar Toring Machine MARS)
+
+En el 2000, se crea ARQuake por Bruce H. Thomas, el primer juego de realidad aumentada al aire libre. Se trata de un juego basado en el clásico Quake incorporando realidad aumentada. En la imagen \ref{quakeAR} se observa una imágenes de como se podría representar el juego, y el dispositivo que era necesario para ejecutarlo y detectar el entorno.
+
+\label{quakeAR}\imagen{ArQuake}{ Imágenes del juego ArQuake, y el dispositivo en el que se ejecutaba \cite{ArQuake}}
+
+En 2008 se funda WikiTude, con el objetivo de meterse en la aplicaciones de realidad aumentada móvil. 
+En 2009 ARToolKit se incorpora en Adobe Flash, consiguiendo así que la realidad aumentada pueda ejecutarse desde un navegador Web.
+
+En 2012 Google presenta las Google Glass,en su intento por llevar la realidad aumentada al día a día de las personas a través de unas gafas.  
+
+En 2015 Microsoft presenta las Hololens, sus gafas de realidad aumentada.
+
+
 \section{Herramientas AR}
 
 Se han comparado diferentes herramientas de desarrollo para realidad aumentada. 
@@ -211,13 +231,15 @@ Tiene soporte con los frameworks 3D A-Frame, three.js, babylon.js, Amazon Sumeri
 
 Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegadores soportados son; Chrome, Chromium,Firefox, Android WebViews.
 
+\subsection{Tabla comparativa}
+
 \section{Técnicas AR}
 
 	\subsection{Detección de marcadores}
 	
 	La detección de marcadores se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial, para situar elementos que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras.
 	
-	\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo  \cite{AR_company}.}
+	\label{marcadorSencillo}\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo  \cite{AR_company}.}
 	
 	Con la mejora de las cámaras, también es posible utilizar como marcadores imágenes mas complejas, como por ejemplo un folleto publicitario o la foto de un planeta.
 	También es posible que el marcador se trate de un objeto físico, como por ejemplo una lámpara, o un coche.
@@ -228,21 +250,29 @@ Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegad
 	
 	Se pueden clasificar los marcadores en \cite{linowes_babilinski_2017}:
 	
+	
+	
+	
+		
 	\begin{itemize}
-		\item \subsubsection{Marcadores} El marcador mas básico es uno con un borde ancho. Su ventaja es que minimizan los costes de procesamiento y las posibilidades de error al reconocerlo.\\
+		
+		\item \subsubsection{Marcadores}. El marcador mas básico es uno con un borde ancho. Su ventaja es que minimizan los costes de procesamiento y las posibilidades de error al reconocerlo. En la imagen \ref{marcador} podemos ver un ejemplo de un marcador simple.\\
+		
+		\label{marcador}\imagenPeque{market}{Ejemplo de un marcador\cite{linowes_babilinski_2017}.}	
 		
 		
-		\imagenPeque{market}{Ejemplo de un marcador\cite{linowes_babilinski_2017}.}	
 		
 		\item \subsubsection{Marcadores Codificados}
 		
-		Se trata de marcadores que poseen códigos de barra 2D, dentro del área de bordes patrones.
-		
-		\imagen{market2}{Ejemplo de marcadores codificados\cite{linowes_babilinski_2017}.}
+		Se trata de marcadores que poseen códigos de barra 2D, dentro del área de bordes patrones. En la imagen \ref{marcador} tenemos un ejemplo de distintos marcadores, que contienen diferentes patrones.
+	
+		\label{marcador2}\imagenflotante{market2}{Ejemplo de marcadores codificados\cite{linowes_babilinski_2017}.}
 		
 		\item \subsubsection{Imágenes}
 		
 		El poder usar imágenes evita tener que crear marcadores personalizados. El reconocimiento de imágenes entra en la categoría de seguimiento de características naturales. Su calidad como marcador, dependerá de si tiene un borde que defina claramente esa imagen, del contraste de sus colores o la complejidad de su composición.
+		
+	
 		
 		\item \subsubsection{Multiples Marcadores}
 		
@@ -258,11 +288,18 @@ Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegad
 		
 		\item \subsubsection{Reconocimiento de objetos}
 		
-		Se trata del siguiente nivel, la capacidad de distinguir objetos. No solo reconocerá e identifica la forma y tamaño del objeto, también detalles característicos que le puedan diferenciar de otro. Vuforia por ejemplo cuenta con una funcionalidad llamada Vuforia Object Scanner, que permite escanear un objeto para una copia digital, que se podría usar como marcador.
+		Se trata del siguiente nivel, la capacidad de distinguir objetos. No solo reconocerá e identifica la forma y tamaño del objeto, también detalles característicos que le puedan diferenciar de otro. Vuforia por ejemplo cuenta con una funcionalidad llamada Vuforia Object Scanner, que permite escanear un objeto para una copia digital, que se podría usar como marcador. En la imagen \ref{marcadorObject} podemos ver un ejemplo de la aplicación de Vuforia, en la que escanea un coche.  
 		
-		\imagen{vuforia_recoObjeto}{Vuforia Object Scanner \cite{vuforia_scanner}.}	
+		
 			
 	\end{itemize}
+
+\label{marcadorObject}\imagen{vuforia_recoObjeto}{Vuforia Object Scanner \cite{vuforia_scanner}.}	
+
+
+
+
+
 
 	\subsubsection{Mergecube}
 	
@@ -280,6 +317,7 @@ Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegad
 	La mayoría de herramientas de realidad aumentada, que tienen la capacidad de detectar el entorno sin necesidad de marcadores, se basan en esta técnica \cite{taketomi2017visual}.
 	
 	Los algoritmos de vSLAM, no solo son usados unicamente para la AR, también pueden ser aplicados para robótica, o los coches autónomos no tripulados.
+	
 	
 	
 \section{Secciones}

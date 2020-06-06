@@ -17,6 +17,8 @@ public class Controlador : MonoBehaviour
     public GameObject menu2;
     public GameObject menu2_1;
     public GameObject menu2_1_1;
+
+    public GameObject menu2_2;
     public GameObject atras2;
     public GameObject multiTarget;
     public GameObject camaraAR;
@@ -46,9 +48,15 @@ public class Controlador : MonoBehaviour
             {
                 if (!menu1_1_1.active)
                 {
+                    //normal
                     menu1_2.SetActive(false);
                     menu1.SetActive(true);
                     atras.SetActive(false);
+
+                    //ar
+                    menu2_2.SetActive(false);
+                    menu2.SetActive(true);
+                    atras2.SetActive(false);
                 }
                 else
                 {
@@ -82,12 +90,27 @@ public class Controlador : MonoBehaviour
         {
             if (!menu2_1.active)
             {
-                //ar
-                menu2_1_1.SetActive(false);
-                menu2_1.SetActive(true);
-                //normal
-                menu1_1_1.SetActive(false);
-                menu1_1.SetActive(true);
+                if (!menu2_1_1.active)
+                {
+                    menu2_2.SetActive(false);
+                    menu2.SetActive(true);
+                    atras2.SetActive(false);
+                    //normal
+                    menu1_2.SetActive(false);
+                    menu1.SetActive(true);
+                    atras.SetActive(false);
+                }
+                else
+                {
+                    //ar
+                    menu2_1_1.SetActive(false);
+                    menu2_1.SetActive(true);
+                    //normal
+                    menu1_1_1.SetActive(false);
+                    menu1_1.SetActive(true);
+
+                }
+                
             }
             else
             {
@@ -102,6 +125,7 @@ public class Controlador : MonoBehaviour
             }
         }
     }
+
     //Actualiza el tipo de Target ha usar.
     public void TipoDeAR()
     {

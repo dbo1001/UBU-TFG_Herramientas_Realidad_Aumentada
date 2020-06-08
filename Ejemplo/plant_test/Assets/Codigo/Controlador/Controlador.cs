@@ -14,12 +14,16 @@ public class Controlador : MonoBehaviour
     public GameObject menu1_2;
     public GameObject atras;
 
+    public GameObject menu1_4;
+
     public GameObject menu2;
     public GameObject menu2_1;
     public GameObject menu2_1_1;
 
     public GameObject menu2_2;
     public GameObject atras2;
+
+    
     public GameObject multiTarget;
     public GameObject camaraAR;
 
@@ -200,6 +204,7 @@ public class Controlador : MonoBehaviour
         menu1_1.SetActive(false);
         menu1_1_1.SetActive(false);
         menu1_2.SetActive(false);
+        menu1_4.SetActive(false);
         atras.SetActive(false);
 
         camaraAR.SetActive(false);

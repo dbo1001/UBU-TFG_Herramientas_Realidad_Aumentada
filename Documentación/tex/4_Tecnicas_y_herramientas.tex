@@ -51,15 +51,14 @@ Dado que queremos representar el crecimiento de un planta debo buscar algún mod
 
 Para representar el crecimiento se representara el movimiento de regar la planta echando agua sobre la planta. Para representar esto lo primero que he buscado es un modelo 3D para representar una regadera en la assest store. Una vez encontrado el modelo, le importamos en el proyecto, dado que la idea ha representar es que el movimiento del móvil sea el movimiento como mover la regadera, se debe poner el el modelo como hijo de la ARcamara, de esta manera al mover el teléfono la regadera seguirá el mismo movimiento. Al realizarlo de esta manera hay que prestar atención en que coordenada se coloca, es necesario colocarlo ha cierta distancia de la cámara para que se aprecie cierta distancia, esto se puede ir probando posiciones hasta dar con una que nos parezca correcta. Para añadir el efecto de agua, he usado efectos de partículas de Unity. En la configuración de las partículas de agua, hay que activar el modificador de gravedad dándole un valor de 10, y el tipo de espacio simulado en World, el número máximo de partículas también le he aumentado hasta 10000 y cambiar el color de la partícula por un azul. También es posible añadir un assest a las partículas para dar mayor efecto, pero de los que he encontrado de forma gratuita no me convencían por lo que de momento lo dejaré así. Ahora el problema está en que las partículas siempre caen en la misma inclinación sin importar la posición del dispositivo, para conseguir usar el giroscopio de dispositivo he creado un Script que detecta el giroscopio y ajusta el eje de gravedad según los movimientos del dispositivo. Este proceso fue algo tedioso debido al tener que estar compilando y pasando la aplicación al dispositivo para probar que funcionaba correctamente. Un detalle a tener en cuenta es que el eje Z del giroscopio hay que invertirlo (multiplicar por -1) para conseguir el efecto deseado.
 
-Para detectar y contar el número de partículas que colisionan con la planta, he creado otro scipt que suma cada colision y va actualizando una barra de progreso en la interfaz.
+Para detectar y contar el número de partículas que colisionan con la planta, he creado otro scipt que suma cada colisión y va actualizando una barra de progreso en la interfaz.
 
 
-Al crear la interfaz...
-uno de los problemas que mas habitualmente he tenido con la interfaz se trata que dependiendo de en que dispositivo o resolución se ejecute, hay elemento que se mueven y no están en su posición correcta. Esto se debe a la forma de centrar su punto de referencia de localización. Por defecto los elemento su punto de referencia es el centro respecto a su elemento padre, dependiendo de su localización habrá que cambiarlo al mas adecuado, para que se referencia a la esquina o a la distancia entre la parte superior e inferior.... etc.
+Al crear la interfaz uno de los problemas que mas habitualmente he tenido con la interfaz se trata que dependiendo de en que dispositivo o resolución se ejecute, hay elemento que se mueven y no están en su posición correcta. Esto se debe a la forma de centrar su punto de referencia de localización. Por defecto los elemento su punto de referencia es el centro respecto a su elemento padre, dependiendo de su localización habrá que cambiarlo al mas adecuado, para que se referencia a la esquina o a la distancia entre la parte superior e inferior.... etc.
 
 
 
-Un problema que tiene el realizar una aplicación para móviles, es que cada vez que se quiera hacer una prueba en el dispositivo es necesario compilar al apk .... Este proceso para hacer pruebas puntales no tiene un gran impacto en cuanto esfuerzo y tiempo invertido, pero si es necesario hacer muchas pruebas, por que por ejemplo hay un bug especifico que unicamente ocurre en el dispositivo móvil, el impacto en tiempo invertido en compilar será considerable.
+Un problema que tiene el realizar una aplicación para móviles, es que cada vez que se quiera hacer una prueba en el dispositivo es necesario compilar al apk. Este proceso para hacer pruebas puntales no tiene un gran impacto en cuanto esfuerzo y tiempo invertido, pero si es necesario hacer muchas pruebas, por que por ejemplo hay un bug especifico que unicamente ocurre en el dispositivo móvil, el impacto en tiempo invertido en compilar será considerable.
 
 
 -
@@ -76,13 +75,28 @@ Después hay que añadir en el proyecto un ImagenTarget de Vuforia() y configura
 Seguido hay que añadir CameraImageBuilder que es el encargado de construir el target temporal. 
 Ahora el paso ha seguir es de asignar a los componentes creados sus respectivos scripts que contralan las funciones. 
 
-Durante este proceso en mi primer intento Unity tuvo algún fallo y corrompió el proyecto. Haciendo imposible asociar ningún script y ademas los que estaban asociados anteriormente también fallaban impidiendo su uso. Para solucionar el bug probé dos posibles soluciones: borrar los metadatos y reimportar todo el proyecto, por desgracia ninguno funciono por lo que tuve que volver a una copia de seguridad.
+Durante este proceso en mi primer intento, Unity tuvo algún fallo y corrompió el proyecto. Haciendo imposible asociar ningún script y ademas los que estaban asociados anteriormente también fallaban impidiendo su uso. Para solucionar el bug probé dos posibles soluciones: borrar los metadatos y reimportar todo el proyecto, por desgracia ninguno funciono por lo que tuve que volver a una copia de seguridad.
 
 
-Para implementar el Device tracker hay que crear un botón para poder activarlo y desactivarlo, y añadir el correspondiente script de DeviceTracker.
+Para implementar el Device tracker hay que crear un botón para poder activarlo y desactivarlo. Una vez creado el botón, simplemente hay que asociar el correspondiente script de DeviceTracker a las acciones del botón al ser pulsado.
 
 
-Para la mejorar la interfaz, estoy añadiendo efectos de movimiento en algunos de los menús, cambiando fonts y skins. Por ejemplo el menú que se despliega al mostrar las herramientas antes simplemente aparecía y desaparecía, ahora he añadido la animación para que se despliegue desde el marco derecho de la pantalla.
+Para la mejorar la interfaz, estoy añadiendo efectos de movimiento en algunos de los menús con las animaciones de Unity , cambiando fonts y skins. Por ejemplo el menú que se despliega al mostrar las herramientas antes simplemente aparecía y desaparecía, ahora he añadido la animación para que se despliegue desde el marco derecho de la pantalla.
+
+En la aplicación a la hora de intercambiar entre el menú normal y el menú AR, encontramos un comportamiento no era el ideal. Al cambiar entre normal a AR o viceversa, si por ejemplo nos encontramos en la pagina de opciones del menú, al cambiar se encuentra en la página principal. Dado que este no es un comportamiento ideal, se corregirá para que siempre que se cambie de modo, se encuentre en la misma página. Para ello en el script <<controlador>> donde se encuentran las funciones para cambiar de modo y de navegación del menú, se modificaran para que al navegar por el menú los cambios se tengan en cuenta en ambos modos.
+
+Hasta este momento en la aplicación únicamente se había trabajado con un único modelo de una planta, ahora incorporare otro dos modelos.  La complicación de esto se encuentra en el proceso por el cual el usuario escoge un modelo. Tenemos creado en el menú una lista de las plantas seleccionables, al seleccionar la función asociada a al botón, hará que al cargar la escena con las plantas, la función del script controlador active únicamente la planta seleccionada.
+
+la aplicación actualmente tiene dos formas de aplicar marcadores, en un principio es posible intercambiar entre las dos desde la misma pantalla de realidad aumentada. Pero dado.... 
+
+Una de las siguientes cosas que he tenido que hacer, era actualizar el menú del modo realidad aumentada, en cual no había añadido la pagina de opciones. Debido a esto me olvide de actualizar también el script que controla que al navegar por un menú, se haga en ambos, por lo que se origino un pequeño bug en el que se quedaba sin actualizar correctamente si se entraba en ese apartado nuevo. para solucionarlo de la misma manera que antes, es revisar el script y las acciones de los menú en Unity para que tenga en cuenta el nuevo apartado.
+
+
+Para las imágenes de los botones y demás elementos de la interfaz, he decido dibujarlos yo mismo con herramientas gratuitas. He usado Paint 3D(citar), Jump Paint(citar) y Gimp(citar). He usado estas pues son gratuitas, no muy difíciles de usar y así no tener que invertir tiempo para poder hacer cosas sencillas.
+
+
+
+En el menú en un principio se incorporo un cubo para realizar pruebas en el componente Canvas de Unity, ahora en estos últimos pasos se ha decidido reutilizarlo, añadiéndole en sus caras los escudos de la universidad, de la politécnica y del grado de informática. Para esto, se ha realizado una textura de mapeo UV, que son texturas 2D que al incorporarse las a un objeto 3D, la imagen se adapta a la forma correspondiente del objeto. Lo cierto esto si llevo un tiempo, y si en vez de un objeto simple como un cubo fuera uno mas complejo no sería recomendable intentarlo. Para realizarlo he tenido que usar la herramienta Blender, en la que se crea una plantilla acorde al objeto, un cubo en este caso. Después se importa la plantilla a un editor de imagen, para esto yo use Gimp, en el editor colocas las imágenes de los escudos siguiendo la plantilla que indica lo que correspondería a cada cara del cubo. Una vez editada la imagen, ya se podría usar para el cubo en Unity.
 
 
 

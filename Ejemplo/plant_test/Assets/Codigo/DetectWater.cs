@@ -18,11 +18,11 @@ public class DetectWater : MonoBehaviour
     public Text cuentaAtras;
     int tiempo = 60;
     bool tFin = false;
-
+    /*
     public GameObject fase1;
     public GameObject fase2;
     public GameObject fase3;
-    public GameObject fase4;
+    public GameObject fase4;*/
     public GameObject regadera;
     bool flag = true;
     bool fertilizanteUse = false;
@@ -30,8 +30,18 @@ public class DetectWater : MonoBehaviour
     public GameObject ventana;
     public TMPro.TextMeshProUGUI textVentana;
     public Image colorTiempo;
+    
+    public GameObject planta1;
+    public GameObject planta2;
+    public GameObject planta3;
+    
 
-
+    private Plants plants =  new Plants();
+    private Controlador controlador = new Controlador();
+    GameObject f1;
+    GameObject f2;
+    GameObject f3;
+    GameObject f4;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +52,31 @@ public class DetectWater : MonoBehaviour
             Debug.LogError("No funciona jajaja", this);
             return;
         }
+
+        if (controlador.GetTomato())
+        {
+            f1 = planta1.GetComponent<Plants>().GetFase1();
+            f2 = planta1.GetComponent<Plants>().GetFase2();
+            f3 = planta1.GetComponent<Plants>().GetFase3();
+            f4 = planta1.GetComponent<Plants>().GetFase4();
+        }
+        if (controlador.GetCalabaza())
+        {
+            f1 = planta2.GetComponent<Plants>().GetFase1();
+            f2 = planta2.GetComponent<Plants>().GetFase2();
+            f3 = planta2.GetComponent<Plants>().GetFase3();
+            f4 = planta2.GetComponent<Plants>().GetFase4();
+        }
+        if (controlador.GetGirasol())
+        {
+            f1 = planta3.GetComponent<Plants>().GetFase1();
+            f2 = planta3.GetComponent<Plants>().GetFase2();
+            f3 = planta3.GetComponent<Plants>().GetFase3();
+            f4 = planta3.GetComponent<Plants>().GetFase4();
+        }
+        
+        
+        
         ActualizarProgreso(0);
         ActualizarHud();
         //StartCoroutine(CuentaAtras());
@@ -74,7 +109,6 @@ public class DetectWater : MonoBehaviour
     {
         //agua = agua + agua;
         textoAgua.text = "Agua: " + agua;
-        
 
         
         if (tFin == false)
@@ -83,38 +117,39 @@ public class DetectWater : MonoBehaviour
             if (agua >= 5000 & fertilizanteUse == true)
             {
                 agua = 0;
+                tiempo = 60;
                 if (flag == true)
                 {
                     flag = false;
                     tiempo = 60;
                     fertilizanteUse = false;
-                    fase1.SetActive(true);
+                    f1.SetActive(true);
                     ActualizarProgreso(0);
                 }
-                else if (fase1.active)
+                else if (f1.active)
                 {
                     fertilizanteUse = false;
                     tiempo = 60;
-                    fase1.SetActive(false);
-                    fase2.SetActive(true);
-                    ActualizarProgreso(0);
-                    agua = 0;
-                }
-                else if (fase2.active)
-                {
-                    fertilizanteUse = false;
-                    tiempo = 60;
-                    fase2.SetActive(false);
-                    fase3.SetActive(true);
+                    f1.SetActive(false);
+                    f2.SetActive(true);
                     ActualizarProgreso(0);
                     agua = 0;
                 }
-                else if (fase3.active)
+                else if (f2.active)
                 {
                     fertilizanteUse = false;
                     tiempo = 60;
-                    fase3.SetActive(false);
-                    fase4.SetActive(true);
+                    f2.SetActive(false);
+                    f3.SetActive(true);
+                    ActualizarProgreso(0);
+                    agua = 0;
+                }
+                else if (f3.active)
+                {
+                    fertilizanteUse = false;
+                    tiempo = 60;
+                    f3.SetActive(false);
+                    f4.SetActive(true);
                     regadera.SetActive(false);
                 
                     agua = 0;

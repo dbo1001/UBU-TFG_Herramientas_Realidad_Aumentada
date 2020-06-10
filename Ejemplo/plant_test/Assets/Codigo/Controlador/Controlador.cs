@@ -200,12 +200,19 @@ public class Controlador : MonoBehaviour
 
     public void Start()
     {
+        //normal
         menu1.SetActive(true);
         menu1_1.SetActive(false);
         menu1_1_1.SetActive(false);
         menu1_2.SetActive(false);
         menu1_4.SetActive(false);
         atras.SetActive(false);
+        //ar
+        menu2.SetActive(true);
+        menu2_1.SetActive(false);
+        menu2_1_1.SetActive(false);
+        menu2_2.SetActive(false);
+        //menu2_4.SetActive(false);
 
         camaraAR.SetActive(false);
         multiTarget.SetActive(false);

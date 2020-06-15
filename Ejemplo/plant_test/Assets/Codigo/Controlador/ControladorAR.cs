@@ -20,8 +20,11 @@ public class ControladorAR : MonoBehaviour
     public GameObject plantaCalabaza;
     public GameObject plantaGirasol;
 
+    public GameObject botonPruebas;
+
     private Controlador controlador = new Controlador();
 
+    //Se activa al ejecutar el script, activa la configuración inicial de elementos activos visibles.
     public void Start()
     {
         regadera.SetActive(false);
@@ -57,6 +60,11 @@ public class ControladorAR : MonoBehaviour
         {
             plantaGirasol.SetActive(true);
         }
+        //Pone a cero el progreso al entrar al nivel.
+        DetectWater.agua=0;
+
+        if (SystemInfo.deviceType == DeviceType.Handheld)
+            botonPruebas.SetActive(false);
     }
 
     public void VolverMenu()

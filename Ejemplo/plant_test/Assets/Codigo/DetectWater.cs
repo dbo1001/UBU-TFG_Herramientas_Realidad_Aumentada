@@ -195,7 +195,10 @@ public class DetectWater : MonoBehaviour
             if (tFin == true)
             {
                 ventana.SetActive(true);
-                textVentana.text = " Debido a la falta de agua, la planta ha muerto";
+                textVentana.text = "<pos=25%><b><size=55>¡¡Has Perdido!!</size></b>\n" +
+                    "\n"+
+                    "\n"+
+                    "Debido a la falta de agua y de abono, la planta no ha podido crecer.";
                 colorTiempo.color = new Color32(231,62,62,155);
                 
             }

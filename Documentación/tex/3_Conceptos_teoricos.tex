@@ -7,18 +7,18 @@ El concepto de realidad aumentada (AR--Augmented Reality) se aplica a las tecnol
 La realidad virtual (VR--Virtuality Reality) se diferencia de la anterior, en que esta crea un entorno virtual completo en el que el usuario se sumerge.
  
 
-
-El concepto de realidad aumentada fue utilizado por primera vez en 1901 por Frank L Baum en su novela The Master Key\cite{theMasterKey}, en ella presenta una historia que a un niño le otorgan un regalo, que son como unas gafas que da a entender un concepto de realidad aumentada.
+\section{Orígenes y evolución de la realidad aumentada}
+El concepto de realidad aumentada fue utilizado por primera vez en 1901 por Frank L Baum en su novela The Master Key~\cite{theMasterKey}, en ella presenta una historia que a un niño le otorgan un regalo, que son como unas gafas que da a entender un concepto de realidad aumentada.
 
 Décadas mas tarde Morton Helling, conocido como el padre de la realidad virtual, inventó el Sensorama en 1957 y lo patentó en 1962, se trataba de una maquina que intentaba una mayor inmersión con la combinación de una pantalla, ventiladores, olores, una silla que se movía y sonido estéreo. Morton también diseñó TELESPHERE MASK, un aparato que recuerda mucho a las gafas de realidad virtual que conocemos hoy en día.
 
-\imagen{Sensorama}{ Sensorama \cite{ARhistory}}
+\imagen{Sensorama}{ Sensorama~\cite{ARhistory}}
 
 En 1968 el profesor Ivan Sutherland junto a su estudiante Bob Sproull, Quintin Foster and Danny Cohen desarrollaron el considerado el primer sistema de realidad aumentada. Se conectaba a un ordenador para generar los gráficos. En el vídeo del siguiente enlace se puede ver una demostración: \url{https://www.youtube.com/watch?v=Xd1DgzPPH_Q}.
 
-\imagen{EspadaDeDamocles}{La espada de Damocles \cite{EspadaDamocles}}
+\imagen{EspadaDeDamocles}{La espada de Damocles~\cite{EspadaDamocles}}
 
-En 1975 Myron Krueger creó VideoPlace, un sistema con el que lograba que el usuario pudiera interaccionar con la pantalla y moviendo objetos en en tiempo real\cite{ARevolution}.
+En 1975 Myron Krueger creó VideoPlace, un sistema con el que lograba que el usuario pudiera interaccionar con la pantalla y moviendo objetos en en tiempo real~\cite{ARevolution}.
 
 
 
@@ -29,7 +29,7 @@ Dos años mas tarde, Louis Rosenberg construiría el primer sistema inmersivo de
 
 En 1994 se crea KARMA (Knowledge based Augmented Reality for Maintenance Assistance), creado por  Steven Feiner, Blair MacIntyre y Doree Seligmann. Se trata de un sistema de pruebas para el diseño de entornos de realidad aumentada, para usarse en tareas de mantenimiento y reparación.
 
-Ronald T. Azuma  en 1997 escribió <<A survey of Augmented Reality>>\cite{azuma1997survey}, donde explora los diferentes usos que podría tener la realidad aumentada en medicina, producción, investigación, mecánica y entretenimiento.
+Ronald T. Azuma  en 1997 escribió <<A survey of Augmented Reality>>~\cite{azuma1997survey}, donde explora los diferentes usos que podría tener la realidad aumentada en medicina, producción, investigación, mecánica y entretenimiento.
 
 En 1999 la NASA emplea la realidad aumentada para mejorar la navegación en sus vuelos de prueba. Ese mismo año, Hirokazu Kato desarrolla ARToolKit, un software para el desarrollo de aplicaciones de realidad aumentada.
 
@@ -37,7 +37,7 @@ En 1999 la NASA emplea la realidad aumentada para mejorar la navegación en sus 
 
 En el 2000, se crea ARQuake por Bruce H. Thomas, el primer juego de realidad aumentada al aire libre. Se trata de un juego basado en el clásico Quake incorporando realidad aumentada. En la imagen \ref{quakeAR} se observa una imágenes de como se podría representar el juego, y el dispositivo que era necesario para ejecutarlo y detectar el entorno.
 
-\label{quakeAR}\imagen{ArQuake}{ Imágenes del juego ArQuake, y el dispositivo en el que se ejecutaba \cite{ArQuake}}
+\label{quakeAR}\imagen{ArQuake}{ Imágenes del juego ArQuake, y el dispositivo en el que se ejecutaba ~\cite{ArQuake}}
 
 En 2008 se funda WikiTude, con el objetivo de meterse en la aplicaciones de realidad aumentada móvil. 
 En 2009 ARToolKit se incorpora en Adobe Flash, consiguiendo así que la realidad aumentada pueda ejecutarse desde un navegador Web.
@@ -45,203 +45,6 @@ En 2009 ARToolKit se incorpora en Adobe Flash, consiguiendo así que la realidad
 En 2012 Google presenta las Google Glass, en su intento por llevar la realidad aumentada al día a día de las personas a través de unas gafas.  
 
 En 2015 Microsoft presenta las Hololens, sus gafas de realidad aumentada.
-
-
-\section{Herramientas AR}
-
-Se han comparado diferentes herramientas de desarrollo para realidad aumentada. 
-Algunas de ellas se tratan de herramientas ya desarrolladas y usadas con fines educativos o comerciales. Otras de las herramientas que se explican son los frameworks/API que muchas de las herramientas anteriores usan.
- 
-
-\subsection{ArCore}
-
-ArCore \footnote{\url{https://developers.google.com/ar/discover}} es la plataforma de Google de desarrollo para realidad aumentada. Con el uso de diferentes API permite que los dispositivos detecten su entorno, lo comprendan e interactúen con la información.
-
-Para conseguir integrar el contenido virtual en el mundo real, ArCore utiliza tres técnicas fundamentales:
-\begin{itemize}
-	\item Motion Tracking (seguimiento del movimiento): permite establecer la posición del móvil en relación con el mundo.
-	\item La compresión ambiental: esta permite detectar la posición y tamaño de las superficies del entorno.
-	\item Estimación de la luz: que permite calcular las condiciones de luz del ambiente.
-\end{itemize}
-
-Su funcionamiento se puede resumir en dos pasos principalmente: rastrear la posición del dispositivo a medida que se mueve y construir su propia comprensión del mundo real.
-
-ArCore utiliza el Motion Tracking para identificar los puntos clave, y rastrea cómo esos puntos se mueven. Combinado el movimiento de dichos puntos con  las lecturas de los sensores de inercia del dispositivo, ArCore calcula la posición y orientación del dispositivo mientras se mueve \cite{google}.
-
-Lamentablemente no es compatible con cualquier dispositivo. En el siguiente enlace se encuentra la lista de los dispositivos compatibles actualmente \url{https://developers.google.com/ar/discover/supported-devices}.
-
-\subsection{ArKit}
-
-ARKit \footnote{\url{https://developer.apple.com/augmented-reality/}} es la herramienta de realidad aumentada de Apple para sistemas iOS. ARKit consigue mostrar contenido virtual de forma natural en el mudo real, incluso pudiendo situarlo detrás o delante del usuario con People Occlusion, pudiendo reconocer hasta 3 rostros al mismo tiempo \cite{apple_inc}.
-
-Funciones destacadas que posee ArKit actualmente.
-
-\begin{itemize}
-	\item Oclusión de personas: es capaz de diferenciar a una persona del fondo del escenario, consiguiendo que el contenido virtual  pueda pasar por delante o por detrás de la persona.
-	\item Captura de movimiento: Tiene la capacidad de capturar los movimientos de una persona. Distinguiendo diferentes posiciones y movimientos al instante, de forma que es capaz de usarlo como referencias para experiencias de AR.
-	\item Cámara frontal y trasera simultánea: Tiene la capacidad de usar ambas cámaras al mismo tiempo, pudiendo así por ejemplo interactuar con el entorno capturado por la cámara trasera, usando únicamente el rostro.
-	\item Seguimiento de rostros múltiples: Es capaz de reconocer hasta 3 rostros al mismo tiempo usando la cámara TrueDepth.
-	\item Sesiones colaborativas: Tiene la capacidad de crear un mapa mundial, entre múltiples usuarios conectados. Siendo así capaz de crear experiencias de realidad aumentada mas rápido, que pueden servir por ejemplo para juegos multijugador.
-\end{itemize}
-
-
-
-Una limitación es que únicamente esta disponible para sistemas iOS 11.0 o superior.
-
-
-\subsection{CoSpaces}\label{sub:Def_cospace} 
-
-CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo educativo. Se puede acceder a ella tanto por web, como desde la aplicación de móvil. Permite a los profesores crear salas para sus alumnos donde tendrían acceso a los diferentes ejemplos a usar para sus clases. También cuenta con una galería donde los usuarios pueden compartir sus ejemplos.
-
-\imagen{cospaces2}{Imagen de mi plataforma de desarrollo de CoSpaces.}
-
-Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D, donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scripts, aunque hay que destacar, que la programación por scripts y algunas opciones de la programación de bloques únicamente están disponibles con una licencia premium. Para añadir un modelo 3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly (biblioteca pública de google de modelos 3D\footnote{\url{https://poly.google.com/}}).
-CoSpace también cuenta con la opción de diseñar proyectos para el Mergecube, aunque este plugin se encuentra disponible para la versión premium.
-
-...
-
-\subsection{Metaverse} 
-
-Metaverse\footnote{\url{https://studio.gometa.io/discover/me}} es otra aplicación enfocada bastante al entorno educativo. En este caso el entorno de desarrollo de los ejemplos es más sencillo. En la propia web, tendremos una estructura similar a un modelo de diagrama de flujo. En cada paso se puede añadir un objeto 3D o una imagen que es la que estará flotando cuando estemos usando la realidad aumentada, posteriormente se pueden añadir botones y menús, para que te lleven a otra pantalla que tenga otro objeto asignado. Así, por ejemplo, se pueden hacer programas en los que se creen pequeños juegos de preguntas y, dependiendo de las respuestas, te llevan a diferentes pantallas.
-Además da la posibilidad de importar tus propios modelos e imágenes.
-También incluye la posibilidad de reconocer expresiones faciales para poder usarlo como disparadores.
-Otra característica es que puede usar el ArCore y ArKit para permitir que los objetos puedan asentarse en una posición y poder girar alrededor suyo.
-
-\subsection{Zapworks} ZapWorks\footnote{\url{https://zap.works/}} se trata de una herramienta de desarrollo para AR. En general esta compuesto por dos herramientas de creación, ZapWorks Designer y ZapWorks Studio.
-
-\begin{itemize}
-	\item ZapWorks Studio: se trata de la aplicación de desarrollo para escritorio. La aplicación permite desarrollar los proyectos AR, con modelos 3D, animaciones, interacciones, etc. Soporta los formatos  GLTF, FBX, OBJ, POD de modelos 3D.
-	\imagen{zapworkStudio}{Imagen perteneciente a la aplicación de ZapWorks Studio\cite{ZapStudio}.}
-	\item ZapWorks Designer: Se trata de una aplicación web, desde la que se puede de una forma sencilla, asociar a un marcador, imágenes, textos, vídeos, links. Pero no es posible trabajar con modelos 3D.
-\end{itemize}	
-
-La herramienta posee los siguientes tipos de seguimiento de realidad aumentada.
-
-\begin{itemize}
-	\item Word Tracking: Capacidad de reconocer el entorno para poder colocar objetos de una manera mas realista sobre el terreno, sin la ayuda de marcadores.
-	\item Face Tracking: Capacidad de reconocer y seguir rostros, para por ejemplo colocar, en una cara el contenido AR y que aunque se muevan el contenido se mueva con la cara.
-	\item Image Tracking: Que una imagen pueda ser el marcador, y pueda seguirla en movimiento.
-	\item Zapbox Tracking: \colorbox{red}{COMPLETAR}	 
-\end{itemize}
-
-Para acceder al contenido AR almacenado en el servidor de ZapWorks, utiliza los zapcodes, se tratan una imagen codificada para que pueda descargar un proyecto AR. Una vez que la aplicación reconoce el zapcode, descarga el proyecto y este se ejecutará.
-
-\imagenPeque{zapcode}{Ejemplo de un zapcode \cite{ZapStudio}.}
-
-
-\subsection{Kudan} 
-
-Kudan\footnote{\url{https://www.xlsoft.com/en/products/kudan/index.html}} 
-se trata de un SDK, con la capacidad de soportar AR tanto con marcadores y como sin ellos. En principio Kudan no tiene un limite de marcadores que pueda detectar al mismo tiempo, pero se puede incluir un limite para que la aplicación tenga un rendimiento adecuado. 
-Posee soporte para APIs nativas, como ObjetiveC para iOS, Java para Android y Unity~\cite{kudan_developer_hub}.
-
-El motor de Kudan está escrito en C++ y optimizado con programación en ensamblador, dando un mayor rendimiento y estabilidad, con el menor impacto de memoria.
-Usa la tecnología SLAM (Simultaneous Localization and Mapping) para el reconocimiento del escenario.
-
-\imagenPeque{marta_2}{Imagen perteneciente a la aplicación M.A.R.T.A \cite{marta_app}.}
-
-Kudan soporta los siguientes formatos 3D: FBX, OBJ y COLLADA.
-
-En la imagen \ref{fig:marta_2} podemos ver un ejemplo de la aplicación M.A.R.T.A\footnote{\url{https://play.google.com/store/apps/details?id=com.apophistechlabs.marta}} que utiliza Kudan para detectar una superficie en la que colocar el modelo 3D.
-
-\subsection{Vuforia}\label{sub:Def_Vuforia}
-
-Vuforia\footnote{\url{https://developer.vuforia.com/}} es un kit de desarrollo ( SDK) para aplicaciones de AR, para las plataformas de Android, iOS, Windows, Unity y HoloLens. Fue creado por Qualcomm Connected Experience en 2010, y en 2015 PTC inc lo compró~\cite{simonetti2013vuforia}.
-
-Vuforia proporciona una API en C++, Java, Objective-C++ y los lenguajes de .NET mediante Unity.
-
-Vuforia soporta diferentes tipos marcadores, estos pueden ser 2D o 3D, también soporta múltiples marcadores simultáneamente, y reconocimiento del terreno sin marcadores.
-
-\imagen{vuforia01}{Posibles marcadores de Vuforia}
-
-Los marcadores se pueden crear desde la página web de developer vuforia, para ello deben escoger qué tipo de marcadores se quieren crear y adjuntarle las imágenes que formarán dicho marcador. La página dará una calificación de 5 estrellas según la calidad de la imagen para ser un marcador. Una vez completado, da la opción de descargarlos el un archivo configurable de Unity que incluirá los marcadores en nuestro proyecto.
-
-
-
-Cuenta con una licencia gratuita por defecto, con la limitación de poder tener un máximo de 100 vumarks y 1000 cloud targets.
-
-Actualmente Vuforia esta disponible para las versiones indicadas en la siguiente tabla~\cite{vuforia_supported_versions}.
-\begin{table}[]
-	\begin{tabular}{|l|l|l|l|l|l|}
-		\hline
-		\multicolumn{2}{|l|}{Device OS}                       & \multicolumn{2}{l|}{Herramientas de Desarrollo}                                             & \multicolumn{2}{l|}{Fusion Provider}                \\ \hline
-		&                          & NDK                                            & r20+                                       &                                &                    \\ \cline{3-4}
-		&                          & \cellcolor[HTML]{EFEFEF}Gradle                 & \cellcolor[HTML]{EFEFEF}5.1.1+             &                                &                    \\ \cline{3-4}
-		&                          & Android SDK Build Tools                        & 28.0.3                                     &                                &                    \\ \cline{3-4}
-		&                          & \cellcolor[HTML]{EFEFEF}Android Studio         & \cellcolor[HTML]{EFEFEF}3.4.x              &                                &                    \\ \cline{3-4}
-		\multirow{-5}{*}{Android}  & \multirow{-5}{*}{5.1.1+} & Unity Editor                                   & 2019.2.0+                                  & \multirow{-5}{*}{ArCore 1.10+} & \multirow{-5}{*}{} \\ \hline
-		&                          & \cellcolor[HTML]{EFEFEF}XCode                  & \cellcolor[HTML]{EFEFEF}10.1+              & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
-		\multirow{-2}{*}{iOS}      & \multirow{-2}{*}{11+}    & Unity Editor                                   & 2019.2+                                    & \multicolumn{2}{l|}{\multirow{-2}{*}{ArKit}}        \\ \hline
-		&                          & \cellcolor[HTML]{EFEFEF}Visual Studio          & \cellcolor[HTML]{EFEFEF}2017 v 15.9+ & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
-		&                          & Unity Editor                                   & 2019.2.0+                                  & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
-		\multirow{-3}{*}{Windows}  & \multirow{-3}{*}{10}     & \cellcolor[HTML]{EFEFEF}Unity Editor(Hololens) & \cellcolor[HTML]{EFEFEF}2018.4.11          & \multicolumn{2}{l|}{\multirow{-3}{*}{}}             \\ \hline
-		&                          & Lumin SDK                                      & 0.22.0                                     & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
-		\multirow{-2}{*}{Lumin Os} & \multirow{-2}{*}{10}     & \cellcolor[HTML]{EFEFEF}Lumin OS               & \cellcolor[HTML]{EFEFEF}0.97+              & \multicolumn{2}{l|}{\multirow{-2}{*}{}}             \\ \hline
-	\end{tabular}
-\end{table}
-
-
-\subsection{Wikitude}
-
-Wikitude\footnote{\url{https://www.wikitude.com/}} se trata de un SDK de realidad aumentada, ofrece un amplio repertorio de características\cite{wikitude}: 
-
-\begin{itemize}
-	\item Reconocimiento de imágenes.
-	\item Reconocimiento de objetos.
-	\item Reconocimiento de múltiples marcadores: Permite reconocer múltiples marcadores de forma simultánea.
-	\item Instant Tracking: reconocimiento sin la necesidad de marcadores, permitiendo superponer elementos virtuales en superficies detectadas con la tecnologia Slam Instant Tracking.	
-	\item Seguimiento extendido: Permite que un elemento virtual que se ha superpuesto en un punto o marcador determinado, persista aunque dicho punto se salga del campo de visión de la cámara.	
-	\item Geo AR: Permite agregar contenido de realidad aumentada basándose en la ubicación, valiéndose del GPS y demás sensores para determinar la ubicación.
-	\item Cloud Recognition: Ofrece la posibilidad de guardar en línea los datos de imágenes/marcadores para las aplicaciones.	
-\end{itemize}
-
-Wikitude esta disponible para Android, iOS, Windows y Smart Glasses.
-También posee un amplio soporte para frameworks de desarrollo : Andoid, iOS, Windows, Unity, Cordova, Xamarin, Flutter, Titanium. 
-Los sistemas deberán cumplir los requisitos indicados en el siguiente enlace: \url{https://www.wikitude.com/documentation/latest/android/supporteddevices.html#supported-devices}.
-
-
-
-\subsection{OpenCV}
-
-OpenCV\footnote{\url{https://opencv.org/}} es una librería de visión artificial y machine learning, de código abierto. Tiene una licencia BSD por lo que facilita su uso y modificación para las empresas. Cuenta con más de 2500 algoritmos optimizados. Estos pueden emplearse para detectar y reconocer rostros, identificación de objetos, clasificar acciones humanas en vídeos, seguir los movimientos de la cámara, rastrear objetos en movimiento, extraer modelos 3D de objetos, producir nubes de puntos 3D de cámaras estéreo, seguir el movimiento de los ojos, reconocer paisajes y establecer marcadores para usarlos en realidad aumentada.
-
-Esta disponible en interfaces para C++, Python, Java y MATLAB y es compatible con Windows, Linux, Android y Mac OS.
-
-
-\subsection{8thWall}
-
-8thWall\footnote{\url{https://www.8thwall.com/}}
-es un entorno de desarrollo de realidad aumentada, que se caracteriza principalmente por el WebAR, que da la posibilidad de ejecutar las imágenes AR a través del propio navegador web del dispositivo, sin tener que instalarse ninguna aplicación extra en el mismo~\cite{8thwall_products}.
-
-Posee las siguientes características:
-
-\begin{itemize}
-	\item World Tracking: Con la tecnología SLAM, es capaz de reconocer superficies planas instantáneamente, ademas de estimaciones de iluminación.
-	\item Image Targets: 8thWall Web puede detectar y rastrear imágenes y usarlas como marcadores. Cada aplicación puede tener un máximo de 1000 marcadores.
-	\item Modular framework: El framework de la aplicación esta diseñado para integrar tecnologías de reconocimiento como el seguimiento de rostros, la oclusión de personas y otras tecnologías de machine learning.
-\end{itemize}
-
-
-Tiene soporte con los frameworks 3D A-Frame, three.js, babylon.js, Amazon Sumerian y PlayCanvas.
-
-Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegadores soportados son; Chrome, Chromium,Firefox, Android WebViews.
-
-\subsection{Resumen y comparativa de herramientas}
-En la tabla \ref{tabla:comparacionHerramientas} se puede observar una comparativa entre las principales funcionalidades de las herramientas. Se expondrán si es MultiTarget (MT), si pose realidad sin marcadores (SM), las plataformas para las que está disponible, el tipo de licencia, libre (L) o comercial (C), el precio y tipo de requisitos.
-
-\label{tablaComparacion}\tablaSmall{Comparativa herramientas AR}{l c c c c c c}{comparacionHerramientas}
-{ \multicolumn{1}{l}{} & MT & SM & Plataforma  & Licencia & Precio & Requisitos\\}{ 
-	ArCore & X&X&Android& L & 0\euro & Altos\\ 
-	ArKit &X&X&iOS &L & 0\euro &-\\
-	CoSpaces&X & &iOS/Android  &L y C & 75\euro año&Medios\\
-	Metaverse &X&X&iOS/Android &L y C & ?\euro&Medios \\
-	Zapworks  &X&&iOS/Android &L y C & 55\euro mes& Medios\\
-	Kudan   &X&X&iOS/Android &L y C & ?\euro& Medios\\
-	Vuforia  &X&X& iOS/Android&L y C & 42\euro mes& Medios\\
-	WikiTude &X&X&iOS/Android &L y C & 2490\euro & Medios\\
-	OpenCV  &X& & iOS/Android&L & 0\euro& Bajos\\
-	8thWall &X&X& iOS/Android&L y C & 99mes\euro& Medios\\
-}
 
 
 
@@ -252,20 +55,18 @@ En la tabla \ref{tabla:comparacionHerramientas} se puede observar una comparativ
 	
 	La detección de marcadores se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial, para situar elementos que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras.
 	
-	\label{marcadorSencillo}\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo  \cite{AR_company}.}
+	\label{marcadorSencillo}\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo~\cite{AR_company}.}
 	
 	Con la mejora de las cámaras, también es posible utilizar como marcadores imágenes mas complejas, como por ejemplo un folleto publicitario o la foto de un planeta.
 	También es posible que el marcador se trate de un objeto físico, como por ejemplo una lámpara, o un coche.
 	
-	\imagen{ejemploMarcadorTigre}{Ejemplo donde una carta de un tigre es un marcador \cite{AR_company}.}
+	\imagen{ejemploMarcadorTigre}{Ejemplo donde una carta de un tigre es un marcador~\cite{AR_company}.}
 	
 	Aunque gracias al avance de la calidad de las cámaras y del software de reconocimiento, es posible utilizar marcadores mas complejos, esto también implicarán que será mas probable que falle, y por consecuencia se desencuandren las imágenes insertadas por AR, que los tiempos de detección sean mas largos etc.
 	
-	Se pueden clasificar los marcadores en \cite{linowes_babilinski_2017}:
+	Se pueden clasificar los marcadores en~\cite{linowes_babilinski_2017}:
 	
-	\imagenPeque{market}{Ejemplo de un marcador~\cite{linowes_babilinski_2017}.}
-		
-	\imagenflotante{market2}{Ejemplo de marcadores codificados~\cite{linowes_babilinski_2017}.}
+	
 		
 	\begin{itemize}
 		\item Marcadores: El marcador mas básico es uno con un borde ancho. Su ventaja es que minimizan los costes de procesamiento y las posibilidades de error al reconocerlo. En la imagen \ref{fig:market} podemos ver un ejemplo de un marcador simple.\\		
@@ -284,7 +85,11 @@ En la tabla \ref{tabla:comparacionHerramientas} se puede observar una comparativ
 		
 	\end{itemize}
 
-\imagen{vuforia_recoObjeto}{Vuforia Object Scanner \cite{vuforia_scanner}.}	
+	\imagenPeque{market}{Ejemplo de un marcador~\cite{linowes_babilinski_2017}.}
+	
+	\imagenflotante{market2}{Ejemplo de marcadores codificados~\cite{linowes_babilinski_2017}.}
+	
+	\imagen{vuforia_recoObjeto}{Vuforia Object Scanner~\cite{vuforia_scanner}.}	
 
 
 
@@ -311,80 +116,3 @@ En la tabla \ref{tabla:comparacionHerramientas} se puede observar una comparativ
 	
 	
 	
-\section{Secciones}
-
-Las secciones se incluyen con el comando section.
-
-\subsection{Subsecciones}
-
-Además de secciones tenemos subsecciones.
-
-\subsubsection{Subsubsecciones}
-
-Y subsecciones. 
-
-
-\section{Referencias}
-
-Las referencias se incluyen en el texto usando cite \cite{wiki:latex}. Para citar webs, artículos o libros \cite{koza92}.
-
-
-\section{Imágenes}
-
-Se pueden incluir imágenes con los comandos standard de \LaTeX, pero esta plantilla dispone de comandos propios como por ejemplo el siguiente:
-
-\imagen{escudoInfor}{Autómata para una expresión vacía}
-
-
-
-\section{Listas de items}
-
-Existen tres posibilidades:
-
-\begin{itemize}
-	\item primer item.
-	\item segundo item.
-\end{itemize}
-
-\begin{enumerate}
-	\item primer item.
-	\item segundo item.
-\end{enumerate}
-
-\begin{description}
-	\item[Primer item] más información sobre el primer item.
-	\item[Segundo item] más información sobre el segundo item.
-\end{description}
-	
-\begin{itemize}
-\item 
-\end{itemize}
-
-\section{Tablas}
-
-Igualmente se pueden usar los comandos específicos de \LaTeX o bien usar alguno de los comandos de la plantilla.
-
-\tablaSmall{Herramientas y tecnologías utilizadas en cada parte del proyecto}{l c c c c}{herramientasportipodeuso}
-{ \multicolumn{1}{l}{Herramientas} & App AngularJS & API REST & BD & Memoria \\}{ 
-HTML5 & X & & &\\
-CSS3 & X & & &\\
-BOOTSTRAP & X & & &\\
-JavaScript & X & & &\\
-AngularJS & X & & &\\
-Bower & X & & &\\
-PHP & & X & &\\
-Karma + Jasmine & X & & &\\
-Slim framework & & X & &\\
-Idiorm & & X & &\\
-Composer & & X & &\\
-JSON & X & X & &\\
-PhpStorm & X & X & &\\
-MySQL & & & X &\\
-PhpMyAdmin & & & X &\\
-Git + BitBucket & X & X & X & X\\
-Mik\TeX{} & & & & X\\
-\TeX{}Maker & & & & X\\
-Astah & & & & X\\
-Balsamiq Mockups & X & & &\\
-VersionOne & X & X & X & X\\
-} 

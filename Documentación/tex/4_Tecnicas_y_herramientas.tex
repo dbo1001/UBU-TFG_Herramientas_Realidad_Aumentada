@@ -1,12 +1,13 @@
 \capitulo{4}{Técnicas y herramientas}
 
-\section{Herramientas AR}
+\section{Herramientas}
+\subsection{Herramientas AR}
 
 Se han comparado diferentes herramientas de desarrollo para realidad aumentada. 
 Algunas de ellas se tratan de herramientas ya desarrolladas y usadas con fines educativos o comerciales. Otras de las herramientas que se explican son los frameworks/API que muchas de las herramientas anteriores usan.
 
 
-\subsection{ArCore}
+\subsubsection{ArCore}
 
 ArCore \footnote{\url{https://developers.google.com/ar/discover}} es la plataforma de Google de desarrollo para realidad aumentada. Con el uso de diferentes API permite que los dispositivos detecten su entorno, lo comprendan e interactúen con la información.
 
@@ -23,7 +24,7 @@ ArCore utiliza el Motion Tracking para identificar los puntos clave, y rastrea c
 
 Lamentablemente no es compatible con cualquier dispositivo. En el siguiente enlace se encuentra la lista de los dispositivos compatibles actualmente \url{https://developers.google.com/ar/discover/supported-devices}.
 
-\subsection{ArKit}
+\subsubsection{ArKit}
 
 ARKit \footnote{\url{https://developer.apple.com/augmented-reality/}} es la herramienta de realidad aumentada de Apple para sistemas iOS. ARKit consigue mostrar contenido virtual de forma natural en el mudo real, incluso pudiendo situarlo detrás o delante del usuario con People Occlusion, pudiendo reconocer hasta 3 rostros al mismo tiempo~\cite{apple_inc}.
 
@@ -42,31 +43,32 @@ Funciones destacadas que posee ArKit actualmente.
 Una limitación es que únicamente esta disponible para sistemas iOS 11.0 o superior.
 
 
-\subsection{CoSpaces}\label{sub:Def_cospace} 
+\subsubsection{CoSpaces}\label{sub:Def_cospace} 
 
 CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo educativo. Se puede acceder a ella tanto por web, como desde la aplicación de móvil. Permite a los profesores crear salas para sus alumnos donde tendrían acceso a los diferentes ejemplos a usar para sus clases. También cuenta con una galería donde los usuarios pueden compartir sus ejemplos.
 
-\imagen{cospaces2}{Imagen de mi plataforma de desarrollo de CoSpaces.}
+\imagen{cospaces2}{Imagen de mi plataforma de desarrollo de CoSpaces. ( Captura de pantalla)}
 
-Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D, donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scripts, aunque hay que destacar, que la programación por scripts y algunas opciones de la programación de bloques únicamente están disponibles con una licencia premium. Para añadir un modelo 3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly (biblioteca pública de google de modelos 3D\footnote{\url{https://poly.google.com/}}).
+Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D, donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo, en la imagen~\ref{fig:cospaces2} se puede observar el entorno descrito. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scripts, aunque hay que destacar, que la programación por scripts y algunas opciones de la programación de bloques únicamente están disponibles con una licencia premium. Para añadir un modelo 3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly (biblioteca pública de google de modelos 3D\footnote{\url{https://poly.google.com/}}).
 CoSpace también cuenta con la opción de diseñar proyectos para el Mergecube, aunque este plugin se encuentra disponible para la versión premium.
 
-...
 
-\subsection{Metaverse} 
+
+\subsubsection{Metaverse} 
 
 Metaverse\footnote{\url{https://studio.gometa.io/discover/me}} es otra aplicación enfocada bastante al entorno educativo. En este caso el entorno de desarrollo de los ejemplos es más sencillo. En la propia web, tendremos una estructura similar a un modelo de diagrama de flujo. En cada paso se puede añadir un objeto 3D o una imagen que es la que estará flotando cuando estemos usando la realidad aumentada, posteriormente se pueden añadir botones y menús, para que te lleven a otra pantalla que tenga otro objeto asignado. Así, por ejemplo, se pueden hacer programas en los que se creen pequeños juegos de preguntas y, dependiendo de las respuestas, te llevan a diferentes pantallas.
 Además da la posibilidad de importar tus propios modelos e imágenes.
 También incluye la posibilidad de reconocer expresiones faciales para poder usarlo como disparadores.
 Otra característica es que puede usar el ArCore y ArKit para permitir que los objetos puedan asentarse en una posición y poder girar alrededor suyo.
 
-\subsection{Zapworks} ZapWorks\footnote{\url{https://zap.works/}} se trata de una herramienta de desarrollo para AR. En general esta compuesto por dos herramientas de creación, ZapWorks Designer y ZapWorks Studio.
+\subsubsection{Zapworks} ZapWorks\footnote{\url{https://zap.works/}} se trata de una herramienta de desarrollo para AR. En general esta compuesto por dos herramientas de creación, ZapWorks Designer y ZapWorks Studio.
 
 \begin{itemize}
-	\item ZapWorks Studio: se trata de la aplicación de desarrollo para escritorio. La aplicación permite desarrollar los proyectos AR, con modelos 3D, animaciones, interacciones, etc. Soporta los formatos  GLTF, FBX, OBJ, POD de modelos 3D.
-	\imagen{zapworkStudio}{Imagen perteneciente a la aplicación de ZapWorks Studio~\cite{ZapStudio}.}
+	\item ZapWorks Studio: se trata de la aplicación de desarrollo para escritorio. La aplicación permite desarrollar los proyectos AR, con modelos 3D, animaciones, interacciones, etc. Soporta los formatos  GLTF, FBX, OBJ, POD de modelos 3D. En la imagen~\ref{fig:zapworkStudio} se puede observar el entorno.
 	\item ZapWorks Designer: Se trata de una aplicación web, desde la que se puede de una forma sencilla, asociar a un marcador, imágenes, textos, vídeos, links. Pero no es posible trabajar con modelos 3D.
 \end{itemize}	
+
+\imagen{zapworkStudio}{Imagen perteneciente a la aplicación de ZapWorks Studio~\cite{ZapStudio}.}
 
 La herramienta posee los siguientes tipos de seguimiento de realidad aumentada.
 
@@ -74,15 +76,17 @@ La herramienta posee los siguientes tipos de seguimiento de realidad aumentada.
 	\item Word Tracking: Capacidad de reconocer el entorno para poder colocar objetos de una manera mas realista sobre el terreno, sin la ayuda de marcadores.
 	\item Face Tracking: Capacidad de reconocer y seguir rostros, para por ejemplo colocar, en una cara el contenido AR y que aunque se muevan el contenido se mueva con la cara.
 	\item Image Tracking: Que una imagen pueda ser el marcador, y pueda seguirla en movimiento.
-	\item Zapbox Tracking: \colorbox{red}{COMPLETAR}	 
+	\item Zapbox Tracking: Se trata de unos marcadores específicamente creados para que se puedan manipular~\ref{fig:Memoria/zapbox}.
 \end{itemize}
 
-Para acceder al contenido AR almacenado en el servidor de ZapWorks, utiliza los zapcodes, se tratan una imagen codificada para que pueda descargar un proyecto AR. Una vez que la aplicación reconoce el zapcode, descarga el proyecto y este se ejecutará.
+\imagen{Memoria/zapbox}{Imagen perteneciente a un kit de zapbox~\cite{ZapStudio}.}
+
+Para acceder al contenido AR almacenado en el servidor de ZapWorks, utiliza los zapcodes~\ref{fig:zapcode}, se tratan una imagen codificada para que pueda descargar un proyecto AR. Una vez que la aplicación reconoce el zapcode, descarga el proyecto y este se ejecutará.
 
 \imagenPeque{zapcode}{Ejemplo de un zapcode~\cite{ZapStudio}.}
 
 
-\subsection{Kudan} 
+\subsubsection{Kudan} 
 
 Kudan\footnote{\url{https://www.xlsoft.com/en/products/kudan/index.html}} 
 se trata de un SDK, con la capacidad de soportar AR tanto con marcadores y como sin ellos. En principio Kudan no tiene un limite de marcadores que pueda detectar al mismo tiempo, pero se puede incluir un limite para que la aplicación tenga un rendimiento adecuado. 
@@ -91,19 +95,21 @@ Posee soporte para APIs nativas, como ObjetiveC para iOS, Java para Android y Un
 El motor de Kudan está escrito en C++ y optimizado con programación en ensamblador, dando un mayor rendimiento y estabilidad, con el menor impacto de memoria.
 Usa la tecnología SLAM (Simultaneous Localization and Mapping) para el reconocimiento del escenario.
 
-\imagenPeque{marta_2}{Imagen perteneciente a la aplicación M.A.R.T.A~\cite{marta_app}.}
-
 Kudan soporta los siguientes formatos 3D: FBX, OBJ y COLLADA.
 
 En la imagen \ref{fig:marta_2} podemos ver un ejemplo de la aplicación M.A.R.T.A\footnote{\url{https://play.google.com/store/apps/details?id=com.apophistechlabs.marta}} que utiliza Kudan para detectar una superficie en la que colocar el modelo 3D.
 
-\subsection{Vuforia}\label{sub:Def_Vuforia}
+\imagenPeque{marta_2}{Imagen perteneciente a la aplicación M.A.R.T.A~\cite{marta_app}.}
+
+
+
+\subsubsection{Vuforia}\label{sub:Def_Vuforia}
 
 Vuforia\footnote{\url{https://developer.vuforia.com/}} es un kit de desarrollo ( SDK) para aplicaciones de AR, para las plataformas de Android, iOS, Windows, Unity y HoloLens. Fue creado por Qualcomm Connected Experience en 2010, y en 2015 PTC inc lo compró~\cite{simonetti2013vuforia}.
 
 Vuforia proporciona una API en C++, Java, Objective-C++ y los lenguajes de .NET mediante Unity.
 
-Vuforia soporta diferentes tipos marcadores, estos pueden ser 2D o 3D, también soporta múltiples marcadores simultáneamente, y reconocimiento del terreno sin marcadores.
+Vuforia soporta diferentes tipos marcadores~\ref{fig:vuforia01}, estos pueden ser 2D o 3D, también soporta múltiples marcadores simultáneamente, y reconocimiento del terreno sin marcadores.
 
 \imagen{vuforia01}{Posibles marcadores de Vuforia}
 
@@ -114,6 +120,8 @@ Los marcadores se pueden crear desde la página web de developer vuforia, para e
 Cuenta con una licencia gratuita por defecto, con la limitación de poder tener un máximo de 100 vumarks y 1000 cloud targets.
 
 Actualmente Vuforia esta disponible para las versiones indicadas en la siguiente tabla~\cite{vuforia_supported_versions}.
+
+REVISAR TABLA   ELIMINAR SI REALMENTE NO ES RELEVANTE
 \begin{table}[]
 	\begin{tabular}{|l|l|l|l|l|l|}
 		\hline
@@ -134,7 +142,7 @@ Actualmente Vuforia esta disponible para las versiones indicadas en la siguiente
 \end{table}
 
 
-\subsection{Wikitude}
+\subsubsection{Wikitude}
 
 Wikitude\footnote{\url{https://www.wikitude.com/}} se trata de un SDK de realidad aumentada, ofrece un amplio repertorio de características~\cite{wikitude}: 
 
@@ -154,14 +162,14 @@ Los sistemas deberán cumplir los requisitos indicados en el siguiente enlace: \
 
 
 
-\subsection{OpenCV}
+\subsubsection{OpenCV}
 
 OpenCV\footnote{\url{https://opencv.org/}} es una librería de visión artificial y machine learning, de código abierto. Tiene una licencia BSD por lo que facilita su uso y modificación para las empresas. Cuenta con más de 2500 algoritmos optimizados. Estos pueden emplearse para detectar y reconocer rostros, identificación de objetos, clasificar acciones humanas en vídeos, seguir los movimientos de la cámara, rastrear objetos en movimiento, extraer modelos 3D de objetos, producir nubes de puntos 3D de cámaras estéreo, seguir el movimiento de los ojos, reconocer paisajes y establecer marcadores para usarlos en realidad aumentada.
 
 Esta disponible en interfaces para C++, Python, Java y MATLAB y es compatible con Windows, Linux, Android y Mac OS.
 
 
-\subsection{8thWall}
+\subsubsection{8thWall}
 
 8thWall\footnote{\url{https://www.8thwall.com/}}
 es un entorno de desarrollo de realidad aumentada, que se caracteriza principalmente por el WebAR, que da la posibilidad de ejecutar las imágenes AR a través del propio navegador web del dispositivo, sin tener que instalarse ninguna aplicación extra en el mismo~\cite{8thwall_products}.
@@ -179,7 +187,7 @@ Tiene soporte con los frameworks 3D A-Frame, three.js, babylon.js, Amazon Sumeri
 
 Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegadores soportados son; Chrome, Chromium,Firefox, Android WebViews.
 
-\subsection{Resumen y comparativa de herramientas}
+\subsubsection{Resumen y comparativa de herramientas}
 En la tabla \ref{tabla:comparacionHerramientas} se puede observar una comparativa entre las principales funcionalidades de las herramientas. Se indica si es MultiTarget (MT), si posee realidad sin marcadores (SM), las plataformas para las que está disponible, el tipo de licencia, libre (L) o comercial (C), el precio y tipo de requisitos.
 
 \label{tablaComparacion}\tablaSmall{Comparativa herramientas AR}{l c c c c r c}{comparacionHerramientas}
@@ -196,7 +204,27 @@ En la tabla \ref{tabla:comparacionHerramientas} se puede observar una comparativ
 	8thWall &X&X& iOS/Android&L y C & 99mes\euro& Medios\\
 }
 
+\subsection{Herramientas de documentación}
+\subsubsection{\LaTeX} 
+Se trata de un sistema de composición de textos, con el objetivo de la creación de documentos de alta calidad tipográfica. Se ha usado TeXstudio y miktex para compilar y editar \LaTeX.
+\subsection{Herramientas de gestión}
+\subsubsection{GitHub}
+Se trata de una plataforma donde se pueden guardar con un sistema de control de versiones los proyectos....
 
+Link del repositorio: \url{https://github.com/smi0010/TFG_Herramientas_Realidad_Aumentada}
+
+\subsection{Herramientas de desarrollo}
+\subsubsection{Unity}
+Unity\footnote{\url{https://unity.com/es}}, es un motor gráfico de desarrollo de videojuegos creado por Unity technologies, disponible para Windows, Linux y Mac OS. En él, se pueden desarrollar aplicaciones para distintas plataformas como, Windows, MacOS, Linux, Andorid, iOS, videoconsolas, WebGL, tvOS y Facebook.
+\subsubsection{VisualStudio}
+ViusalStudio\footnote{\url{https://visualstudio.microsoft.com/es/}}, se trata de un entorno de desarrollo para Windows, Linux y macOS. Es compatible con múltiples lenguajes de programación. C\# es uno de los principales lenguajes con los que es compatible, y dado que los scripts de Unity son en dicho lenguaje, se ha escogido visual studio para su desarrollo.
+
+
+
+\subsubsection{Vuforia}
+Como se ha explicado en el apartado \ref{sub:Def_Vuforia}, Vuforia\footnote{\url{https://developer.vuforia.com/}} se trata de un SDK para aplicaciones de AR, para las plataformas de Android, iOS, Windows, Unity y HoloLens. Proporciona las herramientas necesarias para desarrollar realidad aumentada en el entorno Unity.
+\subsubsection{CoSpace}
+Como se expuso en el apartado \ref{sub:Def_Vuforia}, CoSpaces se trata de una plataforma de apoyo educativo. Se puede acceder a ella tanto por web, como desde la aplicación de móvil. Permite crear entornos virtuales y de realidad aumentada para el MergeCube, desde su entorno de desarrollo web.
 
 \section{Técnicas utilizadas en el desarrollo del trabajo}
 
@@ -299,24 +327,6 @@ En el menú en un principio se incorporo un cubo para realizar pruebas en el com
 
 
 
-\section{Herramientas de documentación}
-\subsection{\LaTeX} 
-Se trata de un sistema de composición de textos, con el objetivo de la creación de documentos de alta calidad tipográfica. Se ha usado TeXstudio y miktex para compilar y editar \LaTeX.
-\section{Herramientas de gestión}
-\subsection{GitHub}
-Se trata de una plataforma donde se pueden guardar con un sistema de control de versiones los proyectos....
 
- Link del repositorio: \url{https://github.com/smi0010/TFG_Herramientas_Realidad_Aumentada}
-
-\section{Herramientas de desarrollo}
-\subsection{Unity}
-Unity\footnote{\url{https://unity.com/es}}, es un motor gráfico de desarrollo de videojuegos creado por Unity technologies, disponible para Windows, Linux y Mac OS. En él, se pueden desarrollar aplicaciones para distintas plataformas como, Windows, MacOS, Linux, Andorid, iOS, videoconsolas, WebGL, tvOS y Facebook.
-\subsection{VisualStudio}
-ViusalStudio\footnote{\url{https://visualstudio.microsoft.com/es/}}, se trata de un entorno de desarrollo para Windows, Linux y macOS. Es compatible con múltiples lenguajes de programación. C\# es uno de los principales lenguajes con los que es compatible, y dado que los scripts de Unity son en dicho lenguaje, se ha escogido visual studio para su desarrollo.
-
-\subsection{Vuforia}
-Como se ha explicado en el apartado \ref{sub:Def_Vuforia}, Vuforia\footnote{\url{https://developer.vuforia.com/}} se trata de un SDK para aplicaciones de AR, para las plataformas de Android, iOS, Windows, Unity y HoloLens. Proporciona las herramientas necesarias para desarrollar realidad aumentada en el entorno Unity.
-\subsection{CoSpace}
-Como se expuso en el apartado \ref{sub:Def_Vuforia}, CoSpaces se trata de una plataforma de apoyo educativo. Se puede acceder a ella tanto por web, como desde la aplicación de móvil. Permite crear entornos virtuales y de realidad aumentada para el MergeCube, desde su entorno de desarrollo web.
 
 \section{title}

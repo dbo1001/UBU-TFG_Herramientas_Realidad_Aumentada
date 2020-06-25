@@ -137,18 +137,39 @@ El resto de tarifas que posee CoSpaces, su principal característica es el núme
 La tarifa que sería recomendable se trata de la primera ofertada en el plan Pro, ya que aunque se vaya a utilizar con un número de alumnos superior al ofertado, sería posible organizarse por turnos.
 
 \subsubsection{Costes Personal}
-El proyecto ha sido desarrollado por una única persona, durante un periodo de X meses a tiempo parcial. Se considerará un salario de 1000\euro.
+El proyecto ha sido desarrollado por una única persona, durante un periodo de 6 meses a tiempo parcial. Se considerará un salario de 1000\euro.
 
-Para calcular los porcentajes de cotización de la seguridad social, se tendrá en cuenta los datos de 2020, 23,6\% la empresa y 4,7\% trabajadores.
+Para calcular los porcentajes de cotización de la seguridad social, se tendrá en cuenta los datos de 2020~\cite{contingencias2020}:
+\begin{itemize}
+	\item Por parte de la empresa:
+	\item Contingencias Comunes (Empresa): 23,6\%
+	\item Formación Profesional (Empresa): 0,6\%
+	\item Desempleo de tipo general (Empresa): 5,5\%
+	\item Fondo de Garantía Salarial (Fogasa) 0.2\%
+	\item Total 29,9\%:
+	\item Por parte del empleado:
+	\item Contingencias Comunes (Trabajador): 4,7\%	
+	\item Formación Profesional (Trabajador): 0,1\%
+	\item Desempleo de tipo general (Trabajador): 1,55\%
+	\item Total 6,35\%
+\end{itemize}
 
 En la tabla \ref{tabla:costesPersonal}
 
 El coste de personal total será de X\euro.
 
 \tablaSmall{Costes Personal}{l c }{costesPersonal}{\multicolumn{1}{l}{}& Coste\\}{
-	Salario & 1000\euro \\
-	Seguridad social& ?\euro  \\
-	IRPF& ?\euro  \\
+	Salario neto& 1000~\euro \\
+	IRPF (19\%)& ?\euro  \\
+	Seguridad social(28,30\%)& ?\euro  \\
+	
+	Formación profesional& ~\euro\\
+	Tasa de desempleo& ~\euro\\
+	Contingencias comunes& ~\euro\\
+	Fogasa& 166~\euro\\
+	Formación profesional& 166~\euro\\
+	
+	
 	\midrule
 	Total& \\}
 
@@ -157,8 +178,8 @@ Para el proyecto se ha requerido de algunos gastos en hardware y software.
 
 \begin{itemize}
 	\item Hardware:
-	Se tendrá en cuenta el equipo con el se ha desarrollado la aplicación, un ordenador valorado en 1100\euro. Una WebCam valorada en ?\euro, para realizar pruebas en el ordenador. Y un smartphone valorado en 210\euro. El Mergecube con un coste de 19.99\euro. En la tabla \ref{tabla:costesHardware} se pueden apreciar los costes agrupados.
-	\item Software: Algunas de las herramientas software que se han utilizado en el proyecto se traban de software gratuitos, o se han utilizado unicamente las pruebas o niveles gratuitos que ofrecen. Por el contrarío en algunos casos ha sido necesario, recurrir al pago. Uno de los casos es con CoSpaces, realizando una prueba de un mes, a un coste de ?\euro. En la tabla \ref{tabla:costesSoftware} se pueden apreciar los costes agrupados.
+	Se tendrá en cuenta el equipo con el se ha desarrollado la aplicación, un ordenador valorado en 1100\euro. Una WebCam valorada en 70\euro, para realizar pruebas en el ordenador. Y un smartphone valorado en 210\euro. El Mergecube con un coste de 19.99\euro. Los componentes se amortizarán en 4 años. En la tabla \ref{tabla:costesHardware} se pueden apreciar los costes  y las amortizaciones\footnote{Los costes de Amortización son calculados a 6 meses, que es la duración del proyecto.} agrupados.
+	\item Software: Algunas de las herramientas software que se han utilizado en el proyecto se traban de software gratuitos, o se han utilizado unicamente las pruebas o niveles gratuitos que ofrecen. Por el contrarío en algunos casos ha sido necesario, recurrir al pago. Uno de los casos es con CoSpaces, realizando una prueba de un mes, a un coste de ?\euro. En la tabla \ref{tabla:costesSoftware} se pueden apreciar los costes y las amortizaciones agrupados.
 \end{itemize}
 
 
@@ -167,25 +188,25 @@ Los costes totales de material, son de X.
 
 
 \tablaSmall{Costes hardware}{l c c}{costesHardware}{\multicolumn{1}{l}{}& Coste & Amortización\\}{
-	MergeCube& 19,99\euro&?\euro \\
-	Ordenador& 1100\euro&?\euro  \\
-	WebCam& 70\euro&?\euro  \\
-	SmartPhone& 210\euro&?\euro  \\
+	MergeCube& 19,99~\euro&19,99 \\
+	Ordenador& 1100~\euro&137,5~\euro  \\
+	WebCam& 70~\euro&8.75~\euro  \\
+	SmartPhone& 210~\euro&26,25~\euro  \\
 	\midrule
-	Total& &\\}
+	Total& 1399,99~\euro&192,49~\euro\\}
 
-\tablaSmall{Costes software}{l c c }{costesSoftware}{\multicolumn{1}{l}{}& Coste & Amortización\\}{
-	Windows 10& 145\euro&?\euro \\
-	CoSapaces& ?\euro&?\euro  \\
+\tablaSmall{Costes software}{l c }{costesSoftware}{\multicolumn{1}{l}{}& Coste \\}{
+	Windows 10& 145~\euro \\
+	CoSapaces& 79.99~\euro/mes  \\
 	\midrule
-	Total& &\\}
+	Total&224,99~\euro\\}
 
 \subsubsection{Costes Totales}
 	El coste total durante el desarrollo, es de X. Ver tabla \ref{tabla:costesTotales}
 \tablaSmall{Costes Totales}{l c  }{costesTotales}{\multicolumn{1}{l}{}& Coste\\}{
-	Personal& \euro \\
-	Hardware& ?\euro  \\
-	Software& ?\euro  \\
+	Personal& ~\euro \\
+	Hardware& 192,49~\euro  \\
+	Software& 224,99~\euro  \\
 	\midrule
 	Total& \\}
 

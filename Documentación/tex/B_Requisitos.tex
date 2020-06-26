@@ -44,134 +44,154 @@ En el presente anexo se detallan los objetivos generales de la aplicación desar
 \imagen{Anexos/casosdeuso}{Diagrama de casos de uso.}
 \subsection{Descripción de los casos de uso}
 %\tablaCasosDeUso{Caso de Uso 1: Menu}{}{}{}
-\subsubsection{Caso de uso 1: Menú}
+\subsubsection{Caso de uso 1: Configurar nivel.}
 \begin{itemize}
-	\item \textbf{Autor:} Saúl Martín Ibáñez
-	\item \textbf{Descripción:} Se crea un menú en el que poder seleccionar distintos modos de juego que pueda haber en la aplicación. Así como para poder configurar algunas de normas o preferencias del usuario.
-	\item \textbf{Precondiciones:} Compatibilidad del dispositivo con la aplicación.
-	\item \textbf{Requisitos:} RF-1.1, RF-1.2, RF-1.3
+	\item \textbf{Descripción:} Configurar los aspectos básicos del juego en la aplicación.
+	\item \textbf{Precondiciones:} Encontrarse en el menú principal.
+	\item \textbf{Requisitos:} RF-1 RF1.1
 	\item \textbf{Acciones:}
 	\begin{enumerate}
-		\item Abrir aplicación.
-		\item Seleccionar modo de juego.
-		\item Ajustar normas de juego a las preferencias que escoja el usuario o a las por defecto.
+		\item Seleccionar en el menú el botón Opciones.
+		\item Cambiar a la pantalla del menú de opciones.		
+		\item Escoger una de las opciones a configurar.		
 	\end{enumerate}
-	\item \textbf{Post Condiciones:} Inicia el modo cámara ¿?
-	\item \textbf{Excepciones:} No hay
-	\item \textbf{Importancia:} media...
+	\item \textbf{PostCondiciones:} Se ha entrado en la configuración correctamente. al salir los cambios se han guardado y hecho efectivos.
+	\item \textbf{Excepciones:} -
 \end{itemize}
-\subsubsection{Caso de uso 2: Botones Herramientas}
+\subsubsection{Caso de uso 1.1: Escoger modo target.}
 \begin{itemize}
-	\item \textbf{Autor:} Saúl Martín Ibáñez
-	\item \textbf{Descripción:} Se trata de los botones para poder seleccionar las diferentes opciones del modo jugable de la aplicación.
-	\item \textbf{Precondiciones:}
-	\item \textbf{Requisitos:} RF-2
+	\item \textbf{Descripción:} Escoger el tipo de target que se usará en la aplicación.
+	\item \textbf{Precondiciones:} haber entrado en opciones
+	\item \textbf{Requisitos:} RF-1 RF-1.1
 	\item \textbf{Acciones:}
 	\begin{enumerate}
-		\item Seleccionar el botón de la acción deseada.
-		\item Habilitar la herramienta seleccionada y deshabilitar la anterior. 
+		\item Elegir una de las opciones disponibles.
+		\item Configurar parámetros a decisión del usuario.
 	\end{enumerate}
-	\item \textbf{Post Condiciones:}
-	\item \textbf{Excepciones:}
-	\item \textbf{Importancia:} Alta
+	\item \textbf{PostCondiciones:} guardar los cambios realizados.
+	\item \textbf{Excepciones:} -
 \end{itemize}
-\subsubsection{Caso de uso 3: Atrás}
+\subsubsection{Caso de uso 2:  Seleccionar modo juego AR}
  \begin{itemize}
- 	\item \textbf{Autor:} Saúl Martín Ibáñez
- 	\item \textbf{Descripción:} Retroceder al menú, para poder volver a seleccionar otro modo.
- 	\item \textbf{Precondiciones:} Estar en el segundo nivel del menú, o dentro del modo jugable.
- 	\item \textbf{Requisitos:} RF-3
+ 	\item \textbf{Descripción:} Seleccionar uno de los modos de juego disponibles.
+ 	\item \textbf{Precondiciones:} Encontrarnos en el menú principal.
+ 	\item \textbf{Requisitos:} RF-1
  	\item \textbf{Acciones:}
  	\begin{enumerate}
- 		\item Pulsar el botón de Atrás.
- 		\item Volver al menú principal.
+ 		\item Seleccionar en el menú el botón Modos de Juego.
+ 		\item cambiar a la pantalla del menú de modos de juego.
  	\end{enumerate}
- 	\item \textbf{Post Condiciones:} El usuario ha vuelto a la pantalla del menú.
- 	\item \textbf{Excepciones:}	
- 	\item \textbf{Importancia:} Media.
+ 	\item \textbf{PostCondiciones:} Acceder al menú de modos de juego.
+ 	\item \textbf{Excepciones:}	-
  \end{itemize}
-\subsubsection{Caso de uso 4: Interfaz}
+\subsubsection{Caso de uso 2.1: Seleccionar semilla.}
 \begin{itemize}
-	\item \textbf{Autor:} Saúl Martín Ibáñez
-	\item \textbf{Descripción:} En la interfaz del juego se mostrara el progreso de cada fase, de esta manera el usuario, sabrá cuanto le falta para finalizar la fase en la que se encuentra.
-	\item \textbf{Precondiciones:} Estar en la pantalla del modo jugable.
-	\item \textbf{Requisitos:} RF-4
+	\item \textbf{Descripción:} El usuario escogerá una de las semilla/planta disponibles y se iniciara el modo AR de esa semilla..
+	\item \textbf{Precondiciones:} Haber seleccionado el modo de las plantas.
+	\item \textbf{Requisitos:}RF-1 RF-6 RF-2
 	\item \textbf{Acciones:}
 	\begin{enumerate}
-		\item Actualizar visualmente el progreso, cuando el usuario cumpla los requisitos.
+		\item Seleccionar en una de las disponibles.
+		\item Iniciar el modo AR sobre la semilla seleccionada.
 	\end{enumerate}
-	\item \textbf{Post Condiciones:} La interfaz se ha actualizado con éxito.
-	\item \textbf{Excepciones:} La información de la interfaz no se actualiza.
-	\item \textbf{Importancia:} media.
+	\item \textbf{PostCondiciones:} Se ha iniciado el modo de realidad aumentada correctamente.
+	\item \textbf{Excepciones:} Si se trata de iniciar una planta aun no implementada, no se iniciará el modo AR.
 \end{itemize}
-\subsubsection{Caso de uso 5: Giroscopio}
+\subsubsection{Caso de uso 2.1.1: Escoger una herramienta}
 \begin{itemize}
-	\item \textbf{Autor:} Saúl Martín Ibáñez
-	\item \textbf{Descripción:} la aplicación puede usar el sensor giroscópico del terminal, para actualizar los vectores de gravedad de objetos de la aplicación.
-	\item \textbf{Precondiciones:}-
-	\item \textbf{Requisitos:} RF-5
-	\item \textbf{Acciones:} No hay.
-	\item \textbf{Post Condiciones:} Se actualizan los vectores de gravedad, según la inclinación del dispositivo.
-	\item \textbf{Excepciones:} El dispositivo no posee del sensor o tiene inhabilitado los permisos.
-	\item \textbf{Importancia:} Media.
-\end{itemize}
-\subsubsection{Caso de uso 6: }
- \begin{itemize}
- 	\item \textbf{Autor:} Saúl Martín Ibáñez
- 	\item \textbf{Descripción:} Al completar una fase ofrecerán datos educativos sobre esa fase. 
- 	\item \textbf{Precondiciones:}...
- 	\item \textbf{Requisitos:} RF-7
- 	\item \textbf{Acciones:}
- 	\item \textbf{Post Condiciones:} Se ha ofrecido información.
- 	\item \textbf{Excepciones:} No se ha ofrecido ningún tipo de información de la fase.
- 	\item \textbf{Importancia:} Media
- \end{itemize}
-\subsubsection{Caso de uso 7: Ayuda}
-\begin{itemize}
-	\item \textbf{Autor:} Saúl Martín Ibáñez
-	\item \textbf{Descripción:} Ofrecer una guía para los usuarios nobeles o que tengan dudas en las normas y funcionamiento de la aplicación.
+	\item \textbf{Descripción:} Escoger entre una de las diferentes herramientas <<jugables>> del modo AR.
 	\item \textbf{Precondiciones:}
-	\item \textbf{Requisitos:} RF-8
-	\item \textbf{Acciones:}
 	\begin{enumerate}
-		\item Seleccionar botón de ayuda.
-		\item En caso de estar en mitad del juego, pausar el progreso y poder continuar después.
-		\item Desplegar una guía con las posibles dudas de utilización de la aplicación que puedan surgir.
+		\item Se ha iniciado el modo AR.
+		\item Sensor de la cámara encendido.
 	\end{enumerate}
-	\item \textbf{Post Condiciones:}
-	\item \textbf{Excepciones:} Tener la ayuda ya desplegada.
-	\item \textbf{Importancia:} 
+	\item \textbf{Requisitos:}  RF-2 RF2.2
+	\item \textbf{Acciones:} 
+	\begin{enumerate}
+		\item Pulsar  botón de la esquina inferior derecha.
+		\item Se desplegará una barra con botones de distintas herramientas.
+		\item Escoger una de las herramientas y pulsar.
+		\item Usar la harramienta seleccionada y completar sus funciones en el nivel.
+	\end{enumerate}
+	\item \textbf{PostCondiciones:} La herramienta sale en pantalla y es funcional.
+	\item \textbf{Excepciones:} 
+	\begin{enumerate}
+		\item La funcionalidad de la herramienta ya ha sido completada.
+		\item El nivel ya ha sido completado.
+	\end{enumerate}
+
 \end{itemize}
-\subsubsection{Caso de uso 8: Cambiar Idioma}
+\subsubsection{Caso de uso 2.1.2: Captura de pantalla. }
+ \begin{itemize}
+ 	\item \textbf{Descripción:} Realiza una captura de pantalla de ese instante y la guarda en la galería del terminal.
+ 	\item \textbf{Precondiciones:}
+	 		\begin{enumerate}
+	 		\item Se ha iniciado el modo AR
+	 		\item Sensor de la cámara encendido.
+	 		
+	 	\end{enumerate}
+ 	\item \textbf{Requisitos:} RF-1.4 RF-2 RF-2.1
+ 	\item \textbf{Acciones:}
+	 	\begin{enumerate}
+	 		\item Seleccionar captura de pantalla.
+	 		\item Seleccionar captura de pantalla.
+	 		\item Guardar en un archivo png.
+	 		\item Volver al funcionamiento
+	 	\end{enumerate}
+ 	
+ 	\item \textbf{PostCondiciones:}
+	 	\begin{enumerate}
+	 		\item Captura guardada correctamente como un archivo de imagen.
+	 		\item El modo AR sigue funcionando y no se interrumpe.
+	 		
+	 	\end{enumerate}
+ 
+ 	\item \textbf{Excepciones:}  No hay espacio suficiente de almacenamiento.
+ \end{itemize}
+\subsubsection{Caso de uso  2.1.3: Visualizar interfaz.}
 \begin{itemize}
-	\item \textbf{Autor:} Saúl Martín Ibáñez
-	\item \textbf{Descripción:} Poder cambiar el idioma de los menús, y demás información textual de la aplicación, entre los idiomas disponibles.
-	\item \textbf{Precondiciones:} No hay.
-	\item \textbf{Requisitos:} RF-9
+	\item \textbf{Descripción:} La interfaz del modo AR se hace visible para el usuario.
+	\item \textbf{Precondiciones:} Entrar en el modo jugable AR
+	\item \textbf{Requisitos:} RF2 RF 2.1 RF2.2 RF-2.3
 	\item \textbf{Acciones:}
-	\begin{enumerate}
-		\item Seleccionar botón de idioma.
-		\item Seleccionar idioma deseado.
-		\item Cambiar el idioma.
-	\end{enumerate}
-	\item \textbf{Post Condiciones:} El idioma de la aplicación ha cambiado satisfactoriamente.
-	\item \textbf{Excepciones:} Ya se encuentra en ese idioma.
-	\item \textbf{Importancia:} Baja.
+		\begin{enumerate}
+			\item Entrar en el modo AR.
+			\item Cargar interfaz
+		\end{enumerate}
+	\item \textbf{PostCondiciones:}
+		\begin{enumerate}
+			\item La interfaz ha sido cargada correctamente.
+		\end{enumerate}
+	\item \textbf{Excepciones:} -Error al cargar el modo AR.
 \end{itemize}
-\subsubsection{Caso de uso 9: Captura de Pantalla}
+\subsubsection{Caso de uso 3: Ayuda.}
 \begin{itemize}
-	\item \textbf{Autor:} Saúl Martín Ibáñez
-	\item \textbf{Descripción:} Poder realizar una foto del instante del juego con realidad aumentada.
-	\item \textbf{Precondiciones:} Estar en el modo realidad aumentada.
-	\item \textbf{Requisitos:} RF-10
+	\item \textbf{Descripción:} Proporciona una guía o ayuda básica a los usuarios, respecto al uso de la aplicación.
+	\item \textbf{Precondiciones:} -
+	\item \textbf{Requisitos:} RF-1 RF-3
 	\item \textbf{Acciones:}
 	\begin{enumerate}
-		\item Presionar el botón de foto.
-		\item Guardar la foto en la galería.
+		\item Seleccionar en el menú el botón Ayuda.
+		\item Cambiar a la pantalla del menú de Ayuda.
 	\end{enumerate}
-	\item \textbf{Post Condiciones:} La foto se ha guardado con éxito.
-	\item \textbf{Excepciones:} La aplicación no tiene permisos para guardar un archivo.
-	\item \textbf{Importancia:} Baja.
+	\item \textbf{PostCondiciones:} La ventana que muestra la información de ayuda, ha cargado correctamente.
+	\item \textbf{Excepciones:} -
+\end{itemize}
+\subsubsection{Caso de uso 4: Encuestas}
+\begin{itemize}
+	\item \textbf{Descripción:}  Al completarse un nivel se da la posibilidad de realizar una encuesta sobre la app.
+	\item \textbf{Precondiciones:} Completar un nivel.
+	\item \textbf{Requisitos:} RF-1 RF-5
+	\item \textbf{Acciones:}
+	\begin{enumerate}
+		\item Finalizar un nivel.
+		\item Entrar en link de la encuesta.
+		\item Redirigir a la página, usando el navegador del dispositivo.
+		\item Contestar las preguntas.
+	\end{enumerate}
+	\item \textbf{PostCondiciones:} Se ha redirigido a la pagina de la encuesta..
+	\item \textbf{Excepciones:} No hay conexión a Internet, por lo que no se puede acceder a la encuesta.
+	
 \end{itemize}
 
 \subsection{Actores}

@@ -116,6 +116,11 @@ Otro de los objetivos será el de completar la tabla comparativa añadida en el 
  
  Se ha hablado también de implementar la función de realizar capturas de pantalla y que se guarden en la galería, pues en un principio se había propuesto en los requisitos y aun no se había realizado. Por lo demás en la aplicación se seguirá revisando en busca de posibles bugs o pequeños aspectos que se puedan mejorar. 
  
+  \subsection{Sprint 21 (24/06/2020 - 26/06/2020)}
+ Para este sprint dado que se acercan la fecha de entrega, hemos decido acortar la duración del sprint para acelerar el avance.
+ Concretamente en este sprint hemos acordado el centrarnos en los apartados de El estudio de viabilidad, Los Requisitos, y del Diseño de Anexos para poder darlos por cerrados. En la memoria nos centraremos en el apartado de Trabajos relacionados.
+ 
+ 
 \section{Estudio de viabilidad}
 
 \subsection{Viabilidad económica}
@@ -123,23 +128,23 @@ Otro de los objetivos será el de completar la tabla comparativa añadida en el 
 En este apartado se evaluara la viabilidad económica de las herramientas que se han investigado.
 
 
-CoSpaces, ofrece varias tarifas aparte de la básica que es gratuita, la más barata de 69,99\euro{}  anuales y la mas cara es de 1349,99\euro{} anuales.
+CoSpaces, ofrece varias tarifas aparte de la básica que es gratuita, la más barata de 69,99~\euro{}  anuales y la mas cara es de 1349,99~\euro{} anuales.
 
 La tarifa básica, ofrece la creación de una clase con capacidad para 30 personas (alumnos y profesores). En esta clase virtual, el profesor puede crear únicamente una tarea y asignarse al alumnado de forma individual o por grupos. El número máximo de profesores por clase en la tarifa básica es de uno.
 
 La tarifa básica, permite la creación de un máximo de dos espacios, es decir un máximo de dos proyectos. En la creación de ejemplos, estos se encuentran limitados a unos pocos modelos 3D de CoSpace, y a un limitado número de opciones de programación por CoBlocks. En la tarifa básica no es posible realizar proyectos para el MergeCube.
 
-Con la tarifa Pro de 69,99\euro{}, el número de personas máximas para una clase, aumenta en 5, permitiendo también que haya mas de un profesor en la clase. Permite crear mas de una clase. En el apartado de espacios, la tarifa Pro, permite crear mas de dos espacios, y en estos espacios da acceso a todos los modelos 3D de CoSpace, y permite utilizar en la programación todos los bloques de CoBlocks y scripts.
-Si se desea utilizar el Meregecube, la licencia asciende hasta los 79,99\euro{}. 
+Con la tarifa Pro de 69,99~\euro{}, el número de personas máximas para una clase, aumenta en 5, permitiendo también que haya mas de un profesor en la clase. Permite crear mas de una clase. En el apartado de espacios, la tarifa Pro, permite crear mas de dos espacios, y en estos espacios da acceso a todos los modelos 3D de CoSpace, y permite utilizar en la programación todos los bloques de CoBlocks y scripts.
+Si se desea utilizar el Meregecube, la licencia asciende hasta los 79,99~\euro{}. 
 
 El resto de tarifas que posee CoSpaces, su principal característica es el número de personas simultáneas para una clase que puede tener, subiendo en la última tarifa hasta 400 personas adicionales.
 
 La tarifa que sería recomendable se trata de la primera ofertada en el plan Pro, ya que aunque se vaya a utilizar con un número de alumnos superior al ofertado, sería posible organizarse por turnos.
 
 \subsubsection{Costes Personal}
-El proyecto ha sido desarrollado por una única persona, durante un periodo de 6 meses a tiempo parcial. Se considerará un salario de 1000\euro.
+El proyecto ha sido desarrollado por una única persona, durante un periodo de 6 meses a tiempo parcial. Se considerará un salario de 1300\euro.
 
-Para calcular los porcentajes de cotización de la seguridad social, se tendrá en cuenta los datos de 2020~\cite{contingencias2020}:
+Para calcular los porcentajes de cotización de la seguridad social, se tendrá en cuenta los datos de cotización 2020~\cite{contingencias2020}:
 \begin{itemize}
 	\item Por parte de la empresa:
 	\item Contingencias Comunes (Empresa): 23,6\%
@@ -154,40 +159,34 @@ Para calcular los porcentajes de cotización de la seguridad social, se tendrá 
 	\item Total 6,35\%
 \end{itemize}
 
-En la tabla \ref{tabla:costesPersonal}
+En la tabla \ref{tabla:costesPersonal} se utilizaran los supuestos costes de la empresa, para calcular el coste total.
 
-El coste de personal total será de X\euro.
+El coste de personal total será de 10132,2\euro.
 
-\tablaSmall{Costes Personal}{l c }{costesPersonal}{\multicolumn{1}{l}{}& Coste\\}{
-	Salario neto& 1000~\euro \\
-	IRPF (19\%)& ?\euro  \\
-	Seguridad social(28,30\%)& ?\euro  \\
-	
-	Formación profesional& ~\euro\\
-	Tasa de desempleo& ~\euro\\
-	Contingencias comunes& ~\euro\\
-	Fogasa& 166~\euro\\
-	Formación profesional& 166~\euro\\
-	
-	
+\tablaSmall{Costes Personal.}{l c }{costesPersonal}{\multicolumn{1}{l}{Concepto}& Coste\\}{
+	Salario Bruto& 1300~\euro \\
+	Seguridad social(Empresa 29,9\%)& 388,7~\euro  \\
 	\midrule
-	Total& \\}
+	Coste mensual&1688,7~\euro\\
+	\midrule
+	Coste Total&10132,2~\euro\\
+	}
 
 \subsubsection{Costes Material}
 Para el proyecto se ha requerido de algunos gastos en hardware y software.
 
 \begin{itemize}
 	\item Hardware:
-	Se tendrá en cuenta el equipo con el se ha desarrollado la aplicación, un ordenador valorado en 1100\euro. Una WebCam valorada en 70\euro, para realizar pruebas en el ordenador. Y un smartphone valorado en 210\euro. El Mergecube con un coste de 19.99\euro. Los componentes se amortizarán en 4 años. En la tabla \ref{tabla:costesHardware} se pueden apreciar los costes  y las amortizaciones\footnote{Los costes de Amortización son calculados a 6 meses, que es la duración del proyecto.} agrupados.
-	\item Software: Algunas de las herramientas software que se han utilizado en el proyecto se traban de software gratuitos, o se han utilizado unicamente las pruebas o niveles gratuitos que ofrecen. Por el contrarío en algunos casos ha sido necesario, recurrir al pago. Uno de los casos es con CoSpaces, realizando una prueba de un mes, a un coste de ?\euro. En la tabla \ref{tabla:costesSoftware} se pueden apreciar los costes y las amortizaciones agrupados.
+	Se tendrá en cuenta el equipo con el se ha desarrollado la aplicación, un ordenador valorado en 1100~\euro. Una WebCam valorada en 70~\euro, para realizar pruebas en el ordenador. Y un smartphone valorado en 210~\euro. El Mergecube con un coste de 19.99~\euro. Los componentes se amortizarán en 4 años. En la tabla \ref{tabla:costesHardware} se pueden apreciar los costes  y las amortizaciones\footnote{Los costes de Amortización son calculados a 6 meses, que es la duración del proyecto.} agrupados.
+	\item Software: Algunas de las herramientas software que se han utilizado en el proyecto se traban de software gratuitos, o se han utilizado unicamente las pruebas o niveles gratuitos que ofrecen. Por el contrarío en algunos casos ha sido necesario, recurrir al pago. Uno de los casos es con CoSpaces, realizando una prueba de un mes, a un coste de 79,9~\euro/año. En la tabla \ref{tabla:costesSoftware} se pueden apreciar los costes agrupados.
 \end{itemize}
 
 
 
-Los costes totales de material, son de X.
+Los costes totales de material, son de 417,48.
 
 
-\tablaSmall{Costes hardware}{l c c}{costesHardware}{\multicolumn{1}{l}{}& Coste & Amortización\\}{
+\tablaSmall{Costes hardware.}{l c c}{costesHardware}{\multicolumn{1}{l}{Concepto}& Coste & Amortización\\}{
 	MergeCube& 19,99~\euro&19,99 \\
 	Ordenador& 1100~\euro&137,5~\euro  \\
 	WebCam& 70~\euro&8.75~\euro  \\
@@ -195,27 +194,28 @@ Los costes totales de material, son de X.
 	\midrule
 	Total& 1399,99~\euro&192,49~\euro\\}
 
-\tablaSmall{Costes software}{l c }{costesSoftware}{\multicolumn{1}{l}{}& Coste \\}{
+\tablaSmall{Costes software.}{l c }{costesSoftware}{\multicolumn{1}{l}{Concepto}& Coste \\}{
 	Windows 10& 145~\euro \\
-	CoSapaces& 79.99~\euro/mes  \\
+	CoSapaces& 79.99~\euro/año  \\
 	\midrule
 	Total&224,99~\euro\\}
 
-\subsubsection{Costes Totales}
-	El coste total durante el desarrollo, es de X. Ver tabla \ref{tabla:costesTotales}
-\tablaSmall{Costes Totales}{l c  }{costesTotales}{\multicolumn{1}{l}{}& Coste\\}{
-	Personal& ~\euro \\
+\subsubsection{Costes Totales.}
+
+	El coste total durante el desarrollo, es de 10549,68~\euro. En la tabla \ref{tabla:costesTotales} se pueden apreciar el conjunto de todos los supuestos costes calculados.
+	
+\tablaSmall{Costes Totales}{l c  }{costesTotales}{\multicolumn{1}{l}{Concepto}& Coste\\}{
+	Personal& 10132,~\euro \\
 	Hardware& 192,49~\euro  \\
 	Software& 224,99~\euro  \\
 	\midrule
-	Total& \\}
+	Total& 10549,68~\euro\\}
 
 \subsection{Viabilidad legal}
 
-.
-.
-.
-El proyecto se han utilizado recursos para Unity de licencia gratuita mayoritariamente. Se tratan de algunos modelos 3D, imágenes, o Fonts que contaban con una licencia Creative Commons Atribution\footnote{\url{https://creativecommons.org/licenses/by/4.0/}} para su uso.
+En el caso de las licencias del software usado, se a aprovechado el uso gratuito. En el caso de Unity se trata de la licencia de uso personal. En el caso de Vuforia, el desarrollo de aplicaciones es gratuito, pero si se tuviese la intención de publicarla con uso comercial sería necesario acogerse a una de las licencias de pago. En la tabla \ref{licenciasSoftware} se encuentran recogidas el tipo de licencias usadas.
+
+El proyecto se han utilizado recursos para Unity de licencias gratuitas. Se tratan de algunos modelos 3D, imágenes, o Fonts que contaban con una licencia Creative Commons Atribution\footnote{\url{https://creativecommons.org/licenses/by/4.0/}} para su uso. En la tabla \ref{componentesUnity} se encunetran recogidos los distintos tipo de recursos usados en el proyectos Unity y sus licencias.
 
 \tablaSmall{Licencias Software}{l c c }{licenciasSoftware}{\multicolumn{1}{l}{}& Versión& Licencia\\}{
 	Unity& 2019.2.19f1& Unity Personal\\

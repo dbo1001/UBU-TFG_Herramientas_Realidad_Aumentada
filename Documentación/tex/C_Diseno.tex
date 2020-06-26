@@ -5,16 +5,28 @@
  
 
 \section{Diseño procedimental}
-En la figura  \ref{fig:Diagrama} se muestra un diagrama de flujo, en el que se puede observar el comportamiento básico de la aplicación. Para crear el diagrama se ha usado la herramienta online Draw.io\footnote{\url{https://app.diagrams.net/}}.
-\imagen{Diagrama}{Diagrama de flujo del funcionamiento básico de la aplicación.}
+En la figura  \ref{fig:Diagrama_secuencia} se muestra un diagrama de secuencia, en el que se puede observar el comportamiento básico de la aplicación a la hora de buscar, detectar un marcador y renderizar su modelo asociado. Para crear el diagrama se ha usado la herramienta online Draw.io\footnote{\url{https://app.diagrams.net/}}.
+
+
+\imagen{Anexos/Diagrama_secuencia}{Diagrama de secuencia del proceso de buscar un marcador.}
 
 \section{Diseño arquitectónico}
-La aplicación al ser construida tendrá por defecto la arquitectura predefinida de Unity. A esta se le añadirá la de Vuforia que sera un complemento a la de Unity.
 
-También formarán parte del diseño el sistema operativo del dispositivo y la cámara. La cámara será la encargada de recoger la señal de entrada de vídeo, esta será procesado por el sistema operativo para su uso en la aplicación. La capa de Unity y vuforia al detectar la señal de vídeo comenzará .... la parte de Unity será la encargada de ejecutar los scripts... mientras que la de Vuforia será la que detecta los target......
-.
-.
-.
+
+Dado que se trata de una aplicación desarrollado en Unity la estructura que sigue viene dada por defecto propiamente por Unity. En la imagen\ref{fig:Anexos/unity_xr_new_architecture} podemos ver una sencilla representación de la estructura de Unity con respecto al plugin de Vuforia. 
+
+La plataforma XR de Unity se trata de una capa dedicada específicamente al control de tecnologías de realidad aumentada y realidad virtual, con el objetivo conseguir una mayor compatibilidad y facilidades de desarrollo para software de extensión. Hasta la versión 2019.3 de Unity, Vuforia contaba con soporte integrado en Unity por defecto, apartir de dicha versión es necesario descargar Vuforia Engine desde el Portal de desabolladores de Vuforia. 
+
+ 
+El sdk de Vuforia interactua directamente con Unity XR, para el uso de los recursos de realidad aumentada (Cámara, targets...). 
+
+El Unity Core será el encargado del renderizado general de los recursos y demás funciones de Unity.
+
+Por ultimo el sdk de Android interactuara con Unity para realizar la compilación del APK y poder un correcto porte para una aplicación Android.
+
+\imagen{Anexos/unity_xr_new_architecture}{Arquitectura XR de Unity.}
+
+
 
 
 \section{Diseño de interfaz}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Android;
 
 
 
@@ -27,6 +28,14 @@ public class ControladorAR : MonoBehaviour
     //Se activa al ejecutar el script, activa la configuración inicial de elementos activos visibles.
     public void Start()
     {
+
+#if UNITY_ANDROID
+        if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite))
+        {
+            Permission.RequestUserPermission(Permission.ExternalStorageWrite);
+        }
+#endif
+
         regadera.SetActive(false);
         ventama.SetActive(false);
         

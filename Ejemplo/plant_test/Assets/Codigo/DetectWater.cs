@@ -175,6 +175,10 @@ public class DetectWater : MonoBehaviour
             //    yield break;
 
             //}
+            if (tiempo > 10)
+            {
+                colorTiempo.color = new Color32(255, 255, 255, 155);
+            }
             cuentaAtras.text =""+tiempo;
             if (5 < tiempo & tiempo < 10)
             {

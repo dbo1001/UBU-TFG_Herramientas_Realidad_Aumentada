@@ -13,7 +13,7 @@ public class Controlador : MonoBehaviour
 
     public GameObject menu1_2;
     public GameObject atras;
-
+    public GameObject menu1_3;
     public GameObject menu1_4;
 
     public GameObject menu2;
@@ -21,6 +21,8 @@ public class Controlador : MonoBehaviour
     public GameObject menu2_1_1;
 
     public GameObject menu2_2;
+    public GameObject menu2_3;
+    public GameObject menu2_4;
     public GameObject atras2;
 
     
@@ -46,89 +48,51 @@ public class Controlador : MonoBehaviour
     //Controla el botón Atras del menú.
     public void Atras()
     {
-        if (!menu1.active )
+        if (menu1_1.activeSelf)
         {
-            if (!menu1_1.active )
-            {
-                if (!menu1_1_1.active)
-                {
-                    //normal
-                    menu1_2.SetActive(false);
-                    menu1.SetActive(true);
-                    atras.SetActive(false);
+            //normal
+            menu1_1.SetActive(false);
+            menu1.SetActive(true);
+            atras.SetActive(false);
 
-                    //ar
-                    menu2_2.SetActive(false);
-                    menu2.SetActive(true);
-                    atras2.SetActive(false);
-                }
-                else
-                {
-                    //normal
-                    menu1_1_1.SetActive(false);
-                    menu1_1.SetActive(true);
-                    //ar
-                    menu2_1_1.SetActive(false);
-                    menu2_1.SetActive(true);
-                }
-                
-            }
-            else{
-                //normal
-                menu1_1.SetActive(false);
-                menu1.SetActive(true);
-                atras.SetActive(false);
+            //ar
+            menu2_1.SetActive(false);
+            menu2.SetActive(true);
+            atras2.SetActive(false);
+        }
 
-                //ar
-                menu2_1.SetActive(false);
-                menu2.SetActive(true);
-                atras2.SetActive(false);
-            }
+        if (menu1_1_1.activeSelf)
+        {
+            //normal
+            menu1_1_1.SetActive(false);
+            menu1_1.SetActive(true);
+
+            //ar
+            menu2_1_1.SetActive(false);
+            menu2_1.SetActive(true);
+
+        }
+
+        if (menu1_2.activeSelf || menu1_3.activeSelf || menu1_4.activeSelf)
+        {
+            //normal
+            menu1_2.SetActive(false);
+            menu1_3.SetActive(false);
+            menu1_4.SetActive(false);
+            menu1.SetActive(true);
+            atras.SetActive(false);
+
+            //ar
+            menu2_2.SetActive(false);
+            menu2_3.SetActive(false);
+            menu2_4.SetActive(false);
+            menu2.SetActive(true);
+            atras2.SetActive(false);
+
         }
     }
 
-    //Controla el botón Atras del menú modo AR.
-    public void Atras2()
-    {
-        if (!menu2.active)
-        {
-            if (!menu2_1.active)
-            {
-                if (!menu2_1_1.active)
-                {
-                    menu2_2.SetActive(false);
-                    menu2.SetActive(true);
-                    atras2.SetActive(false);
-                    //normal
-                    menu1_2.SetActive(false);
-                    menu1.SetActive(true);
-                    atras.SetActive(false);
-                }
-                else
-                {
-                    //ar
-                    menu2_1_1.SetActive(false);
-                    menu2_1.SetActive(true);
-                    //normal
-                    menu1_1_1.SetActive(false);
-                    menu1_1.SetActive(true);
-
-                }
-                
-            }
-            else
-            {
-                //ar
-                menu2_1.SetActive(false);
-                menu2.SetActive(true);
-                atras2.SetActive(false);
-                //normal
-                menu1_1.SetActive(false);
-                menu1.SetActive(true);
-                atras.SetActive(false);
-            }
-        }
-    }
+    
 
     //Actualiza el tipo de Target ha usar.
     public void TipoDeAR()
@@ -205,6 +169,7 @@ public class Controlador : MonoBehaviour
         menu1_1.SetActive(false);
         menu1_1_1.SetActive(false);
         menu1_2.SetActive(false);
+        menu1_3.SetActive(false);
         menu1_4.SetActive(false);
         atras.SetActive(false);
         //ar
@@ -212,6 +177,8 @@ public class Controlador : MonoBehaviour
         menu2_1.SetActive(false);
         menu2_1_1.SetActive(false);
         menu2_2.SetActive(false);
+        menu2_3.SetActive(false);
+        menu2_4.SetActive(false);
         //menu2_4.SetActive(false);
 
         camaraAR.SetActive(false);

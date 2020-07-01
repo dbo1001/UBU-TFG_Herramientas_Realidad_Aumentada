@@ -34,7 +34,11 @@ public class DetectWater : MonoBehaviour
     public GameObject planta1;
     public GameObject planta2;
     public GameObject planta3;
-    
+
+    public GameObject planta1CT;
+    public GameObject planta2CT;
+    public GameObject planta3CT;
+
 
     private Plants plants =  new Plants();
     private Controlador controlador = new Controlador();
@@ -54,27 +58,56 @@ public class DetectWater : MonoBehaviour
             return;
         }
 
-        if (controlador.GetTomato())
+        if (controlador.GetTipoARMergecube())
         {
-            f1 = planta1.GetComponent<Plants>().GetFase1();
-            f2 = planta1.GetComponent<Plants>().GetFase2();
-            f3 = planta1.GetComponent<Plants>().GetFase3();
-            f4 = planta1.GetComponent<Plants>().GetFase4();
+            if (controlador.GetTomato())
+            {
+                f1 = planta1.GetComponent<Plants>().GetFase1();
+                f2 = planta1.GetComponent<Plants>().GetFase2();
+                f3 = planta1.GetComponent<Plants>().GetFase3();
+                f4 = planta1.GetComponent<Plants>().GetFase4();
+            }
+            if (controlador.GetCalabaza())
+            {
+                f1 = planta2.GetComponent<Plants>().GetFase1();
+                f2 = planta2.GetComponent<Plants>().GetFase2();
+                f3 = planta2.GetComponent<Plants>().GetFase3();
+                f4 = planta2.GetComponent<Plants>().GetFase4();
+            }
+            if (controlador.GetGirasol())
+            {
+                f1 = planta3.GetComponent<Plants>().GetFase1();
+                f2 = planta3.GetComponent<Plants>().GetFase2();
+                f3 = planta3.GetComponent<Plants>().GetFase3();
+                f4 = planta3.GetComponent<Plants>().GetFase4();
+            }
+
         }
-        if (controlador.GetCalabaza())
+        else
         {
-            f1 = planta2.GetComponent<Plants>().GetFase1();
-            f2 = planta2.GetComponent<Plants>().GetFase2();
-            f3 = planta2.GetComponent<Plants>().GetFase3();
-            f4 = planta2.GetComponent<Plants>().GetFase4();
+            if (controlador.GetTomato())
+            {
+                f1 = planta1CT.GetComponent<Plants>().GetFase1();
+                f2 = planta1CT.GetComponent<Plants>().GetFase2();
+                f3 = planta1CT.GetComponent<Plants>().GetFase3();
+                f4 = planta1CT.GetComponent<Plants>().GetFase4();
+            }
+            if (controlador.GetCalabaza())
+            {
+                f1 = planta2CT.GetComponent<Plants>().GetFase1();
+                f2 = planta2CT.GetComponent<Plants>().GetFase2();
+                f3 = planta2CT.GetComponent<Plants>().GetFase3();
+                f4 = planta2CT.GetComponent<Plants>().GetFase4();
+            }
+            if (controlador.GetGirasol())
+            {
+                f1 = planta3CT.GetComponent<Plants>().GetFase1();
+                f2 = planta3CT.GetComponent<Plants>().GetFase2();
+                f3 = planta3CT.GetComponent<Plants>().GetFase3();
+                f4 = planta3CT.GetComponent<Plants>().GetFase4();
+            }
         }
-        if (controlador.GetGirasol())
-        {
-            f1 = planta3.GetComponent<Plants>().GetFase1();
-            f2 = planta3.GetComponent<Plants>().GetFase2();
-            f3 = planta3.GetComponent<Plants>().GetFase3();
-            f4 = planta3.GetComponent<Plants>().GetFase4();
-        }
+        
         
         
         

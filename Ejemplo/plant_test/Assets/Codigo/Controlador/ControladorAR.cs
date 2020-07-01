@@ -21,6 +21,10 @@ public class ControladorAR : MonoBehaviour
     public GameObject plantaCalabaza;
     public GameObject plantaGirasol;
 
+    public GameObject plantaTomate2;
+    public GameObject plantaCalabaza2;
+    public GameObject plantaGirasol2;
+
     public GameObject botonPruebas;
 
     private Controlador controlador = new Controlador();
@@ -60,14 +64,17 @@ public class ControladorAR : MonoBehaviour
         if (controlador.GetTomato())
         {
             plantaTomate.SetActive(true);
+            plantaTomate2.SetActive(true);
         }
         if (controlador.GetCalabaza())
         {
             plantaCalabaza.SetActive(true);
+            plantaCalabaza2.SetActive(true);
         }
         if (controlador.GetGirasol())
         {
             plantaGirasol.SetActive(true);
+            plantaGirasol2.SetActive(true);
         }
         //Pone a cero el progreso al entrar al nivel.
         DetectWater.agua=0;

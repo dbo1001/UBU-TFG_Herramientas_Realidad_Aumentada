@@ -26,6 +26,7 @@ public class DetectWater : MonoBehaviour
     public GameObject regadera;
     bool flag = true;
     bool fertilizanteUse = false;
+    public GameObject fertilizanteUsed;
 
     public GameObject ventana;
     public TMPro.TextMeshProUGUI textVentana;
@@ -157,12 +158,14 @@ public class DetectWater : MonoBehaviour
                     flag = false;
                     tiempo = 60;
                     fertilizanteUse = false;
+                    fertilizanteUsed.SetActive(false);
                     f1.SetActive(true);
                     ActualizarProgreso(0);
                 }
                 else if (f1.active)
                 {
                     fertilizanteUse = false;
+                    fertilizanteUsed.SetActive(false);
                     tiempo = 60;
                     f1.SetActive(false);
                     f2.SetActive(true);
@@ -171,6 +174,7 @@ public class DetectWater : MonoBehaviour
                 }
                 else if (f2.active)
                 {
+                    fertilizanteUsed.SetActive(false);
                     fertilizanteUse = false;
                     tiempo = 60;
                     f2.SetActive(false);
@@ -181,6 +185,7 @@ public class DetectWater : MonoBehaviour
                 else if (f3.active)
                 {
                     fertilizanteUse = false;
+                    fertilizanteUsed.SetActive(false);
                     tiempo = 60;
                     f3.SetActive(false);
                     f4.SetActive(true);

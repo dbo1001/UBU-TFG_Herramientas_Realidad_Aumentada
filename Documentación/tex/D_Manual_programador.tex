@@ -22,11 +22,6 @@ En este apartado se procederá a dar una breve explicación de la estructura que
 .5 Material/ Materiales.
 .5 Scenes/ Escenas de unity.
 .4 Library/ Librerías usadas en el proyecto.
-.4 Logs/ ...
-.4 obj/ ...
-.4 Packages/ ...
-.4 ProjectSettings/ ...
-.4 QCAR/ ...
 .3 APK/ Apk de la aplicación.
 }
 
@@ -60,9 +55,28 @@ Dado que en el ejemplo realizado en Unity se utiliza Vuforia como herramienta de
 
 \section{Compilación, instalación y ejecución del proyecto}
 
-El proceso de instalación es sencillo. Una vez descargada la apk el el terminal, se procederá as u ejecución, el propio SO seguirá los pasos necesarios. La única intervención a resaltar, es posible que al tratar de instalar, nos pregunte si deseamos permitir la instalación de origen desconocido, esto se debe a que la apk no se encuentra oficialmente registrada el appstore. Una vez dados los permisos la instalación seguirá normalmente.
+El proceso de instalación es sencillo. Una vez descargada la apk en el terminal, se procederá a su ejecución, el propio SO seguirá los pasos necesarios. La única intervención a resaltar, es posible que al tratar de instalar, nos pregunte si deseamos permitir la instalación de origen desconocido, esto se debe a que la apk no se encuentra oficialmente registrada el appstore. Una vez dados los permisos la instalación seguirá normalmente.
 
 \section{Pruebas del sistema}
-Las pruebas realizadas a la aplicación, se han realizado mediante pruebas manuales directamente en el dispositivo.
+Las pruebas realizadas a la aplicación, se han realizado mediante pruebas de forma manual directamente en el dispositivo.
 
-Unity posee cualidades para realizar algunas preubas unitarias, pero de momento no he tenido tiempo para utilizarlas. 
+Una de las primeras pruebas ha realizar es el de la instalación en el dispositivo, para comprobar que el APK se ha realizado correctamente y es funcional. 
+
+Para comprobar el re escalado de la interfaz de la aplicación, se ha probado en distintos dispositivos, varios smartphone, y una tablet. En cada pantalla de la interfaz, se comprueba que cada elemento es visible independientemente de el dispositivo.
+En la interfaz del modo juego, en los dispositivos que tienen en la pantalla notch(cámara frontal) se aprecio que la interfaz no tenia en cuenta el notch, por lo que este tapaba una parte de la barra de progreso. Para corregirlo se ha bajado la barra de progreso.
+
+En la detección de realidad aumentada, la gran mayoría de las pruebas se han podido hacer desde el entorno de Unity con una web cam. Pero para dar mayor fiabilidad a las pruebas, se han probado también en el dispositivo. Las pruebas consistían en comprobar que el mergecube era reconocido correctamente, y que cuando es detectado, el modelo 3D asociado se puede visualizar adecuadamente. Para la prueba de detección del mergecube se enfoca en cada cara del cubo, demostrando que en cualquier cara es reconocido, para complementar se han hecho pruebas tapando un porcentaje de la cara del cubo. (VÍDEO)
+
+También se ha probado la detección con diferentes entornos de luminosidad, en el caso de los extremos de luminosidad(poca y mucha), la detección del mergecube se dificulta. Por ejemplo en los casos de demasiada iluminación, provoca que el contraste de iluminación impida reconocer el mergecube. (REFERENCIA A VÍDEO DEMOSTRACIÓN)
+
+Para las pruebas de navegación entre el menú, se ha procedido ha probar que cada botón redirige a su pantalla correspondiente.
+
+Para la comprobación del uso del sensor del giroscopio, seleccionamos la herramienta de la regadera, una vez seleccionada esta empieza a soltar partículas de agua, al girar el dispositivo en diferentes ángulos las partículas se moverán para dar la sensación de que siempre están cayendo hacia el suelo. (VIDEO)
+
+
+
+
+
+
+
+Por ultimo destacar que Unity posee cualidades para realizar algunas pruebas unitarias de forma automática, pero no he tenido para aprender a utilizarlas de la manera correcta para esta aplicación. 

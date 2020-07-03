@@ -31,6 +31,8 @@ public class Controlador : MonoBehaviour
 
     public Toggle tipoMergeCube;
     public Toggle tipoCapturaTarget;
+    public Toggle tipoMergeCube_AR;
+    public Toggle tipoCapturaTarget_AR;
     static bool tipoARMerge=true;
     static bool tipoARCaptura=false;
 
@@ -108,6 +110,33 @@ public class Controlador : MonoBehaviour
             tipoARMerge = false;
         }
 
+        if (tipoMergeCube_AR.isOn)
+        {
+            tipoARCaptura = false;
+            tipoARMerge = true;
+
+        }
+        else if (tipoCapturaTarget_AR.isOn)
+        {
+            tipoARCaptura = true;
+            tipoARMerge = false;
+        }
+
+    }
+    //Sincroniza los Toggle entre el menu normal y el de AR.
+    public void SyncTipoAR()
+    {
+
+        if (!multiTarget.activeSelf)
+        {
+            tipoMergeCube.isOn = tipoMergeCube_AR.isOn;
+            tipoCapturaTarget.isOn = tipoCapturaTarget_AR.isOn;
+        }
+        else
+        {
+            tipoMergeCube_AR.isOn= tipoMergeCube.isOn;
+            tipoCapturaTarget_AR.isOn= tipoCapturaTarget.isOn;
+        }
     }
 
     
@@ -186,5 +215,8 @@ public class Controlador : MonoBehaviour
 
         tipoCapturaTarget.isOn=false;
         tipoMergeCube.isOn = true;
+
+        tipoCapturaTarget_AR.isOn = false;
+        tipoMergeCube_AR.isOn = true;
     }
 }

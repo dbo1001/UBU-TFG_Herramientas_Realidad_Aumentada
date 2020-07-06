@@ -28,8 +28,8 @@ En este apartado se procederá a dar una breve explicación de la estructura que
 
 
 \section{Manual del programador}
-\subsection{Unity}
-Instalación.
+\subsection{Unity}\label{sub:Unity}
+\subsubsection{Instalación}.
 
 Para Instalar el motor Unity es necesario descargar Unity Hub: \url{https://store.unity.com/es/download-nuo}
 
@@ -38,7 +38,15 @@ Unity Hub se trata de un launcher desde el que se pueden descargar varias versio
 En la pestaña de installs, pulsando el botón <<Add>>, saldrá una ventana donde poder escoger la versión deseada, al pasar el siguiente paso deberemos escoger los módulos complementarios para Unity, por el momento sería necesario el de Android, para poder pasar nuestros proyectos a una aplicación Android, importante desplegar las opciones del módulo y seleccionar ambas, pues para la compilación de una aplicación es estrictamente necesario el APK de Android.\imagen{unity01}{Paso 1: Seleccionar la versión de Unity }
 \imagen{unity02}{Paso 2: Seleccionar}
 
+\label{sub:Confi}\subsubsection{Configuración }
+
 Una vez terminada la instalación ya es posible comenzar a crear proyectos. 
+
+El proceso para crear un proyecto es, desde Unity HUb , seleccionar el botón <<NEW>>, se desplegará una ventana en la que escoger que tipo de proyecto crear (2D, 3D, etc) y  el nombre y la ruta en la que se guardará. En el caso de este proyecto, se trata de uno de tipo 3D.
+
+Una vez se ha generado el entorno deberemos hacer las configuraciones iniciales. En primer lugar se deberá cambiar la plataforma de compilación del proyecto de Windows a Android, este paso permitirá que al construir el ejecutable de la aplicación, este sea compatible con la plataforma seleccionada. 
+Para ello vamos a la pestaña File, Build Settings, desde aquí encontraremos que se encuentra seleccionada Windows de forma predeterminada, cambiamos a Android dado que el proyecto esta pensado en un principio para dispositivos Android.
+
 Para poder descargar y usar Assets desde la tienda de Unity es necesario tener una cuenta de usuario.
 
 Dado que en el ejemplo realizado en Unity se utiliza Vuforia como herramienta de realidad aumentada, es necesario añadir dicha herramienta al proyecto de Unity en el se trabajará. Para esto hay varios métodos posibles:
@@ -52,10 +60,32 @@ Dado que en el ejemplo realizado en Unity se utiliza Vuforia como herramienta de
 \item Por ultimo, con el SDK de Vuforia para Unity, el cual le podemos descargar desde \href{https://developer.vuforia.com/downloads/sdk}{developer Vuforia} si tenemos una cuenta de usuario (Una cuenta gratuita es suficiente). Una vez que le hemos descargado, podemos importarlo en el proyecto ejecutándolo mientras tenemos el proyecto Unity abierto, o simplemente arrastrando el ejecutable dentro del proyecto abierto.	
 \end{itemize}
 
+\subsubsection{Construcción proyecto}
+
+Para la construcción de un proyecto de realidad aumentada con Vuforia, los dos primeros elementos que se deberán añadir son la ARcamara y el Target( Para la aplicación propuesta se usará un MultiTarget). La ARcamera se trata de la cámara diseñada por Vuforia para el uso de realidad aumentada, y el Multitarget se trata del elemento en el se establecerá que targets se reconocerán y sobre donde se construirán los objetos de realidad aumentada.
+El proyecto creado por Unity lleva por defecto una cámara normal, como para nuestra aplicación no la utilizaremos la podemos borrar.
+Para añadir la ARcamara hacemos click derecho, Vuforia Engine, y escogemos AR Camera. Se deberá configurar la ARcamara añadiendo la license key que nos proporciona Vuforia.
+
+Para añadir el multiTarget hay que seguir un proceso similar. La diferencia esta en su configuración. En nuestro caso queremos que el multiTarget tenga como target el MergeCube, para ello en la pagina de developer de Vuforia\footnote{\url{https://developer.vuforia.com}} podremos crear el multiTarget (añadiendo las 6 imágenes del modelo que queremos que sea), descargarlo e importarlo a nuestro proyecto. 
+Click derecho, Vuforia Engine, y escogemos multiTarget, podremos apreciar que el cubo tiene las imágenes que habíamos configurado. Hay que asegurarse de que el cubo este en el campo visual de la cámara en la escena del proyecto, de lo contrario no se podrá reconocer al ejecutarse. Será en este elemento al que tendremos que asociar los modelos que queremos que se muestren en el Mergecube al enfocar nuestro dispositivo al MergeCube.
+
+
+Con estos dos elementos, el esqueleto principal de la aplicación ya esta construido. Ahora si se deseamos incorporar un modelo 3d que se muestre cuando se reconozca el multitarget. Deberemos asociar ese elemento al multitarget como hijo.
+.
+
+.
+
+
 
 \section{Compilación, instalación y ejecución del proyecto}
+Contamos con dos maneras de instalar el proyecto Unity en nuestro equipo. Antes de proceder es importante tener previamente Unity instalado\ref{sub:Unity}.
 
-El proceso de instalación es sencillo. Una vez descargada la apk en el terminal, se procederá a su ejecución, el propio SO seguirá los pasos necesarios. La única intervención a resaltar, es posible que al tratar de instalar, nos pregunte si deseamos permitir la instalación de origen desconocido, esto se debe a que la apk no se encuentra oficialmente registrada el appstore. Una vez dados los permisos la instalación seguirá normalmente.
+
+La primera forma consiste en descargar del repositorio la carpeta Plant-test. Una vez descargado y situado en la ruta deseada para trabajar, se deberá abrir Unity-Hub. Desde la venta de unity-hub tenemos las opciones de nuevo proyecto o añadir projecto, en este caso nos interesa añadir uno ya existente, al selecionarlo nos mastrará una ventana para seleccionar la ruta en la que hemos guardado el proyecto descargado. Una vez seleccionado la ruta, se nos añadirá en la lista de proyectos de Unity-Hub, desde donde le podremos iniciar. 
+
+
+La otra posibilidad de instalar el proyecto es la siguiente. Primero deberemos crear un nuevo proyecto 3D, será necesario modificar la configuración de compilación a Android, como se explica en \ref{sub:Confi} . Una vez creado deberemos seleccionar el paquete de Unity localizado en la carpeta << Paquete del Proyecto>> y arrástralo al proyecto que hemos creado. Una vez arrastrado Unity procederá a su importación, mostrara una ventana con la estructura de directorios del proyecto en la que se puede seleccionar si queremos importar todo o solo las partes seleccionadas, para una correcta importación del proyecto se deberá importar todo.
+
 
 \section{Pruebas del sistema}
 Las pruebas realizadas a la aplicación, se han realizado mediante pruebas de forma manual directamente en el dispositivo.

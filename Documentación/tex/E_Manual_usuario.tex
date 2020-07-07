@@ -15,28 +15,57 @@
 También es necesario disponer de un MergeCube, es valido tanto en papel como el original. 
 \section{Instalación}
 
-La instalación de la aplicación es sencilla, como la de cualquier otra APK. Una vez descargado el APK en el dispositivo ejecutarle y seguir los pasos.
+Dado que la aplicación no se ha publicado en Play Store, se deberá descargar el APK desde (\href{URL}{text}ENLACE CARPETA REPOSITORIO).
+La instalación de la aplicación es sencilla, como la de cualquier otra APK. Una vez descargado el APK en el dispositivo, ejecutarle y seguir los pasos. 
 
-Es posible que en el primer intento nos pida habilitar la opción de instalar aplicaciones de terceros, que por defecto en los dispositivos viene desactivada. En principio los propios pasos de instalación nos llevan a la ventana para habilitar la opción. En caso contrarío deberás buscar en opciones del sistema, si tienes dificultades, buscar en google el dispositivo en el que estas intentando la instalación y como se debe activar dicha opción.
+Dado que la aplicación no se ha descargado desde una fuente oficial, como podría ser la Play Store, es posible que en el primer intento de instalación, el sistema nos pida habilitar la opción de instalar aplicaciones de origen desconocido, que por defecto en los dispositivos viene desactivada.
+En un principio los propios pasos de instalación permite habilitar la opción. En caso contrarío deberás buscar en opciones del sistema. En caso de tener complicaciones para encontrar la ubicación de dicha opción, es recomendable realizar una sencilla búsqueda en Google, de "Activar la instalación de aplicaciones de fuentes desconocidas en <<Modelo del dispositivo usado>>, con <<Versión de Android que posee>>.
+
+
 \section{Manual del usuario}
 
 En este apartado se explicará los pasos básicos para aprender a usar la aplicación.
 
-En la pantalla principal, al ejecutar la aplicación, encontraremos un menú con 4 cuatro opciones: Modos de Juego, Opciones, Ayuda , y Info. en la imagen (ref).
+En la pantalla principal, al ejecutar la aplicación, encontraremos un menú con 4 cuatro opciones: 
+\begin{itemize}
+	\item Modos de Juego
+	\item Opciones
+	\item Ayuda
+	\item Info
+\end{itemize}
 
-En la primera opción ``\textbf{Modos de Juego} '' el usuario podrá buscar entre los diferentes niveles disponibles la aplicación. en la imagen (ref).
 
-En ``\textbf{Opciones}'', se puede configurar diferentes aspectos de la aplicación, como el tipo de target que se usará en la realidad aumentada. en la imagen (ref).
+En la primera opción ``\textbf{Modos de Juego} '' el usuario podrá buscar entre los diferentes niveles disponibles la aplicación y seleccionar uno, ejecutando así el modo jugable. en la imagen (ref).
+
+En ``\textbf{Opciones}'', se puede configurar diferentes aspectos de la aplicación, como el tipo de target que se usará en la realidad aumentada. en la imagen (\ref{fig:Anexos/appOpciones}).
+
+\imagen{Anexos/appOpciones}{Imagen perteneciente a las opciones de la aplicación.}
 
 En la opción ``\textbf{Ayuda}'', se ofrece una guía/tutorial para poder resolver las dudas de los usuarios.
 
-Al seleccionar en ``Modos de Juego'' uno de los modos disponibles, escogemos por ejemplo del tema biología vegetal una planta de Girasol. Al seleccionar el modo deseado, la aplicación abrirá la cámara, ahora tendremos una interfaz que mostrará una barra de progreso en la parte superior, un contador del tiempo restante para acabar la fase en la parte superior derecha. En la parte inferior derecha hay un botón que al pulsarse, despliega una barra con las herramientas disponibles para completar las fases.
-En este modo, una vez que la cámara ya está activa, al apuntar el Mergecube, será detectado y se cargará el modelo de realidad aumentada. En este punto es importante recordar, que para una correcta detección de un marcador se precisa de estar en un ambiente con buena iluminación, que el marcador no se vea afectado por sombras o focos de luz que reduzcan su visibilidad para sensor de la cámara.
+La cuarta y ultima Opción se trata de venta para ofrecer una breve información respecto a la aplicación. Se detalla el autor, lo tutores... 
 
-En caso de tener seleccionado el modo de capturar target, la interfaz contará con dos elementos adicionales. El primero se trata de una barra de colores (rojo, amarillo, verde) que indica la calidad optima para que el objetivo enfocado sea un target. El segundo elemento será el disparador, una vez que tengamos un objetivo optimo que deseemos transformar en un target se deberá presionar el disparador.
 
-En la barra de herramientas contamos con dos elementos, una regadera y un paquete de abono. La primera al seleccionar nos saldrá en pantalla una regadera que automáticamente echará agua, el objetivo es mover el dispositvo hasta conseguir que el agua caiga en el mergecube. Cuando el agua colisione con el modelo proyectado en el mergecube, la barra de progreso subirá hasta completarse. El segundo elemento, se trata de un bote de fertilizante, al pulsarse saldra en la pantalla un botón que al ser presionado saldra delante como si se hubiese lanzado contra el mergecube.
-Para completar una fase es necesario haber completado ambos casos anteriores....
+
+Al seleccionar en ``Modos de Juego'' uno de los modos disponibles, por ejemplo del tema biología vegetal escogemos una planta de Tomate.
+Al seleccionar el modo deseado, la aplicación cambiará al modo de realidad aumentada activando la cámara del dispositivo. Ahora tendremos una interfaz que mostrará una barra de progreso en la parte superior, un contador del tiempo restante para acabar la fase en la parte superior derecha. En la parte inferior derecha hay un botón que al pulsarse, despliega una barra con las herramientas disponibles para completar las fases \ref{fig:Anexos/appInterfaz}.
+
+En este modo, una vez que la cámara ya está activa, al enfocar el Mergecube, será detectado y se cargará el modelo de realidad aumentada. En este punto es importante recordar, que para una correcta detección de un marcador se precisa de estar en un ambiente con una iluminación adecuada para que el marcador no se vea afectado por sombras o focos de luz que reduzcan su visibilidad para el sensor de la cámara.
+
+\imagen{Anexos/appInterfaz}{Imagen pertenecienta a la aplicación, con la interfaz desplegada.}
+
+En caso de tener seleccionado el modo de capturar target, la interfaz contará con dos elementos adicionales. El primero se trata de una barra de colores (rojo, amarillo, verde) que indica la calidad optima para que el objetivo enfocado sea un target. El segundo elemento será el disparador situado en la parte inferior centrar. Una vez que tengamos un objetivo que cumpla los requisitos de calidad, podremos presionar el disparador, de manera que el target se guardará temporalmente (al cerrar la aplicación o volver al menú los target se reinician). Sobre este target capturado aparecera el modelo 3D correspondiente. Imagen---
+
+En la barra de herramientas contamos con dos elementos, una regadera y un paquete de abono. La primera al seleccionar nos saldrá en pantalla una regadera que automáticamente echará agua, el objetivo es mover el dispositvo hasta conseguir que el agua caiga en el mergecube. Cuando el agua colisione con el modelo proyectado en el mergecube, la barra de progreso subirá hasta completarse. 
+El segundo elemento, se trata de un bote de fertilizante, al pulsarse saldrá en la pantalla un botón que al ser presionado saldrá delante como si se hubiese lanzado contra el mergecube.
+Para completar una fase es necesario haber completado ambos casos anteriores descritos.
+
+Actualmente los modos de juego de las plantas constan de cuatro fases, cada una correspondiente con un estado de la planta (semilla, brote, planta1,planta final). Para completar una fase, es necesario, completar la barra de progreso de agua, y haber echado fertilizante.
+
+Imagen
+
+
+En el modo de captura target se procederá ...
 
 
  

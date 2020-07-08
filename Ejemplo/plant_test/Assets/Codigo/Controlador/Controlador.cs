@@ -99,29 +99,35 @@ public class Controlador : MonoBehaviour
     //Actualiza el tipo de Target ha usar.
     public void TipoDeAR()
     {
-        if (tipoMergeCube.isOn)
+        if (!multiTarget.activeSelf)
         {
-            tipoARCaptura = false;
-            tipoARMerge = true;
+            if (tipoMergeCube.isOn)
+            {
+                tipoARCaptura = false;
+                tipoARMerge = true;
 
-        }else if (tipoCapturaTarget.isOn)
-        {
-            tipoARCaptura = true;
-            tipoARMerge = false;
+            }
+            else if (tipoCapturaTarget.isOn)
+            {
+                tipoARCaptura = true;
+                tipoARMerge = false;
+            }
         }
-
-        if (tipoMergeCube_AR.isOn)
+        else
         {
-            tipoARCaptura = false;
-            tipoARMerge = true;
+            if (tipoMergeCube_AR.isOn)
+            {
+                tipoARCaptura = false;
+                tipoARMerge = true;
 
+            }
+            else if (tipoCapturaTarget_AR.isOn)
+            {
+                tipoARCaptura = true;
+                tipoARMerge = false;
+            }
         }
-        else if (tipoCapturaTarget_AR.isOn)
-        {
-            tipoARCaptura = true;
-            tipoARMerge = false;
-        }
-
+    
     }
     //Sincroniza los Toggle entre el menu normal y el de AR.
     public void SyncTipoAR()

@@ -40,6 +40,10 @@ public class DetectWater : MonoBehaviour
     public GameObject planta2CT;
     public GameObject planta3CT;
 
+    public GameObject tempPlanta1CT;
+    public GameObject tempPlanta2CT;
+    public GameObject tempPlanta3CT;
+
 
     private Plants plants =  new Plants();
     private Controlador controlador = new Controlador();
@@ -84,30 +88,30 @@ public class DetectWater : MonoBehaviour
             }
 
         }
-        else
-        {
-            if (controlador.GetTomato())
-            {
-                f1 = planta1CT.GetComponent<Plants>().GetFase1();
-                f2 = planta1CT.GetComponent<Plants>().GetFase2();
-                f3 = planta1CT.GetComponent<Plants>().GetFase3();
-                f4 = planta1CT.GetComponent<Plants>().GetFase4();
-            }
-            if (controlador.GetCalabaza())
-            {
-                f1 = planta2CT.GetComponent<Plants>().GetFase1();
-                f2 = planta2CT.GetComponent<Plants>().GetFase2();
-                f3 = planta2CT.GetComponent<Plants>().GetFase3();
-                f4 = planta2CT.GetComponent<Plants>().GetFase4();
-            }
-            if (controlador.GetGirasol())
-            {
-                f1 = planta3CT.GetComponent<Plants>().GetFase1();
-                f2 = planta3CT.GetComponent<Plants>().GetFase2();
-                f3 = planta3CT.GetComponent<Plants>().GetFase3();
-                f4 = planta3CT.GetComponent<Plants>().GetFase4();
-            }
-        }
+        //else
+        //{
+        //    if (controlador.GetTomato())
+        //    {
+        //        f1 = planta1CT.GetComponent<Plants>().GetFase1();
+        //        f2 = planta1CT.GetComponent<Plants>().GetFase2();
+        //        f3 = planta1CT.GetComponent<Plants>().GetFase3();
+        //        f4 = planta1CT.GetComponent<Plants>().GetFase4();
+        //    }
+        //    if (controlador.GetCalabaza())
+        //    {
+        //        f1 = planta2CT.GetComponent<Plants>().GetFase1();
+        //        f2 = planta2CT.GetComponent<Plants>().GetFase2();
+        //        f3 = planta2CT.GetComponent<Plants>().GetFase3();
+        //        f4 = planta2CT.GetComponent<Plants>().GetFase4();
+        //    }
+        //    if (controlador.GetGirasol())
+        //    {
+        //        f1 = planta3CT.GetComponent<Plants>().GetFase1();
+        //        f2 = planta3CT.GetComponent<Plants>().GetFase2();
+        //        f3 = planta3CT.GetComponent<Plants>().GetFase3();
+        //        f4 = planta3CT.GetComponent<Plants>().GetFase4();
+        //    }
+        //}
         
         
         
@@ -266,7 +270,40 @@ public class DetectWater : MonoBehaviour
         barraProgreso.transform.localScale = new Vector2(valPro / maxPro, 1);
     }
 
-    
+    public void AsociarDefinedTarget()
+    {
+        new WaitForSeconds(3);
+
+        tempPlanta1CT = GameObject.Find("UserDefinedTarget-1/GameObject1/Planta1");
+        tempPlanta2CT = GameObject.Find("UserDefinedTarget-1/GameObject1/Planta2");
+        tempPlanta3CT = GameObject.Find("UserDefinedTarget-1/GameObject1/Planta3");
+
+        if (controlador.GetTipoARcapturar())
+        {
+            if (controlador.GetTomato())
+            {
+                f1 = tempPlanta1CT.GetComponent<Plants>().GetFase1();
+                f2 = tempPlanta1CT.GetComponent<Plants>().GetFase2();
+                f3 = tempPlanta1CT.GetComponent<Plants>().GetFase3();
+                f4 = tempPlanta1CT.GetComponent<Plants>().GetFase4();
+            }
+            if (controlador.GetCalabaza())
+            {
+                f1 = tempPlanta2CT.GetComponent<Plants>().GetFase1();
+                f2 = tempPlanta2CT.GetComponent<Plants>().GetFase2();
+                f3 = tempPlanta2CT.GetComponent<Plants>().GetFase3();
+                f4 = tempPlanta2CT.GetComponent<Plants>().GetFase4();
+            }
+            if (controlador.GetGirasol())
+            {
+                f1 = tempPlanta3CT.GetComponent<Plants>().GetFase1();
+                f2 = tempPlanta3CT.GetComponent<Plants>().GetFase2();
+                f3 = tempPlanta3CT.GetComponent<Plants>().GetFase3();
+                f4 = tempPlanta3CT.GetComponent<Plants>().GetFase4();
+            }
+        }
+    }
+
     //// Update is called once per frame
     //void Update()
     //{

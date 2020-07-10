@@ -1,7 +1,7 @@
 \apendice{Plan de Proyecto Software}
 
 \section{Introducción}
- Para la organización del trabajo se ha utilizado GitHub\footnote{\url{https://github.com}} con la extensión de ZenHub\footnote{\url{https://www.zenhub.com/}} para facilitar el seguimiento de las issues gracias a las opciones que ofrece la extensión.
+ Para la organización del trabajo se ha utilizado GitHub\footnote{\url{https://github.com}} con la extensión de ZenHub\footnote{\url{https://www.zenhub.com/}} para facilitar el seguimiento de las issues gracias a las funcionalidades que ofrece la extensión.
  
 En el siguiente enlace se encuentra el repositorio del trabajo: \url{https://github.com/smi0010/TFG_Herramientas_Realidad_Aumentada}.
 \section{Planificación temporal}
@@ -101,20 +101,20 @@ Otro punto a investigar se trata de añadir alguna de las otras funciones de rea
   
  Durante la reunión mostré los cambios de la interfaz del menú, y la mejora para que al cambiar entre menú normal y AR estén en la misma página. Al hacer esto me percate de un bug en el que en cierta página concreta no se cambia correctamente, con la consecuencia de que se superponen páginas. Este sera uno de los objetivos a resolver durante este sprint.
  
- Otro de los avances que mostré los modelos de plantas que había añadido y como desde el menú se podía escoger cada una.  También explique que debido al modo en el que había realizado en primer momento el script que controla el cambio de fase de las plantas, no era posible añadir mas plantas de una forma eficiente. Por lo tanto mejorar este script, para que se pueda añadir tantos modelos sean necesarios de forma eficiente y funcional será otro de los objetivos del sprint.
+ Otro de los avances que mostré fueron los modelos de plantas que había añadido y como desde el menú se podía escoger cada una.  También expliqué que debido al modo en el que había realizado en primer momento el script que controla el cambio de fase de las plantas, no era posible añadir mas plantas de una forma eficiente. Por lo tanto mejorar este script, para que se pueda añadir tantos modelos sean necesarios de forma eficiente y funcional será otro de los objetivos del sprint.
  
 Otro de los objetivos será el de completar la tabla comparativa añadida en el anterior sprint y seguir mejorando apartados de la documentación.
  
 \subsection{Sprint 19 (10/06/2020 - 17/06/2020)}
 
- Para este sprint me centraré en dejar la aplicación en una versión cercana a la definitiva, para ello me concentraré en corregir los pequeños bugs que aun puedan quedar. Durante la reunión mientras mostraba los progresos de la semana anterior, nos dimos cuenta de dos bugs. El primero y mas importante, se trata de que el progreso de los niveles, no se reinicia al cambiar a otra planta, es decir en el caso de que se haya completado todas las fases o nos quedemos a la mitad, si volvemos al menú y escogemos otra planta o otro modo distinto, el progreso será el mismo de antes, por lo que no se podrá avanzar adecuadamente. Otro de los bugs vistos se trata de al finalizar el tiempo máximo del que se dispone para realizar las tareas, salta un mensaje de texto para informar de que se ha acabado el tiempo, este mensaje no se ve adecuadamente debido al encuadre y al tamaño de la fuente. También será un objetivo, el revisar la aplicación en busca de posibles bugs importantes como los indicados anteriormente para añadirlos, y resolverlos durante este sprint.
+ Para este sprint me centraré en dejar la aplicación en una versión cercana a la definitiva, para ello me concentraré en corregir los pequeños bugs que aún puedan quedar. Durante la reunión mientras mostraba los progresos de la semana anterior, nos dimos cuenta de dos bugs. El primero y mas importante, se trata de que el progreso de los niveles, no se reinicia al cambiar a otra planta, es decir en el caso de que se haya completado todas las fases o nos quedemos a la mitad, si volvemos al menú y escogemos otra planta o otro modo distinto, el progreso será el mismo de antes, por lo que no se podrá avanzar adecuadamente. Otro de los bugs vistos se trata de al finalizar el tiempo máximo del que se dispone para realizar las tareas, salta un mensaje de texto para informar de que se ha acabado el tiempo, este mensaje no se ve adecuadamente debido al encuadre y al tamaño de la fuente. También será un objetivo, el revisar la aplicación en busca de posibles bugs importantes como los indicados anteriormente para añadirlos, y resolverlos durante este sprint.
  
  El otro punto del sprint es centrarse en los apartados de los anexos y la memoria que están menos avanzados.
  
  \subsection{Sprint 20 (17/06/2020 - 24/06/2020)}
- Para este sprint el objetivo principal es seguir completando la memoria y los anexos. Durante la reunión mencione en que apartados había estado trabajando, y las dudas que me habían surgido a la hora de completar algunos.
+ Para este sprint el objetivo principal es seguir completando la memoria y los anexos. Durante la reunión mencioné en que apartados había estado trabajando, y las dudas que me habían surgido a la hora de completar algunos.
  
- Se ha hablado también de implementar la función de realizar capturas de pantalla y que se guarden en la galería, pues en un principio se había propuesto en los requisitos y aun no se había realizado. Por lo demás en la aplicación se seguirá revisando en busca de posibles bugs o pequeños aspectos que se puedan mejorar. 
+ Se ha hablado también de implementar la función de realizar capturas de pantalla y que se guarden en la galería, pues en un principio se había propuesto en los requisitos y aún no se había realizado. Por lo demás en la aplicación se seguirá revisando en busca de posibles bugs o pequeños aspectos que se puedan mejorar. 
  
   \subsection{Sprint 21 (24/06/2020 - 26/06/2020)}
  Para este sprint dado que se acercan la fecha de entrega, hemos decido acortar la duración del sprint para acelerar el avance.
@@ -134,13 +134,16 @@ En la aplicación teníamos previsto añadir una ayuda o guía para el usuario, 
  Durante este sprint se procurara avanzar en los apartados del manual del usuario y a ser posible mas apartados de la memoria.
  Se ha encontrado un bug en la sincronización entre el menú normal y el de realidad aumentada, el bug en cuestión es que en el apartado de opciones, no se mantiene la opción seleccionada cuando se intercambia entre ambos modos del menú. El funcionamiento esperado es que independientemente de si esta manejando el menú en realidad aumentada o en el modo normal, ambos mantengan la misma configuración.
  
+ \subsection{Sprint 25 (8/07/2020 - 10/07/2020)} 
+ Para este sprint se procederá ha finalizar el modo de captura target de la aplicación. En dicho modo surgió el inconveniente que no se podía ``jugar` regando las plantas al igual que con  MergeCube, pues parece que estén en diferentes planos y nunca se puede hacer contacto. El objetivo será buscar una solución ha este problema, para que se pueda ``jugar`  con un target personalizado. 
  
+ También se ha propuesto incluir un modo en el que se pueda hacer uso de la detección de múltiples marcadores simultáneos, pudiendo seleccionar y mostrar distintos modelos 3D, está propuesta puede ser viable pues en pruebas anteriores de captura target se había conseguido resultados similares, aun que sin probar a colocar modelos distintos en cada marcador.
 
 \section{Estudio de viabilidad}
 
 \subsection{Viabilidad económica}
 
-En este apartado se evaluara la viabilidad económica de las herramientas que se han investigado.
+En este apartado se evaluará la viabilidad económica de las herramientas que se han investigado.
 
 
 CoSpaces, ofrece varias tarifas aparte de la básica que es gratuita, la más barata de 69,99~\euro{}  anuales y la mas cara es de 1349,99~\euro{} anuales.
@@ -160,14 +163,18 @@ La tarifa que sería recomendable se trata de la primera ofertada en el plan Pro
 El proyecto ha sido desarrollado por una única persona, durante un periodo de 6 meses a tiempo parcial. Se considerará un salario de 1300\euro.
 
 Para calcular los porcentajes de cotización de la seguridad social, se tendrá en cuenta los datos de cotización 2020~\cite{contingencias2020}:
+
+Por parte de la empresa:
 \begin{itemize}
-	\item Por parte de la empresa:
 	\item Contingencias Comunes (Empresa): 23,6\%
 	\item Formación Profesional (Empresa): 0,6\%
 	\item Desempleo de tipo general (Empresa): 5,5\%
 	\item Fondo de Garantía Salarial (Fogasa) 0.2\%
 	\item Total 29,9\%:
-	\item Por parte del empleado:
+\end{itemize}
+
+Por parte del empleado:
+\begin{itemize}
 	\item Contingencias Comunes (Trabajador): 4,7\%	
 	\item Formación Profesional (Trabajador): 0,1\%
 	\item Desempleo de tipo general (Trabajador): 1,55\%
@@ -178,13 +185,13 @@ En la tabla \ref{tabla:costesPersonal} se utilizaran los supuestos costes de la 
 
 El coste de personal total será de 10132,2\euro.
 
-\tablaSmall{Costes Personal.}{l c }{costesPersonal}{\multicolumn{1}{l}{Concepto}& Coste\\}{
-	Salario Bruto& 1300~\euro \\
-	Seguridad social(Empresa 29,9\%)& 388,7~\euro  \\
+\tablaSmall{Costes Personal.}{l r }{costesPersonal}{\multicolumn{1}{l}{Concepto}& Coste (\euro)\\}{
+	Salario Bruto& 1300~ \\
+	Seguridad social(Empresa 29,9\%)& 388,7~  \\
 	\midrule
-	Coste mensual&1688,7~\euro\\
+	Coste mensual&1688,7~\\
 	\midrule
-	Coste Total&10132,2~\euro\\
+	Coste Total&10132,2~\\
 	}
 
 \subsubsection{Costes Material}
@@ -192,45 +199,45 @@ Para el proyecto se ha requerido de algunos gastos en hardware y software.
 
 \begin{itemize}
 	\item Hardware:
-	Se tendrá en cuenta el equipo con el se ha desarrollado la aplicación, un ordenador valorado en 1100~\euro. Una WebCam valorada en 70~\euro, para realizar pruebas en el ordenador. Y un smartphone valorado en 210~\euro. El Mergecube con un coste de 19.99~\euro. Los componentes se amortizarán en 4 años. En la tabla \ref{tabla:costesHardware} se pueden apreciar los costes  y las amortizaciones\footnote{Los costes de Amortización son calculados a 6 meses, que es la duración del proyecto.} agrupados.
+	Se tendrá en cuenta el equipo con el se ha desarrollado la aplicación, un ordenador valorado en 1100~\euro. Una WebCam valorada en 70~\euro, para realizar pruebas en el ordenador. Y un smartphone valorado en 210~\euro. El Mergecube con un coste de 19,99~\euro. Los componentes se amortizarán en 4 años. En la tabla \ref{tabla:costesHardware} se pueden apreciar los costes  y las amortizaciones\footnote{Los costes de amortización son calculados a 6 meses, que es la duración del proyecto.} agrupados.
 	\item Software: Algunas de las herramientas software que se han utilizado en el proyecto se traban de software gratuitos, o se han utilizado unicamente las pruebas o niveles gratuitos que ofrecen. Por el contrarío en algunos casos ha sido necesario, recurrir al pago. Uno de los casos es con CoSpaces, realizando una prueba de un mes, a un coste de 79,9~\euro/año. En la tabla \ref{tabla:costesSoftware} se pueden apreciar los costes agrupados.
 \end{itemize}
 
 
 
-Los costes totales de material, son de 417,48.
+Los costes totales de material, son de 417,48~\euro.
 
 
-\tablaSmall{Costes hardware.}{l c c}{costesHardware}{\multicolumn{1}{l}{Concepto}& Coste & Amortización\\}{
-	MergeCube& 19,99~\euro&19,99 \\
-	Ordenador& 1100~\euro&137,5~\euro  \\
-	WebCam& 70~\euro&8.75~\euro  \\
-	SmartPhone& 210~\euro&26,25~\euro  \\
+\tablaSmall{Costes hardware.}{l r r}{costesHardware}{\multicolumn{1}{l}{Concepto}& Coste( \euro) & Amortización( \euro)\\}{
+	MergeCube& 19,99~&19,99 \\
+	Ordenador& 1100~&137,5~  \\
+	WebCam& 70~&8.75~  \\
+	SmartPhone& 210~&26,25~  \\
 	\midrule
-	Total& 1399,99~\euro&192,49~\euro\\}
+	Total& 1399,99~&192,49~\\}
 
-\tablaSmall{Costes software.}{l c }{costesSoftware}{\multicolumn{1}{l}{Concepto}& Coste \\}{
-	Windows 10& 145~\euro \\
-	CoSapaces& 79.99~\euro/año  \\
+\tablaSmall{Costes software.}{l r }{costesSoftware}{\multicolumn{1}{l}{Concepto}& Coste ( \euro)\\}{
+	Windows 10& 145~ \\
+	CoSapaces& 79.99~/año  \\
 	\midrule
-	Total&224,99~\euro\\}
+	Total&224,99~\\}
 
 \subsubsection{Costes Totales.}
 
 	El coste total durante el desarrollo, es de 10549,68~\euro. En la tabla \ref{tabla:costesTotales} se pueden apreciar el conjunto de todos los supuestos costes calculados.
 	
-\tablaSmall{Costes Totales}{l c  }{costesTotales}{\multicolumn{1}{l}{Concepto}& Coste\\}{
-	Personal& 10132,~\euro \\
-	Hardware& 192,49~\euro  \\
-	Software& 224,99~\euro  \\
+\tablaSmall{Costes Totales}{l c  }{costesTotales}{\multicolumn{1}{l}{Concepto}& Coste ( \euro)\\}{
+	Personal& 10132,~ \\
+	Hardware& 192,49~  \\
+	Software& 224,99~  \\
 	\midrule
 	Total& 10549,68~\euro\\}
 
 \subsection{Viabilidad legal}
 
-En el caso de las licencias del software usado, se a aprovechado el uso gratuito. En el caso de Unity se trata de la licencia de uso personal. En el caso de Vuforia, el desarrollo de aplicaciones es gratuito, pero si se tuviese la intención de publicarla con uso comercial sería necesario acogerse a una de las licencias de pago. En la tabla \ref{licenciasSoftware} se encuentran recogidas el tipo de licencias usadas.
+En el caso de las licencias del software usado, se a aprovechado el uso gratuito. En el caso de Unity se trata de la licencia de uso personal. En el caso de Vuforia, el desarrollo de aplicaciones es gratuito, pero si se tuviese la intención de publicarla con uso comercial sería necesario acogerse a una de las licencias de pago. En la tabla \ref{tabla:licenciasSoftware} se encuentran recogidas el tipo de licencias usadas.
 
-El proyecto se han utilizado recursos para Unity de licencias gratuitas. Se tratan de algunos modelos 3D, imágenes, o Fonts que contaban con una licencia Creative Commons Atribution\footnote{\url{https://creativecommons.org/licenses/by/4.0/}} para su uso. En la tabla \ref{componentesUnity} se encunetran recogidos los distintos tipo de recursos usados en el proyectos Unity y sus licencias.
+El proyecto se han utilizado recursos para Unity de licencias gratuitas. Se tratan de algunos modelos 3D, imágenes, o Fonts que contaban con una licencia Creative Commons Atribution\footnote{\url{https://creativecommons.org/licenses/by/4.0/}} para su uso. En la tabla \ref{tabla:componentesUnity} se encunetran recogidos los distintos tipo de recursos usados en el proyectos Unity y sus licencias.
 
 \tablaSmall{Licencias Software}{l c c }{licenciasSoftware}{\multicolumn{1}{l}{}& Versión& Licencia\\}{
 	Unity& 2019.2.19f1& Unity Personal\\

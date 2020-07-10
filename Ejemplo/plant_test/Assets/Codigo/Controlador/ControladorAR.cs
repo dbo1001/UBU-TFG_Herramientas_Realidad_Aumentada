@@ -90,7 +90,7 @@ public class ControladorAR : MonoBehaviour
 
     public void ActivarDesactivarHerramienta(GameObject objeto)
     {
-        if (objeto.active is true)
+        if (objeto.activeSelf is true)
         {
             objeto.SetActive(false);
         }

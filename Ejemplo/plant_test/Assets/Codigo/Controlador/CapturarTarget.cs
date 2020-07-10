@@ -32,6 +32,7 @@ public class CapturarTarget : MonoBehaviour
 
     #region PRIVATE_MEMBERS
     const int MAX_TARGETS = 5;
+    const int MAX_TARGETS_GAME_MODE = 3;
     UserDefinedTargetBuildingBehaviour m_TargetBuildingBehaviour;
     ObjectTracker m_ObjectTracker;
     //FrameQualityMeter m_FrameQualityMeter;
@@ -46,6 +47,9 @@ public class CapturarTarget : MonoBehaviour
     // Counter used to name newly created targets
     int m_TargetCounter;
     #endregion //PRIVATE_MEMBERS
+
+    //Sincronizar variables
+    Controlador controlador= new Controlador();
 
 
     #region MONOBEHAVIOUR_METHODS
@@ -119,7 +123,16 @@ public class CapturarTarget : MonoBehaviour
 
         // Destroy the oldest target if the dataset is full or the dataset
         // already contains five user-defined targets.
-        if (m_UDT_DataSet.HasReachedTrackableLimit() || m_UDT_DataSet.GetTrackables().Count() >= MAX_TARGETS)
+        int Max=2;
+        if (controlador.GetTipoARcapturar())
+        {
+            Max = MAX_TARGETS_GAME_MODE;
+        }
+        else
+        {
+            Max = MAX_TARGETS;
+        }
+        if (m_UDT_DataSet.HasReachedTrackableLimit() || m_UDT_DataSet.GetTrackables().Count() >= Max)
         {
             IEnumerable<Trackable> trackables = m_UDT_DataSet.GetTrackables();
             Trackable oldest = null;
@@ -174,6 +187,7 @@ public class CapturarTarget : MonoBehaviour
             Debug.Log("Cannot build new target, due to poor camera image quality");
             StatusMessage.Instance.Display("Low camera image quality", true);
         }
+        
     }
 
     #endregion //PUBLIC_METHODS

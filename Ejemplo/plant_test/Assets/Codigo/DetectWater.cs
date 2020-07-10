@@ -12,17 +12,17 @@ public class DetectWater : MonoBehaviour
     float valPro;
     float maxPro = 100;
 
+    int contDefinded = 1;
+
     public Text textoAgua;
     public Image barraProgreso;
 
+    //Texto de la cuenta atras
     public Text cuentaAtras;
+    //Tiempo
     int tiempo = 60;
     bool tFin = false;
-    /*
-    public GameObject fase1;
-    public GameObject fase2;
-    public GameObject fase3;
-    public GameObject fase4;*/
+    
     public GameObject regadera;
     bool flag = true;
     bool fertilizanteUse = false;
@@ -31,11 +31,13 @@ public class DetectWater : MonoBehaviour
     public GameObject ventana;
     public TMPro.TextMeshProUGUI textVentana;
     public Image colorTiempo;
-    
+
+    //Plantas asociadas al Mergecube.
     public GameObject planta1;
     public GameObject planta2;
     public GameObject planta3;
 
+    //Plantas asociadas al Target personalizado de capturaTarget.
     public GameObject planta1CT;
     public GameObject planta2CT;
     public GameObject planta3CT;
@@ -44,7 +46,7 @@ public class DetectWater : MonoBehaviour
     public GameObject tempPlanta2CT;
     public GameObject tempPlanta3CT;
 
-
+    //
     private Plants plants =  new Plants();
     private Controlador controlador = new Controlador();
     GameObject f1;
@@ -118,22 +120,12 @@ public class DetectWater : MonoBehaviour
         
         ActualizarProgreso(0);
         ActualizarHud();
-        //StartCoroutine(CuentaAtras());
     }
-
-    //void Update()
-    //{
-    //    //StartCoroutine(CuentaAtras());
-       
-    //}
-
-
+    
     //Detecta si se producen colisiones de particulas
     void OnParticleCollision(GameObject other)
     {
-        //int contact = pSystem.GetSafeCollisionEventSize();
-        //if (contact > collisionEvents.Count)
-        //    collisionEvents = new ParticleCollisionEvent[contact];
+        
         if (pSystem == null)
         {
             Debug.LogError("No funciona jajaja", this);
@@ -166,7 +158,7 @@ public class DetectWater : MonoBehaviour
                     f1.SetActive(true);
                     ActualizarProgreso(0);
                 }
-                else if (f1.active)
+                else if (f1.activeSelf)
                 {
                     fertilizanteUse = false;
                     fertilizanteUsed.SetActive(false);
@@ -176,7 +168,7 @@ public class DetectWater : MonoBehaviour
                     ActualizarProgreso(0);
                     agua = 0;
                 }
-                else if (f2.active)
+                else if (f2.activeSelf)
                 {
                     fertilizanteUsed.SetActive(false);
                     fertilizanteUse = false;
@@ -186,7 +178,7 @@ public class DetectWater : MonoBehaviour
                     ActualizarProgreso(0);
                     agua = 0;
                 }
-                else if (f3.active)
+                else if (f3.activeSelf)
                 {
                     fertilizanteUse = false;
                     fertilizanteUsed.SetActive(false);
@@ -263,6 +255,7 @@ public class DetectWater : MonoBehaviour
          fertilizanteUse = true;
     }
 
+    //Controla el crecimiento de la barra de progreso.
     public void ActualizarProgreso(float amount)
     {
         agua2 = ((amount * maxPro) / 5000);
@@ -270,13 +263,14 @@ public class DetectWater : MonoBehaviour
         barraProgreso.transform.localScale = new Vector2(valPro / maxPro, 1);
     }
 
+    //Por cada nuevo target personalizado, actualizar las variables de las fases.
     public void AsociarDefinedTarget()
     {
-        new WaitForSeconds(3);
-
-        tempPlanta1CT = GameObject.Find("UserDefinedTarget-1/GameObject1/Planta1");
-        tempPlanta2CT = GameObject.Find("UserDefinedTarget-1/GameObject1/Planta2");
-        tempPlanta3CT = GameObject.Find("UserDefinedTarget-1/GameObject1/Planta3");
+        
+        tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta1");
+        tempPlanta2CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta2");
+        tempPlanta3CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta3");
+        contDefinded++;
 
         if (controlador.GetTipoARcapturar())
         {
@@ -307,6 +301,10 @@ public class DetectWater : MonoBehaviour
     //// Update is called once per frame
     //void Update()
     //{
-
+    //    if (GameObject.Find("UserDefinedTarget-"+contDefinded.ToString()).activeSelf)
+    //    {
+    //        AsociarDefinedTarget();
+    //        contDefinded++;
+    //    }
     //}
 }

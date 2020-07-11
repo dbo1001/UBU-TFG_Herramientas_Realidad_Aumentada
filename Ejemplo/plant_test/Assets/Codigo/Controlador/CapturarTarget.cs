@@ -32,7 +32,7 @@ public class CapturarTarget : MonoBehaviour
 
     #region PRIVATE_MEMBERS
     const int MAX_TARGETS = 5;
-    const int MAX_TARGETS_GAME_MODE = 3;
+    const int MAX_TARGETS_GAME_MODE = 1;
     UserDefinedTargetBuildingBehaviour m_TargetBuildingBehaviour;
     ObjectTracker m_ObjectTracker;
     //FrameQualityMeter m_FrameQualityMeter;

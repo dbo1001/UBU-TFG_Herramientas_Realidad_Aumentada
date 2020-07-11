@@ -12,7 +12,8 @@ public class DetectWater : MonoBehaviour
     float valPro;
     float maxPro = 100;
 
-    int contDefinded = 1;
+    //Contador de los Target personalizados creados por el usuario.
+    int contDefinded = 0;
 
     public Text textoAgua;
     public Image barraProgreso;
@@ -53,6 +54,11 @@ public class DetectWater : MonoBehaviour
     GameObject f2;
     GameObject f3;
     GameObject f4;
+
+    bool f1Activa = false;
+    bool f2Activa = false;
+    bool f3Activa = false;
+    bool f4Activa = false;
 
     // Start is called before the first frame update
     void Start()
@@ -194,7 +200,11 @@ public class DetectWater : MonoBehaviour
             
             
         }
-        
+        f1Activa = f1.activeSelf;
+        f2Activa = f2.activeSelf;
+        f3Activa = f3.activeSelf;
+        f4Activa = f4.activeSelf;
+
     }
 
     IEnumerator CuentaAtras()
@@ -266,36 +276,44 @@ public class DetectWater : MonoBehaviour
     //Por cada nuevo target personalizado, actualizar las variables de las fases.
     public void AsociarDefinedTarget()
     {
-        
-        tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta1");
-        tempPlanta2CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta2");
-        tempPlanta3CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta3");
-        contDefinded++;
+        if (controlador.GetTomato())
+        {
+            tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta1");
+        }
 
+        if (controlador.GetCalabaza())
+        {
+            tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta2");
+        }
+
+        if (controlador.GetGirasol())
+        {
+            tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta3");
+        }
+
+        //si f1 es distinto de null y esta activo
         if (controlador.GetTipoARcapturar())
         {
-            if (controlador.GetTomato())
-            {
-                f1 = tempPlanta1CT.GetComponent<Plants>().GetFase1();
-                f2 = tempPlanta1CT.GetComponent<Plants>().GetFase2();
-                f3 = tempPlanta1CT.GetComponent<Plants>().GetFase3();
-                f4 = tempPlanta1CT.GetComponent<Plants>().GetFase4();
-            }
-            if (controlador.GetCalabaza())
-            {
-                f1 = tempPlanta2CT.GetComponent<Plants>().GetFase1();
-                f2 = tempPlanta2CT.GetComponent<Plants>().GetFase2();
-                f3 = tempPlanta2CT.GetComponent<Plants>().GetFase3();
-                f4 = tempPlanta2CT.GetComponent<Plants>().GetFase4();
-            }
-            if (controlador.GetGirasol())
-            {
-                f1 = tempPlanta3CT.GetComponent<Plants>().GetFase1();
-                f2 = tempPlanta3CT.GetComponent<Plants>().GetFase2();
-                f3 = tempPlanta3CT.GetComponent<Plants>().GetFase3();
-                f4 = tempPlanta3CT.GetComponent<Plants>().GetFase4();
-            }
+            f1 = tempPlanta1CT.GetComponent<Plants>().GetFase1();
+            f2 = tempPlanta1CT.GetComponent<Plants>().GetFase2();
+            f3 = tempPlanta1CT.GetComponent<Plants>().GetFase3();
+            f4 = tempPlanta1CT.GetComponent<Plants>().GetFase4();
+
+            if (f1Activa)
+                f1.SetActive(true);
+            if (f2Activa)
+                f2.SetActive(true);
+            if (f3Activa)
+                f3.SetActive(true);
+            if (f4Activa)
+                f4.SetActive(true);
+            
         }
+    }
+
+    public void AumentarContDefinedTarget()
+    {
+        contDefinded++;
     }
 
     //// Update is called once per frame

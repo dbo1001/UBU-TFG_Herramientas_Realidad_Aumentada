@@ -1,7 +1,7 @@
 \apendice{Documentación técnica de programación}
 
 \section{Introducción}
-En este apartado se explicaran los pasos para la instalación y ejecución de las herramientas con las que se deberá trabajar.
+En este apartado se explicarán los pasos para la instalación y ejecución de las herramientas con las que se deberá trabajar.
 
 \section{Estructura de directorios}
 En este apartado se procederá a dar una breve explicación de la estructura que ha seguido los directorios del proyecto.\\
@@ -12,7 +12,7 @@ En este apartado se procederá a dar una breve explicación de la estructura que
 .3 img/ Imágenes de la documentación.
 .3 text/ Archivos latex de la documentación.
 .3 anexos.Pdf  Anexos.
-.3 memoria.Pdf memoria.
+.3 memoria.Pdf Memoria.
 .2 Ejemplo/ Ejemplo de realidad aumentada.
 .3 Plant-test/ Ejemplo de realidad aumentada.
 .4 Assest/ Assests del proyecto.
@@ -29,36 +29,45 @@ En este apartado se procederá a dar una breve explicación de la estructura que
 
 \section{Manual del programador}
 \subsection{Unity}\label{sub:Unity}
-\subsubsection{Instalación}.
+\subsubsection{Instalación}
 
-Para Instalar el motor Unity es necesario descargar Unity Hub: \url{https://store.unity.com/es/download-nuo}
+Para Instalar el motor Unity es necesario descargar \textbf{Unity Hub}: \url{https://store.unity.com/es/download-nuo}
 
 Unity Hub se trata de un launcher desde el que se pueden descargar varias versiones de Unity simultáneamente, pudiendo escoger la que mejor se acomode a las necesidades del usuario. También ofrece una serie de tutoriales para iniciarse en el desarrollo de Unity. Por último ofrece un listado de los proyectos del usuario, así como a que versión pertenecen, pudiendo escoger con que versión de Unity desean ejecutarlos.
 
-En la pestaña de installs, pulsando el botón <<Add>>, saldrá una ventana donde poder escoger la versión deseada, al pasar el siguiente paso deberemos escoger los módulos complementarios para Unity, por el momento sería necesario el de Android, para poder pasar nuestros proyectos a una aplicación Android, importante desplegar las opciones del módulo y seleccionar ambas, pues para la compilación de una aplicación es estrictamente necesario el APK de Android.\imagen{unity01}{Paso 1: Seleccionar la versión de Unity }
+En la pestaña de \textbf{installs}, pulsando el botón <<\textbf{Add}>>, saldrá una ventana donde poder escoger la versión deseada, al pasar el siguiente paso deberemos escoger los módulos complementarios para Unity, por el momento sería necesario el de Android, para poder pasar nuestros proyectos a una aplicación Android, importante desplegar las opciones del módulo y seleccionar ambas, pues para la compilación de una aplicación es estrictamente necesario el APK de Android.
+
+\imagen{unity01}{Paso 1: Seleccionar la versión de Unity }
+
 \imagen{unity02}{Paso 2: Seleccionar}
 
 \label{sub:Confi}\subsubsection{Configuración }
 
 Una vez terminada la instalación ya es posible comenzar a crear proyectos. 
 
-El proceso para crear un proyecto es, desde Unity HUb , seleccionar el botón <<NEW>>, se desplegará una ventana en la que escoger que tipo de proyecto crear (2D, 3D, etc) y  el nombre y la ruta en la que se guardará. En el caso de este proyecto, se trata de uno de tipo 3D.
+El proceso para crear un proyecto es, desde Unity Hub , seleccionar el botón <<\textbf{NEW}>>, se desplegará una ventana en la que escoger que tipo de proyecto crear (2D, 3D, etc) y  el nombre y la ruta en la que se guardará. En el caso de este proyecto, se trata de uno de tipo 3D.
 
 Una vez se ha generado el entorno deberemos hacer las configuraciones iniciales. En primer lugar se deberá cambiar la plataforma de compilación del proyecto de Windows a Android, este paso permitirá que al construir el ejecutable de la aplicación, este sea compatible con la plataforma seleccionada. 
-Para ello vamos a la pestaña File, Build Settings, desde aquí encontraremos que se encuentra seleccionada Windows de forma predeterminada, cambiamos a Android dado que el proyecto esta pensado en un principio para dispositivos Android.
+Para ello vamos a la pestaña \textbf{File, Build Settings}, desde aquí encontraremos que se encuentra seleccionado ``Windows` de forma predeterminada, cambiamos a ``Android` dado que el proyecto esta pensado en un principio para dispositivos Android.
 
 Para poder descargar y usar Assets desde la tienda de Unity es necesario tener una cuenta de usuario.
 
-Dado que en el ejemplo realizado en Unity se utiliza Vuforia como herramienta de realidad aumentada, es necesario añadir dicha herramienta al proyecto de Unity en el se trabajará. Para esto hay varios métodos posibles:
+Dado que en el ejemplo realizado en Unity y se utiliza Vuforia como herramienta de realidad aumentada, es necesario añadir dicha herramienta al proyecto de Unity en el se trabajará. Para ello, deberemos acudir a la pagina de \href{https://developer.vuforia.com/downloads/sdk}{developer de Vuforia}, desde donde podremos descargar la ultima versión una vez registrados. Para instalarlo en el proyecto se deberá importar el fichero descargado, este paso se puede realizar fácilmente unicamente arrastrando el fichero a la ventana del proyecto, o ejecutando el fichero descargado.
+
+Aparte del método descrito hay otras posibilidades para instalar Vuforia, aunque recomiendo el anterior método pues al tratarse de su página oficial tiene mayor seguimiento.
+
+Algunas de las otras posibilidades son:
 \begin{itemize}
-\item Desde la pestaña de Edit-Project Settings, en el apartado Player-XR Settings, nos encontraremos con varias herramientas que se han instalado por defecto con Unity, marcamos el check de Vuforia y se incluirá automáticamente en nuestro proyecto.
-\imagenPeque{VuforiaPlayer01}{Instalación Vuforia en Unity paso 1.}
-
-\imagenPequeDos{VuforiaPlayer02}{Instalación Vuforia en Unity paso 2.}
-\item Otra opción posible es, desde la pestaña de la tienda de Assests de Unity, podemos buscar Vuforia Core Samples. Aquí la podremos encontrar de forma gratuita para descargar, y el único proceso que tendremos que seguir es presionar el botón de descargar y seguidamente el botón de importar, de esta manera Vuforia quedará importado en nuestro proyecto. Si seguimos estos pasos también se habrán incorporado al proyecto algunos ejemplos ya construidos de las distintas funcionalidades de la herramienta.
-
-\item Por ultimo, con el SDK de Vuforia para Unity, el cual le podemos descargar desde \href{https://developer.vuforia.com/downloads/sdk}{developer Vuforia} si tenemos una cuenta de usuario (Una cuenta gratuita es suficiente). Una vez que le hemos descargado, podemos importarlo en el proyecto ejecutándolo mientras tenemos el proyecto Unity abierto, o simplemente arrastrando el ejecutable dentro del proyecto abierto.	
+	\item Desde la pestaña de la \textbf{tienda de Assests} de Unity, podemos buscar Vuforia. Entre los resultados encontraremos distintos assets ofrecidos por la compañia de Vuforia. Nos interesará el llamado ``\textbf{Vuforia Engine}`, al descargar y importar este asset en nuestro proyecto, siguiendo los sencillos pasos de la tienda, nos instalará Vuforia en nuestro proyecto.
+	Otra posibilidad, podría ser descargar Vuforia Core Samples. Este Assest de Vuforia se diferencia, en que aparte del engine de Vuforia, incluye varios ejemplos ya construidos, de algunas de las diferentes funcionalidades, estos ejemplos añadidos se pueden borrar del proyecto en caso de que no nos interesen. En mi caso instale por error Vuforia Core Samples.
+	
+	\item Este metodo que se va describir a continuación, es posible que no se encuentre disponible en las ultimas versiones de Unity, específicamente desde la versión 2019.3. Si la versión con la que trabaja de Unity es inferior a la 2019.3 podrá seguir los siguientes pasos. Desde la pestaña de \textbf{Edit-Project Settings}, en el apartado \textbf{Player-XR Settings}, nos encontraremos con varias herramientas incluidas por defecto en Unity, marcamos el check de Vuforia y se incluirá automáticamente en nuestro proyecto. Se pueden ver los pasos descritos en la imágenes~\ref{fig:Anexos/VuforiaPlayer01}~\ref{fig:Anexos/VuforiaPlayer02}.
+	
 \end{itemize}
+
+\imagenPeque{Anexos/VuforiaPlayer01}{Instalación Vuforia en Unity paso 1.}
+
+\imagenPequeDos{Anexos/VuforiaPlayer02}{Instalación Vuforia en Unity paso 2.}
 
 \subsubsection{Construcción proyecto}
 
@@ -70,7 +79,7 @@ Para añadir el multiTarget hay que seguir un proceso similar. La diferencia est
 Click derecho, Vuforia Engine, y escogemos multiTarget, podremos apreciar que el cubo tiene las imágenes que habíamos configurado. Hay que asegurarse de que el cubo este en el campo visual de la cámara en la escena del proyecto, de lo contrario no se podrá reconocer al ejecutarse. Será en este elemento al que tendremos que asociar los modelos que queremos que se muestren en el Mergecube al enfocar nuestro dispositivo al MergeCube.
 
 
-Con estos dos elementos, el esqueleto principal de la aplicación ya esta construido. Ahora si se deseamos incorporar un modelo 3d que se muestre cuando se reconozca el multitarget. Deberemos asociar ese elemento al multitarget como hijo.
+Con estos dos elementos, el esqueleto principal de la aplicación ya esta construido. Ahora si se deseamos incorporar un modelo 3D que se muestre cuando se reconozca el multitarget. Deberemos asociar ese elemento al multitarget como hijo.
 .
 
 .
@@ -78,13 +87,13 @@ Con estos dos elementos, el esqueleto principal de la aplicación ya esta constr
 
 
 \section{Compilación, instalación y ejecución del proyecto}
-Contamos con dos maneras de instalar el proyecto Unity en nuestro equipo. Antes de proceder es importante tener previamente Unity instalado\ref{sub:Unity}.
+Contamos con dos maneras de instalar el proyecto Unity en nuestro equipo. Antes de proceder es importante tener previamente Unity instalado~\ref{sub:Unity}.
 
 
-La primera forma consiste en descargar del repositorio la carpeta Plant-test. Una vez descargado y situado en la ruta deseada para trabajar, se deberá abrir Unity-Hub. Desde la venta de unity-hub tenemos las opciones de nuevo proyecto o añadir projecto, en este caso nos interesa añadir uno ya existente, al selecionarlo nos mastrará una ventana para seleccionar la ruta en la que hemos guardado el proyecto descargado. Una vez seleccionado la ruta, se nos añadirá en la lista de proyectos de Unity-Hub, desde donde le podremos iniciar. 
+La primera forma consiste en descargar del repositorio la carpeta Plant-test. Una vez descargado y situado en la ruta deseada para trabajar, se deberá abrir Unity-Hub. Desde la venta de Unity-hub tenemos las opciones de nuevo proyecto o añadir projecto, en este caso nos interesa añadir uno ya existente, al seleccionarlo nos mostrará una ventana para seleccionar la ruta en la que hemos guardado el proyecto descargado. Una vez seleccionado la ruta, se nos añadirá en la lista de proyectos de Unity-Hub, desde donde le podremos iniciar. 
 
 
-La otra posibilidad de instalar el proyecto es la siguiente. Primero deberemos crear un nuevo proyecto 3D, será necesario modificar la configuración de compilación a Android, como se explica en \ref{sub:Confi} . Una vez creado deberemos seleccionar el paquete de Unity localizado en la carpeta << Paquete del Proyecto>> y arrástralo al proyecto que hemos creado. Una vez arrastrado Unity procederá a su importación, mostrara una ventana con la estructura de directorios del proyecto en la que se puede seleccionar si queremos importar todo o solo las partes seleccionadas, para una correcta importación del proyecto se deberá importar todo.
+La otra posibilidad de instalar el proyecto es la siguiente. Primero deberemos crear un nuevo proyecto 3D, será necesario modificar la configuración de compilación a Android, como se explica en~\ref{sub:Confi}. Una vez creado deberemos seleccionar el paquete de Unity localizado en la carpeta <<Paquete del Proyecto>> y arrástralo al proyecto que hemos creado. Una vez arrastrado Unity procederá a su importación, mostrara una ventana con la estructura de directorios del proyecto en la que se puede seleccionar si queremos importar todo o solo las partes seleccionadas, para una correcta importación del proyecto se deberá importar todo.
 
 
 \section{Pruebas del sistema}
@@ -92,12 +101,12 @@ Las pruebas realizadas a la aplicación, se han realizado mediante pruebas de fo
 
 Una de las primeras pruebas ha realizar es el de la instalación en el dispositivo, para comprobar que el APK se ha realizado correctamente y es funcional. 
 
-Para comprobar el re escalado de la interfaz de la aplicación, se ha probado en distintos dispositivos, varios smartphone, y una tablet. En cada pantalla de la interfaz, se comprueba que cada elemento es visible independientemente de el dispositivo.
-En la interfaz del modo juego, en los dispositivos que tienen en la pantalla notch(cámara frontal) se aprecio que la interfaz no tenia en cuenta el notch, por lo que este tapaba una parte de la barra de progreso. Para corregirlo se ha bajado la barra de progreso.
+Para comprobar el reescalado de la interfaz de la aplicación, se ha probado en distintos dispositivos, varios smartphone, y una tablet. En cada pantalla de la interfaz, se comprueba que cada elemento es visible independientemente de el dispositivo.
+En la interfaz del modo juego, en los dispositivos que tienen en la pantalla notch(cámara frontal) se aprecio que la interfaz no tenía en cuenta el notch, por lo que este tapaba una parte de la barra de progreso. Para corregirlo se ha bajado la barra de progreso.
 
-En la detección de realidad aumentada, la gran mayoría de las pruebas se han podido hacer desde el entorno de Unity con una web cam. Pero para dar mayor fiabilidad a las pruebas, se han probado también en el dispositivo. Las pruebas consistían en comprobar que el mergecube era reconocido correctamente, y que cuando es detectado, el modelo 3D asociado se puede visualizar adecuadamente. Para la prueba de detección del mergecube se enfoca en cada cara del cubo, demostrando que en cualquier cara es reconocido, para complementar se han hecho pruebas tapando un porcentaje de la cara del cubo. (VÍDEO)
+En la detección de realidad aumentada, la gran mayoría de las pruebas se han podido hacer desde el entorno de Unity con una webcam. Pero para dar mayor fiabilidad a las pruebas, se han probado también en el dispositivo. Las pruebas consistían en comprobar que el Mergecube era reconocido correctamente, y que cuando es detectado, el modelo 3D asociado se puede visualizar adecuadamente. Para la prueba de detección del Mergecube se enfoca en cada cara del cubo, demostrando que en cualquier cara es reconocido, para complementar se han hecho pruebas tapando un porcentaje de la cara del cubo. (VÍDEO)
 
-También se ha probado la detección con diferentes entornos de luminosidad, en el caso de los extremos de luminosidad(poca y mucha), la detección del mergecube se dificulta. Por ejemplo en los casos de demasiada iluminación, provoca que el contraste de iluminación impida reconocer el mergecube. (REFERENCIA A VÍDEO DEMOSTRACIÓN)
+También se ha probado la detección con diferentes entornos de luminosidad, en el caso de los extremos de luminosidad (poca y mucha), la detección del Mergecube se dificulta. Por ejemplo en los casos de demasiada iluminación, provoca que el contraste de iluminación impida reconocer el Mergecube. (REFERENCIA A VÍDEO DEMOSTRACIÓN)
 
 Para las pruebas de navegación entre el menú, se ha procedido ha probar que cada botón redirige a su pantalla correspondiente.
 
@@ -109,4 +118,4 @@ Para la comprobación del uso del sensor del giroscopio, seleccionamos la herram
 
 
 
-Por ultimo destacar que Unity posee cualidades para realizar algunas pruebas unitarias de forma automática, pero no he tenido para aprender a utilizarlas de la manera correcta para esta aplicación. 
+Por último destacar que Unity posee cualidades para realizar algunas pruebas unitarias de forma automática, pero no he tenido para aprender a utilizarlas de la manera correcta para esta aplicación. 

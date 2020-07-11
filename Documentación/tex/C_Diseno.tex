@@ -5,7 +5,7 @@
  
 
 \section{Diseño procedimental}
-En la figura  \ref{fig:Diagrama_secuencia} se muestra un diagrama de secuencia, en el que se puede observar el comportamiento básico de la aplicación a la hora de buscar, detectar un marcador y renderizar su modelo asociado. Para crear el diagrama se ha usado la herramienta online Draw.io\footnote{\url{https://app.diagrams.net/}}.
+En la figura~\ref{fig:Anexos/Diagrama_secuencia} se muestra un diagrama de secuencia, en el que se puede observar el comportamiento básico de la aplicación a la hora de buscar, detectar un marcador y renderizar su modelo asociado. Para crear el diagrama se ha usado la herramienta online Draw.io\footnote{\url{https://app.diagrams.net/}}.
 
 
 \imagen{Anexos/Diagrama_secuencia}{Diagrama de secuencia del proceso de buscar un marcador.}
@@ -13,16 +13,16 @@ En la figura  \ref{fig:Diagrama_secuencia} se muestra un diagrama de secuencia, 
 \section{Diseño arquitectónico}
 
 
-Dado que se trata de una aplicación desarrollado en Unity la estructura que sigue viene dada por defecto propiamente por Unity. En la imagen\ref{fig:Anexos/unity_xr_new_architecture} podemos ver una sencilla representación de la estructura de Unity con respecto al plugin de Vuforia. 
+Dado que se trata de una aplicación desarrollado en Unity la estructura que sigue viene dada por defecto propiamente por Unity. En la imagen~\ref{fig:Anexos/unity_xr_new_architecture} podemos ver una sencilla representación de la estructura de Unity con respecto al plugin de Vuforia. 
 
 La plataforma XR de Unity se trata de una capa dedicada específicamente al control de tecnologías de realidad aumentada y realidad virtual, con el objetivo conseguir una mayor compatibilidad y facilidades de desarrollo para software de extensión. Hasta la versión 2019.3 de Unity, Vuforia contaba con soporte integrado en Unity por defecto, apartir de dicha versión es necesario descargar Vuforia Engine desde el Portal de desabolladores de Vuforia. 
 
  
-El sdk de Vuforia interactua directamente con Unity XR, para el uso de los recursos de realidad aumentada (Cámara, targets...). 
+El SDK de Vuforia interactúa directamente con Unity XR, para el uso de los recursos de realidad aumentada (Cámara, targets...). 
 
 El Unity Core será el encargado del renderizado general de los recursos y demás funciones de Unity.
 
-Por ultimo el sdk de Android interactuara con Unity para realizar la compilación del APK y poder un correcto porte para una aplicación Android.
+Por ultimo el SDK de Android interactuará con Unity para realizar la compilación del APK y poder un correcto porte para una aplicación Android.
 
 \imagen{Anexos/unity_xr_new_architecture}{Arquitectura XR de Unity.}
 
@@ -31,20 +31,20 @@ Por ultimo el sdk de Android interactuara con Unity para realizar la compilació
 
 \section{Diseño de interfaz}
 
-En las siguientes imágenes se pueden ver, el prototipo de interfaz pensado para la aplicación. 
+En las siguientes imágenes se pueden ver el prototipo de interfaz pensado para la aplicación. 
 
 En las figuras \ref{fig:Anexos/Interfaz/page1}, \ref{fig:Anexos/Interfaz/page2} y \ref{fig:Anexos/Interfaz/page2_2} se muestra un prototipo de los menús de la aplicación. En la segunda, se puede escoger diferentes modos de juego, por el momento en esta aplicación unicamente se está desarrollando un modo de juego. 
 Otra posibilidad para los menús, sería integrarlos por realidad aumenta en el MergeCube, teniendo que girarle y jugar con él para navegar por el menú.
 
 En las figuras \ref{fig:Anexos/Interfaz/page3} y \ref{fig:Anexos/Interfaz/page4}, se muestra un prototipo de la interfaz del juego. Tendríamos botones para seleccionar las diferentes herramientas posibles en la parte inferior. Y en la parte superior una barra de progreso, para indicar el progreso de cada fase. Para regresar al menú principal se podría usar los botones del terminal o añadir uno a la interfaz también.
 
-\imagenPeque{Anexos/Interfaz/page1}{Prototipo del menú principal de la aplicación.}
+\imagenMasPeque{Anexos/Interfaz/page1}{Prototipo del menú principal de la aplicación.}
 
-\imagenPeque{Anexos/Interfaz/page2}{Prototipo del menú de juegos de la aplicación.}
+\imagenMasPeque{Anexos/Interfaz/page2}{Prototipo del menú de juegos de la aplicación.}
 
-\imagenPeque{Anexos/Interfaz/page2_2}{Prototipo del menú de tipos de plantas disponibles.}
+\imagenMasPeque{Anexos/Interfaz/page2_2}{Prototipo del menú de tipos de plantas disponibles.}
 
-\imagenPeque{Anexos/Interfaz/page3}{Prototipo de la interfaz en modo AR.}
-A la hora de probar en distintos dispositivos, en los dispositivos que tienen en la pantalla notch(cámara frontal) se aprecio que la interfaz no tenia en cuenta el notch, por lo que este tapaba una parte de la barra de progreso. Para corregirlo se ha bajado la barra de progreso.
+\imagenMasPeque{Anexos/Interfaz/page3}{Prototipo de la interfaz en modo AR.}
+A la hora de probar en distintos dispositivos, en los dispositivos que tienen en la pantalla notch (cámara frontal) se aprecio que la interfaz no tenía en cuenta el notch, por lo que este tapaba una parte de la barra de progreso. Para corregirlo se ha bajado la barra de progreso.
 
-\imagenPeque{Anexos/Interfaz/page4}{Prototipo de la interfaz en modo AR.}
+\imagenMasPeque{Anexos/Interfaz/page4}{Prototipo de la interfaz en modo AR.}

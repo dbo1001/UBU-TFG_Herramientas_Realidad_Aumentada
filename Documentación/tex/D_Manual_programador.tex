@@ -97,23 +97,26 @@ La otra posibilidad de instalar el proyecto es la siguiente. Primero deberemos c
 
 
 \section{Pruebas del sistema}
-Las pruebas realizadas a la aplicación, se han realizado mediante pruebas de forma manual directamente en el dispositivo.
+Las pruebas realizadas a la aplicación, se han realizado mediante pruebas de forma manual directamente en el dispositivo móvil.
 
 Una de las primeras pruebas ha realizar es el de la instalación en el dispositivo, para comprobar que el APK se ha realizado correctamente y es funcional. 
 
 Para comprobar el reescalado de la interfaz de la aplicación, se ha probado en distintos dispositivos, varios smartphone, y una tablet. En cada pantalla de la interfaz, se comprueba que cada elemento es visible independientemente de el dispositivo.
 En la interfaz del modo juego, en los dispositivos que tienen en la pantalla notch(cámara frontal) se aprecio que la interfaz no tenía en cuenta el notch, por lo que este tapaba una parte de la barra de progreso. Para corregirlo se ha bajado la barra de progreso.
 
-En la detección de realidad aumentada, la gran mayoría de las pruebas se han podido hacer desde el entorno de Unity con una webcam. Pero para dar mayor fiabilidad a las pruebas, se han probado también en el dispositivo. Las pruebas consistían en comprobar que el Mergecube era reconocido correctamente, y que cuando es detectado, el modelo 3D asociado se puede visualizar adecuadamente. Para la prueba de detección del Mergecube se enfoca en cada cara del cubo, demostrando que en cualquier cara es reconocido, para complementar se han hecho pruebas tapando un porcentaje de la cara del cubo. (VÍDEO)
+En la detección de realidad aumentada, la gran mayoría de las pruebas se han podido hacer desde el entorno de Unity con una webcam. Pero para dar mayor fiabilidad a las pruebas, se han probado también en el dispositivo. Las pruebas consistían en comprobar que el Mergecube era reconocido correctamente, y que cuando es detectado, el modelo 3D asociado se puede visualizar adecuadamente. Para la prueba de detección del Mergecube se enfoca en cada cara del cubo, demostrando que en cualquier cara es reconocido, para complementar se han hecho pruebas tapando un porcentaje de la cara del cubo. En el siguiente enlace se pueden ver estas pruebas: \url{https://www.youtube.com/watch?v=dFsnTGja6-I}
 
-También se ha probado la detección con diferentes entornos de luminosidad, en el caso de los extremos de luminosidad (poca y mucha), la detección del Mergecube se dificulta. Por ejemplo en los casos de demasiada iluminación, provoca que el contraste de iluminación impida reconocer el Mergecube. (REFERENCIA A VÍDEO DEMOSTRACIÓN)
+Una de las primeras pruebas que se realizo de detección, fue mover el Mergecube para comprobar que el modelo 3D si se movía con los movimientos correspondientes. En el siguiente vídeo subido a Youtube, se puede observar esa prueba con un modelo que no se ha sido utilizado en la aplicación: \url{https://www.youtube.com/watch?v=SaZeSrDMNEE}
+
+También se ha probado la detección con diferentes entornos de luminosidad, en el caso de los extremos de luminosidad (poca y mucha), la detección del Mergecube se dificulta. Por ejemplo en los casos de demasiada iluminación, provoca que el contraste de iluminación impida reconocer el Mergecube. 
+(REFERENCIA A VÍDEO DEMOSTRACIÓN)
 
 Para las pruebas de navegación entre el menú, se ha procedido ha probar que cada botón redirige a su pantalla correspondiente.
 
-Para la comprobación del uso del sensor del giroscopio, seleccionamos la herramienta de la regadera, una vez seleccionada esta empieza a soltar partículas de agua, al girar el dispositivo en diferentes ángulos las partículas se moverán para dar la sensación de que siempre están cayendo hacia el suelo. (VIDEO)
+Para la comprobación del uso del sensor del giroscopio, seleccionamos la herramienta de la regadera, una vez seleccionada esta empieza a soltar partículas de agua, al girar el dispositivo en diferentes ángulos las partículas se moverán para dar la sensación de que siempre están cayendo hacia el suelo. En el primer vídeo vemos una de las primeras pruebas: \url{https://www.youtube.com/watch?v=O9vR6dptWag}. El segundo es del estado actual de la aplicación:~\url{https://www.youtube.com/watch?v=ZpLFIQjsxmY}
 
 
-
+Dado que la aplicación necesita algunos permisos para poder acceder a algunas características del dispositivo, se han hecho las pruebas de dichos permisos. En el siguiente vídeo, cuando se entra en el modo jugable, solicita permisos para poder guardar archivos en el dispositivo: \url{https://www.youtube.com/watch?v=QWSm2oUMCtA}. Esto se debe a que para guardar una captura de pantalla es necesario.
 
 
 

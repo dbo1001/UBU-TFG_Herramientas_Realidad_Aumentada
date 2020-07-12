@@ -105,12 +105,14 @@ public class Controlador : MonoBehaviour
             {
                 tipoARCaptura = false;
                 tipoARMerge = true;
+                PlayerPrefs.SetInt("tipoMarcador",0);
 
             }
             else if (tipoCapturaTarget.isOn)
             {
                 tipoARCaptura = true;
                 tipoARMerge = false;
+                PlayerPrefs.SetInt("tipoMarcador", 1);
             }
         }
         else
@@ -119,12 +121,13 @@ public class Controlador : MonoBehaviour
             {
                 tipoARCaptura = false;
                 tipoARMerge = true;
-
+                PlayerPrefs.SetInt("tipoMarcador", 0);
             }
             else if (tipoCapturaTarget_AR.isOn)
             {
                 tipoARCaptura = true;
                 tipoARMerge = false;
+                PlayerPrefs.SetInt("tipoMarcador", 1);
             }
         }
     
@@ -218,11 +221,28 @@ public class Controlador : MonoBehaviour
 
         camaraAR.SetActive(false);
         multiTarget.SetActive(false);
+        int tipoMarcador=PlayerPrefs.GetInt("tipoMarcador",0);
+        if (tipoMarcador == 0)
+        {
+            tipoCapturaTarget.isOn=false;
+            tipoMergeCube.isOn = true;
 
-        tipoCapturaTarget.isOn=false;
-        tipoMergeCube.isOn = true;
+            tipoCapturaTarget_AR.isOn = false;
+            tipoMergeCube_AR.isOn = true;
 
-        tipoCapturaTarget_AR.isOn = false;
-        tipoMergeCube_AR.isOn = true;
+        }
+        else
+        {
+            tipoCapturaTarget.isOn = true;
+            tipoMergeCube.isOn = false;
+
+            tipoCapturaTarget_AR.isOn = true;
+            tipoMergeCube_AR.isOn = false;
+
+        }
+        
+        
+
+        
     }
 }

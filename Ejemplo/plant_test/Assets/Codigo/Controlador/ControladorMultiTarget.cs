@@ -11,6 +11,8 @@ public class ControladorMultiTarget : MonoBehaviour
     public GameObject UDTBuilder;
     public GameObject captura3;
 
+    public GameObject Mensaje_Select_Model;
+
     string nombreModelo;
 
     Vector3 scale;
@@ -41,14 +43,30 @@ public class ControladorMultiTarget : MonoBehaviour
 
     public void AumetarEscala()
     {
-        GameObject.Find(nombreModelo).transform.localScale += scale;
-        GameObject.Find(nombreModelo).transform.position += posicion;
+        if (nombreModelo != null)
+        {
+            GameObject.Find(nombreModelo).transform.localScale += scale;
+            GameObject.Find(nombreModelo).transform.position += posicion;
+        }
+        else
+        {
+            Mensaje_Select_Model.SetActive(true);
+        }
+        
     }
 
     public void DecrementarEscala()
     {
-        GameObject.Find(nombreModelo).transform.localScale -= scale;
-        GameObject.Find(nombreModelo).transform.position -= posicion;
+        if (nombreModelo != null)
+        {
+            GameObject.Find(nombreModelo).transform.localScale -= scale;
+            GameObject.Find(nombreModelo).transform.position -= posicion;
+        }
+        else
+        {
+            Mensaje_Select_Model.SetActive(true);
+        }
+        
     }
 
     //Comprueba que objeto se selecciona/toca en la pantalla mediante raycast.

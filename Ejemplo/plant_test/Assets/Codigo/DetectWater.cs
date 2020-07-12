@@ -276,41 +276,58 @@ public class DetectWater : MonoBehaviour
     //Por cada nuevo target personalizado, actualizar las variables de las fases.
     public void AsociarDefinedTarget()
     {
-        if (controlador.GetTomato())
+        if(GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta1"))
         {
-            tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta1");
-        }
+            if (controlador.GetTomato())
+            {
+                tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta1");
+            }
 
-        if (controlador.GetCalabaza())
-        {
-            tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta2");
-        }
+            if (controlador.GetCalabaza())
+            {
+                tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta2");
+            }
 
-        if (controlador.GetGirasol())
-        {
-            tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta3");
-        }
+            if (controlador.GetGirasol())
+            {
+                tempPlanta1CT = GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta3");
+            }
 
-        //si f1 es distinto de null y esta activo
-        if (controlador.GetTipoARcapturar())
-        {
-            f1 = tempPlanta1CT.GetComponent<Plants>().GetFase1();
-            f2 = tempPlanta1CT.GetComponent<Plants>().GetFase2();
-            f3 = tempPlanta1CT.GetComponent<Plants>().GetFase3();
-            f4 = tempPlanta1CT.GetComponent<Plants>().GetFase4();
+            //si f1 es distinto de null y esta activo
+            if (controlador.GetTipoARcapturar())
+            {
+                f1 = tempPlanta1CT.GetComponent<Plants>().GetFase1();
+                f2 = tempPlanta1CT.GetComponent<Plants>().GetFase2();
+                f3 = tempPlanta1CT.GetComponent<Plants>().GetFase3();
+                f4 = tempPlanta1CT.GetComponent<Plants>().GetFase4();
 
-            if (f1Activa)
-                f1.SetActive(true);
-            if (f2Activa)
-                f2.SetActive(true);
-            if (f3Activa)
-                f3.SetActive(true);
-            if (f4Activa)
-                f4.SetActive(true);
-            
+                if (f1Activa)
+                    f1.SetActive(true);
+                if (f2Activa)
+                    f2.SetActive(true);
+                if (f3Activa)
+                    f3.SetActive(true);
+                if (f4Activa)
+                    f4.SetActive(true);
+
+            }
+
         }
+        
+        
     }
 
+    public void DesactivarPanelYNcapturatarget()
+    {
+        GameObject obj;
+        if (!GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta1"))
+        {
+            obj =GameObject.Find("Canvas/CampturarTarget/Panel");
+            obj.SetActive(false);
+        }
+           
+
+    }
     public void AumentarContDefinedTarget()
     {
         contDefinded++;

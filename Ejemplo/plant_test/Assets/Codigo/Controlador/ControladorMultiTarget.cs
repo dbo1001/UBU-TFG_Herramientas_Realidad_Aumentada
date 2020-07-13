@@ -101,4 +101,13 @@ public class ControladorMultiTarget : MonoBehaviour
         }
 
     }
+
+    public void ActivarDesactivarElemento(GameObject obj)
+    {
+        if (obj.activeSelf)
+            obj.SetActive(false);
+        else
+            obj.SetActive(true);
+
+    }
 }

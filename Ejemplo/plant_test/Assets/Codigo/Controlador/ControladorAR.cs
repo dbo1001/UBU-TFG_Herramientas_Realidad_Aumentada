@@ -99,14 +99,16 @@ public class ControladorAR : MonoBehaviour
             objeto.SetActive(true);
         }
     }
-    //void Update() {
+
+    //void Update()
+    //{
     //    GameObject obj;
-    //    if (!GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta1"))
+    //    if (ImageTargetBuilder.FrameQuality.FRAME_QUALITY_LOW || ImageTargetBuilder.FrameQuality.FRAME_QUALITY_NONE)
     //    {
     //        obj = GameObject.Find("Canvas/CampturarTarget/Panel");
     //        obj.SetActive(false);
     //    }
 
     //}
-    
+
 }

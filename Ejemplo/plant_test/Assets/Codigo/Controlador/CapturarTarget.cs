@@ -190,5 +190,23 @@ public class CapturarTarget : MonoBehaviour
         
     }
 
+    public void AvisoCalidadBaja()
+    {
+        GameObject mensaje;
+        GameObject botonCaptura;
+        GameObject semaforo;
+        if (m_FrameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_LOW || m_FrameQuality == ImageTargetBuilder.FrameQuality.FRAME_QUALITY_NONE)
+        {
+            mensaje = GameObject.Find("Canvas/CampturarTarget/Panel");
+            mensaje.SetActive(false);
+            botonCaptura = GameObject.Find("Canvas/CampturarTarget/Disparador");
+            botonCaptura.SetActive(true);
+            semaforo = GameObject.Find("Canvas/CampturarTarget/CalidadTarget");
+            semaforo.SetActive(true);
+
+
+        }
+    }
+
     #endregion //PUBLIC_METHODS
 }

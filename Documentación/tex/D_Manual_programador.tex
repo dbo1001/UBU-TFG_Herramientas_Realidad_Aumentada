@@ -102,7 +102,7 @@ Las pruebas realizadas a la aplicación, se han realizado mediante pruebas de fo
 Una de las primeras pruebas ha realizar es el de la instalación en el dispositivo, para comprobar que el APK se ha realizado correctamente y es funcional. 
 
 Para comprobar el reescalado de la interfaz de la aplicación, se ha probado en distintos dispositivos, varios smartphone, y una tablet. En cada pantalla de la interfaz, se comprueba que cada elemento es visible independientemente de el dispositivo.
-En la interfaz del modo juego, en los dispositivos que tienen en la pantalla notch(cámara frontal) se aprecio que la interfaz no tenía en cuenta el notch, por lo que este tapaba una parte de la barra de progreso. Para corregirlo se ha bajado la barra de progreso.
+En la interfaz del modo juego, al realizar pruebas en dispositivos que tienen en la pantalla el popular notch(cámara frontal que sobresale como una muesca en la pantalla) se aprecio que en la interfaz no se tenía en cuenta el notch, por lo que este tapaba una parte de la barra de progreso. Para corregirlo se ha bajado la barra de progreso.
 
 En la detección de realidad aumentada, la gran mayoría de las pruebas se han podido hacer desde el entorno de Unity con una webcam. Pero para dar mayor fiabilidad a las pruebas, se han probado también en el dispositivo. Las pruebas consistían en comprobar que el Mergecube era reconocido correctamente, y que cuando es detectado, el modelo 3D asociado se puede visualizar adecuadamente. Para la prueba de detección del Mergecube se enfoca en cada cara del cubo, demostrando que en cualquier cara es reconocido, para complementar se han hecho pruebas tapando un porcentaje de la cara del cubo. En el siguiente enlace se pueden ver estas pruebas: \url{https://www.youtube.com/watch?v=dFsnTGja6-I}
 
@@ -111,14 +111,19 @@ Una de las primeras pruebas que se realizo de detección, fue mover el Mergecube
 También se ha probado la detección con diferentes entornos de luminosidad, en el caso de los extremos de luminosidad (poca y mucha), la detección del Mergecube se dificulta. Por ejemplo en los casos de demasiada iluminación, provoca que el contraste de iluminación impida reconocer el Mergecube. 
 (REFERENCIA A VÍDEO DEMOSTRACIÓN)
 
+Otra de las pruebas es respecto a la implementación del Device Tracking. Para probar el funcionamiento del device tracking, el el vídeo se comprueba como al no tenerlo activado, en el momento que el Mergecube sale del campo visual de la cámara se pierde el modelo 3D cargado, y cuando volvemos a apuntar al cubo hay que esperar a que vuelva a reconocerlo. En cambio cuando el device tracking está activado al volver enfocar el cubo se aprecia que el modelo sigue ahí:~\url{https://www.youtube.com/watch?v=5szopM7FkAQ}. Del mismo modo si tenemos un modelo 3D mas grande que el Mergecube al apuntar un extremo fuera del Mergecube no desaparecerá. Vídeo :~\url{https://www.youtube.com/watch?v=zBC3y8zizVI}.
+
+
+Para probar las capturas de un target personalizadas, se han hecho pruebas con diversos objetivos. También se ha puesto a prueba la posibilidad de tener múltiples marcadores al mismo tiempo. En este vídeo se intenta hacer capturas de target sobre un poster, apuntado ha diversos objetivos: \url{https://www.youtube.com/watch?v=k_bbJS2Hb1w}	
+
 Para las pruebas de navegación entre el menú, se ha procedido ha probar que cada botón redirige a su pantalla correspondiente.
 
 Para la comprobación del uso del sensor del giroscopio, seleccionamos la herramienta de la regadera, una vez seleccionada esta empieza a soltar partículas de agua, al girar el dispositivo en diferentes ángulos las partículas se moverán para dar la sensación de que siempre están cayendo hacia el suelo. En el primer vídeo vemos una de las primeras pruebas: \url{https://www.youtube.com/watch?v=O9vR6dptWag}. El segundo es del estado actual de la aplicación:~\url{https://www.youtube.com/watch?v=ZpLFIQjsxmY}
 
 
-Dado que la aplicación necesita algunos permisos para poder acceder a algunas características del dispositivo, se han hecho las pruebas de dichos permisos. En el siguiente vídeo, cuando se entra en el modo jugable, solicita permisos para poder guardar archivos en el dispositivo: \url{https://www.youtube.com/watch?v=QWSm2oUMCtA}. Esto se debe a que para guardar una captura de pantalla es necesario.
+Dado que la aplicación necesita algunos permisos para poder acceder a algunas características del dispositivo, se han hecho las pruebas de dichos permisos. En el siguiente vídeo, al acceder an el modo jugable, solicita permisos para poder guardar archivos en el dispositivo: \url{https://www.youtube.com/watch?v=QWSm2oUMCtA}. Esto se debe a que para guardar una captura de pantalla es necesario que el sistema tenga permiso para guardarla en una ubicación distinta de la raíz.
 
 
 
 
-Por último destacar que Unity posee cualidades para realizar algunas pruebas unitarias de forma automática, pero no he tenido para aprender a utilizarlas de la manera correcta para esta aplicación. 
+Por último destacar que Unity posee cualidades para realizar algunas pruebas unitarias de forma automática, pero no ha sido posible dada la limitación del tiempo.

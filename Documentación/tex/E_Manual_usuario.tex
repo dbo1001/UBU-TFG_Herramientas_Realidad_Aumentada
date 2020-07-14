@@ -20,7 +20,7 @@ También es necesario disponer de un MergeCube. Para utilizar el Mergecube tenem
 Dado que la aplicación no se ha publicado en Play Store, se deberá descargar el APK desde (\href{URL}{text}ENLACE CARPETA REPOSITORIO).
 La instalación de la aplicación es sencilla, como la de cualquier otra APK. Una vez descargado el APK en el dispositivo, ejecutarle y seguir los pasos. 
 
-Dado que la aplicación no se ha descargado desde una fuente oficial, como podría ser la Play Store, es posible que en el primer intento de instalación, el sistema nos pida habilitar la opción de instalar aplicaciones de origen desconocido, que por defecto en los dispositivos viene desactivada.
+Dado que la aplicación no se ha descargado desde una fuente oficial, como podría ser la Play Store, es posible que en el primer intento de instalación, el sistema solicite habilitar la opción de instalar aplicaciones de origen desconocido, que por defecto en los dispositivos viene desactivada.
 En un principio los propios pasos de instalación permite habilitar la opción. En caso contrarío deberás buscar en opciones del sistema. En caso de tener complicaciones para encontrar la ubicación de dicha opción, es recomendable realizar una sencilla búsqueda en Google, de "Activar la instalación de aplicaciones de fuentes desconocidas en <<Modelo del dispositivo usado>>, con <<Versión de Android que posee>>.
 
 
@@ -43,38 +43,53 @@ En ``\textbf{Opciones}'', se puede configurar diferentes aspectos de la aplicaci
 
 \imagen{Anexos/appOpciones}{Imagen perteneciente a las opciones de la aplicación.}
 
-En la opción ``\textbf{Ayuda}'', se ofrece una guía/tutorial en la que se explica los pasos básicos para el uso de la aplicación y poder resolver las dudas de los usuarios que se puedan encontrar.
+En la opción ``\textbf{Ayuda}'', se ofrece una guía/tutorial en la que se explican los pasos básicos para el uso de la aplicación y poder resolver las dudas de los usuarios que se puedan encontrar.
 
-La cuarta y ultima Opción se trata de venta para ofrecer una breve información respecto a la aplicación. Se detalla el autor, lo tutores... 
+La cuarta y ultima Opción se trata de una venta en la que se muestra un resumen respecto al TFG y la aplicación. Se detallan datos como el autor, lo tutores del TFG. 
 
 
+\subsection{Modo MergeCube }
 
-Al seleccionar en ``Modos de Juego'' uno de los modos disponibles, por ejemplo del tema biología vegetal escogemos una planta de Tomate.
-Al seleccionar el modo deseado, la aplicación cambiará al modo de realidad aumentada activando la cámara del dispositivo. Ahora tendremos una interfaz que mostrará una barra de progreso en la parte superior, un contador del tiempo restante para acabar la fase en la parte superior derecha. En la parte inferior derecha hay un botón que al pulsarse, despliega una barra con las herramientas disponibles para completar las fases \ref{fig:Anexos/appInterfaz}.
+Al seleccionar uno de los modelos de planta teniendo seleccionado el modo con el MergeCube~\ref{fig:Anexos/appOpciones}, la aplicación cambiará al modo de realidad aumentada activando la cámara del dispositivo. Ahora tendremos una interfaz que mostrará una barra de progreso en la parte superior, un contador del tiempo restante para acabar la fase en la parte superior derecha. En la parte inferior derecha hay un botón que al pulsarse, despliega una barra con las herramientas disponibles para completar las fases. En la imagen \ref{fig:Anexos/appInterfaz} podemos ver unas muestras de la interfaz.
 
 En este modo, una vez que la cámara ya está activa, al enfocar el Mergecube, será detectado y se cargará el modelo de realidad aumentada. En este punto es importante recordar, que para una correcta detección de un marcador se precisa de estar en un ambiente con una iluminación adecuada para que el marcador no se vea afectado por sombras o focos de luz que reduzcan su visibilidad para el sensor de la cámara.
 
 \imagen{Anexos/appInterfaz}{Imagen perteneciente a la aplicación, con la interfaz desplegada.}
 
-En caso de tener seleccionado el \textbf{modo de capturar target}~\ref{fig:Anexos/appOpciones}), la interfaz contará con dos elementos adicionales. El primero se trata de una barra de colores (rojo, amarillo, verde) que indica la calidad optima para que el objetivo enfocado sea un target. El segundo elemento será el disparador situado en la parte inferior centrar. Una vez que tengamos un objetivo que cumpla los requisitos de calidad, podremos presionar el disparador, de manera que el target se guardará temporalmente (al cerrar la aplicación o volver al menú los target se reinician). Cuando capturamos un target, el disparador y la barra de colores desaparecerán y saltará un mensaje preguntándonos si deseamos continuar con dicho target, si seleccionamos que no tendremos que volver a capturar un nuevo target. Sobre este target capturado aparecerá el modelo 3D correspondiente y ahora se podrá ``jugar` del mismo modo que se hacia con el Mergecube. 
+\subsection{Modo CapturaTarget}
 
-En el modo jugable el número de target simultáneos esta limitado a uno, si se desea capturar un nuevo target se deberá indicar presionando el botón de la parte inferior izquierda, donde nos preguntará si deseamos continuar con el target, al presionar que no, volverá a salir las interfaz de captura para tomar un nuevo target. Al capturar un nuevo target sustituirá al anterior, pero podremos seguir con el mismo progreso del nivel que teníamos con el anterior target. 
+En el caso de tener seleccionado el \textbf{modo de capturar target}~\ref{fig:Anexos/appOpciones}), la interfaz contará con dos elementos adicionales: 
+\begin{itemize}
+	\item El primero se trata de una barra de colores (rojo, amarillo, verde) que indica la calidad optima para que el objetivo enfocado sea un target.
+	\item El segundo elemento será el disparador situado en la parte inferior central. Una vez que tengamos un objetivo que cumpla los requisitos de calidad, podremos presionar el disparador, de manera que el target se guardará temporalmente (al cerrar la aplicación o volver al menú los target se reinician). 
+\end{itemize}
+
+Cuando capturamos un target, el disparador y la barra de colores desaparecerán y saltará un mensaje preguntándonos si deseamos continuar con dicho target. Si seleccionamos que ``no`, tendremos que volver a capturar un nuevo target. Sobre este target capturado aparecerá el modelo 3D correspondiente y ahora se podrá ``jugar` del mismo modo que se hacia con el Mergecube. 
+
+En el modo jugable el número de target simultáneos esta limitado a uno, si se desea capturar un nuevo target se deberá indicar presionando el botón de la parte inferior izquierda, donde nos preguntará si deseamos continuar con el target, al presionar que ``no`, volverá a salir las interfaz de captura para tomar un nuevo target. Al capturar un nuevo target sustituirá al anterior, pero podremos seguir con el mismo progreso del nivel que teníamos con el anterior target. 
 
 \imagen{Anexos/appCapturaTarget}{Imagen pertenecientes a la captura de un target.}
 
+\subsection{Barra de Herrameintas}
 En la barra de herramientas contamos con dos elementos, una regadera y un paquete de abono. La primera al seleccionar nos saldrá en pantalla una regadera que automáticamente echará agua, el objetivo es mover el dispositvo hasta conseguir que el agua caiga en el Mergecube. Cuando el agua colisione con el modelo proyectado en el Mergecube, la barra de progreso subirá hasta completarse. 
 El segundo elemento, se trata de un bote de fertilizante, al pulsarse saldrá en la pantalla un botón que al ser presionado saldrá delante como si se hubiese lanzado contra el Mergecube.
 Para completar una fase es necesario haber completado ambos casos anteriores descritos.
+
+También en la barra de herramientas aparecen dos opciones, la de Activar el Device Tracker con el botón ``Fijar posición`, y por ultimo la opción de sacar una captura de pantalla.
+
+IMAGEN BARRA HERRAMIENTAS
 
 Actualmente los modos de juego de las plantas constan de cuatro fases, cada una correspondiente con un estado de la planta (semilla, brote, planta inicial, planta final). Para completar una fase, es necesario, completar la barra de progreso de agua, y haber echado fertilizante.
 
 Imagen
 
+\subsection{Modo Múltiples Marcadores}
+En el modo de captura target, también cuenta con un modo de múltiples marcadores. En este modo no se puede ``jugar, pero es posible tener múltiples marcadores personalizados al mismo tiempo. Esto da la posibilidad de poder observar varios los modelos de la aplicación al mismo tiempo, como podemos ver en la imagen~\ref{fig:Anexos/appMultiTarget}. Por defecto la aplicación esta limitada a cinco marcadores simultáneos como máximo, para asegurar el rendimiento. En caso de realizar una sexta captura borrará la primera.
 
-En el modo de captura target, también cuenta con un modo de múltiples marcadores. En este modo no se puede ``jugar, pero es posible tener múltiples marcadores personalizados al mismo tiempo. Esto da la posibilidad de poder observar varios los modelos de la aplicación al mismo tiempo. Por defecto la aplicación esta limitada a cinco marcadores simultáneos como máximo, para asegurar el rendimiento. En caso de realizar una sexta captura borrara la primera.
+\imagenMasPeque{Anexos/appMultiTarget}{Imagen perteneciente al modo de múltiples marcadores simultáneos.}
 
-\imagenPeque{Anexos/appMultiTarget}{Imagen perteneciente al modo de múltiples marcadores simultáneos.}
-
+En este modo podemos cambiar el tamaño de los modelos 3D, para ello primero debemos tocar el modelo que queramos modificar. Y para modificar unicamente hay que pulsar los botones de la parte interior izquierda.
+En las opciones de la parte inferior derecha, podemos seleccionar que modelo 3D queremos que se asocie al marcador que vamos a capturar.
 
 
  

@@ -124,14 +124,19 @@ public class CapturarTarget : MonoBehaviour
         // Destroy the oldest target if the dataset is full or the dataset
         // already contains five user-defined targets.
         int Max=2;
-        if (controlador.GetTipoARcapturar())
-        {
+        //if (controlador.GetTipoARcapturar())
+        //{
+        //    Max = MAX_TARGETS_GAME_MODE;
+        //}
+        //else
+        //{
+        //    Max = MAX_TARGETS;
+        //}
+        if (!controlador.GetIsMultiTarget())
             Max = MAX_TARGETS_GAME_MODE;
-        }
         else
-        {
             Max = MAX_TARGETS;
-        }
+
         if (m_UDT_DataSet.HasReachedTrackableLimit() || m_UDT_DataSet.GetTrackables().Count() >= Max)
         {
             IEnumerable<Trackable> trackables = m_UDT_DataSet.GetTrackables();

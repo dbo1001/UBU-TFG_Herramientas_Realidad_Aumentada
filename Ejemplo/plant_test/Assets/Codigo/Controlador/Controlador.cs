@@ -36,6 +36,8 @@ public class Controlador : MonoBehaviour
     static bool tipoARMerge=true;
     static bool tipoARCaptura=false;
 
+    static bool tipoMultiTarget = false;
+
     static bool tomatoLive = false;
     static bool calabazaLive = false;
     static bool giraSolLive = false;
@@ -159,6 +161,16 @@ public class Controlador : MonoBehaviour
         return tipoARCaptura;
     }
 
+    public bool GetIsMultiTarget()
+    {
+        return tipoMultiTarget;
+    }
+
+    public void SetIsMultiTarget(bool multi)
+    {
+        tipoMultiTarget = multi;
+    }
+
     public void ActivarTomate()
     {
         tomatoLive = true;
@@ -240,6 +252,7 @@ public class Controlador : MonoBehaviour
             tipoMergeCube_AR.isOn = false;
 
         }
+        TipoDeAR();
         
         
 

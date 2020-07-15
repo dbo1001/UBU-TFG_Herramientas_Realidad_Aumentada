@@ -10,6 +10,10 @@ public class ControladorAR : MonoBehaviour
 {
     public GameObject regadera;
     public GameObject ventama;
+    public TMPro.TextMeshProUGUI textVentana;
+    public GameObject buttonCerrar;
+    public GameObject buttonSalir;
+    public GameObject buttonReiniciar;
     // Start is called before the first frame update
 
     public GameObject mergecube;
@@ -42,7 +46,22 @@ public class ControladorAR : MonoBehaviour
 
         regadera.SetActive(false);
         ventama.SetActive(false);
-        
+        textVentana.text = "<pos=25%><b><size=65>Ayuda</size></b>\n" +
+                    "\n" +
+                    "<pos=25%><b><size=45>Modo MergeCube</size></b>\n" +
+                    "-Mantenga enfocado el Mergecube en un ambiente con buena iluminación para que pueda ser detectado.\n" +
+                    "-En la parte inferior derecha, se encuentra la barra de herramientas, en la que encontraremos.\n"+
+                    "---<b>Icono regadera</b>: activa la regadera.\n" +
+                    "---<b>Icono Fertilizante</b>: activa el fertilizante.\n" +
+                    "---<b>Fijar Posición</b>: activa el Device traking, permitiendo que el modelo 3D sea persistente incluso sin verse el Mergecube o el target.\n" +
+                    "---<b>Captura de Pantalla</b>: permite realizar capturas de pantalla.\n" +
+                    "<pos=25%><b><size=45>Modo Captura Target</size></b>\n" +
+                    "La barra de colores indica la calidad del objetivo como target.\n" +
+                    "-<b>Unicamente puede haber un solo target al mismo tiempo</b>.\n" ;
+        buttonCerrar.SetActive(true);
+        buttonReiniciar.SetActive(false);
+        buttonSalir.SetActive(false);
+
         //modo ar
         if (controlador.GetTipoARcapturar())
         {
@@ -100,6 +119,12 @@ public class ControladorAR : MonoBehaviour
         }
     }
 
+    public void AbrirHyperEnlace(string link)
+    {
+        Application.OpenURL(link);
+    }
+
+    
     //void Update()
     //{
     //    GameObject obj;

@@ -31,6 +31,9 @@ public class DetectWater : MonoBehaviour
 
     public GameObject ventana;
     public TMPro.TextMeshProUGUI textVentana;
+    public GameObject buttonCerrar;
+    public GameObject buttonSalir;
+    public GameObject buttonReiniciar;
     public Image colorTiempo;
 
     //Plantas asociadas al Mergecube.
@@ -96,33 +99,6 @@ public class DetectWater : MonoBehaviour
             }
 
         }
-        //else
-        //{
-        //    if (controlador.GetTomato())
-        //    {
-        //        f1 = planta1CT.GetComponent<Plants>().GetFase1();
-        //        f2 = planta1CT.GetComponent<Plants>().GetFase2();
-        //        f3 = planta1CT.GetComponent<Plants>().GetFase3();
-        //        f4 = planta1CT.GetComponent<Plants>().GetFase4();
-        //    }
-        //    if (controlador.GetCalabaza())
-        //    {
-        //        f1 = planta2CT.GetComponent<Plants>().GetFase1();
-        //        f2 = planta2CT.GetComponent<Plants>().GetFase2();
-        //        f3 = planta2CT.GetComponent<Plants>().GetFase3();
-        //        f4 = planta2CT.GetComponent<Plants>().GetFase4();
-        //    }
-        //    if (controlador.GetGirasol())
-        //    {
-        //        f1 = planta3CT.GetComponent<Plants>().GetFase1();
-        //        f2 = planta3CT.GetComponent<Plants>().GetFase2();
-        //        f3 = planta3CT.GetComponent<Plants>().GetFase3();
-        //        f4 = planta3CT.GetComponent<Plants>().GetFase4();
-        //    }
-        //}
-        
-        
-        
         
         ActualizarProgreso(0);
         ActualizarHud();
@@ -242,10 +218,19 @@ public class DetectWater : MonoBehaviour
             tFin = true;
             if (tFin == true)
             {
+               
                 ventana.SetActive(true);
-                textVentana.text = "<pos=25%><b><size=55>¡¡Has Perdido!!</size></b>\n" +
-                    "\n"+
-                    "\n"+
+                buttonCerrar.SetActive(false);
+                buttonReiniciar.SetActive(true);
+                buttonSalir.SetActive(true);
+                //TextAsset txt = (TextAsset)Resources.Load("Textos/textoAyudaModoJuego");
+                //TMPro.TextMeshProUGUI text = (TMPro.TextMeshProUGUI)Resources.Load("Textos/textoAyudaModoJuego");
+                //string texto = System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaModoJuego.txt");
+                //string text= Resources.Load("Textos/textoAyudaModoJuego") as string;
+                textVentana.text =
+                    "<pos=25%><b><size=65>¡¡Has Perdido!!</size></b>\n" +
+                    "\n" +
+                    "\n" +
                     "Debido a la falta de agua y de abono, la planta no ha podido crecer.";
                 colorTiempo.color = new Color32(231,62,62,155);
                 
@@ -273,7 +258,7 @@ public class DetectWater : MonoBehaviour
         barraProgreso.transform.localScale = new Vector2(valPro / maxPro, 1);
     }
 
-    //Por cada nuevo target personalizado, actualizar las variables de las fases.
+    //Por cada nuevo target personalizado en el Modo CaptraTarget, actualizar las variables de las fases.
     public void AsociarDefinedTarget()
     {
         if(GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta1"))
@@ -331,6 +316,36 @@ public class DetectWater : MonoBehaviour
     public void AumentarContDefinedTarget()
     {
         contDefinded++;
+    }
+    
+    public bool GetGameOver()
+    {
+        return tFin;
+    }
+
+    public void Reiniciar()
+    {
+        //reset bool GAmeOVer
+        tFin = false;
+        //reset time
+        colorTiempo.color = new Color32(255, 255, 255, 155);
+        tiempo = 60;
+        cuentaAtras.text = "" + tiempo;
+        //Cierro ventana GameOver
+        ventana.SetActive(false);
+
+        agua = 0;        
+    
+        //reincicio fases de las plantas
+        flag=true;
+        fertilizanteUse = false;
+        f1.SetActive(false);
+        f2.SetActive(false);
+        f3.SetActive(false);
+        f4.SetActive(false);
+        
+        ActualizarProgreso(0);
+        ActualizarHud();
     }
 
     //// Update is called once per frame

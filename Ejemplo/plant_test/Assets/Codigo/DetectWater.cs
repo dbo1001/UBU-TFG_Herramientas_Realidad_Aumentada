@@ -225,7 +225,7 @@ public class DetectWater : MonoBehaviour
                 buttonSalir.SetActive(true);
                 //TextAsset txt = (TextAsset)Resources.Load("Textos/textoAyudaModoJuego");
                 //TMPro.TextMeshProUGUI text = (TMPro.TextMeshProUGUI)Resources.Load("Textos/textoAyudaModoJuego");
-                //string texto = System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaModoJuego.txt");
+                string texto = System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaModoJuego.txt",System.Text.Encoding.ASCII);
                 //string text= Resources.Load("Textos/textoAyudaModoJuego") as string;
                 textVentana.text =
                     "<pos=25%><b><size=65>¡¡Has Perdido!!</size></b>\n" +
@@ -321,6 +321,14 @@ public class DetectWater : MonoBehaviour
     public bool GetGameOver()
     {
         return tFin;
+    }
+
+    public void DetactivarTargetDescartado()
+    {
+        if (GameObject.Find("UserDefinedTarget-" + contDefinded.ToString()))
+        {
+            GameObject.Find("UserDefinedTarget-" + contDefinded.ToString()).SetActive(false);
+        }
     }
 
     public void Reiniciar()

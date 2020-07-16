@@ -46,18 +46,18 @@ public class ControladorAR : MonoBehaviour
 
         regadera.SetActive(false);
         ventama.SetActive(false);
-        textVentana.text = "<pos=25%><b><size=65>Ayuda</size></b>\n" +
+        textVentana.text = "<pos=40%><b><size=65>Ayuda</size></b>\n" +
                     "\n" +
-                    "<pos=25%><b><size=45>Modo MergeCube</size></b>\n" +
-                    "-Mantenga enfocado el Mergecube en un ambiente con buena iluminación para que pueda ser detectado.\n" +
-                    "-En la parte inferior derecha, se encuentra la barra de herramientas, en la que encontraremos.\n"+
-                    "---<b>Icono regadera</b>: activa la regadera.\n" +
-                    "---<b>Icono Fertilizante</b>: activa el fertilizante.\n" +
-                    "---<b>Fijar Posición</b>: activa el Device traking, permitiendo que el modelo 3D sea persistente incluso sin verse el Mergecube o el target.\n" +
-                    "---<b>Captura de Pantalla</b>: permite realizar capturas de pantalla.\n" +
-                    "<pos=25%><b><size=45>Modo Captura Target</size></b>\n" +
+                    "<pos=0%><b><size=45>Modo MergeCube</size></b>\n" +
+                    "Mantenga enfocado el Mergecube en un ambiente con buena iluminación para que pueda ser detectado.\n" +
+                    "En la parte inferior derecha, se encuentra la barra de herramientas, en la que encontraremos.\n"+
+                    "-<b>Icono Gotas de agua</b>: activa la regadera.\n" +
+                    "-<b>Icono Fertilizante</b>: activa el fertilizante.\n" +
+                    "-<b>Fijar Posición</b>: activa el Device traking, permitiendo que el modelo 3D sea persistente incluso sin verse el Mergecube o el target.\n" +
+                    "-<b>Captura de Pantalla</b>: permite realizar capturas de pantalla.\n" +
+                    "<pos=0%><b><size=45>Modo Captura Target</size></b>\n" +
                     "La barra de colores indica la calidad del objetivo como target.\n" +
-                    "-<b>Unicamente puede haber un solo target al mismo tiempo</b>.\n" ;
+                    "<b>Unicamente puede haber un solo target al mismo tiempo</b>.\n" ;
         buttonCerrar.SetActive(true);
         buttonReiniciar.SetActive(false);
         buttonSalir.SetActive(false);

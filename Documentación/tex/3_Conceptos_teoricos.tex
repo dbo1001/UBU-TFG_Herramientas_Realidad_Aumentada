@@ -1,12 +1,89 @@
 \capitulo{3}{Conceptos teóricos}
 
 
-\section{Realidad aumentada y virtual}
+\section{Realidad aumentada}
 
 El concepto de realidad aumentada (AR--Augmented Reality) se aplica a las tecnologías que permiten añadir información gráfica sobrepuesta al mundo real en dispositivos visuales: pantallas, gafas, etc.
 La realidad virtual (VR--Virtuality Reality) se diferencia de la anterior, en que esta crea un entorno virtual completo en el que el usuario se sumerge.
-\subsection{Realidad aumentada} 
-Es frecuente que se confundan estas dos tecnologias,....
+
+La realidad aumentada, como su nombre indica tiene por objetivo aumentar la percepción de la realidad, el mundo real. Para ello por medio de diferentes técnicas, logra colocar a través de una cámara y la pantalla, un objeto virtual en la posición exacta de la pantalla, para que logre la sensación de que ese objeto realmente existe en esa posición del mundo real.
+
+\subsection{Realidad aumentada y virtual diferencias} 
+Es frecuente que la realidad aumentada se confunda con la que se podría considerar su hermana, la realidad virtual. Esto se debe a similitud de tanto sus nombre, como más importante sus objetivos. La realidad virtual también pretende colocar un objeto virtual en una posición realista, la diferencia es que no lleva el objeto al mundo real, sino que hace creer al usuario, que él mismo se encuentra dentro de un entorno totalmente nuevo, un mundo virtual.
+
+\section{Técnicas de realidad aumentada}
+Existen diferentes técnicas por las que lograr realidad aumentada, principalmente se pueden agrupar en dos grupos, la detección de marcadores y la detección del entorno. En el primero para lograr el efecto de realidad aumentada se usa una referencia visual, que puede ser una imagen o un código qr. Mientras que en la segunda no se utiliza ninguna referencia visual, sino que es capaz de entender su entorno, siendo capaz de distinguir superficies planas.
+
+\subsection{Detección de marcadores}
+
+La detección de marcadores se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial, para situar elementos que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras.
+
+\label{marcadorSencillo}\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo~\cite{AR_company}.}
+
+Con la mejora de las cámaras, también es posible utilizar como marcadores imágenes mas complejas, como por ejemplo un folleto publicitario o la foto de un planeta.
+También es posible que el marcador se trate de un objeto físico, como por ejemplo una lámpara, o un coche.
+
+\imagen{ejemploMarcadorTigre}{Ejemplo donde una carta de un tigre es un marcador~\cite{AR_company}.}
+
+Aunque gracias al avance de la calidad de las cámaras y del software de reconocimiento, es posible utilizar marcadores mas complejos, esto también implicarán que será mas probable que falle, y por consecuencia se desencuandren las imágenes insertadas por AR, que los tiempos de detección sean mas largos etc.
+
+Se pueden clasificar los marcadores en~\cite{linowes_babilinski_2017}:
+
+
+
+\begin{itemize}
+	\item \textbf{Marcadores}: El marcador mas básico es uno con un borde ancho. Su ventaja es que minimizan los costes de procesamiento y las posibilidades de error al reconocerlo. En la imagen \ref{fig:market} podemos ver un ejemplo de un marcador simple.\\		
+	\item \textbf{Marcadores Codificados}:
+	Se trata de marcadores que poseen códigos de barra 2D, dentro del área de bordes patrones. En la imagen \ref{fig:market2} tenemos un ejemplo de distintos marcadores, que contienen diferentes patrones.
+	\item \textbf{Imágenes}:		
+	El poder usar imágenes evita tener que crear marcadores personalizados. El reconocimiento de imágenes entra en la categoría de seguimiento de características naturales. Su calidad como marcador, dependerá de si tiene un borde que defina claramente esa imagen, del contraste de sus colores o la complejidad de su composición.
+	\item \textbf{Múltiples Marcadores}:
+	Es el caso de usar mas de un marcador al mismo tiempo por la misma cámara. Permitiendo así tener distintos objetos en la misma escena simultáneamente. También es posible crearlos formado objetos geométricos, un ejemplo sería el Mergecube(Inluir referencia merge).
+	\item \textbf{Reconocimiento de texto}:
+	Algunos SDK de realidad aumentada cuentan con la capacidad de distinguir textos. La precisión estará influenciada dependiendo del tipo de fuente de las letra. 
+	\item \textbf{Formas Simples}:
+	Algunas aplicaciones tienen la capacidad de distinguir diferentes formas simples, como son cubos, cilindros. También pueden distinguir las medidas de las formas, pudiendo así diferenciar si un cubo es mas grande que otro.
+	\item \textbf{Reconocimiento de objetos}:		
+	Se trata del siguiente nivel, la capacidad de distinguir objetos. No solo reconocerá e identifica la forma y tamaño del objeto, también detalles característicos que le puedan diferenciar de otro. Vuforia por ejemplo cuenta con una funcionalidad llamada Vuforia Object Scanner, que permite escanear un objeto para una copia digital, que se podría usar como marcador. En la imagen \ref{fig:vuforia_recoObjeto} podemos ver un ejemplo de la aplicación de Vuforia, en la que escanea un coche.  
+	
+\end{itemize}
+
+\imagenPeque{market}{Ejemplo de un marcador~\cite{linowes_babilinski_2017}.}
+
+\imagenflotante{market2}{Ejemplo de marcadores codificados~\cite{linowes_babilinski_2017}.}
+
+\imagen{vuforia_recoObjeto}{Vuforia Object Scanner~\cite{vuforia_scanner}.}	
+
+
+
+
+
+
+\subsubsection{Mergecube}\label{section:mergecube}
+
+El Mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por Merge, el cual tiene grabado unos dibujos por sus 6 caras, los dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
+
+\imagen{mergecube}{Mergecube~\cite{barker_2019}.} 
+
+\subsection{Detección del entorno}
+
+La detección del entorno trata de poder reconocer el entorno que la cámara capta y ser capaz de, sin la ayuda de un marcador, poder ubicar los modelos en el escenario de forma realista.
+Para esto hay diferentes técnicas, en resumen estas técnicas lo que hacen es detectar los cambios de profundidad de la imagen, y con esos datos evaluar qué objetos están mas o menos cerca, cuáles son una superficie plana, si se trata de un objeto que no tiene profundidad (una pared)...
+
+\subsubsection{SLAM}
+
+Simultaneous Localization and Mapping, se trata de una técnica para estimar los movimientos de los sensores y reconstruir la estructura en un entorno desconocido. Cuando esta técnica se aplica en cámaras, se denomina visual SLAM(vSLAM), ya que se basara en la información visual recibida.
+La mayoría de herramientas de realidad aumentada, que tienen la capacidad de detectar el entorno sin necesidad de marcadores, se basan en esta técnica~\cite{taketomi2017visual}.
+
+Los algoritmos de vSLAM, no solo son usados unicamente para la AR, también pueden ser aplicados para robótica, o los coches autónomos no tripulados.
+\section{Geolocalización}
+La geolocalización, es una técnica por la cual los dispositivos mediante los sensores de GPS y del giroscopio determinan su posición y orientación. De esta forma al conocer la posición y orientación del usuario, es capaz de determinar en que la posición del elemento en realidad aumentada respecto al usuario.
+Por ejemplo es posible crear un mapa, en el que en la imagen de una calle nos indique la localización de los negocios y lugares de interés teniendo sus coordenadas.
+
+Sus desventajas son que no es capaz realizar una combinación con el mundo real de una forma muy realista por si mismo, pues no tiene en cuenta el entorno que le rodea, por ejemplo en el caso de un objeto se interponga entre el usuario y la posición del objeto virtual, el objeto simplemente se superpondrá por encima.
+
+Es por ello que esta técnica hoy en día es mas frecuente que se use en combinación con las anteriores técnicas descritas, consiguiendo así mejores resultados.
+
 \section{Orígenes y evolución de la realidad aumentada}
 El concepto de realidad aumentada fue utilizado por primera vez en 1901 por Frank L Baum en su novela The Master Key~\cite{theMasterKey}, en ella presenta una historia que a un niño le otorgan un regalo, que son como unas gafas que da a entender un concepto de realidad aumentada.
 
@@ -33,7 +110,7 @@ Ronald T. Azuma  en 1997 escribió <<A survey of Augmented Reality>>~\cite{azuma
 
 En 1999 la NASA emplea la realidad aumentada para mejorar la navegación en sus vuelos de prueba. Ese mismo año, Hirokazu Kato desarrolla ARToolKit, un software para el desarrollo de aplicaciones de realidad aumentada.
 
-(investigar Toring Machine MARS)
+
 
 En el 2000, se crea ARQuake por Bruce H. Thomas, el primer juego de realidad aumentada al aire libre. Se trata de un juego basado en el clásico Quake incorporando realidad aumentada. En la imagen \ref{fig:ArQuake} se observa una imágenes de como se podría representar el juego, y el dispositivo que era necesario para ejecutarlo y detectar el entorno.
 
@@ -49,70 +126,7 @@ En 2015 Microsoft presenta las Hololens, sus gafas de realidad aumentada.
 
 
 
-\section{Técnicas AR}
 
-	\subsection{Detección de marcadores}
-	
-	La detección de marcadores se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial, para situar elementos que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras.
-	
-	\label{marcadorSencillo}\imagen{ejemploMarcadorCasa}{Ejemplo un marcador sencillo~\cite{AR_company}.}
-	
-	Con la mejora de las cámaras, también es posible utilizar como marcadores imágenes mas complejas, como por ejemplo un folleto publicitario o la foto de un planeta.
-	También es posible que el marcador se trate de un objeto físico, como por ejemplo una lámpara, o un coche.
-	
-	\imagen{ejemploMarcadorTigre}{Ejemplo donde una carta de un tigre es un marcador~\cite{AR_company}.}
-	
-	Aunque gracias al avance de la calidad de las cámaras y del software de reconocimiento, es posible utilizar marcadores mas complejos, esto también implicarán que será mas probable que falle, y por consecuencia se desencuandren las imágenes insertadas por AR, que los tiempos de detección sean mas largos etc.
-	
-	Se pueden clasificar los marcadores en~\cite{linowes_babilinski_2017}:
-	
-	
-		
-	\begin{itemize}
-		\item Marcadores: El marcador mas básico es uno con un borde ancho. Su ventaja es que minimizan los costes de procesamiento y las posibilidades de error al reconocerlo. En la imagen \ref{fig:market} podemos ver un ejemplo de un marcador simple.\\		
-		\item Marcadores Codificados:
-		Se trata de marcadores que poseen códigos de barra 2D, dentro del área de bordes patrones. En la imagen \ref{fig:market2} tenemos un ejemplo de distintos marcadores, que contienen diferentes patrones.
-		\item Imágenes:		
-		El poder usar imágenes evita tener que crear marcadores personalizados. El reconocimiento de imágenes entra en la categoría de seguimiento de características naturales. Su calidad como marcador, dependerá de si tiene un borde que defina claramente esa imagen, del contraste de sus colores o la complejidad de su composición.
-		\item Múltiples Marcadores:
-		Es el caso de usar mas de un marcador al mismo tiempo por la misma cámara. Permitiendo así tener distintos objetos en la misma escena simultáneamente. También es posible crearlos formado objetos geométricos, un ejemplo sería el Mergecube(Inluir referencia merge).
-		\item Reconocimiento de texto:
-		Algunos SDK de realidad aumentada cuentan con la capacidad de distinguir textos. La precisión estará influenciada dependiendo del tipo de fuente de las letra. 
-		\item Formas Simples:
-		Algunas aplicaciones tienen la capacidad de distinguir diferentes formas simples, como son cubos, cilindros. También pueden distinguir las medidas de las formas, pudiendo así diferenciar si un cubo es mas grande que otro.
-		\item Reconocimiento de objetos:		
-		Se trata del siguiente nivel, la capacidad de distinguir objetos. No solo reconocerá e identifica la forma y tamaño del objeto, también detalles característicos que le puedan diferenciar de otro. Vuforia por ejemplo cuenta con una funcionalidad llamada Vuforia Object Scanner, que permite escanear un objeto para una copia digital, que se podría usar como marcador. En la imagen \ref{fig:vuforia_recoObjeto} podemos ver un ejemplo de la aplicación de Vuforia, en la que escanea un coche.  
-		
-	\end{itemize}
-
-	\imagenPeque{market}{Ejemplo de un marcador~\cite{linowes_babilinski_2017}.}
-	
-	\imagenflotante{market2}{Ejemplo de marcadores codificados~\cite{linowes_babilinski_2017}.}
-	
-	\imagen{vuforia_recoObjeto}{Vuforia Object Scanner~\cite{vuforia_scanner}.}	
-
-
-
-
-
-
-	\subsubsection{Mergecube}\label{section:mergecube}
-	
-	El Mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por Merge, el cual tiene grabado unos dibujos por sus 6 caras, los dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
-	
-	\imagen{mergecube}{Mergecube~\cite{barker_2019}.} 
-	
-	\subsection{Detección del entorno}
-	
-	La detección del entorno trata de poder reconocer el entorno que la cámara capta y ser capaz de, sin la ayuda de un marcador, poder ubicar los modelos en el escenario de forma realista.
-	Para esto hay diferentes técnicas, en resumen estas técnicas lo que hacen es detectar los cambios de profundidad de la imagen, y con esos datos evaluar qué objetos están mas o menos cerca, cuáles son una superficie plana, si se trata de un objeto que no tiene profundidad (una pared)...
-	
-	\subsubsection{SLAM}
-	
-	Simultaneous Localization and Mapping, se trata de una técnica para estimar los movimientos de los sensores y reconstruir la estructura en un entorno desconocido. Cuando esta técnica se aplica en cámaras, se denomina visual SLAM(vSLAM), ya que se basara en la información visual recibida.
-	La mayoría de herramientas de realidad aumentada, que tienen la capacidad de detectar el entorno sin necesidad de marcadores, se basan en esta técnica~\cite{taketomi2017visual}.
-	
-	Los algoritmos de vSLAM, no solo son usados unicamente para la AR, también pueden ser aplicados para robótica, o los coches autónomos no tripulados.
 	
 	
 	

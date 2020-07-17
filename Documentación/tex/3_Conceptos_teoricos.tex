@@ -1,22 +1,22 @@
 \capitulo{3}{Conceptos teóricos}
-
+En esta sección se presentan los conceptos teóricos más importantes del proyecto.
 
 \section{Realidad aumentada}
 
 El concepto de realidad aumentada (AR--Augmented Reality) se aplica a las tecnologías que permiten añadir información gráfica sobrepuesta al mundo real en dispositivos visuales: pantallas, gafas, etc.
 La realidad virtual (VR--Virtuality Reality) se diferencia de la anterior, en que esta crea un entorno virtual completo en el que el usuario se sumerge.
 
-La realidad aumentada, como su nombre indica tiene por objetivo aumentar la percepción de la realidad, el mundo real. Para ello por medio de diferentes técnicas, logra colocar a través de una cámara y la pantalla, un objeto virtual en la posición exacta de la pantalla, para que logre la sensación de que ese objeto realmente existe en esa posición del mundo real.
+La realidad aumentada, como su nombre indica, tiene por objetivo aumentar la percepción de la realidad, el mundo real. Para ello por medio de diferentes técnicas, logra colocar a través de una cámara y la pantalla, un objeto virtual en la posición exacta de la pantalla, para que logre la sensación de que ese objeto realmente existe en esa posición del mundo real.
 
 \subsection{Realidad aumentada y virtual diferencias} 
 Es frecuente que la realidad aumentada se confunda con la que se podría considerar su hermana, la realidad virtual. Esto se debe a similitud de tanto sus nombre, como más importante sus objetivos. La realidad virtual también pretende colocar un objeto virtual en una posición realista, la diferencia es que no lleva el objeto al mundo real, sino que hace creer al usuario, que él mismo se encuentra dentro de un entorno totalmente nuevo, un mundo virtual.
 
 \section{Técnicas de realidad aumentada}
-Existen diferentes técnicas por las que lograr realidad aumentada, principalmente se pueden agrupar en dos grupos, la detección de marcadores y la detección del entorno. En el primero para lograr el efecto de realidad aumentada se usa una referencia visual, que puede ser una imagen o un código qr. Mientras que en la segunda no se utiliza ninguna referencia visual, sino que es capaz de entender su entorno, siendo capaz de distinguir superficies planas.
+Existen diferentes técnicas por las que lograr realidad aumentada, principalmente se pueden agrupar en dos grupos, la detección de marcadores y la detección del entorno. En el primero para lograr el efecto de realidad aumentada se usa una referencia visual, que puede ser una imagen o un código QR. Mientras que en la segunda no se utiliza ninguna referencia visual, sino que es capaz de entender su entorno, siendo capaz de distinguir superficies planas.
 
 \subsection{Detección de marcadores}
 
-La detección de marcadores se trata de un técnica de realidad aumentada en el que los sistemas utilizan como referencia espacial, para situar elementos que queremos superponer, una figura o imagen concreta, que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras (ver~\ref{fig:Memoria/ejemploMarcadorCasa}).
+La detección de marcadores (Targets) se trata de una técnica de realidad aumentada en que los sistemas utilizan como referencia espacial, para situar elementos que queremos superponer, una figura o imagen concreta que ha sido especificada previamente. Los marcadores mas comunes y simples son los códigos QR, pues se tratan de imágenes diseñadas para que puedan ser reconocidas fácilmente por las cámaras (ver imagen~\ref{fig:Memoria/ejemploMarcadorCasa}).
 
 \imagen{Memoria/ejemploMarcadorCasa}{Ejemplo un marcador sencillo~\cite{AR_company}.}
 
@@ -25,7 +25,7 @@ También es posible que el marcador se trate de un objeto físico, como por ejem
 
 \imagen{Memoria/ejemploMarcadorTigre}{Ejemplo donde una carta de un tigre es un marcador~\cite{AR_company}.}
 
-Aunque gracias al avance de la calidad de las cámaras y del software de reconocimiento, es posible utilizar marcadores mas complejos, esto también implicarán que será mas probable que falle, y por consecuencia se desencuandren las imágenes insertadas por AR, que los tiempos de detección sean mas largos etc.
+Aunque gracias al avance de la calidad de las cámaras y del software de reconocimiento, es posible utilizar marcadores mas complejos, esto también implicará que será mas probable que falle, y por consecuencia, se desencuadren las imágenes insertadas por AR, que los tiempos de detección sean mas largos etc.
 
 Se pueden clasificar los marcadores en~\cite{linowes_babilinski_2017}:
 
@@ -38,13 +38,13 @@ Se pueden clasificar los marcadores en~\cite{linowes_babilinski_2017}:
 	\item \textbf{Imágenes}:		
 	El poder usar imágenes evita tener que crear marcadores personalizados. El reconocimiento de imágenes entra en la categoría de seguimiento de características naturales. Su calidad como marcador, dependerá de si tiene un borde que defina claramente esa imagen, del contraste de sus colores o la complejidad de su composición.
 	\item \textbf{Múltiples Marcadores}:
-	Es el caso de usar mas de un marcador al mismo tiempo por la misma cámara. Permitiendo así tener distintos objetos en la misma escena simultáneamente. También es posible crearlos formado objetos geométricos, un ejemplo sería el Mergecube(Inluir referencia merge).
+	Es el caso de usar mas de un marcador al mismo tiempo por la misma cámara. Permitiendo así tener distintos objetos en la misma escena simultáneamente. También es posible crearlos formando objetos geométricos, un ejemplo sería el Mergecube(ver imagen~\ref{fig:Memoria/mergecube}).
 	\item \textbf{Reconocimiento de texto}:
 	Algunos SDK de realidad aumentada cuentan con la capacidad de distinguir textos. La precisión estará influenciada dependiendo del tipo de fuente de las letra. 
 	\item \textbf{Formas Simples}:
-	Algunas aplicaciones tienen la capacidad de distinguir diferentes formas simples, como son cubos, cilindros. También pueden distinguir las medidas de las formas, pudiendo así diferenciar si un cubo es mas grande que otro.
+	Algunas aplicaciones tienen la capacidad de distinguir diferentes formas simples, como son cubos, cilindros\dots. También pueden distinguir las medidas de las formas, pudiendo así diferenciar si un cubo es mas grande que otro.
 	\item \textbf{Reconocimiento de objetos}:		
-	Se trata del siguiente nivel, la capacidad de distinguir objetos. No solo reconocerá e identifica la forma y tamaño del objeto, también detalles característicos que le puedan diferenciar de otro. Vuforia por ejemplo cuenta con una funcionalidad llamada Vuforia Object Scanner, que permite escanear un objeto para una copia digital, que se podría usar como marcador. En la imagen \ref{fig:Memoria/vuforia_recoObjeto} podemos ver un ejemplo de la aplicación de Vuforia, en la que escanea un coche.  
+	Se trata del siguiente nivel, la capacidad de distinguir objetos. No solo reconocerá e identificará la forma y tamaño del objeto, también detalles característicos que le puedan diferenciar de otro. Vuforia por ejemplo cuenta con una funcionalidad llamada <<Vuforia Object Scanner>>, que permite escanear un objeto para una copia digital, que se podría usar como marcador. En la imagen \ref{fig:Memoria/vuforia_recoObjeto} podemos ver un ejemplo de la aplicación de Vuforia, en la que escanea un coche.  
 	
 \end{itemize}
 
@@ -61,24 +61,24 @@ Se pueden clasificar los marcadores en~\cite{linowes_babilinski_2017}:
 
 \subsubsection{Mergecube}\label{section:mergecube}
 
-El Mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por Merge, el cual tiene grabado unos dibujos por sus 6 caras, los dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
+El Mergecube\footnote{\url{https://mergeedu.com/}} se trata de un cubo diseñado por Merge, el cual tiene grabado unos dibujos por sus 6 caras, estos dibujos actúan de marcadores. Es posible mover el cubo al mismo tiempo que se usa, de esa manera se consigue una experiencia mas interactiva. Es por eso que el mergecube es ideal para aplicarlo en experiencias educativas.
 
 \imagen{Memoria/mergecube}{Mergecube~\cite{barker_2019}.} 
 
 \subsection{Detección del entorno}
 
 La detección del entorno trata de poder reconocer el entorno que la cámara capta y ser capaz de, sin la ayuda de un marcador, poder ubicar los modelos en el escenario de forma realista.
-Para esto hay diferentes técnicas, en resumen estas técnicas lo que hacen es detectar los cambios de profundidad de la imagen, y con esos datos evaluar qué objetos están mas o menos cerca, cuáles son una superficie plana, si se trata de un objeto que no tiene profundidad (una pared)...
+Para esto hay diferentes técnicas, en resumen estas técnicas lo que hacen es detectar los cambios de profundidad de la imagen, y con esos datos evaluar qué objetos están mas o menos cerca, cuáles son una superficie plana, si se trata de un objeto que no tiene profundidad (como una pared), entre otros.
 
 \subsubsection{SLAM}
 
-Simultaneous Localization and Mapping, se trata de una técnica para estimar los movimientos de los sensores y reconstruir la estructura en un entorno desconocido. Cuando esta técnica se aplica en cámaras, se denomina visual SLAM(vSLAM), ya que se basara en la información visual recibida.
+Simultaneous Localization and Mapping, es una técnica para estimar los movimientos de los sensores y reconstruir la estructura en un entorno desconocido. Cuando esta técnica se aplica en cámaras, se denomina visual SLAM (vSLAM), ya que se basará en la información visual recibida.
 La mayoría de herramientas de realidad aumentada, que tienen la capacidad de detectar el entorno sin necesidad de marcadores, se basan en esta técnica~\cite{taketomi2017visual}.
 
-Los algoritmos de vSLAM, no solo son usados unicamente para la AR, también pueden ser aplicados para robótica, o los coches autónomos no tripulados.
+Los algoritmos de vSLAM, no solo son usados únicamente para la AR, también pueden ser aplicados para robótica, o los coches autónomos no tripulados.
 
 \section{Geolocalización}
-La geolocalización, es una técnica por la cual los dispositivos mediante los sensores de GPS y del giroscopio determinan su posición y orientación. De esta forma al conocer la posición y orientación del usuario, es capaz de determinar en que la posición del elemento en realidad aumentada respecto al usuario.
+La geolocalización, es una técnica por la cual los dispositivos, mediante los sensores de GPS y del giroscopio, determinan su posición y orientación. De esta forma al conocer la posición y orientación del usuario, es capaz de determinar en que la posición del elemento en realidad aumentada respecto al usuario.
 Por ejemplo es posible crear un mapa, en el que en la imagen de una calle nos indique la localización de los negocios y lugares de interés teniendo sus coordenadas.
 
 Sus desventajas son que no es capaz realizar una combinación con el mundo real de una forma muy realista por si mismo, pues no tiene en cuenta el entorno que le rodea, por ejemplo en el caso de un objeto se interponga entre el usuario y la posición del objeto virtual, el objeto simplemente se superpondrá por encima.
@@ -88,11 +88,11 @@ Es por ello que esta técnica hoy en día es mas frecuente que se use en combina
 \section{Orígenes y evolución de la realidad aumentada}
 El concepto de realidad aumentada fue utilizado por primera vez en 1901 por Frank L Baum en su novela The Master Key~\cite{theMasterKey}, en ella presenta una historia que a un niño le otorgan un regalo, que son como unas gafas que da a entender un concepto de realidad aumentada.
 
-Décadas mas tarde Morton Helling, conocido como el padre de la realidad virtual, inventó el Sensorama~(\ref{fig:Memoria/Sensorama}) en 1957 y lo patentó en 1962, se trataba de una maquina que intentaba una mayor inmersión con la combinación de una pantalla, ventiladores, olores, una silla que se movía y sonido estéreo. Morton también diseñó TELESPHERE MASK, un aparato que recuerda mucho a las gafas de realidad virtual que conocemos hoy en día.
+Décadas mas tarde Morton Helling, conocido como el padre de la realidad virtual, inventó el Sensorama~(\ref{fig:Memoria/Sensorama}) en 1957 y lo patentó en 1962, se trataba de una máquina que intentaba una mayor inmersión con la combinación de una pantalla, ventiladores, olores, una silla que se movía y sonido estéreo. Morton también diseñó TELESPHERE MASK, un aparato que recuerda mucho a las gafas de realidad virtual que conocemos hoy en día.
 
 \imagen{Memoria/Sensorama}{ Sensorama~\cite{ARhistory}}
 
-En 1968 el profesor Ivan Sutherland junto a su estudiante Bob Sproull, Quintin Foster and Danny Cohen desarrollaron el considerado el primer sistema de realidad aumentada, llamado La Espada De Damocles~\ref{fig:Memoria/EspadaDeDamocles}. Se conectaba a un ordenador para generar los gráficos. En el vídeo del siguiente enlace se puede ver una demostración: \url{https://www.youtube.com/watch?v=Xd1DgzPPH_Q}.
+En 1968 el profesor Ivan Sutherland junto a su estudiante Bob Sproull, Quintin Foster and Danny Cohen desarrollaron el considerado el primer sistema de realidad aumentada, llamado La Espada De Damocles (ver ilustración~\ref{fig:Memoria/EspadaDeDamocles}). Se conectaba a un ordenador para generar los gráficos. En el vídeo del siguiente enlace se puede ver una demostración: \url{https://www.youtube.com/watch?v=Xd1DgzPPH_Q}.
 
 \imagen{Memoria/EspadaDeDamocles}{La espada de Damocles~\cite{EspadaDamocles}}
 
@@ -109,13 +109,12 @@ En 1994 se crea KARMA (Knowledge based Augmented Reality for Maintenance Assista
 
 Ronald T. Azuma  en 1997 escribió <<A survey of Augmented Reality>>~\cite{azuma1997survey}, donde explora los diferentes usos que podría tener la realidad aumentada en medicina, producción, investigación, mecánica y entretenimiento.
 
-En 1999 la NASA emplea la realidad aumentada para mejorar la navegación en sus vuelos de prueba. Ese mismo año, Hirokazu Kato desarrolla ARToolKit, un software para el desarrollo de aplicaciones de realidad aumentada.
+En 1999 la NASA empleó la realidad aumentada para mejorar la navegación en sus vuelos de prueba. Ese mismo año, Hirokazu Kato desarrolla ARToolKit, un software para el desarrollo de aplicaciones de realidad aumentada.
 
 
 
-En el 2000, se crea ARQuake por Bruce H. Thomas, el primer juego de realidad aumentada al aire libre. Se trata de un juego basado en el clásico Quake incorporando realidad aumentada. En la imagen \ref{fig:Memoria/ArQuake} se observa una imágenes de como se podría representar el juego, y el dispositivo que era necesario para ejecutarlo y detectar el entorno.
+En el 2000, se crea ARQuake por Bruce H. Thomas, el primer juego de realidad aumentada al aire libre. Se trata de un juego basado en el clásico Quake incorporando realidad aumentada. En la imagen \ref{fig:Memoria/ArQuake} se observa unas imágenes de como se podría representar el juego, y el dispositivo que era necesario para ejecutarlo y detectar el entorno.
 
-\imagen{Memoria/ArQuake}{ Imágenes del juego ArQuake, y el dispositivo en el que se ejecutaba~\cite{ArQuake}}
 
 En 2008 se funda WikiTude, con el objetivo de meterse en la aplicaciones de realidad aumentada móvil. 
 En 2009 ARToolKit se incorpora en Adobe Flash, consiguiendo así que la realidad aumentada pueda ejecutarse desde un navegador Web.
@@ -124,6 +123,7 @@ En 2012 Google presenta las Google Glass, en su intento por llevar la realidad a
 
 En 2015 Microsoft presenta las Hololens, sus gafas de realidad aumentada.
 
+\imagen{Memoria/ArQuake}{ Imágenes del juego ArQuake, y el dispositivo en el que se ejecutaba~\cite{ArQuake}}
 
 
 

@@ -2,9 +2,8 @@
 
 \section{Herramientas}
 \subsection{Herramientas AR}
-
-Se han comparado diferentes herramientas de desarrollo para realidad aumentada. 
-Algunas de ellas se tratan de herramientas ya desarrolladas y usadas con fines educativos o comerciales. Otras de las herramientas que se explican son los frameworks/API que muchas de las herramientas anteriores usan.
+En esta sección se analizaran y compararan las diferentes herramientas para realidad aumentada analizadas durante el proyecto. 
+Algunas de estas herramientas están principalmente enfocadas a su uso para entornos educativos, otras simplemente están enfocadas para un uso comercial o de investigación pero también es posible desarrollar aplicaciones educativas con ellas. Otras de las herramientas que se explican son los frameworks/API que muchas de las herramientas anteriores usan. Por ultimo se ha realizado una tabla resumen de estas herramientas~\ref{tabla:comparacionHerramientas}.
 
 
 \subsubsection{ArCore}
@@ -40,16 +39,16 @@ Funciones destacadas que posee ArKit actualmente.
 
 
 
-Una limitación es que únicamente esta disponible para sistemas iOS 11.0 o superior.
+Una limitación importante es que únicamente esta disponible para sistemas iOS 11.0 o superior.
 
 
 \subsubsection{CoSpaces}\label{sub:Def_cospace} 
 
 CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo educativo. Se puede acceder a ella tanto por web, como desde la aplicación de móvil. Permite a los profesores crear salas para sus alumnos donde tendrían acceso a los diferentes ejemplos a usar para sus clases. También cuenta con una galería donde los usuarios pueden compartir sus ejemplos.
 
-\imagen{cospaces2}{Imagen de mi plataforma de desarrollo de CoSpaces. ( Captura de pantalla)}
+\imagen{cospaces2}{Imagen de mi plataforma de desarrollo de CoSpaces (Captura de pantalla).}
 
-Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D, donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo, en la imagen~\ref{fig:cospaces2} se puede observar el entorno descrito. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scripts, aunque hay que destacar, que la programación por scripts y algunas opciones de la programación de bloques únicamente están disponibles con una licencia premium. Para añadir un modelo 3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly (biblioteca pública de google de modelos 3D\footnote{\url{https://poly.google.com/}}).
+Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D, donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo, en la imagen~\ref{fig:cospaces2} se puede observar el entorno descrito. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scripts, aunque hay que destacar, que la programación por scripts y algunas opciones de la programación de bloques únicamente están disponibles con una licencia premium. Para añadir un modelo 3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly (biblioteca pública de Google de modelos 3D\footnote{\url{https://poly.google.com/}}).
 CoSpace también cuenta con la opción de diseñar proyectos para el Mergecube, aunque este plugin se encuentra disponible para la versión premium.
 
 
@@ -64,32 +63,31 @@ Otra característica es que puede usar el ArCore y ArKit para permitir que los o
 \subsubsection{Zapworks} ZapWorks\footnote{\url{https://zap.works/}} se trata de una herramienta de desarrollo para AR. En general esta compuesto por dos herramientas de creación, ZapWorks Designer y ZapWorks Studio.
 
 \begin{itemize}
-	\item ZapWorks Studio: se trata de la aplicación de desarrollo para escritorio. La aplicación permite desarrollar los proyectos AR, con modelos 3D, animaciones, interacciones, etc. Soporta los formatos  GLTF, FBX, OBJ, POD de modelos 3D. En la imagen~\ref{fig:zapworkStudio} se puede observar el entorno.
+	\item ZapWorks Studio: se trata de la aplicación de desarrollo para escritorio. La aplicación permite desarrollar los proyectos AR, con modelos 3D, animaciones, interacciones, etc. Soporta los formatos  GLTF, FBX, OBJ, POD de modelos 3D.
 	\item ZapWorks Designer: Se trata de una aplicación web, desde la que se puede de una forma sencilla, asociar a un marcador, imágenes, textos, vídeos, links. Pero no es posible trabajar con modelos 3D.
 \end{itemize}	
 
-\imagen{zapworkStudio}{Imagen perteneciente a la aplicación de ZapWorks Studio~\cite{ZapStudio}.}
 
 La herramienta posee los siguientes tipos de seguimiento de realidad aumentada.
 
 \begin{itemize}
 	\item Word Tracking: Capacidad de reconocer el entorno para poder colocar objetos de una manera mas realista sobre el terreno, sin la ayuda de marcadores.
-	\item Face Tracking: Capacidad de reconocer y seguir rostros, para por ejemplo colocar, en una cara el contenido AR y que aunque se muevan el contenido se mueva con la cara.
+	\item Face Tracking: Capacidad de reconocer y seguir rostros para, por ejemplo, colocar en una cara el contenido AR y que aunque se muevan el contenido se mueva con la cara.
 	\item Image Tracking: Que una imagen pueda ser el marcador, y pueda seguirla en movimiento.
 	\item Zapbox Tracking: Se trata de unos marcadores específicamente creados para que se puedan manipular~\ref{fig:Memoria/zapbox}.
 \end{itemize}
 
-\imagen{Memoria/zapbox}{Imagen perteneciente a un kit de zapbox~\cite{ZapStudio}.}
+\imagen{Memoria/zapbox}{Imagen perteneciente a un kit de zapbox y un ZapCode~\cite{ZapStudio}.}
 
-Para acceder al contenido AR almacenado en el servidor de ZapWorks, utiliza los zapcodes~\ref{fig:zapcode}, se tratan una imagen codificada para que pueda descargar un proyecto AR. Una vez que la aplicación reconoce el zapcode, descarga el proyecto y este se ejecutará.
+Para acceder al contenido AR almacenado en el servidor de ZapWorks, se utilizan los zapcodes~(ver figura~\ref{fig:Memoria/zapbox}), se tratan una imagen codificada para que pueda descargar un proyecto AR. Una vez que la aplicación reconoce el zapcode, descarga el proyecto y este se ejecutará.
 
-\imagenPeque{zapcode}{Ejemplo de un zapcode~\cite{ZapStudio}.}
+
 
 
 \subsubsection{Kudan} 
 
 Kudan\footnote{\url{https://www.xlsoft.com/en/products/kudan/index.html}} 
-se trata de un SDK, con la capacidad de soportar AR tanto con marcadores y como sin ellos. En principio Kudan no tiene un limite de marcadores que pueda detectar al mismo tiempo, pero se puede incluir un limite para que la aplicación tenga un rendimiento adecuado. 
+se trata de un SDK, con la capacidad de soportar AR tanto con marcadores como sin ellos. En principio Kudan no tiene un límite de marcadores que pueda detectar al mismo tiempo, pero se puede incluir un límite para que la aplicación tenga un rendimiento adecuado. 
 Posee soporte para APIs nativas, como ObjetiveC para iOS, Java para Android y Unity~\cite{kudan_developer_hub}.
 
 El motor de Kudan está escrito en C++ y optimizado con programación en ensamblador, dando un mayor rendimiento y estabilidad, con el menor impacto de memoria.
@@ -105,41 +103,20 @@ En la imagen \ref{fig:marta_2} podemos ver un ejemplo de la aplicación M.A.R.T.
 
 \subsubsection{Vuforia}\label{sub:Def_Vuforia}
 
-Vuforia\footnote{\url{https://developer.vuforia.com/}} es un kit de desarrollo ( SDK) para aplicaciones de AR, para las plataformas de Android, iOS, Windows, Unity y HoloLens. Fue creado por Qualcomm Connected Experience en 2010, y en 2015 PTC inc lo compró~\cite{simonetti2013vuforia}.
+Vuforia\footnote{\url{https://developer.vuforia.com/}} es un kit de desarrollo (SDK) para aplicaciones de AR, para las plataformas de Android, iOS, Windows, Unity y HoloLens. Fue creado por Qualcomm Connected Experience en 2010, y en 2015 PTC inc lo compró~\cite{simonetti2013vuforia}.
 
 Vuforia proporciona una API en C++, Java, Objective-C++ y los lenguajes de .NET mediante Unity.
 
-Vuforia soporta diferentes tipos marcadores~\ref{fig:vuforia01}, estos pueden ser 2D o 3D, también soporta múltiples marcadores simultáneamente, y reconocimiento del terreno sin marcadores.
+Vuforia soporta diferentes tipos marcadores~(Ejemplos en la figura~\ref{fig:vuforia01}), estos pueden ser 2D o 3D, también soporta múltiples marcadores simultáneamente, y reconocimiento del terreno sin marcadores.
 
 \imagen{vuforia01}{Posibles marcadores de Vuforia}
 
-Los marcadores se pueden crear desde la página web de developer vuforia, para ello deben escoger qué tipo de marcadores se quieren crear y adjuntarle las imágenes que formarán dicho marcador. La página dará una calificación de 5 estrellas según la calidad de la imagen para ser un marcador. Una vez completado, da la opción de descargarlos el un archivo configurable de Unity que incluirá los marcadores en nuestro proyecto.
+Los marcadores se pueden crear desde la página web developer vuforia, para ello deben escoger qué tipo de marcadores se quieren crear y adjuntarle las imágenes que formarán dicho marcador. La página dará una calificación de 5 estrellas según la calidad de la imagen para ser un marcador. Una vez completado, da la opción de descargarlos el un archivo configurable de Unity que incluirá los marcadores en nuestro proyecto.
 
 
 
 Cuenta con una licencia gratuita por defecto, con la limitación de poder tener un máximo de 100 vumarks y 1000 cloud targets.
 
-Actualmente Vuforia esta disponible para las versiones indicadas en la siguiente tabla~\cite{vuforia_supported_versions}.
-
-REVISAR TABLA   ELIMINAR SI REALMENTE NO ES RELEVANTE
-\begin{table}[]
-	\begin{tabular}{|l|l|l|l|l|l|}
-		\hline
-		\multicolumn{2}{|l|}{Device OS}                       & \multicolumn{2}{l|}{Herramientas de Desarrollo}                                             & \multicolumn{2}{l|}{Fusion Provider}                \\ \hline
-		&                          & NDK                                            & r20+                                       &                                &                    \\ \cline{3-4}
-		&                          & \cellcolor[HTML]{EFEFEF}Gradle                 & \cellcolor[HTML]{EFEFEF}5.1.1+             &                                &                    \\ \cline{3-4}
-		&                          & Android SDK Build Tools                        & 28.0.3                                     &                                &                    \\ \cline{3-4}
-		&                          & \cellcolor[HTML]{EFEFEF}Android Studio         & \cellcolor[HTML]{EFEFEF}3.4.x              &                                &                    \\ \cline{3-4}
-		\multirow{-5}{*}{Android}  & \multirow{-5}{*}{5.1.1+} & Unity Editor                                   & 2019.2.0+                                  & \multirow{-5}{*}{ArCore 1.10+} & \multirow{-5}{*}{} \\ \hline
-		&                          & \cellcolor[HTML]{EFEFEF}XCode                  & \cellcolor[HTML]{EFEFEF}10.1+              & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
-		\multirow{-2}{*}{iOS}      & \multirow{-2}{*}{11+}    & Unity Editor                                   & 2019.2+                                    & \multicolumn{2}{l|}{\multirow{-2}{*}{ArKit}}        \\ \hline
-		&                          & \cellcolor[HTML]{EFEFEF}Visual Studio          & \cellcolor[HTML]{EFEFEF}2017 v 15.9+ & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
-		&                          & Unity Editor                                   & 2019.2.0+                                  & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
-		\multirow{-3}{*}{Windows}  & \multirow{-3}{*}{10}     & \cellcolor[HTML]{EFEFEF}Unity Editor(Hololens) & \cellcolor[HTML]{EFEFEF}2018.4.11          & \multicolumn{2}{l|}{\multirow{-3}{*}{}}             \\ \hline
-		&                          & Lumin SDK                                      & 0.22.0                                     & \multicolumn{2}{l|}{}                               \\ \cline{3-4}
-		\multirow{-2}{*}{Lumin Os} & \multirow{-2}{*}{10}     & \cellcolor[HTML]{EFEFEF}Lumin OS               & \cellcolor[HTML]{EFEFEF}0.97+              & \multicolumn{2}{l|}{\multirow{-2}{*}{}}             \\ \hline
-	\end{tabular}
-\end{table}
 
 
 \subsubsection{Wikitude}
@@ -157,7 +134,7 @@ Wikitude\footnote{\url{https://www.wikitude.com/}} se trata de un SDK de realida
 \end{itemize}
 
 Wikitude esta disponible para Android, iOS, Windows y Smart Glasses.
-También posee un amplio soporte para frameworks de desarrollo : Andoid, iOS, Windows, Unity, Cordova, Xamarin, Flutter, Titanium. 
+También posee un amplio soporte para frameworks de desarrollo: Andoid, iOS, Windows, Unity, Cordova, Xamarin, Flutter, Titanium. 
 Los sistemas deberán cumplir los requisitos indicados en el siguiente enlace: \url{https://www.wikitude.com/documentation/latest/android/supporteddevices.html#supported-devices}.
 
 
@@ -206,9 +183,9 @@ En la tabla \ref{tabla:comparacionHerramientas} se puede observar una comparativ
 
 \subsection{Herramientas de documentación}
 \subsubsection{\LaTeX} 
-Para documentar este proyecto se ha utilizado \LaTeX. Se trata de un sistema de composición de textos, con el objetivo de la creación de documentos con una alta calidad tipográfica. Se ha usado TeXstudio y miktex para compilar y editar \LaTeX.
+Para documentar este proyecto se ha utilizado \LaTeX. Se trata de un sistema de composición de textos, con el objetivo de la creación de documentos con una alta calidad tipográfica. Se ha usado TeXstudio y Mik\TeX{} para compilar y editar \LaTeX.
 
-A diferenciara de otros editores clásicos de textos para documentación, \LaTeX tiene una curva de aprendizaje más elevada, pero al final sus ventajas a la hora de documentar, especialmente este tipo de proyectos, le convierte una gran opción.
+A diferenciara de otros editores clásicos de textos para documentación, \LaTeX{} tiene una curva de aprendizaje más elevada, pero al final sus ventajas a la hora de documentar, especialmente este tipo de proyectos, le convierte una gran opción.
 
 
 \subsubsection{Draw.io}
@@ -266,8 +243,6 @@ Pencil\footnote{\url{https://pencil.evolus.vn/}} se trata de un software gratuit
 \subsubsection{Scrum}
 Scrum se trata de una metodología de desarrollo ágil de software que se encuentra basada en el manifiesto ágil~\footnote{\url{https://agilemanifesto.org/principles.html}}. Se ha seguido esta metodología realizando srpints con una duración normalmente de una semana, y una reunión semanal al finalizar cada sprint en las que se mostraban los avances realizados y se planteaba la planificación del siguiente.
 
-Para facilitar el seguimiento de esta metodología se ha utilizado en Github(\ref{github}) las issues y la extensión de ZenHub(\ref{ZenHub}), que permite organizar de una forma mas cómoda mediante tableros kanban\footnote{\url{https://es.wikipedia.org/wiki/Kanban_(desarrollo)}}.
+Para facilitar el seguimiento de esta metodología se ha utilizado en Github las issues y la extensión de ZenHub, que permite organizar de una forma mas cómoda mediante tableros kanban\footnote{\url{https://es.wikipedia.org/wiki/Kanban_(desarrollo)}}.
 
-
-REVISADO HASTA AQUI DE MOMENTO; AHORA ESTOY SIGO TRABAJANDO EN EL RESTO DE APARTADOS
 

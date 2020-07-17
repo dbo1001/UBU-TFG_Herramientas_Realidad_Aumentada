@@ -5,13 +5,129 @@ Para este proyecto ha sido necesario formarse en Unity, pues aunque contaba con 
 Para el desarrollo en Unity ha sido necesario revisar tutoriales respecto algunas de sus configuraciones.
 Aunque contaba con la ventaja de que el lenguaje C\# usado por los scripts de Unity ya lo conocía, lo cual ha facilitado el proceso de desarrollo en Unity en esta parte. También el hecho de contar con un buen manual de usuario, y una comunidad de usuarios notable.
 Formación en técnicas de Unity para hacer diversos elementos, o trucos...
+
 \subsection{Estudio herramientas}
 Uno de los principales puntos de este proyectos ha sido el estudio de diferentes herramientas de realidad aumentada. Para la selección de estas herramientas se siguieron varios pasos. Primero dos de las herramientas de las cuales ya se tenían algunos conocimientos debido a la importancia de las compañías ARCore de Google y ARkit de Apple. Para el resto de herramientas se procedió ha buscar las herramientas mas conocidas y con mayor recepción.
+
+\subsection{Elección Herramienta de realidad aumentada}
+
+Uno de los objetivos del proyecto era el de realizar un aplicación en la que poder poner aprueba las funcionalidades de la realidad aumenta. Para ello se debió de escoger entre una de las herramientas estudiadas. para esta selección se han tenido varios aspectos en cuenta: 
+\begin{itemize}
+	\item El primero la capacidad de esa herramienta para funcionar en el mayor número de dispositivos posibles.
+	\item Que se pueda desarrollar una aplicación de forma gratuita.
+	\item La continuidad de dicha herramienta, es decir que esa herramienta siga actualizándose y teniendo un soporte oficial.
+	\item La comunidad que tiene. Con este aspecto me refiero a la cantidad de usuarios que usan la herramienta. Pues cuanto mas grande sea una comunidad de usuarios en un software, nos puede facilitar el resolver futuros problemas.
+	
+\end{itemize}
+
+ArCore y Arkit, dada su tecnología eran una de las primeras opciones, pero en el caso de ArKit unicamente esta disponible para dispositivos iOS. Y en el caso de ArCore el número de dispositivos Android compatibles aún es algo limitado.
+En el caso de las aplicaciones de MetaVerse, ZapWorks, WikiTude y 8thWall, se han descartado dado que para para el desarrollo de una aplicación unicamente ofrecen una versión gratuita por un tiempo limitado.
+
+En el caso de OpenCv su limitación, pues ya que en realidad no se trata de una tecnología de realidad aumentada como tal, sino una de reconocimientos...............
+
+ que como tecnología de realidad aumentada se queda bastante limitada, y al final no tiene tantas posibilidades como algunas de las otras herramientas.
+
+Finalmente la decisión estaba entre Kudan y Vuforia. Con kudan que parece ser un software muy prometedor, el problema estaba en que el SDK disponible no fui capaz de funcionara, es probable que se deba a que lleve tiempo sin actualizarse, pues la ultima versión de unity en la que esta testado era la 2018. sumado ha este problema esta también el que no tiene una comunidad muy grande ni una guía muy detallada de uso, por lo que buscar posibles soluciones a dudas o problemas se complicaría bastante.
+Es por esto que finalmente me decante por Vuforia, pues  ofrece la posibilidad de desarrollar gratuitamente, siempre que no se publique con el objetivo comercial. Es compatible 
+
+
 \subsection{Desarrollo en Unity}
 Para desarrollar un ejemplo que aplicara las herramientas estudiadas, se tuvo en cuenta aquellos entornos con los eran compatible, ademas de a ser posible buscar un entorno gratuito. Unity se trataba del que mejor concordaba con las características en la mayoría de herramientas. Ademas de que cuenta con um amplio manual de usuario, y un gran apoyo de la comunidad.
-\subsection{Desarrollo en CoSpace}
-Durante el desarrollo en Cospace
+
+\subsection{Desarrollo en CoSpaces}
+Dado que teniamos el MergeCube, se decido también hacer pruebas en CoSpaces, ya que cuenta soporte oficial para el MergeCube. Otra de las razones era comprobar su uso para la docencia.
+
+Para el desarrollo en CoSpace empecé creando un nuevo proyecto. Dado que el ejemplo deberá funcionarán con el MergeCube, en las primeras opciones que nos da al crear el proyecto se podrá incluir.
+Una vez creado el proyecto con el plug de Mergecube, tendremos un espacio de trabajo vació con el cubo de Mergecube en el centro. Esto se trata de una manera sencilla de poder crear un espacio de trabajo, por lo que no sería necesario de un alto nivel de conocimientos.
+
+Para añadir los elementos deseados en el entorno, cuenta con un sencillo panel desde el que seleccionar modelos que ofrece CoSpace, o la posibilidad de importar modelos 3D de una fuente externa, mediante un buscador en Google Poly o mediante una subida de archivos. CoSpaces es compatible con las extensiones obj, mtl, fbx, zip de modelos, y jpg, png, gif, svg, bmp de imágenes.
+
+En cuanto a la manipulación de los modelos, se trata de una manipulación muy sencilla y rápida de aprender, da la posibilidad de mover, rotar y escalar el modelo . El problema de esta manipulación es que es muy simple y no tan precisa, por ejemplo no permite mover objetos en diagonal. Para casos en los que se requiera más precisión habría que usar lo movimientos introduciendo las coordenadas exactas.
+
+Otro de los aspectos de la edición de los modelos es el cambio de colores y textura. No a todos los modelos se les puede cambiar la textura a tu gusto, el color en cambio sí. Con los modelos importados hay más problemas a la hora de personalizar textura o color, pues si el modelo tiene diferentes capas, no las diferencia y cambiará todas del mismo color. 
+
+En algunos modelos predefinidos es posible escoger y activar animaciones, o diferentes estados para ese modelo. Por ejemplo en un modelo de un coche se puede escoger si tiene algunas puertas abiertas o no. La parte negativa es que no puedes definir tus propios estados o animaciones, por lo que unicamente es posible escoger entre las opciones que esos modelos predefinidos tengan. En todos los modelos es posible añadir un bocadillo para añadir un dialogo. También es posible añadir en todos los modelos ciertas físicas, pudiendo ajustando la masa del objeto, seleccionar si será un objeto estático, y alguna opción más, tal vez no es tan completo como otros software pero cumple.
+
+También cuenta con programación, con ella es posible establecer diferentes eventos, cambios de escala, posición o establecer algunas normas para un juego entre muchas más posibilidades. CoSpaces ofrece dos tipos de programación, por bloques y programación en TypeScript. La programación por bloques es una buena forma de iniciación, en especial para los más jóvenes, pues es bastante rápido aprender como funciona. La pega de la programación por bloques es que está limitado a los bloques que nos ofrece, es posible crear tus propios bloques pero no tiene suficiente "diseño" para ajustarse a tantas opciones como una programación por script. 
+La otra posibilidad para programar que ofrece CoSpaces, se trata de elaborar script de en TypeScript. Si se tiene experiencia en programación en otros lenguajes, no resulta difícil acostumbrarse. La parte negativa que tiene esta opción es que la API de CoSpaces, no es tan completa como cabria esperar, sumado a que su "guía de usuario" podría estar mejor.
+
+
+CoSpaces también da la posibilidad de crear espacios de trabajo para alumnos, en estos espacios se puede asignar tareas a los alumnos.
+
+
+\subsection{Ejemplo Unity}
+CAMBIAR TODO ESTE APARTADO
+
+Para el desarrollo se ha encogido Unity como motor gráfico. Esto se debe a que es un motor gratuito y que goza de grandes características y utilidades. Dadas sus grandes características es uno de los mas utilizados, y la gran mayoría de herramientas de realidad aumentada tienen soporte para Unity.
+
+%El proceso para crear un proyecto es, desde Unity HUb escoger que tipo de proyecto crear, uno 2D, 3D, etc. En nuestro caso nos interesa un proyecto en 3D. Escogemos la ruta en la que se desea guardar el proyecto y procedemos a crear el proyecto.
+
+%Una vez se ha generado el entorno deberemos hacer las configuraciones iniciales, en primer lugar se deberá cambiar la plataforma para la que se compilara el proyecto de Windows a Android, este paso permitirá que al construir el ejecutable este sea para Android. Para ello vamos a la pestaña File, Build Settings, desde aquí encontraremos que se encuentra seleccionada Windows de forma predeterminada, cambiamos a Android.
+
+%El segundo paso será añadir el paquete de Vuforia para usar sus extensiones, hay dos opciones: desde la propia Unity si la versión en la que se trabaja lo tiene incluido,desde la pestaña Edit, Project Settings, en Player dentro de la opciones al final se encuentra el apartado XR Settings y desde aquí se puede activar el check de Vuforia que procederá a instalarse, o bien la segunda opción sería importando el SDK de Vuforia que se puede conseguir en su pagina de developer\footnote{\url{https://developer.vuforia.com/downloads/sdk}}. En la versión de Unity 2019.2 contiene la versión  de Vuforia 8.5.
+%Debido a que importe un ejemplo que ofrece la compañía, actualice la versión de Vuforia hasta la 8.6.10. Antes de intentar realizar una actualización de Vuforia, hay que tener en cuenta de que sea compatible con la versión de Unity, ya que puede darse el caso de que para actualizar Vuforia sea necesario también actualizar la versión de Unity, y esto si el proyecto ya está avanzado podría conllevar problemas de compatibilidad.En mi caso he decido seguir en la versión 2019.2.19f1 de Unity y 8.6.1 de Vuforia.
+
+%El proceso para instalar el paquete de Vuforia y iniciar un proyecto no es muy complicado, por lo que prácticamente cualquier usuario siguiendo los pasos podrá completarlo sin problemas.
+
+El segundo paso en la aplicación sería empezar a construirla. 
+Los primeros elementos ha incluir en el proyecto serán la ARcamera y el Multitarget.
+La ARcamera se trata de la cámara diseñada por Vuforia para el uso de realidad aumentada, y el Multitarget se trata del elemento en el se establecerá que targets se reconocerán y sobre donde se construiran los objetos de realidad aumentada.
+El proyecto creado por Unity lleva por defecto una cámara normal, como para nuestra aplicación no la utilizaremos la podemos borrar.
+Para añadir la ARcamara hacemos click derecho, Vuforia Engine, y escogemos AR Camera. Se deberá configurar la ARcamara añadiendo la license key que nos proporciona Vuforia.
+
+Para añadir el multiTarget hay que seguir un proceso similar. La diferencia esta en su configuración. En nuestro caso queremos que el multiTarget tenga como target el MergeCube, para ello en la pagina de developer de Vuforia\footnote{\url{https://developer.vuforia.com}} podremos crear el multiTarget (añadiendo las 6 imágenes del modelo que queremos que sea), descargarlo e importarlo a nuestro proyecto. 
+Click derecho, Vuforia Engine, y escogemos multiTarget, podremos apreciar que el cubo tiene las imágenes que habíamos configurado. Hay que asegurarse de que el cubo este en el campo visual de la cámara en la escena del proyecto, de lo contrario no se podrá reconocer al ejecutarse. Será en este elemento al que tendremos que asociar los modelos que queremos que se muestren en el Mergecube al enfocar nuestro dispositivo al MergeCube.
+
+Con estos dos elementos ya creados se pude proceder a construir la aplicación. El primer elemento que contruir será el un cubo que sera el esqueleto visual. Incluimos un un cubo 3D en la escena y se lo asignamos como elemento hijo al Multitarget. Hay que asegurarse de que estén situados la misma posición, de lo contrarío al ejecutar la aplicación y detectar el Mergecube, el cubo 3D creado no aparecerá en el propio Mergecube.
+
+Dado que queremos representar el crecimiento de un planta debo buscar algún modelo 3D de plantas para Unity, en este caso les buscaré la tienda de Assest de Unity, con el filtro de los assests gratuitos. Aunque no hay demasiados modelos gratuitos, si que he podido encontrar algunos que puedan servir para realizar el ejemplo de la aplicación. Una vez se seleccionado un modelo que nos interese, se importa en el proyecto desde las assets store, y cuando se añada en la escena se deberá incluir como hijo del cubo. El tema de incluir un elemento como hijo de otro es objetivo de mantener un orden y que si realizamos por ejemplo un cambio de posición o de escala en el padre, ese cambio también afectará al hijo, de lo contrarío al realizar uno de esos ajustes habría que repetirlo para el otro modelo o de lo contrario se desajustarían.
+
+Para representar el crecimiento se representara el movimiento de regar la planta echando agua sobre la planta. Para representar esto lo primero que he buscado es un modelo 3D para representar una regadera en la assest store. Una vez encontrado el modelo, le importamos en el proyecto, dado que la idea ha representar es que el movimiento del móvil sea el movimiento como mover la regadera, se debe poner el el modelo como hijo de la ARcamara, de esta manera al mover el teléfono la regadera seguirá el mismo movimiento. Al realizarlo de esta manera hay que prestar atención en que coordenada se coloca, es necesario colocarlo ha cierta distancia de la cámara para que se aprecie cierta distancia, esto se puede ir probando posiciones hasta dar con una que nos parezca correcta. Para añadir el efecto de agua, he usado efectos de partículas de Unity. En la configuración de las partículas de agua, hay que activar el modificador de gravedad dándole un valor de 10, y el tipo de espacio simulado en World, el número máximo de partículas también le he aumentado hasta 10000 y cambiar el color de la partícula por un azul. También es posible añadir un assest a las partículas para dar mayor efecto, pero de los que he encontrado de forma gratuita no me convencían por lo que de momento lo dejaré así. Ahora el problema está en que las partículas siempre caen en la misma inclinación sin importar la posición del dispositivo, para conseguir usar el giroscopio de dispositivo he creado un Script que detecta el giroscopio y ajusta el eje de gravedad según los movimientos del dispositivo. Este proceso fue algo tedioso debido al tener que estar compilando y pasando la aplicación al dispositivo para probar que funcionaba correctamente. Un detalle a tener en cuenta es que el eje Z del giroscopio hay que invertirlo (multiplicar por -1) para conseguir el efecto deseado.
+
+Para detectar y contar el número de partículas que colisionan con la planta, he creado otro scipt que suma cada colisión y va actualizando una barra de progreso en la interfaz.
+
+
+Al crear la interfaz uno de los problemas que mas habitualmente he tenido con la interfaz se trata que dependiendo de en que dispositivo o resolución se ejecute, hay elemento que se mueven y no están en su posición correcta. Esto se debe a la forma de centrar su punto de referencia de localización. Por defecto los elemento su punto de referencia es el centro respecto a su elemento padre, dependiendo de su localización habrá que cambiarlo al mas adecuado, para que se referencia a la esquina o a la distancia entre la parte superior e inferior.... etc.
 
 
 
+Un problema que tiene el realizar una aplicación para móviles, es que cada vez que se quiera hacer una prueba en el dispositivo es necesario compilar al apk. Este proceso para hacer pruebas puntales no tiene un gran impacto en cuanto esfuerzo y tiempo invertido, pero si es necesario hacer muchas pruebas, por que por ejemplo hay un bug especifico que unicamente ocurre en el dispositivo móvil, el impacto en tiempo invertido en compilar será considerable.
+
+
+-
+
+-
+
+-
+
+Para la implementación de las funcionalidades de Device Tracker y crear target personalizados, me basare en el material que ofrece Vuforia en su ejemplo\footnote{\url{https://assetstore.unity.com/packages/templates/packs/vuforia-core-samples-99026}} utilizando de base sus mismos scripts, adaptando les a las necesidades del ejemplo desarrollado.
+
+Para la captura de un target personalizado, hay que crear en la interfaz una señal que indique la calidad del objetivo que se desea transformar en un target.
+Esto puede realizarse mediante una representación de tres colores, como un semáforo.
+Después hay que añadir en el proyecto un ImagenTarget de Vuforia() y configurarlo definiendo el tipo de imagen target que es como User Defined. El ImagenTarget será la referencia de Unity para colocar el modelo 3D por ello es muy importante asegurase de que el ImagenTarget está situado en el campo de visión de la ARcamera, o de lo contrario será imposible reconocerle. 
+Seguido hay que añadir CameraImageBuilder que es el encargado de construir el target temporal. 
+Ahora el paso ha seguir es de asignar a los componentes creados sus respectivos scripts que contralan las funciones. 
+
+Durante este proceso en mi primer intento, Unity tuvo algún fallo y corrompió el proyecto. Haciendo imposible asociar ningún script y ademas los que estaban asociados anteriormente también fallaban impidiendo su uso. Para solucionar el bug probé dos posibles soluciones: borrar los metadatos y reimportar todo el proyecto, por desgracia ninguno funciono por lo que tuve que volver a una copia de seguridad.
+
+
+Para implementar el Device tracker hay que crear un botón para poder activarlo y desactivarlo. Una vez creado el botón, simplemente hay que asociar el correspondiente script de DeviceTracker a las acciones del botón al ser pulsado.
+
+
+Para la mejorar la interfaz, estoy añadiendo efectos de movimiento en algunos de los menús con las animaciones de Unity , cambiando fonts y skins. Por ejemplo el menú que se despliega al mostrar las herramientas antes simplemente aparecía y desaparecía, ahora he añadido la animación para que se despliegue desde el marco derecho de la pantalla.
+
+En la aplicación a la hora de intercambiar entre el menú normal y el menú AR, encontramos un comportamiento no era el ideal. Al cambiar entre normal a AR o viceversa, si por ejemplo nos encontramos en la pagina de opciones del menú, al cambiar se encuentra en la página principal. Dado que este no es un comportamiento ideal, se corregirá para que siempre que se cambie de modo, se encuentre en la misma página. Para ello en el script <<controlador>> donde se encuentran las funciones para cambiar de modo y de navegación del menú, se modificaran para que al navegar por el menú los cambios se tengan en cuenta en ambos modos.
+
+Hasta este momento en la aplicación únicamente se había trabajado con un único modelo de una planta, ahora incorporare otro dos modelos.  La complicación de esto se encuentra en el proceso por el cual el usuario escoge un modelo. Tenemos creado en el menú una lista de las plantas seleccionables, al seleccionar la función asociada a al botón, hará que al cargar la escena con las plantas, la función del script controlador active únicamente la planta seleccionada.
+
+la aplicación actualmente tiene dos formas de aplicar marcadores, en un principio es posible intercambiar entre las dos desde la misma pantalla de realidad aumentada. Pero dado.... 
+
+Una de las siguientes cosas que he tenido que hacer, era actualizar el menú del modo realidad aumentada, en cual no había añadido la pagina de opciones. Debido a esto me olvide de actualizar también el script que controla que al navegar por un menú, se haga en ambos, por lo que se origino un pequeño bug en el que se quedaba sin actualizar correctamente si se entraba en ese apartado nuevo. para solucionarlo de la misma manera que antes, es revisar el script y las acciones de los menú en Unity para que tenga en cuenta el nuevo apartado.
+
+
+Para las imágenes de los botones y demás elementos de la interfaz, he decido dibujarlos yo mismo con herramientas gratuitas. He usado Paint 3D(citar), Jump Paint(citar) y Gimp(citar). He usado estas pues son gratuitas, no muy difíciles de usar y así no tener que invertir tiempo para poder hacer cosas sencillas.
+
+
+
+En el menú en un principio se incorporo un cubo para realizar pruebas en el componente Canvas de Unity, ahora en estos últimos pasos se ha decidido reutilizarlo, añadiéndole en sus caras los escudos de la universidad, de la politécnica y del grado de informática. Para esto, se ha realizado una textura de mapeo UV, que son texturas 2D que al incorporarse las a un objeto 3D, la imagen se adapta a la forma correspondiente del objeto. Lo cierto esto si llevo un tiempo, y si en vez de un objeto simple como un cubo fuera uno mas complejo no sería recomendable intentarlo. Para realizarlo he tenido que usar la herramienta Blender, en la que se crea una plantilla acorde al objeto, un cubo en este caso. Después se importa la plantilla a un editor de imagen, para esto yo use Gimp, en el editor colocas las imágenes de los escudos siguiendo la plantilla que indica lo que correspondería a cada cara del cubo. Una vez editada la imagen, ya se podría usar para el cubo en Unity.
 

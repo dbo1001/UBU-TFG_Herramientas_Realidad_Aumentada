@@ -7,10 +7,21 @@ Son numerosos los trabajos y estudios que hoy en día se realizan respecto a las
  
  Se trata de un estudio sobre la realidad aumentada
 
-\section{Libros}
-
 \section{Paginas Web}
+\subsection{Realidad aumentada en navegador Web}
+\subsubsection{8thWall}
+En una de las herramientas estudiadas, destacaba por el uso de realidad aumentada en un navegador web.
+\textbf{8thWall} aparte de ofrecer las herramientas para creación de realidad aumentada, cuenta con una página en la que podemos encontrar ejemplos de realidad aumentada en web.
+\url{https://www.8thwall.com/8thwall}
 
+\imagen{Memoria/arWeb8th}{Imagen perteneciente a uno de los ejemplos Ar Web de 8thWall.}
+
+Como podemos ver en la imagen~\ref{fig:Memoria/arWeb8th} nos dejará probar el ejemplo copiado la url o escaneando su codigo.
+
+\subsubsection{Google}
+Google también ofrece algunas características de realidad aumentada, para los móviles compatible con ArCore. Desde hace ya unos meses, al buscar en el navegador del móvil, un animal, Google da la opción de visualizar un modelo 3D de este. En caso de que el móvil sea compatible con ArCore sera posible visualizar ese modelo en realidad aumentada.
+
+IMAGEN
 
 \subsection{Niantic}
 Niantic~\footnote{\url{https://nianticlabs.com/es/}} se trata de una empresa centrada en el desarrollo de aplicaciones de realidad aumentada. Actualmente sus aplicaciones más conocidas son Ingress, Pokemon Go y HarryPotter wizzards unite.
@@ -18,6 +29,7 @@ Pero aparte de estas aplicaciones también se dedican a la investigación y desa
 
 Uno de los destacados es del que hablan en la entrada <<Building experiences from the ground up>> de su blog, en el que explican su intención de crear mejores experiencias de realidad aumentada con
 la capacidad de reconocer objetos del entorno para crear mejores sensaciones de profundidad. Para ello es necesario transformar una imagen 2D en un espacio 3D. Un ejemplo sería, en una imagen en la que salen varios arboles, si queremos poner un elemento de realidad aumentada, al moverse ese elemento no distinguiría el fondo de un árbol, por lo que la imagen AR siempre estará en un plano por encima. Pero si la imagen 2D pasa a ser un mapa 3D en el que se diferencian los arboles del fondo, sería posible que ese elemento de realidad aumentada pase de una forma realista detrás de los arboles. 
+
 \imagen{Trabajos_Relacionados/nianticAR}{ Representación del reconocimiento de profundidad.~\cite{nianticAR}}
 \url{https://nianticlabs.com/es/blog/building-experiences-from-the-ground-up/}
 
@@ -29,3 +41,13 @@ Se trata de un proyecto de fin de grado con el objetivo de crear un Visor 3D par
 La aplicación en este proyecto, perimte a alumnos y profesores visualizar modelos 3D óseos, también tiene la posibilidad de añadir anotaciones y medidas. Este proyecto es interesante pues, es un claro ejemplo que los modelos 3D se pueden llevar para la mejora de la docencia. En este caso, está aplicación podría ser mejorada incluyéndola un funcionamiento con realidad aumentada.
 
 Si se cuenta con un modo de realidad aumentada, los usuarios también podrán observar por ejemplo como serían las proporciones reales proyectadas.
+
+\subsection{ArCore Novedades}
+ArCore, esta en constante crecimiento y mejorando su aplicación de realidad aumentada. Una de las ultimas novedades que han incorporado se trata de la \textbf{API ARCore Depth}~\cite{apiArCoreDepth}. Esta nueva API, permite generar un mapa de profundidad usando unicamente una cámara. Este mapa generado, permite conocer la localización de los elementos del entorno de una forma más precisa.
+
+Esto se puede aplicar para mejorar la oclusión, que es la capacidad para que que un objeto virtual pueda aparecer delante o detrás de objetos del mundo real. En la imagen~\ref{fig:Memoria/ARcoreDepth} podemos ver un ejemplo de como se aplicaría la oclusión.
+
+Esta nueva funcionalidad abre la posibilidad un montón de nuevas posibilidades para hacer aplicación de realidad aumentada. En la entrada del blog `` \href{https://developers.googleblog.com/2020/06/a-new-wave-of-ar-realism-with-arcore-depth-api.html}{A new wave of AR Realism with the ARCore Depth API}`` podemos ver algunos ejemplos de aplicaciones que usan esta nueva caracteristica.
+
+\imagen{Memoria/ARcoreDepth}{Gato virtual con oclusión desactivada a la izquierda y activado a la izquierda~\cite{apiArCoreDepth}}
+

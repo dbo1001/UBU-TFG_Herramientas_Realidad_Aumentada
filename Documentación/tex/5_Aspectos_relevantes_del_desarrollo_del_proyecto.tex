@@ -2,14 +2,17 @@
 En este apartado se explicarán los aspectos mas relevantes del desarrollo del proyecto. Las decisiones que se han tomado a lo largo del proyecto, los problemas que han surgido.
 
 \subsection{Formación}
-Para este proyecto ha sido necesario formarse en Unity, pues aunque contaba con conocimientos básicos de antemano, era necesario reforzar los conocimientos en cara al proyecto. Para ello se han seguido tanto videotutoriales como la documentación oficial de Unity y sus foros.
-Para el desarrollo en Unity ha sido necesario revisar tutoriales respecto algunas de sus configuraciones.
-Aunque contaba con la ventaja de que el lenguaje C\# usado por los scripts de Unity ya lo conocía, lo cual ha facilitado el proceso de desarrollo en Unity en esta parte. También el hecho de contar con un buen manual de usuario, y una comunidad de usuarios notable.
+Para este proyecto era necesario aumentar conocimientos de los que se carecían. Principalmente en  Unity y las herramientas de realidad aumentada. Pues los conocimientos que tenía de antemano sobre Unity no eran muy grandes y aun así era necesario actualizarlos de cara al proyecto.
+Para ello se tenían como referencia los recursos oficiales del \href{https://docs.unity3d.com/2019.2/Documentation/Manual/UnityManual.html}{manual de Unity} y sus foros de ayuda de la comunidad. Del mismo modo, se han seguido los recursos oficiales del \href{https://library.vuforia.com/getting-started/overview.html}{manual de Vuforia}. Estos recursos también se han completado con diferentes videotutoriales, tanto creados por las propias compañías como por parte de la comunidad.
+
+Una de las ventajas con Unity, era el uso de C\# pues era un lenguaje en el que ya tenía algunos conocimientos, lo cual ha facilitado el proceso de desarrollo en esta parte. 
 
 \subsection{Estudio herramientas}
-Uno de los principales puntos de este proyectos ha sido el estudio de diferentes herramientas de realidad aumentada. Para la selección de estas herramientas se siguieron varios pasos. Primero dos de las herramientas de las cuales ya se tenían algunos conocimientos debido a la importancia de las compañías ARCore de Google y ARkit de Apple. Para el resto de herramientas se procedió ha buscar las herramientas que actualmente son mas populares y aquellas que destaquen por sus funcionalidades.
+Uno de los principales puntos de este proyectos ha sido el estudio de diferentes herramientas de realidad aumentada. Para la selección de las herramientas que se estudiarían se siguieron varios pasos. 
+Las primeras seleccionadas fueron ARCore y ARKit, pues que gracias al nombre de sus compañías ya había oído hablar de ellas incluso antes de empezar a investigar. Otra de las primeras se trataba de CoSpaces y el MergeCube, pues desde el comienzo del proyecto uno de los tutores le parecía interesante especialmente por su como se aplica para el uso en la docencia. Lamentablemente el uso exclusivo del SDk del MergeCube no fue posible debido a que se dejo de dar soporte de desarrollo, por lo que ya no era posible descargar el SDK ni conseguir las claves de licencia para su uso.
+Para el resto de herramientas seleccionadas, se procedió ha realizar una investigación sobre las herramientas que actualmente son mas populares y aquellas que destaquen por sus funcionalidades.
 
-\subsection{Elección Herramienta de realidad aumentada}
+\subsection{Elección Herramienta de realidad aumentada para el caso práctico}
 
 Uno de los objetivos del proyecto era el de realizar un aplicación en la que poder poner aprueba las funcionalidades de la realidad aumenta. Para ello se debió de escoger entre una de las herramientas estudiadas. para esta selección se han tenido varios aspectos en cuenta: 
 \begin{itemize}
@@ -30,14 +33,16 @@ Es por esto que finalmente me decante por Vuforia, pues  ofrece la posibilidad d
 
 
 \subsection{Elección de Unity}
-Para desarrollar un ejemplo que aplicara las herramientas estudiadas, se tuvo en cuenta aquellos entornos con los eran compatible, ademas de a ser posible buscar un entorno gratuito. Unity se trataba del que mejor concordaba con las características en la mayoría de herramientas. Ademas de que cuenta con um amplio manual de usuario, y un gran apoyo de la comunidad.
+Para desarrollar un ejemplo que aplicara las herramientas estudiadas, se tuvo en cuenta aquellos entornos con los eran las herramientas eran compatibles, ademas de a ser posible buscar un entorno gratuito. 
+
+La mayoría de las herramientas contaban con soporte oficial para el desarrollo en Unity. Y dado que la aplicación ha desarrollar era de realidad aumentada Unity era la mas apropiada, pues para el manejo de modelos 3D y otros de estos recursos, era el entorno que mas facilidades otorgaba. Ademas de que cuenta con um amplio manual de usuario, y un gran apoyo de la comunidad.
 
 \subsection{Problemas Instalación Vuforia en Unity}
 Para incorporar en el proyecto de Unity la herramienta de Vuforia, hay varios métodos, en este caso yo decidí hacerlo desde la Asset Store de Unity. Para poder instalarlo, simplemente debemos buscar en la tienda Vuforia. Entre los resultados podemos encontrar diferentes Assest que ofrece PTC, la compañía de Vuforia. Hasta aquí todo bien, pero en vez de seleccionar Vuforía Engine, que contiene unicamente el engine de Vuforia, seleccione y importe Vuforia Core Samples, que se trata del engine de Vuforia pero viene con múltiples ejemplos desarrollados de vuforia. De este hecho no percaté hasta bastante mas adelante. 
 
 Me pude dar cuenta de esto por el peso de la aplicación y es que el APK era demasiado pesado para el contenido que estaba utilizando. A ese elevado peso de la APK, no le di demasiada importancia hasta que hice pruebas en un proyecto aparte, en los que solo instale Vuforia Engine y pude comprobar que en estos proyectos el peso era considerablemente menor.
 
-Aparte del peso de la aplicación, no suponía ningún problema en el funcionamiento, pues realmente el engine era el mismo solo que en uno tenía mas recursos. Dado que a la larga el este excesivo peso aun que no fuera un problema, si sería un inconveniente. empece a revisar el proyecto para borrar los elementos que hacian que el peso de la aplicación ascendiera tanto. Finalmente si les puede encontrar en la carpeta \textbf{StreamingAsets}, \textbf{Edit}, y borrar todos los elementos excepto el que tendrá el nombre del prefab del MergeCube añadido.
+Aparte del peso de la aplicación, no suponía ningún problema en el funcionamiento, pues realmente el engine era el mismo solo que en uno tenía mas recursos. Dado que a la larga el este excesivo peso aun que no fuera un problema, si sería un inconveniente. empece a revisar el proyecto para borrar los elementos que hacian que el peso de la aplicación ascendiera tanto. Finalmente si les puede encontrar en la carpeta \textbf{StreamingAssets}, \textbf{Vuforia}, y borrar todos los elementos excepto el que tendrá el nombre del prefab del MergeCube añadido.
 
 \subsection{Corrupción del proyecto}
 

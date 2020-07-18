@@ -71,7 +71,7 @@ Algunas de las otras posibilidades son:
 
 \imagenPequeDos{Anexos/VuforiaPlayer02}{Instalación Vuforia en Unity paso 2.}
 
-\subsubsection{Construcción proyecto}
+\subsubsection{Construcción proyecto primeros pasos}
 
 Para la construcción de un proyecto de realidad aumentada con Vuforia, los dos primeros elementos que se deberán añadir son la \textbf{ARcamara} y el \textbf{Target} ( Para la aplicación propuesta se usará un MultiTarget). La AR Camera se trata de la cámara diseñada por Vuforia para el uso de realidad aumentada, y el Multitarget se trata del elemento en el se establecerá que targets se reconocerán y sobre donde se construirán los objetos de realidad aumentada.
 El proyecto creado por Unity lleva por defecto una cámara normal, como para nuestra aplicación no la utilizaremos la podemos borrar.
@@ -83,17 +83,76 @@ Se deberá configurar la AR Camera añadiendo la \textbf{license key} que nos pr
 
 \imagen{Anexos/vuforiaLicense}{Pasos para incluir la license key de Vuforia.}
 
-Para añadir el multiTarget hay que seguir un proceso similar. La diferencia esta en su configuración. La forma más sencilla es desde la página de developer de Vuforia\footnote{\url{https://developer.vuforia.com}}, donde podremos crear el multiTarget configurarlo con las imágenes que queremos que sean su target ( en nuestro caso las caras del MergeCube), descargarlo e importarlo a nuestro proyecto. Para ello en el portal de Vuforia ya registrados deberemos ir al apartado ``Develop``, y en este seleccionar ``Target Manger``. Seleccionamos ``Add Database, Type Device``. En la siguiente ventana escogemos ``Add Target`` y configuramos el target. Una vez configurado le podremos descargar y importar en el proyecto.
-De esta manera el multitarget ya está configurado con el Mergecube.
-Click derecho, Vuforia Engine, y escogemos multiTarget, podremos apreciar que el cubo tiene las imágenes que habíamos configurado. Hay que asegurarse de que el cubo este en el campo visual de la cámara en la escena del proyecto, de lo contrario no se podrá reconocer al ejecutarse. Será en este elemento al que tendremos que asociar los modelos que queremos que se muestren en el Mergecube al enfocar nuestro dispositivo al MergeCube.
+Para añadir el multiTarget hay que seguir un proceso similar, como se puede ver en la imagen~\ref{Anexos/vuforiaCameraAR} también esta la opción de añadir un MultiTarget (Multi image). Pero si añadimos un target ahora mismo, de ese modo, este no tendra ninguna imagen asociada por lo que no podra ser reconocido. Se pueden añadir imagenes a los target desde Unity, pero es mas recomendable hacerlo desde su propia Web, ya que nos indicara también la calidad de la imagen deseada para ser un target. Para ello en el portal de Vuforia ya registrados deberemos ir al apartado ``Develop``, y en este seleccionar ``Target Manger``. Seleccionamos ``Add Database, Type Device``. En la siguiente ventana escogemos ``Add Target`` y configuramos el target. Una vez configurado le podremos descargar y importar en el proyecto. De esta manera el multitarget ya está configurado con el Mergecube. Click derecho, Vuforia Engine, y escogemos multiTarget, podremos apreciar que el cubo tiene las imágenes que habíamos configurado. Hay que asegurarse de que el cubo este en el campo visual de la cámara en la escena del proyecto, de lo contrario no se podrá reconocer al ejecutarse. Será en este elemento al que tendremos que asociar los modelos que queremos que se muestren en el Mergecube al enfocar nuestro dispositivo al MergeCube.
 
 
-Con estos dos elementos, el esqueleto principal de la aplicación para poder reconocer el MergeCube ya esta construido. Ahora si se deseamos incorporar un modelo 3D que se muestre cuando se reconozca el MergeCube. Deberemos asociar el modelo 3D como hijo del multitarget.
+Con estos dos elementos, el esqueleto principal de la aplicación para poder reconocer el MergeCube ya esta construido. Ahora si se deseamos incorporar un modelo 3D que se muestre cuando se reconozca el MergeCube. Deberemos asociar el modelo 3D como hijo del multitarget. Hay que asegurarse de que estén situados la misma posición en la escena, pues lo elementos que se asocien al multitarget aparecer en relación a la su posición en la escena.
 
 
+\subsection{Ejemplo Unity}
+En esta sección explicare algunos de los pasos que segui en el resto de la construcción de la aplicación.
+
+Dado que queremos representar el crecimiento de un planta debo buscar algún modelo 3D de plantas para Unity, se pueden buscar en la tienda de Assest de Unity o alguna plataforma Web. Una vez se seleccionado un modelo que nos interese, se importa en el proyecto, y cuando se añada en la escena se deberá incluir como hijo del MergeCube. El tema de incluir un elemento como hijo de otro es objetivo de mantener un orden y que si realizamos por ejemplo un cambio de posición o de escala en el padre, ese cambio también afectará al hijo, de lo contrarío al realizar uno de esos ajustes habría que repetirlo para el otro modelo o de lo contrario se desajustarían, al incluirlo como hijo del MergeCube esto también permitira que al ser detectado se muestre el modelo.
+
+Para representar el crecimiento se representara el movimiento de regar la planta echando agua sobre la planta. Para representar esto buscamos un modelo de una regadera, una vez incluido, le podrá como hijo de la ARCamera. Al hacer esto permitirá que al mover el teléfono, el modelo seguirá el mismo movimiento.
+Al realizarlo de esta manera hay que prestar atención en que coordenada se coloca, es necesario colocarlo ha cierta distancia de la cámara para que se aprecie cierta distancia, esto se puede ir probando posiciones hasta dar con una que nos parezca correcta.
+Para añadir el efecto de agua, he usado efectos de partículas de Unity. En la configuración de las partículas de agua, hay que activar el modificador de gravedad dándole un valor de 10, y el tipo de espacio simulado en World, el número máximo de partículas también le he aumentado hasta 10000 y cambiar el color de la partícula por un azul. Ahora el problema está en que las partículas siempre caen en la misma inclinación sin importar la posición del dispositivo, para conseguir usar el giroscopio de dispositivo he creado un Script que detecta el giroscopio y ajusta el eje de gravedad según los movimientos del dispositivo. Este proceso fue algo tedioso debido al tener que estar compilando y pasando la aplicación al dispositivo para probar que funcionaba correctamente.
+
+Para detectar y contar el número de partículas que colisionan con la planta, he creado otro scipt usando \href{https://docs.unity3d.com/ScriptReference/Collider.OnCollisionEnter.html}{OnCollisionEnter}. Se suma cada colisión y va actualizando una barra de progreso en la interfaz.
+
+Una vez que se detecta el progreso del agua, las fases de las plantas se implementaron de una manera sencilla. Cuando se detecta el tope de agua para una fase, se cambia el modelo de la planta a uno mas grande, y así sucesivamente hasta llegar a la ultima fase.
+
+Un problema que tiene el realizar una aplicación para móviles, es que cada vez que se quiera hacer una prueba en el dispositivo es necesario compilar al apk. Este proceso para hacer pruebas puntales no tiene un gran impacto en cuanto esfuerzo y tiempo invertido, pero si es necesario hacer muchas pruebas, por que por ejemplo hay un bug especifico que unicamente ocurre en el dispositivo móvil, el impacto en tiempo invertido en compilar será considerable.
+
+
+Para la implementación de las funcionalidades de Device Tracker y crear target personalizados, me basare en el material que ofrece Vuforia en su ejemplo\footnote{\url{https://assetstore.unity.com/packages/templates/packs/vuforia-core-samples-99026}} utilizando de base sus mismos scripts.
+
+Para la captura de un target personalizado, hay que crear en la interfaz una señal que indique la calidad del objetivo que se desea transformar en un target.
+Esto puede realizarse mediante una representación de tres colores, como un semáforo.
+Después hay que añadir en el proyecto un ImagenTarget de Vuforia() y configurarlo definiendo el tipo de imagen target que es como User Defined. El ImagenTarget será la referencia de Unity para colocar el modelo 3D por ello es muy importante asegurase de que el ImagenTarget está situado en el campo de visión de la ARcamera, o de lo contrario será imposible reconocerle. 
+Seguido hay que añadir CameraImageBuilder que es el encargado de construir el target temporal. 
+Ahora el paso ha seguir es de asignar a los componentes creados sus respectivos scripts que contralan las funciones. 
+
+Durante este proceso en mi primer intento, Unity tuvo algún fallo y corrompió el proyecto. Haciendo imposible asociar ningún script y ademas los que estaban asociados anteriormente también fallaban impidiendo su uso. Para solucionar el bug probé dos posibles soluciones: borrar los metadatos y reimportar todo el proyecto, por desgracia ninguno funciono por lo que tuve que volver a una copia de seguridad.
+
+
+Para implementar el Device tracker hay que crear un botón para poder activarlo y desactivarlo. Una vez creado el botón, simplemente hay que asociar el correspondiente script de DeviceTracker a las acciones del botón al ser pulsado.
+
+
+Para mejorar la interfaz, estoy añadiendo efectos de movimiento en algunos de los menús con las animaciones de Unity , cambiando fonts y skins. Por ejemplo el menú que se despliega al mostrar las herramientas antes simplemente aparecía y desaparecía, ahora he añadido la animación para que se despliegue desde el marco derecho de la pantalla.
+
+
+Hasta este momento en la aplicación únicamente se había trabajado con un único modelo de una planta, ahora incorporare otro dos modelos.  La complicación de esto se encuentra en el proceso por el cual el usuario escoge un modelo. Tenemos creado en el menú una lista de las plantas seleccionables, al seleccionar la función asociada a al botón, hará que al cargar la escena con las plantas, la función del script controlador active únicamente la planta seleccionada.
+
+
+
+\subsection{Desarrollo en CoSpaces}
+Dado que teniamos el MergeCube, se decido también hacer pruebas en CoSpaces, ya que cuenta soporte oficial para el MergeCube. Otra de las razones era comprobar su uso para la docencia.
+
+Para el desarrollo en CoSpace empecé creando un nuevo proyecto. Dado que el ejemplo deberá funcionarán con el MergeCube, en las primeras opciones que nos da al crear el proyecto se podrá incluir.
+Una vez creado el proyecto con el plug de Mergecube, tendremos un espacio de trabajo vació con el cubo de Mergecube en el centro. Esto se trata de una manera sencilla de poder crear un espacio de trabajo, por lo que no sería necesario de un alto nivel de conocimientos.
+
+Para añadir los elementos deseados en el entorno, cuenta con un sencillo panel desde el que seleccionar modelos que ofrece CoSpace, o la posibilidad de importar modelos 3D de una fuente externa, mediante un buscador en Google Poly o mediante una subida de archivos. CoSpaces es compatible con las extensiones obj, mtl, fbx, zip de modelos, y jpg, png, gif, svg, bmp de imágenes.
+
+En cuanto a la manipulación de los modelos, se trata de una manipulación muy simple y rápida de aprender, da la posibilidad de mover, rotar y escalar el modelo . El problema de esta manipulación es al ser tan simple, no permite movimientos tan precisos, por ejemplo no permite mover objetos en diagonal. Para casos en los que se requiera más precisión habría que usar lo movimientos introduciendo las coordenadas exactas.
+
+Otro de los aspectos de la edición de los modelos es el cambio de colores y textura. No a todos los modelos se les puede cambiar la textura a tu gusto, el color en cambio sí. Con los modelos importados hay más problemas a la hora de personalizar textura o color, pues si el modelo tiene diferentes capas, no es capaz de separarlas y cambiará todas de ese color al mismo tiempo. 
+
+En algunos modelos predefinidos es posible escoger y activar animaciones, o diferentes estados para ese modelo. Por ejemplo en un modelo de un coche se puede escoger si tiene algunas puertas abiertas o no. La parte negativa es que no puedes definir tus propios estados o animaciones, por lo que unicamente es posible escoger entre las opciones que esos modelos predefinidos tengan. En todos los modelos es posible añadir un bocadillo para añadir un dialogo. También es posible añadir en todos los modelos ciertas físicas, pudiendo ajustando la masa del objeto, seleccionar si será un objeto estático, y alguna opción más, tal vez no es tan completo como otros software pero cumple.
+
+También cuenta con programación, con ella es posible establecer diferentes eventos, cambios de escala, posición o establecer algunas normas para un juego entre muchas más posibilidades. CoSpaces ofrece dos tipos de programación, por bloques y programación en TypeScript:
+\begin{itemize}
+	\item La programación por bloques es una buena forma de iniciación, en especial para los más jóvenes, pues es bastante rápido aprender como funciona. La pega de la programación por bloques es que está limitado a los bloques que nos ofrece, es posible crear tus propios bloques pero no tiene suficiente "diseño" para ajustarse a tantas opciones como una programación por script. 
+	\item La otra posibilidad para programar que ofrece CoSpaces, se trata de elaborar script de en TypeScript. Si se tiene experiencia en programación en otros lenguajes, no resulta difícil acostumbrarse. La parte negativa que tiene esta opción es que la API de CoSpaces, no es tan completa como cabria esperar, sumado a que su "guía de usuario" podría estar mejor.
+\end{itemize}
+ 
+
+CoSpaces también da la posibilidad de crear espacios de trabajo para alumnos, en estos espacios se puede asignar tareas a los alumnos.
+
+Finalmente se desarrollo un ejemplo en el que se intentaba realizar lo mismo que se estaba desarrollando en Unity. En el siguiente vídeo podemos ver dicho ejemplo: \url{https://www.youtube.com/watch?v=wG1fMxFDHzM}
 
 \section{Compilación, instalación y ejecución del proyecto}
-Contamos con dos maneras de instalar el proyecto Unity en nuestro equipo. Antes de proceder es importante tener previamente Unity instalado~\ref{sub:Unity}.
+Contamos con dos maneras de instalar el proyecto \textbf{Unity} en nuestro equipo. Antes de proceder es importante tener previamente Unity instalado~\ref{sub:Unity}.
 
 
 La primera forma consiste en descargar del repositorio la carpeta Plant-test. Una vez descargado y situado en la ruta deseada para trabajar, se deberá abrir Unity-Hub. Desde la venta de Unity-hub tenemos las opciones de nuevo proyecto o \textbf{añadir}, en este caso nos interesa añadir uno ya existente, al seleccionarlo nos mostrará una ventana para seleccionar la ruta en la que hemos guardado el proyecto descargado. Una vez seleccionado la ruta, se nos añadirá en la lista de proyectos de Unity-Hub, desde donde si se ha añadido correctamente le podremos iniciar normalmente.

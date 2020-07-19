@@ -223,15 +223,8 @@ public class DetectWater : MonoBehaviour
                 buttonCerrar.SetActive(false);
                 buttonReiniciar.SetActive(true);
                 buttonSalir.SetActive(true);
-                //TextAsset txt = (TextAsset)Resources.Load("Textos/textoAyudaModoJuego");
-                //TMPro.TextMeshProUGUI text = (TMPro.TextMeshProUGUI)Resources.Load("Textos/textoAyudaModoJuego");
-                string texto = System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaModoJuego.txt",System.Text.Encoding.ASCII);
-                //string text= Resources.Load("Textos/textoAyudaModoJuego") as string;
-                textVentana.text =
-                    "<pos=25%><b><size=65>¡¡Has Perdido!!</size></b>\n" +
-                    "\n" +
-                    "\n" +
-                    "Debido a la falta de agua y de abono, la planta no ha podido crecer.";
+                string texto = System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaJuegoLOSE.txt");
+                textVentana.text = texto;
                 colorTiempo.color = new Color32(231,62,62,155);
                 
             }

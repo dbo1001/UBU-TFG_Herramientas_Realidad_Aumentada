@@ -42,6 +42,9 @@ public class Controlador : MonoBehaviour
     static bool calabazaLive = false;
     static bool giraSolLive = false;
 
+    public TMPro.TextMeshProUGUI textAyuda;
+    public TMPro.TextMeshProUGUI textInfo;
+
     // Start is called before the first frame update
 
     public void CambiarEscena(string scene)
@@ -52,6 +55,10 @@ public class Controlador : MonoBehaviour
     //Controla el botón Atras del menú.
     public void Atras()
     {
+        if (menu1.activeSelf)
+        {
+            Application.Quit();
+        }
         if (menu1_1.activeSelf)
         {
             //normal
@@ -254,8 +261,17 @@ public class Controlador : MonoBehaviour
         }
         TipoDeAR();
         
-        
+        textAyuda.text= System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaMenu.txt"); 
+        textInfo.text= System.IO.File.ReadAllText("Assets/Resources/Textos/textoInfoUTF16BE.txt");
 
-        
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Atras();
+        }
+    }
+
 }

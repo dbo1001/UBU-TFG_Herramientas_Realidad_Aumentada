@@ -13,6 +13,8 @@ public class ControladorMultiTarget : MonoBehaviour
 
     public GameObject Mensaje_Select_Model;
 
+    public TMPro.TextMeshProUGUI textAyuda;
+
     string nombreModelo;
 
     Vector3 scale;
@@ -30,6 +32,7 @@ public class ControladorMultiTarget : MonoBehaviour
         UDTBuilder.SetActive(true);
         captura3.SetActive(true);
 
+        textAyuda.text = System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaMultiTarget.txt");
         scale = new Vector3(0.8f, 0.8f, 0.8f);
         posicion = new Vector3(0.0f, 0.8f, 0.0f);
         //GameObject.Find("UserDefinedTarget-" + contDefinded.ToString() + "/GameObject1/Planta1");

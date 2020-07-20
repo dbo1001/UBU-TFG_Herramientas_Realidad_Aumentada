@@ -70,7 +70,7 @@ public class DetectWater : MonoBehaviour
         collisionEvents = new List<ParticleCollisionEvent>();
         if (pSystem == null)
         {
-            Debug.LogError("No funciona jajaja", this);
+            Debug.LogError("pSystem null", this);
             return;
         }
 
@@ -110,7 +110,7 @@ public class DetectWater : MonoBehaviour
         
         if (pSystem == null)
         {
-            Debug.LogError("No funciona jajaja", this);
+            Debug.LogError("pSystem Null", this);
             return;
         }
         agua = agua + pSystem.GetCollisionEvents(other, collisionEvents);
@@ -224,9 +224,8 @@ public class DetectWater : MonoBehaviour
                 buttonReiniciar.SetActive(true);
                 buttonSalir.SetActive(true);
                 string texto = "<pos=25%><b><size=65>¡¡Has Perdido!!</size></b>\n\n"+
-                    "<b><size = 50> Debido a la falta de agua y de abono, la planta no ha podido crecer.\n"+
-                    "Puedes volver a intentarlo pulsando el botón de<b>Reintentar</b>.<b><size = 50>\n"
-                    ; //System.IO.File.ReadAllText("Assets /Resources/Textos/textoAyudaJuegoLOSE.txt");
+                    "<b><size=50> Debido a la falta de agua y de abono, la planta no ha podido crecer.\n\n"+
+                    "Puedes volver a intentarlo pulsando el botón de <b>Reintentar</b>.<b><size=50>\n"; //System.IO.File.ReadAllText("Assets /Resources/Textos/textoAyudaJuegoLOSE.txt");
                 textVentana.text = texto;
                 colorTiempo.color = new Color32(231,62,62,155);
                 

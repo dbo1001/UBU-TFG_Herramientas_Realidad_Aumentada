@@ -3,30 +3,32 @@ En este apartado se explicarán los aspectos mas relevantes del desarrollo del p
 
 \subsection{Formación}
 Para este proyecto era necesario aumentar conocimientos de los que se carecían. Principalmente en  Unity y las herramientas de realidad aumentada. Pues los conocimientos que tenía de antemano sobre Unity no eran muy grandes y aun así era necesario actualizarlos de cara al proyecto.
-Para ello se tenían como referencia los recursos oficiales del \href{https://docs.unity3d.com/2019.2/Documentation/Manual/UnityManual.html}{manual de Unity} y sus foros de ayuda de la comunidad. Del mismo modo, se han seguido los recursos oficiales del \href{https://library.vuforia.com/getting-started/overview.html}{manual de Vuforia}. Estos recursos también se han completado con diferentes videotutoriales, tanto creados por las propias compañías como por parte de la comunidad.
+
+Para ello, se tenían como referencia los recursos oficiales del \href{https://docs.unity3d.com/2019.2/Documentation/Manual/UnityManual.html}{manual de Unity} y sus foros de ayuda de la comunidad. Del mismo modo, se han seguido los recursos oficiales del \href{https://library.vuforia.com/getting-started/overview.html}{manual de Vuforia}. Estos recursos también se han completado con diferentes videotutoriales, tanto creados por las propias compañías como por parte de la comunidad.
 
 Una de las ventajas con Unity, era el uso de C\# pues era un lenguaje en el que ya tenía algunos conocimientos, lo cual ha facilitado el proceso de desarrollo en esta parte. 
 
 \subsection{Estudio herramientas}
 Uno de los principales puntos de este proyectos ha sido el estudio de diferentes herramientas de realidad aumentada. Para la selección de las herramientas que se estudiarían se siguieron varios pasos. 
-Las primeras seleccionadas fueron ARCore y ARKit, pues que gracias al nombre de sus compañías ya había oído hablar de ellas incluso antes de empezar a investigar. Otra de las primeras se trataba de CoSpaces y el MergeCube, pues desde el comienzo del proyecto uno de los tutores le parecía interesante especialmente por su como se aplica para el uso en la docencia. Lamentablemente el uso exclusivo del SDk del MergeCube no fue posible debido a que se dejo de dar soporte de desarrollo, por lo que ya no era posible descargar el SDK ni conseguir las claves de licencia para su uso.
-Para el resto de herramientas seleccionadas, se procedió ha realizar una investigación sobre las herramientas que actualmente son mas populares y aquellas que destaquen por sus funcionalidades.
+Las primeras seleccionadas fueron ARCore y ARKit, pues que gracias al nombre de sus compañías ya había oído hablar de ellas incluso antes de empezar a investigar. Otra de las primeras herramientas se trataba de CoSpaces y el MergeCube, pues desde el comienzo del proyecto uno de los tutores le parecía interesante especialmente por su aplicación en docencia. Lamentablemente el uso exclusivo del SDK del MergeCube no fue posible debido a que se dejo de dar soporte de desarrollo, por lo que ya no era posible descargar el SDK ni conseguir las claves de licencia para su uso.
 
-\subsection{Elección Herramienta de realidad aumentada para el caso práctico}
+Para el resto de herramientas seleccionadas, se procedió a realizar una investigación sobre las herramientas que actualmente son mas populares y aquellas que destaquen por sus funcionalidades.
 
-Uno de los objetivos del proyecto era el de realizar un aplicación en la que poder poner aprueba las funcionalidades de la realidad aumenta. Para ello se debió de escoger entre una de las herramientas estudiadas. para esta selección se han tenido varios aspectos en cuenta: 
+\subsection{Elección de Herramienta de realidad aumentada para el caso práctico}
+
+Uno de los objetivos del proyecto era el de realizar una aplicación en la que poder poner a prueba las funcionalidades de la realidad aumenta. Para ello se debió de escoger entre una de las herramientas estudiadas. para esta selección se han tenido varios aspectos en cuenta: 
 \begin{itemize}
-	\item El primero la capacidad de esa herramienta para funcionar en el mayor número de dispositivos posibles.
+	\item La capacidad de esa herramienta para funcionar en el mayor número de dispositivos posibles.
 	\item Que se pueda desarrollar una aplicación de forma gratuita.
 	\item La continuidad de dicha herramienta, es decir que esa herramienta siga actualizándose y teniendo un soporte oficial.
-	\item La comunidad que tiene. Con este aspecto me refiero a la cantidad de usuarios que usan la herramienta. Pues cuanto mas grande sea una comunidad de usuarios en un software, nos puede facilitar el resolver futuros problemas.
+	\item La comunidad que tiene. Con este aspecto me refiero a la cantidad de usuarios que usan la herramienta. Pues cuanto más grande sea una comunidad de usuarios en un software, nos puede facilitar el resolver futuros problemas.
 	
 \end{itemize}
 
 ArCore y Arkit, dada su tecnología eran una de las primeras opciones, pero en el caso de ArKit unicamente esta disponible para dispositivos iOS. Y en el caso de ArCore el número de dispositivos Android compatibles aún es algo limitado.
-En el caso de las aplicaciones de MetaVerse, ZapWorks, WikiTude y 8thWall, se han descartado dado que para para el desarrollo de una aplicación unicamente ofrecen una versión gratuita por un tiempo limitado.
+En el caso de las aplicaciones de MetaVerse, ZapWorks, WikiTude y 8thWall, se han descartado dado que para para el desarrollo de una aplicación únicamente ofrecen una versión gratuita por un tiempo limitado.
 
-En el caso de OpenCv su principal problema es que en comparación con otras herramientas de realidad aumentada, OpenCv se queda limitada en cuanto a sus posibilidades.
+En el caso de OpenCv, su principal problema es que en comparación con otras herramientas de realidad aumentada, OpenCv se queda limitada en cuanto a sus posibilidades.
 
 Finalmente la decisión estaba entre Kudan y Vuforia. Con kudan que parece ser un software muy prometedor, el problema estaba en que el SDK disponible no fui capaz de funcionara, es probable que se deba a que lleve tiempo sin actualizarse, pues la ultima versión de Unity en la que esta testado era la 2018. sumado ha este problema esta también el que no tiene una comunidad muy grande ni una guía muy detallada de uso, por lo que buscar posibles soluciones a dudas o problemas se complicaría bastante.
 Es por esto que finalmente me decante por Vuforia, pues  ofrece la posibilidad de desarrollar gratuitamente, siempre que no se publique con el objetivo comercial. Es compatible 

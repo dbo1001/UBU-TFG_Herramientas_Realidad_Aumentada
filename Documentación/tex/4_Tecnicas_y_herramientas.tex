@@ -1,14 +1,14 @@
 \capitulo{4}{Técnicas y herramientas}
 
 \section{Herramientas}
-\subsection{Herramientas AR}
-En esta sección se analizaran y compararan las diferentes herramientas para realidad aumentada analizadas durante el proyecto. 
-Algunas de estas herramientas están principalmente enfocadas a su uso para entornos educativos, otras simplemente están enfocadas para un uso comercial o de investigación pero también es posible desarrollar aplicaciones educativas con ellas. Otras de las herramientas que se explican son los frameworks/API que muchas de las herramientas anteriores usan. Por ultimo se ha realizado una tabla resumen de estas herramientas~\ref{tabla:comparacionHerramientas}.
+\subsection{Herramientas de Realidad aumentada}
+En esta sección se analizarán y compararán las diferentes herramientas para realidad aumentada analizadas durante el proyecto. 
+Algunas de estas herramientas están principalmente enfocadas a su uso para entornos educativos, otras simplemente están enfocadas para un uso comercial o de investigación pero también es posible desarrollar aplicaciones educativas con ellas. Por ultimo se ha realizado una tabla resumen de estas herramientas~\ref{fig:Memoria/TablaHerramientasAR}.
 
 
 \subsubsection{ArCore}
 
-ArCore \footnote{\url{https://developers.google.com/ar/discover}} es la plataforma de Google de desarrollo para realidad aumentada. Con el uso de diferentes API permite que los dispositivos detecten su entorno, lo comprendan e interactúen con la información.
+\textit{ArCore} \footnote{\url{https://developers.google.com/ar/discover}} es la plataforma de \textit{Google} de desarrollo para realidad aumentada. Con el uso de diferentes API permite que los dispositivos detecten su entorno, lo comprendan e interactúen con la información.
 
 Para conseguir integrar el contenido virtual en el mundo real, ArCore utiliza tres técnicas fundamentales:
 \begin{itemize}
@@ -21,20 +21,20 @@ Su funcionamiento se puede resumir en dos pasos principalmente: rastrear la posi
 
 ArCore utiliza el Motion Tracking para identificar los puntos clave, y rastrea cómo esos puntos se mueven. Combinado el movimiento de dichos puntos con  las lecturas de los sensores de inercia del dispositivo, ArCore calcula la posición y orientación del dispositivo mientras se mueve~\cite{google}.
 
-Lamentablemente no es compatible con cualquier dispositivo. En el siguiente enlace se encuentra la lista de los dispositivos compatibles actualmente \url{https://developers.google.com/ar/discover/supported-devices}.
+Lamentablemente no es compatible con cualquier dispositivo. En el siguiente enlace se encuentra la lista de los dispositivos compatibles actualmente: \url{https://developers.google.com/ar/discover/supported-devices}.
 
 \subsubsection{ArKit}
 
-ARKit \footnote{\url{https://developer.apple.com/augmented-reality/}} es la herramienta de realidad aumentada de Apple para sistemas iOS. ARKit consigue mostrar contenido virtual de forma natural en el mudo real, incluso pudiendo situarlo detrás o delante del usuario con People Occlusion, pudiendo reconocer hasta 3 rostros al mismo tiempo~\cite{apple_inc}.
+ArKit \footnote{\url{https://developer.apple.com/augmented-reality/}} es la herramienta de realidad aumentada de \textit{Apple} para sistemas \textit{iOS}. ArKit consigue mostrar contenido virtual de forma natural en el mudo real, incluso pudiendo situarlo detrás o delante del usuario con People Occlusion, pudiendo reconocer hasta 3 rostros al mismo tiempo~\cite{apple_inc}.
 
 Funciones destacadas que posee ArKit actualmente.
 
 \begin{itemize}
-	\item Oclusión de personas: es capaz de diferenciar a una persona del fondo del escenario, consiguiendo que el contenido virtual  pueda pasar por delante o por detrás de la persona.
-	\item Captura de movimiento: Tiene la capacidad de capturar los movimientos de una persona. Distinguiendo diferentes posiciones y movimientos al instante, de forma que es capaz de usarlo como referencias para experiencias de AR.
-	\item Cámara frontal y trasera simultánea: Tiene la capacidad de usar ambas cámaras al mismo tiempo, pudiendo así por ejemplo interactuar con el entorno capturado por la cámara trasera, usando únicamente el rostro.
-	\item Seguimiento de rostros múltiples: Es capaz de reconocer hasta 3 rostros al mismo tiempo usando la cámara TrueDepth.
-	\item Sesiones colaborativas: Tiene la capacidad de crear un mapa mundial, entre múltiples usuarios conectados. Siendo así capaz de crear experiencias de realidad aumentada mas rápido, que pueden servir por ejemplo para juegos multijugador.
+	\item \textbf{Oclusión de personas}: es capaz de diferenciar a una persona del fondo del escenario, consiguiendo que el contenido virtual  pueda pasar por delante o por detrás de la persona.
+	\item \textbf{Captura de movimiento}: Tiene la capacidad de capturar los movimientos de una persona. Distinguiendo diferentes posiciones y movimientos al instante, de forma que es capaz de usarlo como referencias para experiencias de AR.
+	\item \textbf{Cámara frontal y trasera simultánea}: Tiene la capacidad de usar ambas cámaras al mismo tiempo, pudiendo así por ejemplo interactuar con el entorno capturado por la cámara trasera, usando únicamente el rostro.
+	\item \textbf{Seguimiento de rostros múltiples}: Es capaz de reconocer hasta 3 rostros al mismo tiempo usando la cámara TrueDepth.
+	\item \textbf{Sesiones colaborativas}: Tiene la capacidad de crear un mapa mundial, entre múltiples usuarios conectados. Siendo así capaz de crear experiencias de realidad aumentada mas rápido, que pueden servir por ejemplo para juegos multijugador.
 \end{itemize}
 
 
@@ -48,33 +48,37 @@ CoSpaces\footnote{\url{https://cospaces.io/edu/}} es una plataforma de apoyo edu
 
 \imagen{Memoria/cospaces2}{Imagen de mi plataforma de desarrollo de CoSpaces (Captura de pantalla).}
 
-Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D, donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo, en la imagen~\ref{fig:Memoria/cospaces2} se puede observar el entorno descrito. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scripts, aunque hay que destacar, que la programación por scripts y algunas opciones de la programación de bloques únicamente están disponibles con una licencia premium. Para añadir un modelo 3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly (biblioteca pública de Google de modelos 3D\footnote{\url{https://poly.google.com/}}).
+Para la creación de proyectos, se puede hacer desde la web mediante un entorno de desarrollo 3D, donde puedes añadir paredes, objetos y mas tipos de modelos3D, para tu escenario. 
+
+Con una licencia gratuita, permite guardar dos proyectos como máximo al mismo tiempo, en la imagen~\ref{fig:Memoria/cospaces2} se puede observar el entorno descrito. En los proyectos también es posible codificar eventos, acciones mediante una programación de bloques o scripts, aunque hay que destacar, que la programación por scripts y algunas opciones de la programación de bloques únicamente están disponibles con una licencia premium. Para añadir un modelo 3D, que Cospace no ofrezca por defecto, se pueden subir desde un archivo local o desde la búsqueda integrada de CoSpace en Google Poly (biblioteca pública de Google de modelos 3D\footnote{\url{https://poly.google.com/}}).
 CoSpace también cuenta con la opción de diseñar proyectos para el Mergecube, aunque este plugin se encuentra disponible para la versión premium.
 
 
 
 \subsubsection{Metaverse} 
 
-Metaverse\footnote{\url{https://studio.gometa.io/discover/me}} es otra aplicación enfocada bastante al entorno educativo. En este caso el entorno de desarrollo de los ejemplos es más sencillo. En la propia web, tendremos una estructura similar a un modelo de diagrama de flujo. En cada paso se puede añadir un objeto 3D o una imagen que es la que estará flotando cuando estemos usando la realidad aumentada, posteriormente se pueden añadir botones y menús, para que te lleven a otra pantalla que tenga otro objeto asignado. Así, por ejemplo, se pueden hacer programas en los que se creen pequeños juegos de preguntas y, dependiendo de las respuestas, te llevan a diferentes pantallas.
+Metaverse\footnote{\url{https://studio.gometa.io/discover/me}} es otra aplicación enfocada bastante al entorno educativo. En este caso el entorno de desarrollo de los ejemplos es más sencillo. En la propia web, tendremos una estructura similar a un modelo de diagrama de flujo. 
+
+En cada paso se puede añadir un objeto 3D o una imagen que es la que estará flotando cuando estemos usando la realidad aumentada, posteriormente se pueden añadir botones y menús, para que te lleven a otra pantalla que tenga otro objeto asignado. Así, por ejemplo, se pueden hacer programas en los que se creen pequeños juegos de preguntas y, dependiendo de las respuestas, te llevan a diferentes pantallas.
 Además da la posibilidad de importar tus propios modelos e imágenes.
 También incluye la posibilidad de reconocer expresiones faciales para poder usarlo como disparadores.
 Otra característica es que puede usar el ArCore y ArKit para permitir que los objetos puedan asentarse en una posición y poder girar alrededor suyo.
 
-\subsubsection{Zapworks} ZapWorks\footnote{\url{https://zap.works/}} se trata de una herramienta de desarrollo para AR. En general esta compuesto por dos herramientas de creación, ZapWorks Designer y ZapWorks Studio.
+\subsubsection{ZapWorks} ZapWorks\footnote{\url{https://zap.works/}} se trata de una herramienta de desarrollo para AR. En general esta compuesto por dos herramientas de creación, ZapWorks Designer y ZapWorks Studio.
 
 \begin{itemize}
-	\item ZapWorks Studio: se trata de la aplicación de desarrollo para escritorio. La aplicación permite desarrollar los proyectos AR, con modelos 3D, animaciones, interacciones, etc. Soporta los formatos  GLTF, FBX, OBJ, POD de modelos 3D.
-	\item ZapWorks Designer: Se trata de una aplicación web, desde la que se puede de una forma sencilla, asociar a un marcador, imágenes, textos, vídeos, links. Pero no es posible trabajar con modelos 3D.
+	\item \textbf{ZapWorks Studio}: se trata de la aplicación de desarrollo para escritorio. La aplicación permite desarrollar los proyectos AR, con modelos 3D, animaciones, interacciones, etc. Soporta los formatos  GLTF, FBX, OBJ, POD de modelos 3D.
+	\item \textbf{ZapWorks Designer}: Se trata de una aplicación web, desde la que se puede de una forma sencilla, asociar a un marcador, imágenes, textos, vídeos, links. Pero no es posible trabajar con modelos 3D.
 \end{itemize}	
 
 
 La herramienta posee los siguientes tipos de seguimiento de realidad aumentada.
 
 \begin{itemize}
-	\item Word Tracking: Capacidad de reconocer el entorno para poder colocar objetos de una manera mas realista sobre el terreno, sin la ayuda de marcadores.
-	\item Face Tracking: Capacidad de reconocer y seguir rostros para, por ejemplo, colocar en una cara el contenido AR y que aunque se muevan el contenido se mueva con la cara.
-	\item Image Tracking: Que una imagen pueda ser el marcador, y pueda seguirla en movimiento.
-	\item Zapbox Tracking: Se trata de unos marcadores específicamente creados para que se puedan manipular~\ref{fig:Memoria/zapbox}.
+	\item \textbf{Word Tracking}: Capacidad de reconocer el entorno para poder colocar objetos de una manera mas realista sobre el terreno, sin la ayuda de marcadores.
+	\item \textbf{Face Tracking}: Capacidad de reconocer y seguir rostros para, por ejemplo, colocar en una cara el contenido AR y que aunque se muevan el contenido se mueva con la cara.
+	\item \textbf{Image Tracking}: Que una imagen pueda ser el marcador, y pueda seguirla en movimiento.
+	\item \textbf{Zapbox Tracking}: Se trata de unos marcadores específicamente creados para que se puedan manipular~\ref{fig:Memoria/zapbox}.
 \end{itemize}
 
 \imagen{Memoria/zapbox}{Imagen perteneciente a un kit de zapbox y un ZapCode~\cite{ZapStudio}.}
@@ -111,11 +115,11 @@ Vuforia soporta diferentes tipos marcadores~(Ejemplos en la figura~\ref{fig:Memo
 
 \imagen{Memoria/vuforia01}{Posibles marcadores de Vuforia}
 
-Los marcadores se pueden crear desde la página web developer vuforia, para ello deben escoger qué tipo de marcadores se quieren crear y adjuntarle las imágenes que formarán dicho marcador. La página dará una calificación de 5 estrellas según la calidad de la imagen para ser un marcador. Una vez completado, da la opción de descargarlos el un archivo configurable de Unity que incluirá los marcadores en nuestro proyecto.
+Los marcadores se pueden crear desde la página web developer Vuforia, para ello deben escoger qué tipo de marcadores se quieren crear y adjuntarle las imágenes que formarán dicho marcador. La página dará una calificación de 5 estrellas según la calidad de la imagen para ser un marcador. Una vez completado, da la opción de descargarlos el un archivo configurable de Unity que incluirá los marcadores en nuestro proyecto.
 
 
 
-Cuenta con una licencia gratuita por defecto, con la limitación de poder tener un máximo de 100 vumarks y 1000 cloud targets.
+Cuenta con una licencia gratuita por defecto, con la limitación de poder tener un máximo de 100 vumarks y 1000 cloud targets. En caso de querer publicar habría que acogerse a uno de los planes ofertados. 
 
 
 
@@ -165,21 +169,27 @@ Tiene soporte con los frameworks 3D A-Frame, three.js, babylon.js, Amazon Sumeri
 Requiere en iOS, iOS11 o superior, y el navegador Safari. En Android los navegadores soportados son; Chrome, Chromium,Firefox, Android WebViews.
 
 \subsubsection{Resumen y comparativa de herramientas}
-En la tabla \ref{tabla:comparacionHerramientas} se puede observar una comparativa entre las principales funcionalidades de las herramientas. Se indica si es MultiTarget (MT), si posee realidad sin marcadores (SM), las plataformas para las que está disponible, el tipo de licencia, libre (L) o comercial (C), el precio y tipo de requisitos.
+En la tabla \ref{fig:Memoria/TablaHerramientasAR} se puede observar una comparativa entre las principales funcionalidades de las herramientas. Se indica si es MultiTarget (MT), si posee realidad sin marcadores (SM), las plataformas para las que está disponible, el tipo de licencia, libre (L) o comercial (C), el precio y tipo de requisitos.
 
-\label{tablaComparacion}\tablaSmall{Comparativa herramientas AR}{l c c c c r c}{comparacionHerramientas}
-{ \multicolumn{1}{l}{} & MT & SM & Plataforma  & Licencia & Precio & Requisitos\\}{ 
-	ArCore & X&X&iOS/Android& L & 0\euro & Altos\\ 
-	ArKit &X&X&iOS &L & 0\euro &-\\
-	CoSpaces&X & &iOS/Android  &L y C & 75\euro/año&Medios\\
-	Metaverse &X&X&iOS/Android &L y C & ?\euro&Medios \\
-	Zapworks  &X&&iOS/Android &L y C & 55\euro/mes& Medios\\
-	Kudan   &X&X&iOS/Android &L y C & ?\euro& Medios\\
-	Vuforia  &X&X& iOS/Android&L y C & 42\euro/mes& Medios\\
-	WikiTude &X&X&iOS/Android &L y C & 2490\euro & Medios\\
-	OpenCV  &X& & iOS/Android&L & 0\euro& Bajos\\
-	8thWall &X&X& iOS/Android&L y C & 99mes\euro& Medios\\
-}
+%\label{tablaComparacion}\tablaSmall{Comparativa herramientas AR}{l c c c c r c}{comparacionHerramientas}
+%{ \multicolumn{1}{l}{} & MT & SM & Plataforma  & Licencia & Precio & Requisitos\\}{ 
+%	ArCore & X&X&iOS/Android& L & 0\euro & Altos\\ 
+%	ArKit &X&X&iOS &L & 0\euro &-\\
+%	CoSpaces&X & &iOS/Android  &L y C & 75\euro/año&Medios\\
+%	Metaverse &X&X&iOS/Android &L y C & ?\euro&Medios \\
+%	Zapworks  &X&&iOS/Android &L y C & 55\euro/mes& Medios\\
+%	Kudan   &X&X&iOS/Android &L y C & ?\euro& Medios\\
+%	Vuforia  &X&X& iOS/Android&L y C & 42\euro/mes& Medios\\
+%	WikiTude &X&X&iOS/Android &L y C & 2490\euro & Medios\\
+%	OpenCV  &X& & iOS/Android&L & 0\euro& Bajos\\
+%	8thWall &X&X& iOS/Android&L y C & 99mes\euro& Medios\\
+%}
+
+\imagen{Memoria/TablaHerramientasAR}{Tabla comparativa herramientas AR}
+
+
+
+
 
 \subsection{Herramientas de documentación}
 \subsubsection{\LaTeX} 
@@ -223,7 +233,7 @@ ZenHub permite usar un tablero Kanban para el seguimiento y organización del pr
 \subsubsection{Unity}
 Unity\footnote{\url{https://unity.com/es}}, es un motor gráfico de desarrollo de videojuegos creado por Unity technologies, disponible para Windows, Linux y Mac OS. En él, se pueden desarrollar aplicaciones para distintas plataformas como, Windows, MacOS, Linux, Andorid, iOS, videoconsolas, WebGL, tvOS y Facebook.
 
-\subsubsection{VisualStudio}
+\subsubsection{Visual Studio}
 ViusalStudio\footnote{\url{https://visualstudio.microsoft.com/es/}}, se trata de un entorno de desarrollo para Windows, Linux y macOS. Es compatible con múltiples lenguajes de programación. C\# es uno de los principales lenguajes con los que es compatible, y dado que los scripts de Unity son en dicho lenguaje, se ha escogido visual studio para su desarrollo.
 
 

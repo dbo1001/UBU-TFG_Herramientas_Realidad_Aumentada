@@ -38,7 +38,7 @@ Imagen de la app desarrollada:
 
 En la aplicación se tratará de regar la planta, de forma que cuando completes la barra de progreso y uses el fertilizante. La planta podrá avanzar a la siguiente fase de su crecimiento.
 
-[gifPlanta]: https://github.com/smi0010/TFG_Herramientas_Realidad_Aumentada/blob/master/Media/regPlant.gif "Gif"
+[![gifPlanta](https://github.com/smi0010/TFG_Herramientas_Realidad_Aumentada/blob/master/Media/regPlant.gif)]
 
 En este vídeo se puede observar algunas de las pruebas realizadas de la app:
 

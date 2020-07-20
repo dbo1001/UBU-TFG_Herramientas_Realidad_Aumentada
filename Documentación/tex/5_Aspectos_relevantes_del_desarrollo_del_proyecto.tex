@@ -35,22 +35,24 @@ Es por esto que finalmente me decante por Vuforia, pues  ofrece la posibilidad d
 
 
 \subsection{Elección de Unity}
-Para desarrollar un ejemplo que aplicara las herramientas estudiadas, se tuvo en cuenta aquellos entornos con los eran las herramientas eran compatibles, ademas de a ser posible buscar un entorno gratuito. 
+Para desarrollar un ejemplo que aplicara las herramientas estudiadas, se tuvo en cuenta aquellos entornos con los que las herramientas eran compatibles, ademas de a ser posible buscar un entorno gratuito. 
 
-La mayoría de las herramientas contaban con soporte oficial para el desarrollo en Unity. Y dado que la aplicación ha desarrollar era de realidad aumentada Unity era la mas apropiada, pues para el manejo de modelos 3D y otros de estos recursos, era el entorno que mas facilidades otorgaba. Ademas de que cuenta con um amplio manual de usuario, y un gran apoyo de la comunidad.
+La mayoría de las herramientas contaban con soporte oficial para el desarrollo en Unity. Y dado que la aplicación a desarrollar era de realidad aumentada Unity era la mas apropiada, pues para el manejo de modelos 3D y otros de estos recursos, era el entorno que mas facilidades otorgaba. Además de que cuenta con um amplio manual de usuario, y un gran apoyo de la comunidad.
 
 \subsection{Problemas Instalación Vuforia en Unity}
-Para incorporar en el proyecto de Unity la herramienta de Vuforia, hay varios métodos, en este caso yo decidí hacerlo desde la Asset Store de Unity. Para poder instalarlo, simplemente debemos buscar en la tienda Vuforia. Entre los resultados podemos encontrar diferentes Assest que ofrece PTC, la compañía de Vuforia. Hasta aquí todo bien, pero en vez de seleccionar Vuforía Engine, que contiene unicamente el engine de Vuforia, seleccione y importe Vuforia Core Samples, que se trata del engine de Vuforia pero viene con múltiples ejemplos desarrollados de vuforia. De este hecho no percaté hasta bastante mas adelante. 
+Para incorporar en el proyecto de Unity la herramienta de Vuforia, hay varios métodos, en este caso yo decidí hacerlo desde la Asset Store de Unity. Para poder instalarlo, simplemente debemos buscar en la tienda Vuforia. Entre los resultados podemos encontrar diferentes Assest que ofrece PTC, la compañía de Vuforia. 
+
+Hasta aquí todo bien, pero en vez de seleccionar Vuforía Engine, que contiene unicamente el engine de Vuforia, seleccione y importe Vuforia Core Samples, que se trata del engine de Vuforia pero viene con múltiples ejemplos desarrollados de Vuforia. De este hecho no me percaté hasta bastante más adelante. 
 
 Me pude dar cuenta de esto por el peso de la aplicación y es que el APK era demasiado pesado para el contenido que estaba utilizando. A ese elevado peso de la APK, no le di demasiada importancia hasta que hice pruebas en un proyecto aparte, en los que solo instale Vuforia Engine y pude comprobar que en estos proyectos el peso era considerablemente menor.
 
-Aparte del peso de la aplicación, no suponía ningún problema en el funcionamiento, pues realmente el engine era el mismo solo que en uno tenía mas recursos. Dado que a la larga el este excesivo peso aun que no fuera un problema, si sería un inconveniente. empece a revisar el proyecto para borrar los elementos que hacian que el peso de la aplicación ascendiera tanto. Finalmente si les puede encontrar en la carpeta \textbf{StreamingAssets}, \textbf{Vuforia}, y borrar todos los elementos excepto el que tendrá el nombre del prefab del MergeCube añadido.
+Ademas del peso de la aplicación, no suponía ningún problema en el funcionamiento, pues realmente el engine era el mismo solo que en uno tenía mas recursos. Dado que a la larga el este excesivo peso aun que no fuera un problema, si sería un inconveniente. Empecé a revisar el proyecto para borrar los elementos que hacían que el peso de la aplicación ascendiera tanto. Finalmente si les puede encontrar en la carpeta \textbf{StreamingAssets}, \textbf{Vuforia}, y borrar todos los elementos excepto el que tendrá el nombre del prefab del MergeCube añadido.
 
 \subsection{Corrupción del proyecto}
 
 En dos ocasiones el proyecto de Unity se corrompió, de forma que la única opción fue restaurarlo con una copia de seguridad. 
 
-En ambas ocasiones el problema fue el mismo, todos los scripts pasaban a ser inutilizables en el proyecto. Esto impedia la posibilidad de asociar un script a un GameObject para que este usará las funciones del script. Este problema no solo impedía realizar nuevas asociaciones, sino todos los objetos que ya estaban asociados a algún script ya no lo estaban.
+En ambas ocasiones el problema fue el mismo, todos los scripts pasaban a ser inutilizables en el proyecto. Esto impedia la posibilidad de asociar un script a un GameObject para que este usara las funciones del script. Este problema no solo impedía realizar nuevas asociaciones, sino todos los objetos que ya estaban asociados a algún script ya no lo estaban.
 
 La lamentablemente no puede encontrar el origen del problema, ni una solución. Algunas de las posibles soluciones que encontré en foros, eran borrar los ficheros temporales o reimportar el proyecto. La lamentablemente ninguno funciono y tuve que restaurarlo con un copia. 
 

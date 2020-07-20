@@ -28782,8 +28782,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.267, z: 0}
   m_LocalScale: {x: 0.50079, y: 0.50079, z: 0.50079}
-  m_Children:
-  - {fileID: 1552976104}
+  m_Children: []
   m_Father: {fileID: 2049536029}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29995,98 +29994,6 @@ Transform:
   m_Father: {fileID: 2049536029}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1552976103
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1552976104}
-  - component: {fileID: 1552976107}
-  - component: {fileID: 1552976106}
-  - component: {fileID: 1552976105}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1552976104
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552976103}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.305, y: 1.3524, z: 0}
-  m_LocalScale: {x: 0.26193005, y: 2.7411458, z: 0.55403155}
-  m_Children: []
-  m_Father: {fileID: 1433842382}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1552976105
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552976103}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1552976106
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552976103}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: eb292ba43803e7543b0cdc8690d1bc1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1552976107
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552976103}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1570605511
 GameObject:
   m_ObjectHideFlags: 0
@@ -41349,10 +41256,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1- Enfoque con su c\xE1mara a su mergecube.\n\tCuando el mergecube sea
-    detectado se mostar\xE1 \n2- Pulse en bot\xF3n de la esquina inferior derecha
-    \"Herramientas\"\nSe desplegaran una serie de herrameintas, \nEn lace de prueba
-    info crecimiento plantas: <link=\"INFO\">http://bibliotecadigital.ilce.edu.mx/sites/ciencia/volumen1/ciencia2/48/html/sec_9.html</link>"
+  m_text: "<b>Modo MultiTarget</b>:\r\n\r\nEn el modo multitarget es posible capturar
+    hasta un maximo de <b>5</b> marcadores personalizados simultaneos.\r\n\r\nEn la
+    parte izquierda de la pantalla se encuentra una barra de colores, estos colores
+    iran cambiando enfunci\xF3n de calidad del objetivo apuntado para ser un target.\r\n\r\nDesde
+    el bot\xF3n de la esquina inferior derecha, se podr\xE1 cambiar entre los diferentes
+    modeles 3D disponibles.\r\nTambi\xE9n es posible activar la opci\xF3n de Fijar
+    posicion y Tomar una captura de pantalla.\r\n-<b>Fijar Posici\xF3n</b>: activa
+    el Device traking, permitiendo que el modelo 3D sea persistente incluso sin verse
+    el Mergecube o el target.\r\n-<b>Captura de Pantalla</b>: permite realizar capturas
+    de pantalla. Las capturas se guard\xE1n en la Carpeta DCMI/UnityCamera\r\n\r\nEn
+    la es esquina inferior izquierda, encontraremos la opci\xF3n para cambiar la escala
+    de un modelo. Para ello previamente hay que seleccionar tocando la pantalla, cual
+    es el modelo que se quiere cambiar.\r\n "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

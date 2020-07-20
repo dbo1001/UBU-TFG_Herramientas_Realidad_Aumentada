@@ -5346,9 +5346,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &342715704
 MonoBehaviour:
@@ -7148,8 +7148,8 @@ RectTransform:
   m_Father: {fileID: 151902018}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.7088792}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8988,10 +8988,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Autor : Sa\xFAl Mart\xEDn Ib\xE1\xF1ez\n\nTutores : Pedro Luis S\xE1nchez
-    Ortega\n               \xC1lvar Arnaiz Gonz\xE1lez\n\nEsta aplicaci\xF3n se trata
-    de un ejemplo creado para poner en practica la herrameienta de realidad aumentada
-    <b>Vuforia</b>.\n\n\n\n\n\n\n\n\nVersi\xF3n: 1"
+  m_text: "Autor : Sa\xFAl Mart\xEDn Ib\xE1\xF1ez\r\n\r\nTutores : Pedro Luis S\xE1nchez
+    Ortega\r\n          \xC1lvar Arnaiz Gonz\xE1lez\r\n\r\nEsta aplicaci\xF3n se trata
+    de un ejemplo creado para poner en pr\xE1ctica la herramienta de realidad aumentada
+    <b>Vuforia</b>.\r\nEsta planteado como una aplicaci\xF3n de apoyo academico, que
+    pueda complementar el aprendizaje de las materias.\r\n\r\nEn esta ocasi\xF3n,
+    se ha implementado un modo para regar plantas, y observar sus diferentes fases
+    de crecimiento. Esto podr\xEDa equivaler a cuando los alumnos plantan una semilla
+    para ver su creciento, solo que en este caso no hay que esperar semanas para ver
+    los resultados.\r\n\n\nUn punto bueno de la aplicaci\xF3n es que es facilmente
+    actualizable. \n\n\n\n\n\nVersi\xF3n: 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10162,7 +10168,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Realidad Aumentada APP
+  m_text: UBU AR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c27205a7f80956d4dafa01f61bd49c19, type: 2}
   m_sharedMaterial: {fileID: 6189524846395319969, guid: c27205a7f80956d4dafa01f61bd49c19,
@@ -10232,12 +10238,12 @@ MonoBehaviour:
   m_margin: {x: -117.824, y: 0, z: -186.07579, w: 0}
   m_textInfo:
     textComponent: {fileID: 776099877}
-    characterCount: 22
+    characterCount: 6
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -12012,7 +12018,7 @@ RectTransform:
   m_Father: {fileID: 909508181}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.33333337}
+  m_AnchorMin: {x: 0, y: 0.3333333}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -19419,7 +19425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1005743304
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31638,7 +31644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1989351005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32841,22 +32847,35 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\n 1 <b> Opciones </b>: \nDesde el men\xFA de opciones, es posible cambiar
-    el modo de target.\nimagen\nEl modo +++++ , usar\xE1 como marcador el mergecube.\n\nEl
-    modo +++++ , se podr\xE1 personalizar haciendo una foto al marcador desado. Para
-    ello deberemos fijarnos en la barra de colores, esta barra indica la calidad del
-    objetivo como marcador, si es verde, es muy opyimo. por el contrario si es rojo
-    o sin color, se trata de un marcador mala calidad.\n\nUna vez decido cual ser\xE1
-    el marcador, apretar el bot\xF3n central.\n\nEs posible tener multiples marcadores
-    al mismo tiempo, pero en el modo juego no esta pensado para jugar con multiples
-    marcadores.\n\n\nModo Juego:\n En la barra superior se encuentra la barra de progeso,
-    el boton de reteoceso, y el de ayuda.\n La barra de progreso indica la cantida
-    de agua que ha recibido la planta. El incono ++ indica si se ha utilizado el fertilizante.\n\nla
-    barra de retroceso, vuelve al men\xFA principal de la aplicacion.\n\nEn el boton
-    de la esquina inferior derecha, se encuentran las herramiestas a utilizar.\n\ntiempo.
-    \ncontador de tiempo restante para completar la fase.\n\nRegadera\nFertilizante.\nDevice
-    tracker: Activa el device tracker.\nScreen shoot. permite realizar capturas de
-    pantalla.\n\n\n\n\n\n\n\n\n\n\n"
+  m_text: "Desde el men\xFA de opciones, es posible cambiar el modo de target que
+    se utiliza.\r\n\r\nEl modo <b>MergeCube</b> , usar\xE1 como marcador el Mergecube.
+    Es importante recordar la necesidad de disponer de un mergecube.\r\n\r\nEl modo
+    <b>Captura Target</b> , se podr\xE1 personalizar haciendo una foto al marcador
+    desado. Para ello deberemos fijarnos en la barra de colores, esta barra indica
+    la calidad del objetivo como marcador, si es verde, es muy opyimo. por el contrario
+    si es rojo o sin color, se trata de un marcador mala calidad.\r\n\r\nUna vez decido
+    cual ser\xE1 el marcador, apretar el bot\xF3n central.\r\n\r\nEs posible tener
+    multiples marcadores al mismo tiempo, pero en el modo juego no esta pensado para
+    jugar con multiples marcadores.\r\n\r\n\r\n<size=7><b>Modo Juego</b></size>:\r\n\r\nEn
+    la parte superior de la pantalla, podr\xE1 encontrar la barra de progreso y los
+    botones de ayuda y de re retroceso para volver al men\xFA.\r\nLa barra de progreso
+    indica la cantida de agua que ha recibido la planta. Tambi\xE9n en la barra de
+    progreso encontrara una luz, que se encender\xE1 cuando se usa el fertilizante.\r\n\r\n<pos=0%><b><size=7>MergeCube</size></b>\r\nMantenga
+    enfocado el Mergecube en un ambiente con buena iluminaci\xF3n para que pueda ser
+    detectado.\r\nEn la parte inferior derecha, se encuentra la barra de herramientas,
+    en la que encontraremos.\r\n-<b>Icono Gotas de agua</b>: activa la regadera.\r\n-<b>Icono
+    Fertilizante</b>: activa el fertilizante.\r\n-<b>Fijar Posici\xF3n</b>: activa
+    el Device traking, permitiendo que el modelo 3D sea persistente incluso sin verse
+    el Mergecube o el target.\r\n-<b>Captura de Pantalla</b>: permite realizar capturas
+    de pantalla.\r\n\r\n<pos=0%><b><size=7>Captura Target</size></b>\r\nLa barra de
+    colores indica la calidad del objetivo como target.\r\n<b>Unicamente puede haber
+    un solo target al mismo tiempo</b>.\r\n\r\n<size=7><b>Modo MultiTarget</b></size>:\r\n\r\nEn
+    el modo multitarget es posible capturar hasta un maximo de <b>5</b> marcadores
+    personalizados simultaneos.\r\n\r\nDesde el bot\xF3n de la esquina inferior derecha,
+    se podr\xE1 cambiar entre los diferentes modeles 3D disponibles.\r\n\r\nEn la
+    es esquina inferior izquierda, encontraremos la opci\xF3n para cambiar la escala
+    de un modelo. Para ello previamente hay que seleccionar tocando la pantalla, cual
+    es el modelo que se quiere cambiar.\r\n \n\n\n\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

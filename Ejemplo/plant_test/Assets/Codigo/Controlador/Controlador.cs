@@ -260,9 +260,9 @@ public class Controlador : MonoBehaviour
 
         }
         TipoDeAR();
-        
-        textAyuda.text= System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaMenu.txt"); 
-        textInfo.text= System.IO.File.ReadAllText("Assets/Resources/Textos/textoInfoUTF16BE.txt");
+
+        //textAyuda.text = "HOLA";//System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaMenu.txt"); 
+        //textInfo.text = "HOLA"; //System.IO.File.ReadAllText("Assets/Resources/Textos/textoInfoUTF16BE.txt");
 
     }
 

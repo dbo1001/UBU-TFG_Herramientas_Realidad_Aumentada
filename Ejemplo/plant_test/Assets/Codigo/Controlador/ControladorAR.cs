@@ -46,7 +46,20 @@ public class ControladorAR : MonoBehaviour
 
         regadera.SetActive(false);
         ventama.SetActive(false);
-        textVentana.text = System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaJuego.txt");
+        textVentana.text = "<pos=40%><b><size=65>Ayuda</size></b>\n"+
+            "En la parte superior de la pantalla, podrá encontrar la barra de progreso y los botones de ayuda y de re retroceso para volver al menú.\n" +
+            "La barra de progreso indica la cantida de agua que ha recibido la planta. También en la barra de progreso encontrara una luz, que se encenderá cuando se usa el fertilizante.\n\n" +
+            "<pos=0%><b><size=45> Modo MergeCube </size></b>\n" +
+            "           Mantenga enfocado el Mergecube en un ambiente con buena iluminación para que pueda ser detectado.\n" +
+            "n la parte inferior derecha, se encuentra la barra de herramientas, en la que encontraremos.\n" +
+            "-<b> Icono Gotas de agua </b>: activa la regadera.\n" +
+            "-<b> Icono Fertilizante </b>: activa el fertilizante.\n" +
+            "-<b> Fijar Posición </b>: activa el Device traking, permitiendo que el modelo 3D sea persistente incluso sin verse el Mergecube o el target.\n" +
+            "-<b> Captura de Pantalla</b>: permite realizar capturas de pantalla.Las capturas se guardán en la Carpeta DCMI/UnityCamera\n\n." +
+
+    "<pos=0%><b><size=45> Modo Captura Target</size></b>\n" +
+               "La barra de colores indica la calidad del objetivo como target.\n" +
+               "<b> Únicamente puede haber un solo target al mismo tiempo</b>.\n"; //System.IO.File.ReadAllText("Assets/Resources/Textos/textoAyudaJuego.txt");
         buttonCerrar.SetActive(true);
         buttonReiniciar.SetActive(false);
         buttonSalir.SetActive(false);

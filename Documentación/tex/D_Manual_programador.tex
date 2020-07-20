@@ -49,7 +49,8 @@ Una vez terminada la instalación ya es posible comenzar a crear proyectos.
 
 El proceso para crear un proyecto es, desde Unity Hub, en la pestaña \textbf{Projects} seleccionar el botón <<\textbf{NEW}>>, se desplegará una ventana en la que escoger el tipo de proyecto a crear (2D, 3D, etc), el nombre y la ruta en la que se guardará. En el caso desarrollado, se trata de un proyecto 3D.
 
-Una vez se ha generado el entorno, el siguiente paso será hacer las configuraciones iniciales. En primer lugar se deberá cambiar la plataforma de compilación del proyecto de Windows a Android, este paso permitirá que al construir el ejecutable de la aplicación, este sea compatible con la plataforma seleccionada. 
+Una vez se ha generado el entorno, el siguiente paso será hacer las configuraciones iniciales. En primer lugar, se deberá cambiar la plataforma de compilación del proyecto de Windows a Android, este paso permitirá que al construir el ejecutable de la aplicación, este sea compatible con la plataforma seleccionada.
+
 Para realizar el cambio ir a la pestaña \textbf{File, Build Settings}, en esta ventana se verá las diferentes plataformas para las que se puede diseñar el proyecto. De forma predeterminada al crear un nuevo proyecto se encuentra seleccionado ``Windows``, se deberá cambiar a ``Android`` dado que el proyecto esta pensado en un principio para dispositivos Android.
 
 Para poder descargar y usar Assets desde la tienda de Unity es necesario tener una cuenta de usuario.
@@ -71,7 +72,7 @@ Algunas de las otras posibilidades son:
 
 \imagenPequeDos{Anexos/VuforiaPlayer02}{Instalación Vuforia en Unity paso 2.}
 
-\subsubsection{Construcción proyecto primeros pasos}
+\subsubsection{Construcción proyecto: primeros pasos}
 
 Para la construcción de un proyecto de realidad aumentada con Vuforia, los dos primeros elementos que se deberán añadir son la \textbf{ARcamara} y el \textbf{Target} ( Para la aplicación propuesta se usará un MultiTarget). La AR Camera se trata de la cámara diseñada por Vuforia para el uso de realidad aumentada, y el Multitarget se trata del elemento en el se establecerá que targets se reconocerán y sobre donde se construirán los objetos de realidad aumentada.
 El proyecto creado por Unity lleva por defecto una cámara normal, como para nuestra aplicación no la utilizaremos la podemos borrar.
@@ -83,7 +84,7 @@ Se deberá configurar la AR Camera añadiendo la \textbf{license key} que nos pr
 
 \imagen{Anexos/vuforiaLicense}{Pasos para incluir la license key de Vuforia.}
 
-Para añadir el multiTarget hay que seguir un proceso similar, como se puede ver en la imagen~\ref{fig:Anexos/vuforiaCameraAR} también esta la opción de añadir un MultiTarget (Multi image). Pero si añadimos un target ahora mismo, de ese modo, este no tendra ninguna imagen asociada por lo que no podra ser reconocido. Se pueden añadir imagenes a los target desde Unity, pero es mas recomendable hacerlo desde su propia Web, ya que nos indicara también la calidad de la imagen deseada para ser un target. Para ello en el portal de Vuforia ya registrados deberemos ir al apartado ``Develop``, y en este seleccionar ``Target Manger``. Seleccionamos ``Add Database, Type Device``. En la siguiente ventana escogemos ``Add Target`` y configuramos el target. Una vez configurado le podremos descargar y importar en el proyecto. De esta manera el multitarget ya está configurado con el Mergecube. Click derecho, Vuforia Engine, y escogemos multiTarget, podremos apreciar que el cubo tiene las imágenes que habíamos configurado. Hay que asegurarse de que el cubo este en el campo visual de la cámara en la escena del proyecto, de lo contrario no se podrá reconocer al ejecutarse. Será en este elemento al que tendremos que asociar los modelos que queremos que se muestren en el Mergecube al enfocar nuestro dispositivo al MergeCube.
+Para añadir el multiTarget hay que seguir un proceso similar, como se puede ver en la imagen~\ref{fig:Anexos/vuforiaCameraAR} también está la opción de añadir un MultiTarget (Multi image). Pero si añadimos un target ahora mismo, de ese modo, este no tendrá ninguna imagen asociada por lo que no podrá ser reconocido. Se pueden añadir imágenes a los target desde Unity, pero es mas recomendable hacerlo desde su propia Web, ya que nos indicara también la calidad de la imagen deseada para ser un target. Para ello en el portal de Vuforia ya registrados deberemos ir al apartado ``Develop``, y en este seleccionar ``Target Manger``. Seleccionamos ``Add Database, Type Device``. En la siguiente ventana escogemos ``Add Target`` y configuramos el target. Una vez configurado le podremos descargar y importar en el proyecto. De esta manera el multitarget ya está configurado con el Mergecube. Click derecho, Vuforia Engine, y escogemos multiTarget, podremos apreciar que el cubo tiene las imágenes que habíamos configurado. Hay que asegurarse de que el cubo este en el campo visual de la cámara en la escena del proyecto, de lo contrario no se podrá reconocer al ejecutarse. Será en este elemento al que tendremos que asociar los modelos que queremos que se muestren en el Mergecube al enfocar nuestro dispositivo al MergeCube.
 
 
 Con estos dos elementos, el esqueleto principal de la aplicación para poder reconocer el MergeCube ya esta construido. Ahora si se deseamos incorporar un modelo 3D que se muestre cuando se reconozca el MergeCube. Deberemos asociar el modelo 3D como hijo del multitarget. Hay que asegurarse de que estén situados la misma posición en la escena, pues lo elementos que se asocien al multitarget aparecer en relación a la su posición en la escena.
@@ -92,11 +93,16 @@ Con estos dos elementos, el esqueleto principal de la aplicación para poder rec
 \subsection{Ejemplo Unity}
 En esta sección explicare algunos de los pasos que segui en el resto de la construcción de la aplicación.
 
-Dado que queremos representar el crecimiento de un planta debo buscar algún modelo 3D de plantas para Unity, se pueden buscar en la tienda de Assest de Unity o alguna plataforma Web. Una vez se seleccionado un modelo que nos interese, se importa en el proyecto, y cuando se añada en la escena se deberá incluir como hijo del MergeCube. El tema de incluir un elemento como hijo de otro es objetivo de mantener un orden y que si realizamos por ejemplo un cambio de posición o de escala en el padre, ese cambio también afectará al hijo, de lo contrarío al realizar uno de esos ajustes habría que repetirlo para el otro modelo o de lo contrario se desajustarían, al incluirlo como hijo del MergeCube esto también permitira que al ser detectado se muestre el modelo.
+Dado que queremos representar el crecimiento de una planta, debo buscar algún modelo 3D de plantas para Unity, se pueden buscar en la tienda de Assest de Unity o alguna plataforma Web. Una vez se seleccionado un modelo que nos interese, se importa en el proyecto, y cuando se añada en la escena se deberá incluir como hijo del MergeCube. El tema de incluir un elemento como hijo de otro es objetivo de mantener un orden y que si realizamos por ejemplo un cambio de posición o de escala en el padre, ese cambio también afectará al hijo, de lo contrarío al realizar uno de esos ajustes habría que repetirlo para el otro modelo o de lo contrario se desajustarían, al incluirlo como hijo del MergeCube esto también permitira que al ser detectado se muestre el modelo.
 
-Para representar el crecimiento se representara el movimiento de regar la planta echando agua sobre la planta. Para representar esto buscamos un modelo de una regadera, una vez incluido, le podrá como hijo de la ARCamera. Al hacer esto permitirá que al mover el teléfono, el modelo seguirá el mismo movimiento.
-Al realizarlo de esta manera hay que prestar atención en que coordenada se coloca, es necesario colocarlo ha cierta distancia de la cámara para que se aprecie cierta distancia, esto se puede ir probando posiciones hasta dar con una que nos parezca correcta.
-Para añadir el efecto de agua, he usado efectos de partículas de Unity. En la configuración de las partículas de agua, hay que activar el modificador de gravedad dándole un valor de 10, y el tipo de espacio simulado en World, el número máximo de partículas también le he aumentado hasta 10000 y cambiar el color de la partícula por un azul. Ahora el problema está en que las partículas siempre caen en la misma inclinación sin importar la posición del dispositivo, para conseguir usar el giroscopio de dispositivo he creado un Script que detecta el giroscopio y ajusta el eje de gravedad según los movimientos del dispositivo. Este proceso fue algo tedioso debido al tener que estar compilando y pasando la aplicación al dispositivo para probar que funcionaba correctamente.
+Para representar el crecimiento se representara el movimiento de regar la planta echando agua sobre la planta. Para representar esto buscamos un modelo de una regadera, una vez incluido, le podrá como hijo de la ARCamera.
+
+Al hacer esto permitirá que al mover el teléfono, el modelo seguirá el mismo movimiento.
+Al realizarlo de esta manera hay que prestar atención en que coordenada se coloca, es necesario colocarlo a cierta distancia de la cámara para que se aprecie cierta distancia, esto se puede ir probando posiciones hasta dar con una que nos parezca correcta.
+
+Para añadir el efecto de agua, he usado efectos de partículas de Unity. En la configuración de las partículas de agua, hay que activar el modificador de gravedad dándole un valor de 10, y el tipo de espacio simulado en World, el número máximo de partículas también le he aumentado hasta 10000 y cambiar el color de la partícula por un azul. Ahora el problema está en que las partículas siempre caen en la misma inclinación sin importar la posición del dispositivo. 
+
+Para conseguir usar el giroscopio de dispositivo he creado un Script que detecta el giroscopio y ajusta el eje de gravedad según los movimientos del dispositivo. Este proceso fue algo tedioso debido al tener que estar compilando y pasando la aplicación al dispositivo para probar que funcionaba correctamente.
 
 Para detectar y contar el número de partículas que colisionan con la planta, he creado otro scipt usando \href{https://docs.unity3d.com/ScriptReference/Collider.OnCollisionEnter.html}{OnCollisionEnter}. Se suma cada colisión y va actualizando una barra de progreso en la interfaz.
 
@@ -183,41 +189,41 @@ En la detección del cubo como target, la gran mayoría de las pruebas iniciales
 
 Pero para dar mayor fiabilidad a las pruebas, se han probado también en el dispositivo. Consistían en comprobar que el Mergecube era reconocido correctamente, y que cuando es detectado, el modelo 3D asociado se puede visualizar adecuadamente.
 
-Una de las primeras pruebas que se realizó, fue mover el Mergecube para comprobar que el modelo 3D se movía con los movimientos correspondientes. En el siguiente vídeo subido a Youtube, se puede observar esa prueba con un modelo que no se ha sido utilizado en la aplicación: \url{https://www.youtube.com/watch?v=SaZeSrDMNEE}.
+Una de las primeras pruebas que se realizó, fue mover el Mergecube para comprobar que el modelo 3D se movía con los movimientos correspondientes. En el siguiente vídeo subido a Youtube, se puede observar esa prueba con un modelo que no se ha sido utilizado en la aplicación: \href{https://www.youtube.com/watch?v=SaZeSrDMNEE}{Primeras Pruebas detección MergeCube }.
 
 Otra de las pruebas trata de enfocar cada cara del cubo, demostrando que en cualquier cara es reconocido, para complementar se han hecho pruebas tapando un porcentaje de la cara del cubo. 
 
-En el siguiente enlace se pueden ver estas pruebas:\\ \url{https://www.youtube.com/watch?v=dFsnTGja6-I}.
+En el siguiente enlace se pueden ver estas pruebas:\\ \href{https://www.youtube.com/watch?v=dFsnTGja6-I}{Pruebas detección Mergecube}.
 
 \subsection{Pruebas autoenfoque}
 La detección falla cuando se acerca bastante la cámara al cubo, debido a que el autoenfoque esta desactivado. Pero investigando, encontré que Vuforia sí posee funciones para controlar el autoenfoque. Al activarse permite que el reconocimiento del cubo mejore incluso en distancias mas cortas.
 
-En este vídeo en la primera parte la cámara tiene el autoenfoque desactivado, mientras que en la segunda esta activado:\\ \url{https://www.youtube.com/watch?v=FsTertkK1gY}.
+En este vídeo en la primera parte la cámara tiene el autoenfoque desactivado, mientras que en la segunda esta activado:\\ \href{https://www.youtube.com/watch?v=FsTertkK1gY}{Pruebas autoenfoque}.
 
 
 
 \subsection{Pruebas luminosidad}
 También se ha probado la detección con diferentes entornos de luminosidad, en el caso de los extremos de luminosidad (poca y mucha), la detección del Mergecube se dificulta. Por ejemplo en los casos de demasiada iluminación, provoca que el contraste de iluminación impida reconocer el Mergecube. 
-\url{https://www.youtube.com/watch?v=0kfcTpOKaV8}.
+\href{https://www.youtube.com/watch?v=0kfcTpOKaV8}{Pruebas luminosidad}.
 
 \subsection{Pruebas Device Tracking}
-Otra de las pruebas es respecto a la implementación del Device Tracking. Para probar el funcionamiento del device tracking, el el vídeo se comprueba como al no tenerlo activado, en el momento que el Mergecube sale del campo visual de la cámara se pierde el modelo 3D cargado, y cuando volvemos a apuntar al cubo hay que esperar a que vuelva a reconocerlo. En cambio cuando el device tracking está activado, al volver enfocar el cubo se aprecia que el modelo sigue ahí:\\~\url{https://www.youtube.com/watch?v=5szopM7FkAQ}.
+Otra de las pruebas es respecto a la implementación del Device Tracking. Para probar el funcionamiento del device tracking, el el vídeo se comprueba como al no tenerlo activado, en el momento que el Mergecube sale del campo visual de la cámara se pierde el modelo 3D cargado, y cuando volvemos a apuntar al cubo hay que esperar a que vuelva a reconocerlo. En cambio cuando el device tracking está activado, al volver enfocar el cubo se aprecia que el modelo sigue ahí:\\~\href{https://www.youtube.com/watch?v=5szopM7FkAQ}{Prueba Device Tracking}.
 
-Del mismo modo si tenemos un modelo 3D mas grande que el Mergecube al apuntar un extremo fuera del Mergecube no desaparecerá. Vídeo:\\~\url{https://www.youtube.com/watch?v=zBC3y8zizVI}.
+Del mismo modo si tenemos un modelo 3D mas grande que el Mergecube al apuntar un extremo fuera del Mergecube no desaparecerá. Vídeo:\\~\href{https://www.youtube.com/watch?v=zBC3y8zizVI}{Prueba Device Tracking}.
 
 \subsection{Pruebas Captura Target}
-Para probar las capturas de un target personalizadas, se han hecho pruebas con diversos objetivos. También se ha puesto a prueba la posibilidad de tener múltiples marcadores al mismo tiempo. En este vídeo se intenta hacer capturas de target sobre un poster, apuntado ha diversos objetivos: \url{https://www.youtube.com/watch?v=k_bbJS2Hb1w}	
+Para probar las capturas de un target personalizadas, se han hecho pruebas con diversos objetivos. También se ha puesto a prueba la posibilidad de tener múltiples marcadores al mismo tiempo. En este vídeo se intenta hacer capturas de target sobre un poster, apuntado a diversos objetivos: \href{https://www.youtube.com/watch?v=k_bbJS2Hb1w}{Pruebas Captura Target}.	
 
 
 \subsection{Prueba Sensor Giroscopio}
 Para la comprobación del uso del sensor del giroscopio, seleccionamos la herramienta de la regadera, una vez seleccionada empieza a soltar partículas de agua, al girar el dispositivo en diferentes ángulos las partículas se moverán para dar la sensación de que siempre están cayendo hacia el suelo. 
 
-En el primer vídeo vemos una de las primeras pruebas:\\ \url{https://www.youtube.com/watch?v=O9vR6dptWag}.
+En el primer vídeo vemos una de las primeras pruebas:\\ \href{https://www.youtube.com/watch?v=O9vR6dptWag}{Pruebas Giroscopio}
 
- El segundo es del estado actual de la aplicación:\\ \url{https://www.youtube.com/watch?v=ZpLFIQjsxmY}
+ El segundo es del estado actual de la aplicación:\\ \href{https://www.youtube.com/watch?v=ZpLFIQjsxmY}{Pruebas GirosCopio 2}
 
 \subsection{Pruebas Permisos}
-Dado que la aplicación necesita algunos permisos para poder acceder a algunas características del dispositivo, se han hecho las pruebas de dichos permisos. En el siguiente vídeo, al acceder an el modo jugable, solicita permisos para poder guardar archivos en el dispositivo: \url{https://www.youtube.com/watch?v=QWSm2oUMCtA}. Esto se debe a que para guardar una captura de pantalla es necesario que el sistema tenga permiso para guardarla en una ubicación distinta de la raíz.
+Dado que la aplicación necesita algunos permisos para poder acceder a algunas características del dispositivo, se han hecho las pruebas de dichos permisos. En el siguiente vídeo, al acceder an el modo jugable, solicita permisos para poder guardar archivos en el dispositivo: \href{https://www.youtube.com/watch?v=QWSm2oUMCtA}{Prueba Permisos}. Esto se debe a que para guardar una captura de pantalla es necesario que el sistema tenga permiso para guardarla en una ubicación distinta de la raíz.
 
 
 

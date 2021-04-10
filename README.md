@@ -52,3 +52,4 @@ Otra de las funcionalidades de la aplicación es realizar capturas de target per
 
 [![gifCpTarget](https://github.com/smi0010/TFG_Herramientas_Realidad_Aumentada/blob/master/Media/capturaTarget.gif)](https://www.youtube.com/watch?v=k_bbJS2Hb1w)
 
+
